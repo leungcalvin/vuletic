@@ -1,0 +1,10 @@
+#!/bin/sh
+set -x
+
+#  Run rlevels
+$GRASP/bin/rlevels > out_rlevels <<S1
+2s2p_DF.m
+
+S1
+
+cat out_rlevels

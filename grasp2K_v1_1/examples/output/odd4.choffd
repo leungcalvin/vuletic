@@ -1,0 +1,100 @@
+Nuclear spin                         1.000000000000000D+00 au
+Nuclear magnetic dipole moment       4.038000000000000D-01 n.m.
+Nuclear electric quadrupole moment   1.560000000000000D-02 barns
+
+
+ Interaction constants:
+
+ Level1  J Parity  Level2  J Parity        A (MHz)             B (MHz)
+
+   1        1 -      1        0 -      7.2132800139D+02    0.0000000000D+00
+   1        1 -      1        1 -      8.2327896604D+02   -4.0145777276D+00
+   1        1 -      2        1 -      9.8978409996D+02    2.5004658158D-02
+   2        1 -      1        0 -      6.1139636370D+02    0.0000000000D+00
+   2        1 -      2        1 -      2.1671074083D+02    8.2206931163D+00
+   1        2 -      1        0 -      0.0000000000D+00   -3.4747468580D+00
+   1        2 -      1        1 -     -3.1149222849D+02    2.0050207228D+00
+   1        2 -      2        1 -      5.1703318246D+02   -2.6304391454D-03
+   1        2 -      1        2 -      6.8640663845D+02    8.0109191955D+00
+
+
+ Matrix elements:
+
+ Level1  J Parity  Level2  J Parity    F     Matrix element (a.u.)
+
+   1        1 -      1        0 -      1        1.5503964245D-07
+
+
+ Matrix elements:
+
+ Level1  J Parity  Level2  J Parity    F     Matrix element (a.u.)
+
+   1        1 -      1        1 -      0       -2.5177415760D-07
+   1        1 -      1        1 -      1       -1.2436171004D-07
+   1        1 -      1        1 -      2        1.2497185754D-07
+
+
+ Matrix elements:
+
+ Level1  J Parity  Level2  J Parity    F     Matrix element (a.u.)
+
+   1        1 -      2        1 -      0       -3.0085118254D-07
+   1        1 -      2        1 -      1       -1.5043509198D-07
+   1        1 -      2        1 -      2        1.5043129169D-07
+
+
+ Matrix elements:
+
+ Level1  J Parity  Level2  J Parity    F     Matrix element (a.u.)
+
+   2        1 -      1        0 -      1        1.3141133221D-07
+
+
+ Matrix elements:
+
+ Level1  J Parity  Level2  J Parity    F     Matrix element (a.u.)
+
+   2        1 -      1        1 -      0       -3.0085118254D-07
+   2        1 -      1        1 -      1       -1.5043509198D-07
+   2        1 -      1        1 -      2        1.5043129169D-07
+
+
+ Matrix elements:
+
+ Level1  J Parity  Level2  J Parity    F     Matrix element (a.u.)
+
+   2        1 -      2        1 -      0       -6.2749176684D-08
+   2        1 -      2        1 -      1       -3.4498102030D-08
+   2        1 -      2        1 -      2        3.3248696555D-08
+
+
+ Matrix elements:
+
+ Level1  J Parity  Level2  J Parity    F     Matrix element (a.u.)
+
+   1        2 -      1        0 -      1       -1.3635545289D-09
+
+
+ Matrix elements:
+
+ Level1  J Parity  Level2  J Parity    F     Matrix element (a.u.)
+
+   1        2 -      1        1 -      1       -1.0762916938D-07
+   1        2 -      1        1 -      2       -1.4123284644D-07
+
+
+ Matrix elements:
+
+ Level1  J Parity  Level2  J Parity    F     Matrix element (a.u.)
+
+   1        2 -      2        1 -      1        1.7571309473D-07
+   1        2 -      2        1 -      2        2.3573969996D-07
+
+
+ Matrix elements:
+
+ Level1  J Parity  Level2  J Parity    F     Matrix element (a.u.)
+
+   1        2 -      1        2 -      1       -3.1190105570D-07
+   1        2 -      1        2 -      2       -1.0538746254D-07
+   1        2 -      1        2 -      3        2.0894863997D-07

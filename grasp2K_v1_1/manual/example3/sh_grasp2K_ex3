@@ -1,0 +1,45 @@
+#!/bin/sh
+
+set -x
+
+#    Example of grasp2K run for 2s(2)2p(3) and 2p(5) in Si VIII
+
+# 1.   Get the nuclear data
+        ./sh_iso
+
+# 2.   Generate the 2s(2)2p(3) and 2p(5) DF expansion
+#      Save a mrlist
+       
+	./sh_jjgen_DF
+
+# 3.   Angular integration and initial estimates of 1s,2s,2p orbitals
+        ./sh_initial_DF
+
+# 4.   Perform scf calculations and save to 2s22p3_2p5_DF
+        ./sh_scf_DF
+
+# 5.   Generate the 2s(2)2p(3) and 2p(5) n = 3 SD expansion
+	./sh_jjgen_SD_MR
+
+# 6.   Keep only CSFs that interact with 2s(2)2p(3) and 2p(5)
+
+        ./sh_jjreduce_SD_MR
+
+# 6.   Angular integration and initial extimates of 3s,3p,3d orbitals
+        ./sh_initial_SD_MR
+
+# 7.   Perform scf calculation and save to 2s22p3_2p5_3
+        ./sh_scf_SD_MR
+
+# 8.   Perform rci calculation for 2s22p3_2p5_3
+        ./sh_rci_SD_MR
+
+# 9.   Transform from jj-coupling to LSJ-coupling
+        ./sh_jj2lsj_SD_MR
+
+# 9.   View levels
+        ./sh_rlevels_SD_MR
+
+# 10.  Perform transition calculation 
+
+        ./sh_tr

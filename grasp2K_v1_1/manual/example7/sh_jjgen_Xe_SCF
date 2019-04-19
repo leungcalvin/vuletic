@@ -1,0 +1,40 @@
+#!/bin/sh
+set -x
+
+#   Generate grasp2K expansions for initial DF run
+#   First Config: 2S1/2
+#   Closed: [Xe]4f14
+#   Active: 5d0 5f0 6s1 6p0 6d0 6f0 
+#   2*J = 1,1 (lower,upper)
+#   0 excitations
+
+$GRASP/bin/jjgen << EOF
+
+
+5
+f
+n
+
+5
+c
+5
+14
+
+0
+
+0
+i
+0,0
+1
+
+EOF
+
+cp clist.log 6s_6p_DF.log
+cp clist.out rcsl.inp
+
+$GRASP/bin/jsplit << EOF
+n
+EOF
+
+cp rcsl.out rcsl.inp
+

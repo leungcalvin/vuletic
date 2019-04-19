@@ -1,0 +1,35 @@
+Nuclear spin                         5.000000000000000D-01 au
+Nuclear magnetic dipole moment       4.936700000000000D-01 n.m.
+Nuclear electric quadrupole moment   1.600000000000000D+00 barns
+
+
+ Interaction constants:
+
+ Level1  J Parity  Level2  J Parity        A (MHz)             B (MHz)
+
+   1      1/2 -      1      1/2 -      6.0742545399D+06    0.0000000000D+00
+   1      3/2 -      1      1/2 -      2.8502441246D+05    6.0989564248D+05
+   1      3/2 -      1      3/2 -      6.8595054273D+05    2.3098978538D+06
+
+
+ Matrix elements:
+
+ Level1  J Parity  Level2  J Parity    F     Matrix element (a.u.)
+
+   1      1/2 -      1      1/2 -      0       -6.9238750065D-04
+   1      1/2 -      1      1/2 -      1        2.3079583355D-04
+
+
+ Matrix elements:
+
+ Level1  J Parity  Level2  J Parity    F     Matrix element (a.u.)
+
+   1      3/2 -      1      1/2 -      1        6.1262120577D-05
+
+
+ Matrix elements:
+
+ Level1  J Parity  Level2  J Parity    F     Matrix element (a.u.)
+
+   1      3/2 -      1      3/2 -      1       -1.3031601347D-04
+   1      3/2 -      1      3/2 -      2        7.8189608080D-05

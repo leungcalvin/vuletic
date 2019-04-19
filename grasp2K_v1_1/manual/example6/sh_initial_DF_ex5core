@@ -1,0 +1,18 @@
+#!/bin/sh
+set -x
+
+# Angular integration
+
+$GRASP/bin/mcp3  <<EOF
+y
+EOF
+
+#  Get initial estimates of wave functions
+$GRASP/bin/erwf <<EOF
+y
+1
+../example5/6s_6p_DF.w
+1* 2* 3* 4s 4p* 4d* 5s 5p* 6s 6p*
+2
+*
+EOF

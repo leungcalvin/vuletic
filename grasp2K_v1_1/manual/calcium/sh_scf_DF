@@ -1,0 +1,15 @@
+#!/bin/sh
+set -x
+
+# Perform self-consistent field calculations
+# ...with extended optimal level weighting (idk what that means)
+$GRASP/bin/rscf2 > out_scf_4s_4p_DF <<EOF
+y
+y
+1
+4*
+*
+1000
+EOF
+
+$GRASP/bin/rsave 4s_4p_DF

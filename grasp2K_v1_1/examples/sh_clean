@@ -1,0 +1,5 @@
+#!/bin/sh
+set -x
+
+rm odd* out* clist*
+rm r* f* i* m* r*

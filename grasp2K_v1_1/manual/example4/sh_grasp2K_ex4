@@ -1,0 +1,52 @@
+#!/bin/sh
+
+set -x
+
+#    Example of grasp2K run for 1s(2)2s 2S and 1s(2)2p 2P in Li I
+
+# 1.   Get the nuclear data -- done, IEEE_DIVIDE_BY_ZERO err? also happens with given example...ignoring...
+        ./sh_iso_yb
+
+# 2.   Generate the 1s(2)2s and 1s(2)2p DF expansion
+	./sh_jjgen_DF
+
+# 3.   Angular integration and initial estimates of 1s,2s,2p orbitals
+        ./sh_initial_DF
+
+# 4.   Perform scf calculations and save to 2s_2p_DF
+        ./sh_scf_DF
+
+# 5.   Generate the 1s(2)2s n = 3 CAS expansion
+	./sh_jjgen_2s_3
+
+# 6.   Angular integration and initial extimates of 3s,3p,3d orbitals
+        ./sh_initial_2s_3
+
+# 7.   Perform scf calculation and save to 2s_3
+        ./sh_scf_2s_3
+
+# 8.   Perform rci calculation for 2s_3
+        ./sh_rci_2s_3
+
+# 9.   Generate the 1s(2)2p n = 3 CAS expansion
+	./sh_jjgen_2p_3
+
+# 10.  Angular integration and initial extimates of 3s,3p,3d orbitals
+        ./sh_initial_2p_3
+
+# 11.  Perform scf calculation and save to 2p_3
+        ./sh_scf_2p_3
+
+# 12.  Perform rci calculation for 2p_3
+        ./sh_rci_2p_3
+
+# 13.  View levels
+        ./sh_rlevels
+
+# 14.  Run sms and hfs for 2s_3 and 2p_3 rci wave functions
+
+        ./sh_sms_hfs
+
+# 15.  Perform transition calculation for 2s_3 and 2p_3 rci wave functions
+
+        ./sh_tr

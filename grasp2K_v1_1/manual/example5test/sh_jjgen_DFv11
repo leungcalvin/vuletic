@@ -1,0 +1,103 @@
+#!/bin/sh
+set -x
+
+#   Generate even-parity MCHF set A from Karacoban 2011
+#   [Xe]4f14 6s2; 2J = 0,0
+#   [Xe]4f14 6s1 5d1; S; 2J = 2,6 (3D, 1D terms)
+#   [Xe]4f14 5d2; 2J = 0,10
+#   [Xe]4f14 6p2; 2J = 0,6
+#   [Xe]4f14 6s1 7s1
+
+
+$GRASP/bin/jjgen << EOF
+
+
+8
+f
+
+
+6
+c
+5
+14
+0
+0
+2
+0
+0
+0
+0,0
+0
+y
+8
+f
+
+
+6
+14
+1
+0
+1
+0
+0
+0
+2,6
+0
+y
+8
+f
+
+
+5
+14
+2
+0
+0,10
+0
+y
+8
+f
+
+
+6
+14
+0
+0
+0
+2
+0
+0
+0,6
+0
+y
+8
+f
+
+
+7
+14
+0
+0
+1
+0
+0
+0
+1
+0
+0
+0
+0,2
+0
+
+
+EOF
+
+cp clist.log 6s_6p_5d_4f.log
+cp clist.out rcsl.inp
+
+$GRASP/bin/jsplit << EOF
+n
+EOF
+
+cp rcsl.out rcsl.inp
+

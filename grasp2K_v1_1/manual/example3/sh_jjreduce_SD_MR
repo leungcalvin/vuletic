@@ -1,0 +1,19 @@
+#!/bin/sh
+set -x
+
+#   Generate grasp2K expansions
+#   SD to n = 3 from 2s2p(3) and 2p(5)
+
+$GRASP/bin/jjreduce3 << EOF
+y
+EOF
+
+cp rcsl.out rcsl.inp
+
+#   Run jsplit
+
+$GRASP/bin/jsplit << EOF
+n
+EOF
+
+cp rcsl.out rcsl.inp

@@ -1,0 +1,17 @@
+#!/bin/sh
+set -x
+
+# Perform self-consistent field calculations
+$GRASP/bin/rscf2 > out_scf_6s_7 <<EOF
+y
+y
+1
+1
+5
+4f* 5d* 6s 6p-
+6s 6p- 
+100
+EOF
+
+$GRASP/bin/rsave 6s_7
+less out_scf_6s_7

@@ -1,0 +1,23 @@
+#!/bin/sh
+
+set -x
+
+#    Example of grasp2K run For 2s2p 1P, 3P in N+3
+
+# 1.   Generate the expansions
+	./sh_files_c
+
+# 2.   Get the nuclear data
+        ./sh_iso
+
+# 3.   Get the DHF (occupied) orbitals as initial estimates
+        ./sh_initial
+
+# 4.   Perform scf calculations and include the Breit correction
+        ./sh_scf
+
+# 5.   Transform ASF from jj-coupling to LSJ-coupling
+	./sh_jj2lsj
+
+# 6.   Perform a transition calculation
+        ./sh_tr

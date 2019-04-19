@@ -1,0 +1,15 @@
+ nblock =            1   ncftot =           79   nw =            9   nelec =            3
+ nblock =            2   ncftot =          186   nw =            9   nelec =            3
+
+ Energy levels for ...
+ Rydberg constant is   109737.31534
+ No - Serial number of the state; Pos - Position of the state within the 
+ J/P block; Splitting is the energy difference with the lower neighbor
+-------------------------------------------------------------------------
+ No Pos  J Parity Energy Total    Levels     Splitting 
+                      (a.u.)      (cm^-1)     (cm^-1)
+-------------------------------------------------------------------------
+  1  1  1/2 +   -5845.4906523
+  2  1  1/2 -   -5838.9755128  1429907.82  1429907.82
+  3  1  3/2 -   -5795.9609367 10870516.03  9440608.21
+-------------------------------------------------------------------------

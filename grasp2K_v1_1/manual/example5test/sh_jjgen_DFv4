@@ -1,0 +1,69 @@
+#!/bin/sh
+set -x
+
+#   Generate grasp2K expansions
+#   [Xe]4f14 6s2 ; S ; 2J = 0,4 (1S term)
+#   [Xe]4f14 6s1 6p1; S; 2J = 0,4 (3P term, 1P term)
+#   [Xe]4f14 6s1 5d1; S; 2J = 2,6 (3D term)
+#   See NIST website...
+#   Should get 118 configs
+#   split into blocks
+
+$GRASP/bin/jjgen << EOF
+
+
+6
+f
+n
+
+6
+c
+5
+14
+c
+0
+
+0
+
+2
+
+0
+
+0
+
+0
+
+0,4
+1
+y
+6
+f
+n
+
+6
+0
+
+0
+
+1
+
+1
+
+0
+
+0
+
+0,4
+1
+
+EOF
+
+cp clist.log 2s_2p_DF.log
+cp clist.out rcsl.inp
+
+$GRASP/bin/jsplit << EOF
+n
+EOF
+
+cp rcsl.out rcsl.inp
+

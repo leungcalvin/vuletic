@@ -1,0 +1,16 @@
+#!/bin/sh
+set -x
+
+# Angular integration
+
+$GRASP/bin/mcp3  <<EOF
+y
+EOF
+
+#  Get estimates from ex5...
+$GRASP/bin/erwf <<EOF
+y
+1
+../example5/rwfn.out
+*
+EOF

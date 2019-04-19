@@ -1,0 +1,13 @@
+ ====================================================
+        jj2lsj: Execution Begins ...
+ ====================================================
+  
+   jj2lsj: Transformation of ASFs from a jj-coupled CSF basis
+           into an LS-coupled CSF basis  (Fortran 95 version)
+           (C) Copyright by   G. Gaigalas and Ch. F. Fischer,
+           (2011).
+  
+ Loading Configuration Symmetry List File ...
+ There are 4 relativistic subshells;
+ There are 4 relativistic CSFs;
+  ... load complete;

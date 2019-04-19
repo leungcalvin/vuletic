@@ -1,0 +1,10 @@
+#!/bin/sh
+set -x
+
+# jj-coupling to lsj intermediate coupling
+$GRASP/bin/jj2lsj > out_jj2lsj <<EOF
+2s2p_DF
+n
+y
+EOF
+

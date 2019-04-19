@@ -1,0 +1,378 @@
+ ====================================================
+        RSCF2: Execution Begins ...
+ ====================================================
+ Loading CSL file ... Header only
+ There are/is           30  relativistic subshells;
+ Loading CSL File for ALL blocks 
+ There are         7226  relativistic CSFs... load complete;
+ Loading Radial WaveFunction File ...
+
+ Average energy =  -1.4063157279D+04 Hartrees
+ Calling dvdson!!!         200
+ EIGVAL(i)    -0.9259406013588478 1 Res.Norm 0.0554222907727581
+ EIGVAL(i)    -0.9260076165038723 1 Res.Norm 0.0553307932306585
+ EIGVAL(i)    -0.9509406263884538 1 Res.Norm 0.0476157967455741
+ EIGVAL(i)    -0.9550233382339480 1 Res.Norm 0.0218933774639431
+ EIGVAL(i)    -0.9567510961678983 1 Res.Norm 0.0219111443303831
+ EIGVAL(i)    -0.9583065562300709 1 Res.Norm 0.0194324906489470
+ EIGVAL(i)    -0.9597883448714878 1 Res.Norm 0.0207113665319490
+ EIGVAL(i)    -0.9614171596878517 1 Res.Norm 0.0185336371680579
+ EIGVAL(i)    -0.9621977829158858 1 Res.Norm 0.0118276240941921
+ EIGVAL(i)    -0.9625966162285610 1 Res.Norm 0.0097040291147634
+ EIGVAL(i)    -0.9628560219511549 1 Res.Norm 0.0071341172122359
+ EIGVAL(i)    -0.9630118013209052 1 Res.Norm 0.0065803716311101
+ EIGVAL(i)    -0.9631647264968873 1 Res.Norm 0.0063499300804739
+ EIGVAL(i)    -0.9632680325077095 1 Res.Norm 0.0048910643846349
+ EIGVAL(i)    -0.9633546746630621 1 Res.Norm 0.0051559191565184
+ EIGVAL(i)    -0.9634473224421554 1 Res.Norm 0.0052486886549396
+ EIGVAL(i)    -0.9635903132458811 1 Res.Norm 0.0085123283055060
+ EIGVAL(i)    -0.9641791559798079 1 Res.Norm 0.0197796974157456
+ EIGVAL(i)    -0.9663734823569217 1 Res.Norm 0.0281304548066462
+ EIGVAL(i)    -0.9687394836895138 1 Res.Norm 0.0249941627008586
+ EIGVAL(i)    -0.9701635468885906 1 Res.Norm 0.0184801594059976
+ EIGVAL(i)    -0.9710974035808109 1 Res.Norm 0.0153340694779919
+ EIGVAL(i)    -0.9716809971639008 1 Res.Norm 0.0116059152814392
+ EIGVAL(i)    -0.9720036690755952 1 Res.Norm 0.0090323713656259
+ EIGVAL(i)    -0.9722277065145654 1 Res.Norm 0.0070036919830303
+ EIGVAL(i)    -0.9723258334319610 1 Res.Norm 0.0043096866510169
+ EIGVAL(i)    -0.9723685598177606 1 Res.Norm 0.0031866356546930
+ EIGVAL(i)    -0.9723918259619864 1 Res.Norm 0.0021158230438834
+ EIGVAL(i)    -0.9724012259051614 1 Res.Norm 0.0014553701591805
+ EIGVAL(i)    -0.9724066690560423 1 Res.Norm 0.0011851870512392
+ EIGVAL(i)    -0.9724104115107403 1 Res.Norm 0.0009213304834370
+ EIGVAL(i)    -0.9724126716454219 1 Res.Norm 0.0008042439198568
+ EIGVAL(i)    -0.9724144833894051 1 Res.Norm 0.0006840976324429
+ EIGVAL(i)    -0.9724156983474533 1 Res.Norm 0.0005556046770742
+ EIGVAL(i)    -0.9724166077031021 1 Res.Norm 0.0005074208690200
+ EIGVAL(i)    -0.9724172653036877 1 Res.Norm 0.0004029085774977
+ EIGVAL(i)    -0.9724176435181420 1 Res.Norm 0.0002826403293833
+ EIGVAL(i)    -0.9724178439515589 1 Res.Norm 0.0002243978410512
+ EIGVAL(i)    -0.9724179798481627 1 Res.Norm 0.0001840565746723
+ EIGVAL(i)    -0.9724180660377930 1 Res.Norm 0.0001432999808604
+ EIGVAL(i)    -0.9724181237285621 1 Res.Norm 0.0001311157825731
+ EIGVAL(i)    -0.9724181665226626 1 Res.Norm 0.0001156729126624
+ EIGVAL(i)    -0.9724181994306633 1 Res.Norm 0.0000857337909303
+ EIGVAL(i)    -0.9724182204863339 1 Res.Norm 0.0000745572400560
+ EIGVAL(i)    -0.9724182355028399 1 Res.Norm 0.0000613360419190
+ EIGVAL(i)    -0.9724182446933021 1 Res.Norm 0.0000472529803859
+ EIGVAL(i)    -0.9724182500121149 1 Res.Norm 0.0000373360674175
+ EIGVAL(i)    -0.9724182530776123 1 Res.Norm 0.0000262035828546
+ EIGVAL(i)    -0.9724182546479294 1 Res.Norm 0.0000195252484241
+ EIGVAL(i)    -0.9724182555205562 1 Res.Norm 0.0000149052403489
+ EIGVAL(i)    -0.9724182561001474 1 Res.Norm 0.0000115126118308
+ EIGVAL(i)    -0.9724182564391687 1 Res.Norm 0.0000096960191021
+ EIGVAL(i)    -0.9724182567032581 1 Res.Norm 0.0000081579194649
+ EIGVAL(i)    -0.9724182568601935 1 Res.Norm 0.0000060702733235
+ EIGVAL(i)    -0.9724182569530978 1 Res.Norm 0.0000050171562244
+ EIGVAL(i)    -0.9724182570144499 1 Res.Norm 0.0000035771229546
+ EIGVAL(i)    -0.9724182570406534 1 Res.Norm 0.0000023403844850
+ EIGVAL(i)    -0.9724182570523137 1 Res.Norm 0.0000016232769370
+ EIGVAL(i)    -0.9724182570580739 1 Res.Norm 0.0000010845497802
+ EIGVAL(i)    -0.9724182570605775 1 Res.Norm 0.0000007311365011
+ EIGVAL(i)    -0.9724182570616267 1 Res.Norm 0.0000004479719145
+ EIGVAL(i)    -0.9724182570620292 1 Res.Norm 0.0000002958950064
+ EIGVAL(i)    -0.9724182570621669 1 Res.Norm 0.0000002003789112
+ EIGVAL(i)    -0.9724182570622814 1 Res.Norm 0.0000001594272250
+ EIGVAL(i)    -0.9724182570623292 1 Res.Norm 0.0000000918742585
+ EIGVAL(i)    -0.9724182570623461 1 Res.Norm 0.0000000588636838
+ EIGVAL(i)    -0.9724182570623533 1 Res.Norm 0.0000000395653072
+ EIGVAL(i)    -0.9724182570623564 1 Res.Norm 0.0000000264263585
+ EIGVAL(i)    -0.9724182570623582 1 Res.Norm 0.0000000164351851
+ EIGVAL(i)    -0.9724182570623594 1 Res.Norm 0.0000000105321991
+ EIGVAL(i)    -0.9724182570623592 1 Res.Norm 0.0000000074356196
+ DVDSON::NLOOPS =          71
+DVDSON:  71 loops;  72 matrix-vector multiplies.
+
+Optimise on the following level(s):
+
+Level  1    Energy = -1.406412969709D+04    Weight =  1.00000D+00
+
+Weights of major contributors to ASF:
+
+Block Level J Parity      CSF contributions
+
+  1     1   3/2 -       0.5422     0.5039    -0.4853     0.1160     0.1077
+                          4344       1481       6666       4507       1569
+
+Generalised occupation numbers:
+
+   2.0000D+00  2.0000D+00  2.0000D+00  4.0000D+00  2.0000D+00  2.0000D+00
+   4.0000D+00  4.0000D+00  6.0000D+00  2.0000D+00  2.0000D+00  4.0000D+00
+   4.0000D+00  6.0000D+00  2.0000D+00  2.0000D+00  4.0000D+00  4.9854D+00
+   7.0146D+00  8.6683D-02  2.2690D-02  2.9367D-05  2.9674D-06  1.7266D+00
+   9.4655D-01  9.1567D-02  1.0075D-01  2.4145D-02  8.7126D-04  1.0901D-04
+
+ Iteration number   1
+ --------------------
+
+Include Lagrange multipliers between:
+
+                1s    6s 
+                2s    6s 
+                2p-   6p-
+                2p    6p 
+                3s    6s 
+                3p-   6p-
+                3p    6p 
+                3d-   5d-
+                3d-   6d-
+                3d    5d 
+                3d    6d 
+                4s    6s 
+                4p-   6p-
+                4p    6p 
+                4d-   5d-
+                4d-   6d-
+                4d    5d 
+                4d    6d 
+                5s    6s 
+                5p-   6p-
+                5p    6p 
+                5d-   6d-
+                5d    6d 
+                5f-   6f-
+                5f-   4f-
+                5f    6f 
+                5f    4f 
+                6f-   4f-
+                6f    4f 
+
+Lagrange multipliers:
+
+                1s    6s    4.342212935D-02
+                2s    6s    1.906159197D-02
+                2p-   6p-  -4.493671795D-03
+                2p    6p   -6.621378592D-05
+                3s    6s    1.397600341D-02
+                3p-   6p-  -1.582254843D-03
+                3p    6p   -1.346593847D-04
+                3d-   5d-  -3.164028499D-03
+                3d-   6d-   3.334399975D-03
+                3d    5d   -8.991887815D-04
+                3d    6d    8.222351332D-04
+                4s    6s   -6.717439834D-02
+                4p-   6p-  -8.504852024D-02
+                4p    6p   -1.779523453D-03
+                4d-   5d-  -2.742895362D-02
+                4d-   6d-   2.926634422D-02
+                4d    5d   -6.749237787D-03
+                4d    6d    6.715716564D-03
+                5s    6s   -5.098152125D-03
+                5p-   6p-  -2.797131974D-02
+                5p    6p   -3.970327378D-03
+                5d-   6d-  -5.283574058D-02
+                5d    6d   -1.373929943D-02
+                5f-   6f-   1.225989981D-04
+                5f-   4f-  -1.122306025D-05
+                5f    6f    1.754661735D-05
+                5f    4f   -1.752092169D-07
+                6f-   4f-  -3.780745139D-05
+                6f    4f    9.247749279D-06
+                                         Self-            Damping
+Subshell    Energy    Method   P0    consistency  Norm-1  factor  JP MTP INV NNP
+
+  5s    2.7802256D+00  1  6.771D+01  6.49D-01  3.69D-01 0.000   272   333  0  4
+  5p-   1.8441542D+00  1  3.463D+00  9.87D-01  6.58D-01 0.000   277   344  0  3
+  5p    1.7572597D+00  1  7.847D+02  1.29D+00  6.25D-01 0.000   278   339  0  3
+  5d-   5.5026428D-01  1  4.215D+00  3.81D-01  1.66D+00 0.000   292   357  0  2
+  5d    4.8300032D-01  1  1.070D+03  3.16D-01  2.84D+00 0.000   293   356  0  2
+ Method 1 unable to solve for  5f- orbital
+ Iteration number: 15, limit: 15
+ Present estimate of P0;  0.93129816615585D-01
+ Present estimate of E(J):  0.12211012072015D+03, DELEPS: -0.11267902999848D+00
+ Lower bound on energy:  0.12204479310047D+03, upper bound:  0.12217544833983D+03
+ Join point:  234, Maximum tabulation point: 364
+ Number of nodes counted:  2, Correct number:  1
+ Sign of P at first oscillation:  1.
+
+ Failure; equation for orbital  5f- could not be solved using method 1
+
+ Average energy =  -1.4064569463D+04 Hartrees
+ Calling dvdson!!!         200
+ EIGVAL(i)    -1.0887439765638454 1 Res.Norm 0.0272139234460808
+ EIGVAL(i)    -1.0888384832076607 1 Res.Norm 0.0271973726405778
+ EIGVAL(i)    -1.0948749851950141 1 Res.Norm 0.0432761950318007
+ EIGVAL(i)    -1.1062864154535497 1 Res.Norm 0.0255550601663751
+ EIGVAL(i)    -1.1094415381223504 1 Res.Norm 0.0135526781227181
+ EIGVAL(i)    -1.1101507476996615 1 Res.Norm 0.0064959079214449
+ EIGVAL(i)    -1.1104159567298553 1 Res.Norm 0.0057480462571092
+ EIGVAL(i)    -1.1106268266537140 1 Res.Norm 0.0046638510836318
+ EIGVAL(i)    -1.1107220935923763 1 Res.Norm 0.0025699713477441
+ EIGVAL(i)    -1.1107544267734701 1 Res.Norm 0.0014135230076273
+ EIGVAL(i)    -1.1107617537621550 1 Res.Norm 0.0006161950561740
+ EIGVAL(i)    -1.1107638453190949 1 Res.Norm 0.0003739036282287
+ EIGVAL(i)    -1.1107644212485546 1 Res.Norm 0.0001814977978207
+ EIGVAL(i)    -1.1107645268295794 1 Res.Norm 0.0000696620379017
+ EIGVAL(i)    -1.1107645441039764 1 Res.Norm 0.0000287270681117
+ EIGVAL(i)    -1.1107645468088554 1 Res.Norm 0.0000107162188731
+ EIGVAL(i)    -1.1107645471668770 1 Res.Norm 0.0000039893282550
+ EIGVAL(i)    -1.1107645472222514 1 Res.Norm 0.0000018417524719
+ EIGVAL(i)    -1.1107645472379299 1 Res.Norm 0.0000011658502405
+ EIGVAL(i)    -1.1107645472430536 1 Res.Norm 0.0000005125888363
+ EIGVAL(i)    -1.1107645472436427 1 Res.Norm 0.0000001340842856
+ EIGVAL(i)    -1.1107645472436849 1 Res.Norm 0.0000000384280327
+ EIGVAL(i)    -1.1107645472436889 1 Res.Norm 0.0000000151422144
+ EIGVAL(i)    -1.1107645472436893 1 Res.Norm 0.0000000066687416
+ DVDSON::NLOOPS =          24
+DVDSON:  24 loops;  25 matrix-vector multiplies.
+
+Optimise on the following level(s):
+
+Level  1    Energy = -1.406568022712D+04    Weight =  1.00000D+00
+
+Weights of major contributors to ASF:
+
+Block Level J Parity      CSF contributions
+
+  1     1   1/2 +       0.5317     0.3813     0.2932    -0.2816    -0.2395
+                          5427       1984       2073       5378        430
+
+Generalised occupation numbers:
+
+   2.0000D+00  2.0000D+00  2.0000D+00  4.0000D+00  2.0000D+00  2.0000D+00
+   4.0000D+00  4.0000D+00  6.0000D+00  2.0000D+00  2.0000D+00  4.0000D+00
+   4.0000D+00  6.0000D+00  2.0000D+00  2.0000D+00  4.0000D+00  5.3264D+00
+   6.6736D+00  7.1464D-01  1.2785D+00  1.5970D-06  3.1342D-06  1.0000D+00
+   1.0145D-04  5.9127D-05  4.6359D-03  1.7254D-03  1.0333D-04  2.0489D-04
+
+Lagrange multipliers:
+
+                1s    6s    4.058303990D-02
+                2s    6s    1.892602388D-02
+                2p-   6p-  -2.042680660D-07
+                2p    6p    1.931603049D-07
+                3s    6s    1.595680437D-02
+                3p-   6p-   1.617225881D-06
+                3p    6p    6.954094929D-07
+                3d-   5d-  -1.985917836D-02
+                3d-   6d-   1.349320022D-03
+                3d    5d   -2.868078170D-02
+                3d    6d   -7.722259318D-04
+                4s    6s   -5.247964263D-02
+                4p-   6p-  -1.115998093D-05
+                4p    6p    2.362098181D-07
+                4d-   5d-  -1.695839543D-01
+                4d-   6d-   1.268890334D-02
+                4d    5d   -2.956394876D-01
+                4d    6d   -6.464525432D-03
+                5s    6s   -9.089866116D-03
+                5p-   6p-  -1.186935523D-04
+                5p    6p   -1.102834588D-04
+                5d-   6d-  -2.932668152D-02
+                5d    6d    1.810232312D-02
+                5f-   6f-   1.475472630D-05
+                5f-   4f-  -4.710457788D-06
+                5f    6f    2.685067963D-05
+                5f    4f   -7.926827868D-06
+                6f-   4f-  -3.638799650D-05
+                6f    4f   -5.923579089D-05
+  5f-   1.8938941D+00  2  1.143D-02  8.06D-03  7.00D+00 0.000   276   364  1  1
+ Method 1 unable to solve for  5f  orbital
+ Iteration number: 15, limit: 15
+ Present estimate of P0;  0.39132203851531D+02
+ Present estimate of E(J):  0.22380604050646D+01, DELEPS: -0.14694560234755D+01
+ Lower bound on energy:  0.66115993450995D-01, upper bound:  0.12157720040657D+03
+ Join point:  287, Maximum tabulation point: 370
+ Number of nodes counted:  1, Correct number:  1
+ Sign of P at first oscillation: -1.
+
+ Failure; equation for orbital  5f  could not be solved using method 1
+
+ Average energy =  -1.4063723281D+04 Hartrees
+ Calling dvdson!!!         200
+ EIGVAL(i)    -1.3109025237934053 1 Res.Norm 0.0206897406483347
+ EIGVAL(i)    -1.3109285755577875 1 Res.Norm 0.0211114160218613
+ EIGVAL(i)    -1.3117059896583358 1 Res.Norm 0.0075827366104840
+ EIGVAL(i)    -1.3117666186282240 1 Res.Norm 0.0035674341975866
+ EIGVAL(i)    -1.3117892979545502 1 Res.Norm 0.0022673194117143
+ EIGVAL(i)    -1.3118034805081138 1 Res.Norm 0.0019621727185336
+ EIGVAL(i)    -1.3118106889910577 1 Res.Norm 0.0016581459297380
+ EIGVAL(i)    -1.3118130681818612 1 Res.Norm 0.0007587715124168
+ EIGVAL(i)    -1.3118136074945237 1 Res.Norm 0.0002999536225326
+ EIGVAL(i)    -1.3118137631159936 1 Res.Norm 0.0002113091241359
+ EIGVAL(i)    -1.3118138512889759 1 Res.Norm 0.0001634374833683
+ EIGVAL(i)    -1.3118139113133547 1 Res.Norm 0.0001404886413872
+ EIGVAL(i)    -1.3118139557148327 1 Res.Norm 0.0001174998624761
+ EIGVAL(i)    -1.3118139771707769 1 Res.Norm 0.0000773798326387
+ EIGVAL(i)    -1.3118139847347841 1 Res.Norm 0.0000459019720569
+ EIGVAL(i)    -1.3118139872752468 1 Res.Norm 0.0000227727446902
+ EIGVAL(i)    -1.3118139879164645 1 Res.Norm 0.0000094400601831
+ EIGVAL(i)    -1.3118139880187705 1 Res.Norm 0.0000056629896049
+ EIGVAL(i)    -1.3118139880694606 1 Res.Norm 0.0000047149935895
+ EIGVAL(i)    -1.3118139881104816 1 Res.Norm 0.0000035712212507
+ EIGVAL(i)    -1.3118139881264710 1 Res.Norm 0.0000021138197167
+ EIGVAL(i)    -1.3118139881308577 1 Res.Norm 0.0000009897577651
+ EIGVAL(i)    -1.3118139881319628 1 Res.Norm 0.0000004918604563
+ EIGVAL(i)    -1.3118139881322455 1 Res.Norm 0.0000002783675030
+ EIGVAL(i)    -1.3118139881323216 1 Res.Norm 0.0000001426625299
+ EIGVAL(i)    -1.3118139881323412 1 Res.Norm 0.0000000525098424
+ EIGVAL(i)    -1.3118139881323432 1 Res.Norm 0.0000000203856064
+ EIGVAL(i)    -1.3118139881323454 1 Res.Norm 0.0000000097107409
+ DVDSON::NLOOPS =          28
+DVDSON:  28 loops;  29 matrix-vector multiplies.
+
+Optimise on the following level(s):
+
+Level  1    Energy = -1.406503509465D+04    Weight =  1.00000D+00
+
+Weights of major contributors to ASF:
+
+Block Level J Parity      CSF contributions
+
+  1     1   1/2 +       0.7003     0.3830     0.3633     0.3048    -0.2819
+                           385        428        386        429        430
+
+Generalised occupation numbers:
+
+   2.0000D+00  2.0000D+00  2.0000D+00  4.0000D+00  2.0000D+00  2.0000D+00
+   4.0000D+00  4.0000D+00  6.0000D+00  2.0000D+00  2.0000D+00  4.0000D+00
+   4.0000D+00  6.0000D+00  2.0000D+00  2.0000D+00  4.0000D+00  4.0364D+00
+   7.9641D+00  3.4341D-01  1.6479D+00  1.4339D-03  8.3799D-06  1.0000D+00
+   6.7717D-05  1.7609D-04  3.3087D-03  2.4641D-03  2.4069D-04  3.9605D-04
+
+Lagrange multipliers:
+
+                1s    6s    4.058185754D-02
+                2s    6s    1.892724202D-02
+                2p-   6p-  -5.303368307D-08
+                2p    6p    2.578850080D-07
+                3s    6s    1.539986081D-02
+                3p-   6p-   4.296074164D-07
+                3p    6p    7.191825569D-07
+                3d-   5d-  -3.953459700D-03
+                3d-   6d-   3.787985888D-04
+                3d    5d   -4.371797251D-02
+                3d    6d   -1.500991418D-03
+                4s    6s   -5.455705832D-02
+                4p-   6p-  -5.220155941D-06
+                4p    6p    3.943012950D-06
+                4d-   5d-  -8.629142183D-02
+                4d-   6d-   8.156188050D-03
+                4d    5d   -3.896522450D-01
+                4d    6d   -1.168743253D-02
+                5s    6s   -9.366505699D-03
+                5p-   6p-  -8.776396080D-05
+                5p    6p   -2.498486330D-04
+                5d-   6d-  -1.824131763D-02
+                5d    6d    3.139888962D-02
+                5f-   6f-   3.827588710D-04
+                5f-   4f-   1.201165680D-03
+                5f    6f    5.836107725D-05
+                5f    4f    2.395752890D-05
+                6f-   4f-   1.973533054D-04
+                6f    4f   -9.166962873D-05
+ Method 2 unable to solve for  5f  orbital
+ Iteration number: 15, limit: 15
+ Present estimate of P0;  0.39132203851531D+02
+ Present estimate of E(J):  0.12131791809698D+03, DELEPS: -0.25917254448711D+03
+ Lower bound on energy:  0.12105863578740D+03, upper bound:  0.12157720040657D+03
+ Join point:  234, Maximum tabulation point: 364
+ Number of nodes counted:  3, Correct number:  1
+ Sign of P at first oscillation:  1.
+
+ Failure; equation for orbital  5f  could not be solved using method 2
+
+
+ ****** Error in SUBROUTINE IMPROV ******
+ Convergence not obtained
+

@@ -1,0 +1,67 @@
+#!/bin/sh
+set -x
+
+#   Generate grasp2K expansions
+#   [Ar]4s1 
+#   J = 1,1 (lower,upper)
+#   SD excitations
+#   split into blocks
+#   [Ar]4p1 
+#   J = 1,3 (lower,upper)
+#   SD excitations
+
+$GRASP/bin/jjgen << EOF
+
+
+4
+f
+
+
+4
+c
+3
+1
+0
+0
+0
+0
+3,5
+1
+y
+4
+f
+
+
+4
+0
+1
+0
+0
+0
+1,1
+1
+y
+4
+f
+
+
+4
+0
+0
+1
+0
+0
+1,3
+1
+
+EOF
+
+cp clist.log 4s_4p_DF.log
+cp clist.out rcsl.inp
+
+$GRASP/bin/jsplit << EOF
+n
+EOF
+
+cp rcsl.out rcsl.inp
+

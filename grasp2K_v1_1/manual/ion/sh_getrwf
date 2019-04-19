@@ -1,0 +1,33 @@
+#!/bin/sh
+
+set -x
+
+# This is for Joon's ion calculations 6s & 5d levels 
+# Follows p. 66 of manual.pdf
+# Let's look at just the raw output of the Dirac-Fock SCF before a config expansion
+# COPY 6s_6p_DF.w TO mcdf.w WHICH IS THE INPUT FILE TO PLOTMCDF
+cp 6s_5d_DF.w mcdf.w
+
+# Save 6s orbital (1S0 term)...J=+1
+$GRASP/bin/plotmcdf << EOF
+6,0,1
+
+EOF
+cp mcdf.w.dat plot_6s_2S12.dat
+
+# Save 2D32 term...J=-1 (j = L-S = 2 - 1/2)
+$GRASP/bin/plotmcdf << EOF
+5,2,-1
+
+EOF
+cp mcdf.w.dat plot_5d_2D32.dat
+
+# Save 2D52...J=+1 (j = L-S = 2 + 1/2)
+$GRASP/bin/plotmcdf << EOF
+5,2,1
+
+EOF
+cp mcdf.w.dat plot_5d_2D52.dat
+
+rm mcdf.w
+rm mcdf.w.dat

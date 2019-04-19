@@ -1,0 +1,20 @@
+#!/bin/sh
+set -x
+
+# Biorthogonal transformation not need. Copy files instead
+
+cp 2s22p3_2p5_3.w 2s22p3_2p5_3.bw
+cp 2s22p3_2p5_3.cm 2s22p3_2p5_3.cbm
+
+# Then the transition calculations
+
+$GRASP/bin/bioscl3 > out_bioscl <<EOF
+y
+n
+2s22p3_2p5_3
+2s22p3_2p5_3
+M1
+n
+EOF
+
+cat 2s22p3_2p5_3.2s22p3_2p5_3.ct.lsj

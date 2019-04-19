@@ -1,0 +1,36 @@
+#!/bin/sh
+set -x
+
+#   Generate grasp2K expansions
+#   SD to n = 3 from 2s2p(3) and 2p(5)
+
+$GRASP/bin/jjgen << EOF
+
+
+3
+d
+
+
+2
+
+2
+2
+3
+1,5
+2
+y
+3
+d
+
+
+2
+2
+0
+5
+1,5
+2
+
+EOF
+
+cp clist.log 2s22p3_2p5_3.log
+cp clist.out rcsl.inp

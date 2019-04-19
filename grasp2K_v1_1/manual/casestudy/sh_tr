@@ -1,0 +1,28 @@
+#!/bin/sh
+set -x
+
+#  6. Perform transition calculation for the n=6 CI results
+
+n=6
+
+#  First the biorthogonal rotations
+
+$GRASP/bin/biotra3 > out_biotra <<EOF
+y
+y
+odd$n
+even$n
+y
+EOF
+
+# Then the transition calculations
+
+$GRASP/bin/bioscl3 > out_bioscl <<EOF
+y
+n
+odd$n
+even$n
+E1
+EOF
+
+

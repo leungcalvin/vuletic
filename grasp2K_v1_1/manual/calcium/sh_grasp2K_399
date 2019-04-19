@@ -1,0 +1,21 @@
+#!/bin/sh
+
+set -x
+
+# Calculate the wavefunctions involved in the 399 transition in neutral Yb [Xe] 4f14 6s2
+
+# 1.   Get the nuclear data. The quadrupole moment is wrong; we use 172 Yb but isotope dependence of w.f. is NLO
+        ./sh_iso_yb
+
+# 2.   Generate a bunch of possible electron configuration for DF expansion. We don't allow J=1, but we get decent results anyway.
+        ./sh_jjgen_DF
+
+# 3.   Angular integration and initial estimates of orbitals from n=1 to n=6 (Thomas Fermi potential)
+        ./sh_initial_DF
+
+# 4.   Perform scf calculations and save to 6s_6p_DF.
+        ./sh_scf_DF
+
+        # 5.   Write relativistic P(r), Q(r) from 6s_6p_DF.w into text files.
+        ./sh_getrwf
+

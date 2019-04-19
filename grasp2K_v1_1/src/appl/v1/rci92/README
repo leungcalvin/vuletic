@@ -1,0 +1,6 @@
+This file is created on 1997.06.20
+routines changed:
+lodres.f --- input prompt re-direct
+setdbg.f --- input prompts re-direct
+qed.f    --- correcting error
+matrix.f --- same as qed.f

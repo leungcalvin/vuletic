@@ -1,0 +1,43 @@
+  Option :  
+ Standard ordering.
+           4  Highest principal quantum number.
+           3  Highest orbital angular momentum.
+ T  all subshells active.
+ F  limitations on population of n-subshells.
+           4  highest n-number.
+ Predefined core:c
+ Core n=           3
+           1  number of electrons in           3 d
+           0  number of electrons in           4 s
+           0  number of electrons in           4 p
+           0  number of electrons in           4 d
+           0  number of electrons in           4 f
+           3  to           5  is the resulting term.
+           1  number of excitations.
+ T  Generate another list.
+           4  Highest principal quantum number.
+           3  Highest orbital angular momentum.
+ T  all subshells active.
+ F  limitations on population of n-subshells.
+           4  highest n-number.
+           0  number of electrons in           3 d
+           1  number of electrons in           4 s
+           0  number of electrons in           4 p
+           0  number of electrons in           4 d
+           0  number of electrons in           4 f
+           1  to           1  is the resulting term.
+           1  number of excitations.
+ T  Generate another list.
+           4  Highest principal quantum number.
+           3  Highest orbital angular momentum.
+ T  all subshells active.
+ F  limitations on population of n-subshells.
+           4  highest n-number.
+           0  number of electrons in           3 d
+           0  number of electrons in           4 s
+           1  number of electrons in           4 p
+           0  number of electrons in           4 d
+           0  number of electrons in           4 f
+           1  to           3  is the resulting term.
+           1  number of excitations.
+ F  Generate another list.

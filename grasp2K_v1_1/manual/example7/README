@@ -1,0 +1,10 @@
+Please note that the environment variable GRASP needs to be set in order for the scripts to work.
+The environment variable is set by issuing the command (assuing we are using the gfortran compiler)
+
+source ./make_environment_gfortran
+
+in the installation directory. To run the script type
+
+./sh_grasp2K_ex1
+
+The output should be checked against the data in the output1 directory.

@@ -1,0 +1,9 @@
+#!/bin/sh
+et -x
+
+$GRASP/bin/sms2 << S7
+y
+odd4
+y
+y
+S7

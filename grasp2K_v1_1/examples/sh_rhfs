@@ -1,0 +1,10 @@
+#!/bin/sh
+
+set -x
+
+$GRASP/bin/rhfs2 << S7
+y
+odd4
+y
+y
+S7

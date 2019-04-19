@@ -1,0 +1,111 @@
+ ====================================================
+        BIOSCL3: Execution Begins ...
+ ====================================================
+
+
+  Input from a CI calculation?
+
+  Generate debug output?
+
+  Name of the Initial state
+  Name of the Final state
+
+ MRGCSL: Execution begins ...
+ Loading Configuration Symmetry List File ...
+ There are 9 relativistic subshells;
+ There are 79 relativistic CSFs;
+  ... load complete;
+ Loading Configuration Symmetry List File ...
+ There are 9 relativistic subshells;
+ There are 186 relativistic CSFs;
+  ... load complete;
+           1 s 
+           2 s 
+           2 p-
+           2 p 
+           3 s 
+           3 p-
+           3 p 
+           3 d-
+           3 d 
+           1
+          79
+           2
+          76         186
+ Loading Configuration Symmetry List File ...
+  there are 9 relativistic subshells;
+  there are 265 relativistic CSFs;
+  ... load complete;
+ Enter the list of transition specifications
+  e.g.,  E1,M2  or  E1 M2  or  E1;M2 :
+ Loading Radial WaveFunction File for initial state...
+ NWII           9
+          -1           1 s 
+          -1           2 s 
+           1           2 p-
+          -2           2 p 
+          -1           3 s 
+           1           3 p-
+          -2           3 p 
+           2           3 d-
+          -3           3 d 
+  ... load complete;
+ Loading Radial WaveFunction File for final state...
+  ... load complete;
+< 1s | 1s > = 0.1000000000000E+01
+< 1s | 2s > =-0.4215046729342E-17
+< 1s | 3s > =-0.9636047043395E-16
+< 2s | 1s > = 0.1146986879433E-16
+< 2s | 2s > = 0.1000000000000E+01
+< 2s | 3s > = 0.4571270732766E-16
+< 2p-| 2p-> = 0.1000000000000E+01
+< 2p-| 3p-> =-0.6850521278846E-17
+< 2p | 2p > = 0.1000000000000E+01
+< 2p | 3p > =-0.5363623918029E-17
+< 3s | 1s > =-0.7656125726374E-16
+< 3s | 2s > = 0.6475323448289E-16
+< 3s | 3s > = 0.1000000000000E+01
+< 3p-| 2p-> = 0.3779985342380E-16
+< 3p-| 3p-> = 0.1000000000000E+01
+< 3p | 2p > =-0.6926943005416E-17
+< 3p | 3p > = 0.1000000000000E+01
+< 3d-| 3d-> = 0.1000000000000E+01
+< 3d | 3d > = 0.1000000000000E+01
+    nelec  =            3
+    ncftoti =           79
+    nwi     =            9
+    nblocki =            1
+
+
+  Angular file not available
+ LK,IOPAR,from MCTOUT
+           1          -1
+
+
+
+      864 MCT coefficients generated for rank  1 and parity -1
+
+
+
+
+
+     1137 MCT coefficients generated for rank  1 and parity -1
+
+
+    nelec  =            3
+    ncftotf =          186
+    nwf     =            9
+    nblockf =            2
+
+ ====================================================
+        BIOSCL3: Execution Finished ...
+ ====================================================
+ Wall time:
+        0 seconds
+
+ Finish Date and Time:
+   Date (Yr/Mon/Day): 2019/01/13
+   Time (Hr/Min/Sec): 01/50/02.612
+   Zone: -0500
+
+ BIOSCL3: Execution complete.

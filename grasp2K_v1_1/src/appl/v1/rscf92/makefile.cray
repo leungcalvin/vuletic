@@ -1,0 +1,31 @@
+#
+LIBDIR  = ${GRASPLIB}
+BINDIR  = ${GRASPBIN}
+BINFILE = $(BINDIR)/rscf
+FC      = ${GRASPFOR}
+FFLAGS  = ${GRASPOPT}
+
+LIBS = $(LIBDIR)/lib92.a $(LIBDIR)/njgraf.a $(LIBDIR)/libdvdson.a
+       #$(LIBDIR)/lapackd.a $(LIBDIR)/lapacku.a $(LIBDIR)/blas.a
+
+BLOCK_DATA = ../bd/consts.o ../bd/jlabel.o ../bd/term.o
+
+OBJECTS= alcsca.o chkplt.o consis.o csfwgt.o dacon.o \
+         dampck.o dampor.o defcor.o dsubrs.o eigen.o \
+         endsum.o estim.o fco.o fndblk.o gco.o \
+         getald.o getold.o getscd.o hmout.o improv.o \
+         in.o lagcon.o maneig.o matrix.o maxarr.o \
+         newco.o newe.o orbout.o out.o \
+         outbnd.o prtrsl.o prwf.o rscf92.o scf.o \
+         setcof.o setdbg.o setham.o setlag.o setmcp.o \
+         setmix.o setrwg.o setsum.o setxuv.o setxv.o \
+         setxz.o solve.o spicmv.o strsum.o xpot.o \
+         ypot.o orthy.o \
+         dsuvec.o fcovec.o gcovec.o
+
+$(BINFILE) : $(OBJECTS) $(BLOCK_DATA) $(LIBS)
+	$(FC) -o $(BINFILE) $(FFLAGS) $(OBJECTS) $(BLOCK_DATA) $(LIBS)
+
+.f.o : 
+	$(FC) -c $(FFLAGS) $*.f
+

@@ -1,0 +1,18 @@
+#!/bin/sh
+set -x
+
+# Relativistic CI calculation for 2p n = 3
+$GRASP/bin/rci3 << EOF
+y
+2p_3
+y
+y
+1d-6
+y
+n
+n
+y
+3
+1
+1
+EOF

@@ -1,0 +1,21 @@
+#!/bin/sh
+set -x
+
+for n in 4 # 5 
+do  
+  (
+
+#  Get LSJ coupling
+$GRASP/bin/jj2lsj > out_jj2lsj_odd${n} <<S1
+odd${n}
+y
+y
+S1
+
+$GRASP/bin/rlevels  odd${n}.cm > out_rlevels_odd${n} <<S2
+S2
+
+echo)
+
+done
+

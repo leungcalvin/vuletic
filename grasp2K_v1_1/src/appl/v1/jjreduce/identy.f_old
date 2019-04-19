@@ -1,0 +1,99 @@
+************************************************************************
+*                                                                      *
+      SUBROUTINE IDENTY
+*                                                                      *
+*   Determine the position of the multireference CSFs in the csl list  * 
+*                                                                      *
+*   Written by Per Jonsson                                             *
+*                                                                      *
+************************************************************************
+*
+      CHARACTER*24 NAME(2)
+      CHARACTER*500 CMR1(1000),CMR2(1000),CMR3(1000)
+      CHARACTER*500 LINE1C,LINE2C,LINE3C
+      CHARACTER*500 LINE1,LINE2,LINE3
+      COMMON/IDENT/NPOS(1000),NMR,NBEGIN2
+*
+*  Open the multireference and the file to be 
+*
+*
+*   Open the files
+*
+      OPEN (UNIT = 14,FILE='rcsl.inp',FORM='FORMATTED',STATUS='OLD')
+
+      OPEN (UNIT = 15,FILE='mrlist',FORM='FORMATTED',STATUS='OLD')
+
+    9 FORMAT(A)
+
+      DO I = 1,1000
+        NPOS(I) = 0
+      ENDDO
+*
+*  Determine where to start reading the CSFs in the multireference list
+*
+      REWIND (15)
+      NBEGIN1 = 0
+   55 READ(15,9) LINE1
+      IF (LINE1(6:6).NE.'(') THEN
+        NBEGIN1 = NBEGIN1 + 1
+      GOTO 55
+      ENDIF
+*
+*  Determine where to start reading the CSFs in the clist
+*
+      REWIND (14)
+      NBEGIN2 = 0
+   56 READ(14,9) LINE1
+      IF (LINE1(6:6).NE.'(') THEN
+        NBEGIN2 = NBEGIN2 + 1
+      GOTO 56
+      ENDIF
+*
+*  Read the header information in csl and csl.mr
+*
+      REWIND (14)
+      DO I = 1,NBEGIN2
+        READ(14,9) LINE1
+      ENDDO
+*
+
+      REWIND (15)
+      DO K = 1,NBEGIN1
+        READ(15,9) LINE1
+      ENDDO
+
+      NMR = 0
+   10 READ(15,9,END=25) CMR1(NMR+1)
+      READ(15,9) CMR2(NMR+1)
+      READ(15,9) CMR3(NMR+1)
+        NMR = NMR + 1
+        IF (NMR.GT.1000) THEN
+          WRITE(*,*) ' Not more than 1000 CSFs in the multiref.'
+          STOP
+        ENDIF
+      GOTO 10
+   25 CONTINUE
+*
+      NCF = 0
+   50 READ(14,9,END=60) LINE1C
+      READ(14,9) LINE2C
+      READ(14,9) LINE3C
+      NCF = NCF + 1
+      DO I = 1,NMR
+         IF (CMR1(I).EQ.LINE1C.AND.CMR2(I).EQ.LINE2C.AND.
+     :      CMR3(I).EQ.LINE3C) THEN
+            NPOS(I) = NCF
+         GOTO 50
+         ENDIF
+      ENDDO
+      GOTO 50
+
+   60 CONTINUE 
+*
+*   Close the files
+*
+      CLOSE (14)
+      CLOSE (15)
+
+      RETURN
+      END

@@ -1,0 +1,53 @@
+#!/bin/sh
+
+set -x
+
+# Follows p. 66 of manual.pdf
+# Extract 5s,5p,6s,6p orbitals (<n> = 2,6,2,0)
+# COPY 6s_6p_DF.w TO mcdf.w WHICH IS THE INPUT FILE TO PLOTMCDF
+cp 6s_6p_DF.w mcdf.w
+
+# Save 5s orbital; spins=up,down; J=+1
+$GRASP/bin/plotmcdf << EOF
+5,0,1
+
+EOF
+cp mcdf.w.dat plot_5s_1S0.dat
+
+# Save 5p term...J=-1 (spin down electrons x 3)
+$GRASP/bin/plotmcdf << EOF
+5,1,-1
+
+EOF
+cp mcdf.w.dat plot_5p_2P12.dat
+
+# Save 5p term...J=+1 (spin up electrons x 3)
+$GRASP/bin/plotmcdf << EOF
+5,1,1
+
+EOF
+cp mcdf.w.dat plot_5p_2P32.dat
+
+# Save 6s orbital (1S0 term)...J=+1
+$GRASP/bin/plotmcdf << EOF
+6,0,1
+
+EOF
+cp mcdf.w.dat plot_6s_1S0.dat
+
+# Save 1P0 term...J=-1 (j = L-S = 1 - 1)
+$GRASP/bin/plotmcdf << EOF
+6,1,-1
+
+EOF
+cp mcdf.w.dat plot_6p_1P0.dat
+
+# Save 1P1...J=+1 (j = L+S = 1 + 0)
+$GRASP/bin/plotmcdf << EOF
+6,1,1
+
+EOF
+cp mcdf.w.dat plot_6p_1P1.dat
+
+rm mcdf.w
+rm mcdf.w.dat

@@ -1,0 +1,16 @@
+#!/bin/sh
+set -x
+
+# Perform self-consistent field calculations
+$GRASP/bin/rscf2 > out_scf_2p_3 <<EOF
+y
+y
+1
+1
+5
+3*
+
+100
+EOF
+
+$GRASP/bin/rsave 2p_3

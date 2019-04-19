@@ -1,0 +1,46 @@
+#!/bin/sh
+set -x
+
+#   Generate grasp2K expansions
+#   [Xe]4f14 closed, CI with 2 excitations
+#   2J = 2,2 (lower,upper) gets 1P1 term
+#   split into blocks
+
+$GRASP/bin/jjgen << EOF
+
+
+6
+f
+n
+
+6
+c
+5
+14
+c
+0
+
+0
+
+1
+
+1
+
+0
+
+0
+
+0,4
+0
+
+EOF
+
+cp clist.log 2s_2p_DF.log
+cp clist.out rcsl.inp
+
+$GRASP/bin/jsplit << EOF
+n
+EOF
+
+cp rcsl.out rcsl.inp
+

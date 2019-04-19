@@ -1,0 +1,46 @@
+#!/bin/sh
+
+set -x
+
+# Follows p. 66 of manual.pdf
+# Let's look at just the raw output of the Dirac-Fock SCF before a config expansion
+# COPY 6s_6p_DF.w TO mcdf.w WHICH IS THE INPUT FILE TO PLOTMCDF
+cp 4s_4p_DF.w mcdf.w
+
+# Save 4s orbital (2S1/2 term)...J=+1
+$GRASP/bin/plotmcdf << EOF
+4,0,1
+
+EOF
+cp mcdf.w.dat plot_4s_2S12.dat
+
+# Save 2P1/2 term...J=-1 (j = L-S = 1 - 1)
+$GRASP/bin/plotmcdf << EOF
+4,1,-1
+
+EOF
+cp mcdf.w.dat plot_4p_2P12.dat
+
+# Save 2P3/2...J=+1 (j = L+S = 1 + 0)
+$GRASP/bin/plotmcdf << EOF
+4,1,1
+
+EOF
+cp mcdf.w.dat plot_4p_2P32.dat
+
+# Save 2D3/2...J=+1 (j = L+S = 1 + 0)
+$GRASP/bin/plotmcdf << EOF
+3,2,-1
+
+EOF
+cp mcdf.w.dat plot_3d_2D32.dat
+
+# Save 2D5/2...J=+1 (j = L+S = 1 + 0)
+$GRASP/bin/plotmcdf << EOF
+3,2,1
+
+EOF
+
+cp mcdf.w.dat plot_3d_2D52.dat
+rm mcdf.w
+rm mcdf.w.dat

@@ -1,0 +1,34 @@
+#!/bin/sh
+set -x
+
+# 3. For n=2, Get initial estimates.
+
+
+cp odd2.c rcsl.inp
+$GRASP/bin/mcp3  <<S4
+y
+S4
+
+#  Get initial estimates of wave functions
+$GRASP/bin/erwf <<S5
+y
+2
+*
+S5
+
+# Perform self-consistent field calculations
+$GRASP/bin/rscf2 <<S6
+y
+y
+1
+1,2
+1
+5
+*
+*
+100
+S6
+
+#  Save the result to odd2
+$GRASP/bin/rsave odd2
+

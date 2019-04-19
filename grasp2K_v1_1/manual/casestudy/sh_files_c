@@ -1,0 +1,323 @@
+#!/bin/sh
+set -x
+
+#  1.  Generate grasp2K expansions
+#      1.1 HF for 2s(2)2p
+
+$GRASP/bin/jjgen << EOF
+*
+*
+2
+p
+*
+*
+2
+*
+2
+2
+1
+1,3
+0
+y
+2
+p
+*
+*
+2
+2
+0
+3
+1,3
+0
+*
+EOF
+
+mv clist.out rcsl.inp
+$GRASP/bin/jsplit << EOF
+n
+EOF
+
+mv rcsl.out odd2.c
+
+#        1.2 SD-MR for n=3 
+
+$GRASP/bin/jjgen <<EOF
+*
+*
+3
+d
+*
+*
+2
+*
+2
+2
+1
+1,3
+2
+y
+3
+d
+*
+*
+2
+2
+0
+3
+1,3
+2
+*
+EOF
+
+mv clist.out rcsl.inp
+$GRASP/bin/jsplit <<EOF
+n
+EOF
+
+mv rcsl.out odd3.c
+
+
+#        1.3 SD-MR for n=4 
+
+$GRASP/bin/jjgen <<EOF
+*
+*
+4
+f
+*
+*
+2
+*
+2
+2
+1
+1,3
+2
+y
+4
+f
+*
+*
+2
+2
+0
+3
+1,3
+2
+*
+EOF
+
+mv clist.out rcsl.inp
+$GRASP/bin/jsplit <<EOF
+n
+EOF
+
+mv rcsl.out odd4.c
+
+#        1.4 SD-MR for n=5 
+
+$GRASP/bin/jjgen <<EOF
+*
+*
+5
+g
+*
+*
+2
+*
+2
+2
+1
+1,3
+2
+y
+5
+g
+*
+*
+2
+2
+0
+3
+1,3
+2
+*
+EOF
+
+mv clist.out rcsl.inp
+$GRASP/bin/jsplit <<EOF
+n
+EOF
+
+mv rcsl.out odd5.c
+
+#        1.5 SD-MR for n=6 
+
+$GRASP/bin/jjgen <<EOF
+*
+*
+6
+h
+*
+*
+2
+*
+2
+2
+1
+1,3
+2
+y
+6
+h
+*
+*
+2
+2
+0
+3
+1,3
+2
+*
+EOF
+
+mv clist.out rcsl.inp
+$GRASP/bin/jsplit <<EOF
+n
+EOF
+
+mv rcsl.out odd6.c
+
+
+#  1.  Generate grasp2K expansions
+#      1.6 HF for 2s2p(2)
+
+$GRASP/bin/jjgen << EOF
+*
+*
+2
+p
+*
+*
+2
+*
+2
+1
+2
+1,5
+0
+*
+EOF
+
+mv clist.out rcsl.inp
+$GRASP/bin/jsplit << EOF
+n
+EOF
+
+mv rcsl.out even2.c
+
+#        1.7 SD-MR for n=3 
+
+$GRASP/bin/jjgen <<EOF
+*
+*
+3
+d
+*
+*
+2
+*
+2
+1
+2
+1,5
+2
+*
+EOF
+
+mv clist.out rcsl.inp
+$GRASP/bin/jsplit <<EOF
+n
+EOF
+
+mv rcsl.out even3.c
+
+
+#        1.8 SD-MR for n=4 
+
+$GRASP/bin/jjgen <<EOF
+*
+*
+4
+f
+*
+*
+2
+*
+2
+1
+2
+1,5
+2
+*
+EOF
+
+mv clist.out rcsl.inp
+$GRASP/bin/jsplit <<EOF
+n
+EOF
+
+mv rcsl.out even4.c
+
+#        1.9 SD-MR for n=5 
+
+$GRASP/bin/jjgen <<EOF
+*
+*
+5
+g
+*
+*
+2
+*
+2
+1
+2
+1,5
+2
+*
+EOF
+
+mv clist.out rcsl.inp
+$GRASP/bin/jsplit <<EOF
+n
+EOF
+
+mv rcsl.out even5.c
+
+#        1.10 SD-MR for n=6 
+
+$GRASP/bin/jjgen <<EOF
+*
+*
+6
+h
+*
+*
+2
+*
+2
+1
+2
+1,5
+2
+*
+EOF
+
+mv clist.out rcsl.inp
+$GRASP/bin/jsplit <<EOF
+n
+EOF
+
+mv rcsl.out even6.c
+

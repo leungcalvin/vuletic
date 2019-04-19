@@ -1,0 +1,2097 @@
+ ====================================================
+        RSCF2: Execution Begins ...
+ ====================================================
+ Loading CSL file ... Header only
+ There are/is            9  relativistic subshells;
+ Loading CSL File for ALL blocks 
+ There are         1164  relativistic CSFs... load complete;
+ Loading Radial WaveFunction File ...
+
+ Average energy =  -2.0557125557D+02 Hartrees
+ Average energy =  -2.0334036062D+02 Hartrees
+ Average energy =  -2.0984399070D+02 Hartrees
+
+Optimise on the following level(s):
+
+Level  1    Energy = -2.628387554997D+02    Weight =  7.69231D-02
+Level  2    Energy = -2.595328771887D+02    Weight =  7.69231D-02
+Level  1    Energy = -2.633335153855D+02    Weight =  1.53846D-01
+Level  2    Energy = -2.630031443456D+02    Weight =  1.53846D-01
+Level  3    Energy = -2.628358210953D+02    Weight =  1.53846D-01
+Level  4    Energy = -2.595603576171D+02    Weight =  1.53846D-01
+Level  1    Energy = -2.630001946343D+02    Weight =  2.30769D-01
+
+Weights of major contributors to ASF:
+
+Block Level J Parity      CSF contributions
+
+  1     1   1/2 -       0.9862     0.1499    -0.0302     0.0221    -0.0200
+                             1         81         31         20         23
+  1     2   1/2 -       0.9793    -0.1495    -0.0591     0.0527     0.0492
+                            81          1         23         24         30
+  2     1   3/2 -       0.7404     0.4979    -0.4434     0.0349    -0.0287
+                             2          3          1         59         53
+  2     2   3/2 -       0.6644    -0.6076     0.4270     0.0313     0.0237
+                             2          3          1         58         62
+  2     3   3/2 -       0.7769     0.6048     0.1499     0.0576    -0.0280
+                             1          3        169          2         41
+  2     4   3/2 -       0.9791    -0.1075    -0.1057    -0.0620     0.0452
+                           169          1          3         53         56
+  3     1   5/2 -       0.9966     0.0339    -0.0248    -0.0195    -0.0179
+                             1         41         40         42         45
+
+Weighted average energy of these levels =  -2.6221829950D+02
+
+Generalised occupation numbers:
+
+   1.9999D+00  1.5376D+00  1.1503D+00  2.3006D+00  1.0780D-03  7.9093D-04
+   1.5838D-03  3.2536D-03  4.8828D-03
+
+ Iteration number   1
+ --------------------
+
+Include Lagrange multipliers between:
+
+                1s    3s 
+                2s    3s 
+                2p-   3p-
+                2p    3p 
+
+Lagrange multipliers:
+
+                1s    3s   -1.256893028D-03
+                2s    3s    1.112562502D-02
+                2p-   3p-   1.478112263D-02
+                2p    3p    2.964137112D-02
+                                         Self-            Damping
+Subshell    Energy    Method   P0    consistency  Norm-1  factor  JP MTP INV NNP
+
+  3s    1.8198278D+01  3  1.123D+02  9.95D-03 -2.15D-02 0.000   249   300  0  2
+  3p-   2.0894562D+01  3  1.717D-01  1.06D-02 -1.23D-02 0.000   247   300  0  1
+  3p    2.1374906D+01  3  1.933D+02  1.78D-02 -7.01D-03 0.000   246   300  0  1
+  3d-   1.3756078D+01  3  7.875D-02  2.28D-02 -2.51D-02 0.000   254   300  0  0
+  3d    1.3977074D+01  3  1.598D+02  2.91D-02 -2.28D-02 0.000   253   300  0  0
+
+ Average energy =  -2.0105213254D+02 Hartrees
+ Average energy =  -1.9861906272D+02 Hartrees
+ Average energy =  -2.0519796158D+02 Hartrees
+
+Optimise on the following level(s):
+
+Level  1    Energy = -2.628688834138D+02    Weight =  7.69231D-02
+Level  2    Energy = -2.595773421466D+02    Weight =  7.69231D-02
+Level  1    Energy = -2.633603211292D+02    Weight =  1.53846D-01
+Level  2    Energy = -2.630339718039D+02    Weight =  1.53846D-01
+Level  3    Energy = -2.628659286078D+02    Weight =  1.53846D-01
+Level  4    Energy = -2.596047573974D+02    Weight =  1.53846D-01
+Level  1    Energy = -2.630310467563D+02    Weight =  2.30769D-01
+
+Weights of major contributors to ASF:
+
+Block Level J Parity      CSF contributions
+
+  1     1   1/2 -       0.9862     0.1497    -0.0290     0.0248    -0.0189
+                             1         81         31         20         23
+  1     2   1/2 -       0.9814    -0.1494    -0.0499     0.0452     0.0411
+                            81          1         23         24         30
+  2     1   3/2 -       0.7406     0.4982    -0.4434     0.0333    -0.0274
+                             2          3          1         59         53
+  2     2   3/2 -       0.6646    -0.6071     0.4276     0.0302     0.0225
+                             2          3          1         58         62
+  2     3   3/2 -       0.7766     0.6052     0.1497     0.0570    -0.0269
+                             1          3        169          2         41
+  2     4   3/2 -       0.9812    -0.1074    -0.1057    -0.0519     0.0383
+                           169          1          3         53         56
+  3     1   5/2 -       0.9967     0.0326    -0.0237    -0.0184    -0.0173
+                             1         41         40         42         45
+
+Weighted average energy of these levels =  -2.6225148644D+02
+
+Generalised occupation numbers:
+
+   1.9999D+00  1.5369D+00  1.1508D+00  2.3016D+00  9.8854D-04  7.4767D-04
+   1.4841D-03  3.0530D-03  4.5512D-03
+
+ Iteration number   2
+ --------------------
+
+Lagrange multipliers:
+
+                1s    3s   -4.359023624D-03
+                2s    3s    2.946953416D-02
+                2p-   3p-   2.960499868D-02
+                2p    3p    5.974200051D-02
+                                         Self-            Damping
+Subshell    Energy    Method   P0    consistency  Norm-1  factor  JP MTP INV NNP
+
+  3s    2.3389038D+01  3  1.028D+02  3.89D-03 -2.72D-02 0.000   245   299  0  2
+  3p-   2.5453629D+01  3  9.426D-02  3.67D-03 -2.28D-02 0.000   243   300  0  1
+  3p    2.5694008D+01  3  2.027D+02  5.13D-03 -2.23D-02 0.000   243   300  0  1
+  3d-   1.6084676D+01  3  9.123D-02  4.79D-03 -2.07D-02 0.000   251   299  0  0
+  3d    1.6180550D+01  3  1.920D+02  5.41D-03 -1.92D-02 0.000   251   299  0  0
+
+ Average energy =  -1.9901420242D+02 Hartrees
+ Average energy =  -1.9652930572D+02 Hartrees
+ Average energy =  -2.0319115808D+02 Hartrees
+
+Optimise on the following level(s):
+
+Level  1    Energy = -2.628724674363D+02    Weight =  7.69231D-02
+Level  2    Energy = -2.595788746284D+02    Weight =  7.69231D-02
+Level  1    Energy = -2.633624323870D+02    Weight =  1.53846D-01
+Level  2    Energy = -2.630371115787D+02    Weight =  1.53846D-01
+Level  3    Energy = -2.628694991405D+02    Weight =  1.53846D-01
+Level  4    Energy = -2.596063932238D+02    Weight =  1.53846D-01
+Level  1    Energy = -2.630341807588D+02    Weight =  2.30769D-01
+
+Weights of major contributors to ASF:
+
+Block Level J Parity      CSF contributions
+
+  1     1   1/2 -       0.9864     0.1497    -0.0280     0.0245    -0.0183
+                             1         81         31         20         23
+  1     2   1/2 -       0.9821    -0.1495    -0.0475     0.0429     0.0390
+                            81          1         23         24         30
+  2     1   3/2 -       0.7408     0.4985    -0.4434     0.0323    -0.0265
+                             2          3          1         59         53
+  2     2   3/2 -       0.6647    -0.6077     0.4271     0.0292     0.0219
+                             2          3          1         58         62
+  2     3   3/2 -       0.7772     0.6047     0.1497     0.0573    -0.0261
+                             1          3        169          2         41
+  2     4   3/2 -       0.9819    -0.1074    -0.1057    -0.0493     0.0363
+                           169          1          3         53         56
+  3     1   5/2 -       0.9969     0.0316    -0.0230    -0.0178    -0.0167
+                             1         41         40         42         45
+
+Weighted average energy of these levels =  -2.6225421208D+02
+
+Generalised occupation numbers:
+
+   1.9998D+00  1.5370D+00  1.1511D+00  2.3021D+00  8.6159D-04  6.6308D-04
+   1.3166D-03  2.8691D-03  4.2942D-03
+
+ Iteration number   3
+ --------------------
+
+Lagrange multipliers:
+
+                1s    3s   -4.032870593D-03
+                2s    3s    3.319494262D-02
+                2p-   3p-   3.063382805D-02
+                2p    3p    6.125624641D-02
+                                         Self-            Damping
+Subshell    Energy    Method   P0    consistency  Norm-1  factor  JP MTP INV NNP
+
+  3s    2.6803688D+01  3  1.077D+02  2.13D-03 -1.79D-02 0.000   242   299  0  2
+  3p-   2.8309601D+01  3  8.237D-02  1.79D-03 -1.49D-02 0.000   241   300  0  1
+  3p    2.8451357D+01  3  2.179D+02  2.43D-03 -1.43D-02 0.000   241   300  0  1
+  3d-   1.6672104D+01  3  9.486D-02  1.08D-03 -5.30D-03 0.000   250   298  0  0
+  3d    1.6700696D+01  3  2.014D+02  1.13D-03 -4.54D-03 0.000   250   298  0  0
+
+ Average energy =  -1.9789521446D+02 Hartrees
+ Average energy =  -1.9539925171D+02 Hartrees
+ Average energy =  -2.0212758094D+02 Hartrees
+
+Optimise on the following level(s):
+
+Level  1    Energy = -2.628734492319D+02    Weight =  7.69231D-02
+Level  2    Energy = -2.595787949842D+02    Weight =  7.69231D-02
+Level  1    Energy = -2.633629192233D+02    Weight =  1.53846D-01
+Level  2    Energy = -2.630380286016D+02    Weight =  1.53846D-01
+Level  3    Energy = -2.628704852339D+02    Weight =  1.53846D-01
+Level  4    Energy = -2.596063313804D+02    Weight =  1.53846D-01
+Level  1    Energy = -2.630350999796D+02    Weight =  2.30769D-01
+
+Weights of major contributors to ASF:
+
+Block Level J Parity      CSF contributions
+
+  1     1   1/2 -       0.9865     0.1497    -0.0278     0.0244    -0.0181
+                             1         81         31         20         23
+  1     2   1/2 -       0.9823    -0.1495    -0.0470     0.0424     0.0386
+                            81          1         23         24         30
+  2     1   3/2 -       0.7408     0.4986    -0.4434     0.0320    -0.0264
+                             2          3          1         59         53
+  2     2   3/2 -       0.6648    -0.6078     0.4270     0.0290     0.0217
+                             2          3          1         58         62
+  2     3   3/2 -       0.7774     0.6046     0.1497     0.0573    -0.0259
+                             1          3        169          2         41
+  2     4   3/2 -       0.9821    -0.1074    -0.1057    -0.0487     0.0358
+                           169          1          3         53         56
+  3     1   5/2 -       0.9970     0.0314    -0.0229    -0.0177    -0.0166
+                             1         41         40         42         45
+
+Weighted average energy of these levels =  -2.6225485177D+02
+
+Generalised occupation numbers:
+
+   1.9998D+00  1.5370D+00  1.1512D+00  2.3023D+00  7.8196D-04  6.0947D-04
+   1.2117D-03  2.8232D-03  4.2346D-03
+
+ Iteration number   4
+ --------------------
+
+Lagrange multipliers:
+
+                1s    3s   -3.155016862D-03
+                2s    3s    3.428177939D-02
+                2p-   3p-   2.994933036D-02
+                2p    3p    5.975967685D-02
+                                         Self-            Damping
+Subshell    Energy    Method   P0    consistency  Norm-1  factor  JP MTP INV NNP
+
+  3s    2.9260771D+01  3  1.127D+02  1.35D-03 -1.23D-02 0.000   241   299  0  2
+  3p-   3.0240775D+01  3  8.227D-02  1.02D-03 -9.73D-03 0.000   240   299  0  1
+  3p    3.0328761D+01  3  2.297D+02  1.45D-03 -9.35D-03 0.000   240   300  0  1
+  3d-   1.6831722D+01  3  9.597D-02  2.53D-04 -1.31D-03 0.000   250   297  0  0
+  3d    1.6837758D+01  3  2.041D+02  2.52D-04 -1.06D-03 0.000   250   297  0  0
+
+ Average energy =  -1.9717566221D+02 Hartrees
+ Average energy =  -1.9467899043D+02 Hartrees
+ Average energy =  -2.0145727250D+02 Hartrees
+
+Optimise on the following level(s):
+
+Level  1    Energy = -2.628738470193D+02    Weight =  7.69231D-02
+Level  2    Energy = -2.595786194931D+02    Weight =  7.69231D-02
+Level  1    Energy = -2.633631022691D+02    Weight =  1.53846D-01
+Level  2    Energy = -2.630384451361D+02    Weight =  1.53846D-01
+Level  3    Energy = -2.628708860898D+02    Weight =  1.53846D-01
+Level  4    Energy = -2.596061555357D+02    Weight =  1.53846D-01
+Level  1    Energy = -2.630355184477D+02    Weight =  2.30769D-01
+
+Weights of major contributors to ASF:
+
+Block Level J Parity      CSF contributions
+
+  1     1   1/2 -       0.9865     0.1497    -0.0277     0.0244    -0.0181
+                             1         81         31         20         23
+  1     2   1/2 -       0.9824    -0.1495    -0.0469     0.0423     0.0385
+                            81          1         23         24         30
+  2     1   3/2 -       0.7409     0.4987    -0.4434     0.0319    -0.0263
+                             2          3          1         59         53
+  2     2   3/2 -       0.6648    -0.6078     0.4270     0.0289     0.0217
+                             2          3          1         58         62
+  2     3   3/2 -       0.7774     0.6046     0.1497     0.0573    -0.0259
+                             1          3        169          2         41
+  2     4   3/2 -       0.9822    -0.1075    -0.1057    -0.0486     0.0357
+                           169          1          3         53         56
+  3     1   5/2 -       0.9970     0.0313    -0.0228    -0.0176    -0.0165
+                             1         41         40         42         45
+
+Weighted average energy of these levels =  -2.6225509230D+02
+
+Generalised occupation numbers:
+
+   1.9998D+00  1.5370D+00  1.1512D+00  2.3024D+00  7.3004D-04  5.7527D-04
+   1.1447D-03  2.8119D-03  4.2206D-03
+
+ Iteration number   5
+ --------------------
+
+Lagrange multipliers:
+
+                1s    3s   -2.323375095D-03
+                2s    3s    3.465866341D-02
+                2p-   3p-   2.919748668D-02
+                2p    3p    5.823469744D-02
+                                         Self-            Damping
+Subshell    Energy    Method   P0    consistency  Norm-1  factor  JP MTP INV NNP
+
+  3s    3.1104349D+01  3  1.169D+02  9.28D-04 -8.90D-03 0.000   240   299  0  2
+  3p-   3.1593700D+01  3  8.425D-02  6.56D-04 -6.60D-03 0.000   240   299  0  1
+  3p    3.1652196D+01  3  2.384D+02  9.62D-04 -6.38D-03 0.000   240   300  0  1
+  3d-   1.6882486D+01  3  9.637D-02  6.08D-05 -3.34D-04 0.000   250   297  0  0
+  3d    1.6881940D+01  3  2.050D+02  5.84D-05 -2.65D-04 0.000   250   297  0  0
+
+ Average energy =  -1.9667165511D+02 Hartrees
+ Average energy =  -1.9417702905D+02 Hartrees
+ Average energy =  -2.0099282840D+02 Hartrees
+
+Optimise on the following level(s):
+
+Level  1    Energy = -2.628740457914D+02    Weight =  7.69231D-02
+Level  2    Energy = -2.595784614416D+02    Weight =  7.69231D-02
+Level  1    Energy = -2.633631842548D+02    Weight =  1.53846D-01
+Level  2    Energy = -2.630386736089D+02    Weight =  1.53846D-01
+Level  3    Energy = -2.628710865496D+02    Weight =  1.53846D-01
+Level  4    Energy = -2.596059943012D+02    Weight =  1.53846D-01
+Level  1    Energy = -2.630357482276D+02    Weight =  2.30769D-01
+
+Weights of major contributors to ASF:
+
+Block Level J Parity      CSF contributions
+
+  1     1   1/2 -       0.9865     0.1498    -0.0277     0.0244    -0.0181
+                             1         81         31         20         23
+  1     2   1/2 -       0.9824    -0.1495    -0.0468     0.0422     0.0385
+                            81          1         23         24         30
+  2     1   3/2 -       0.7409     0.4987    -0.4434     0.0319    -0.0263
+                             2          3          1         59         53
+  2     2   3/2 -       0.6648    -0.6078     0.4270     0.0289     0.0217
+                             2          3          1         58         62
+  2     3   3/2 -       0.7774     0.6046     0.1497     0.0573    -0.0258
+                             1          3        169          2         41
+  2     4   3/2 -       0.9823    -0.1075    -0.1057    -0.0486     0.0357
+                           169          1          3         53         56
+  3     1   5/2 -       0.9971     0.0313    -0.0228    -0.0176    -0.0165
+                             1         41         40         42         45
+
+Weighted average energy of these levels =  -2.6225520226D+02
+
+Generalised occupation numbers:
+
+   1.9998D+00  1.5371D+00  1.1513D+00  2.3025D+00  6.9438D-04  5.5244D-04
+   1.0998D-03  2.8089D-03  4.2170D-03
+
+ Iteration number   6
+ --------------------
+
+Lagrange multipliers:
+
+                1s    3s   -1.631746737D-03
+                2s    3s    3.479298069D-02
+                2p-   3p-   2.859907409D-02
+                2p    3p    5.703883723D-02
+                                         Self-            Damping
+Subshell    Energy    Method   P0    consistency  Norm-1  factor  JP MTP INV NNP
+
+  3s    3.2521374D+01  3  1.202D+02  6.68D-04 -6.62D-03 0.000   239   299  0  2
+  3p-   3.2570306D+01  3  8.630D-02  4.53D-04 -4.64D-03 0.000   239   299  0  1
+  3p    3.2612894D+01  3  2.447D+02  6.70D-04 -4.51D-03 0.000   239   300  0  1
+  3d-   1.6903357D+01  3  9.657D-02  1.98D-05 -9.45D-05 0.000   250   297  0  0
+  3d    1.6900967D+01  3  2.055D+02  2.18D-05 -7.60D-05 0.000   250   297  0  0
+
+ Average energy =  -1.9630178597D+02 Hartrees
+ Average energy =  -1.9380986081D+02 Hartrees
+ Average energy =  -2.0065423299D+02 Hartrees
+
+Optimise on the following level(s):
+
+Level  1    Energy = -2.628741589797D+02    Weight =  7.69231D-02
+Level  2    Energy = -2.595783324490D+02    Weight =  7.69231D-02
+Level  1    Energy = -2.633632237095D+02    Weight =  1.53846D-01
+Level  2    Energy = -2.630388129984D+02    Weight =  1.53846D-01
+Level  3    Energy = -2.628712007122D+02    Weight =  1.53846D-01
+Level  4    Energy = -2.596058625106D+02    Weight =  1.53846D-01
+Level  1    Energy = -2.630358885056D+02    Weight =  2.30769D-01
+
+Weights of major contributors to ASF:
+
+Block Level J Parity      CSF contributions
+
+  1     1   1/2 -       0.9866     0.1498    -0.0277     0.0244    -0.0181
+                             1         81         31         20         23
+  1     2   1/2 -       0.9825    -0.1495    -0.0468     0.0422     0.0385
+                            81          1         23         24         30
+  2     1   3/2 -       0.7409     0.4987    -0.4434     0.0319    -0.0263
+                             2          3          1         59         53
+  2     2   3/2 -       0.6648    -0.6078     0.4271     0.0289     0.0217
+                             2          3          1         58         62
+  2     3   3/2 -       0.7774     0.6046     0.1498     0.0573    -0.0258
+                             1          3        169          2         41
+  2     4   3/2 -       0.9823    -0.1075    -0.1058    -0.0486     0.0357
+                           169          1          3         53         56
+  3     1   5/2 -       0.9971     0.0313    -0.0228    -0.0176    -0.0165
+                             1         41         40         42         45
+
+Weighted average energy of these levels =  -2.6225525822D+02
+
+Generalised occupation numbers:
+
+   1.9998D+00  1.5371D+00  1.1513D+00  2.3025D+00  6.6887D-04  5.3652D-04
+   1.0684D-03  2.8080D-03  4.2159D-03
+
+ Iteration number   7
+ --------------------
+
+Lagrange multipliers:
+
+                1s    3s   -1.073652454D-03
+                2s    3s    3.483194205D-02
+                2p-   3p-   2.814648580D-02
+                2p    3p    5.613728707D-02
+                                         Self-            Damping
+Subshell    Energy    Method   P0    consistency  Norm-1  factor  JP MTP INV NNP
+
+  3s    3.3627665D+01  3  1.228D+02  4.97D-04 -5.05D-03 0.000   238   299  0  2
+  3p-   3.3293064D+01  3  8.803D-02  3.24D-04 -3.36D-03 0.000   239   299  0  1
+  3p    3.3327237D+01  3  2.494D+02  4.85D-04 -3.29D-03 0.000   239   300  0  1
+  3d-   1.6914591D+01  3  9.668D-02  1.02D-05 -3.26D-05 0.000   250   297  0  0
+  3d    1.6911663D+01  3  2.057D+02  1.19D-05 -2.74D-05 0.000   250   297  0  0
+
+ Average energy =  -1.9602262085D+02 Hartrees
+ Average energy =  -1.9353339372D+02 Hartrees
+ Average energy =  -2.0039985016D+02 Hartrees
+
+Optimise on the following level(s):
+
+Level  1    Energy = -2.628742292499D+02    Weight =  7.69231D-02
+Level  2    Energy = -2.595782300826D+02    Weight =  7.69231D-02
+Level  1    Energy = -2.633632432043D+02    Weight =  1.53846D-01
+Level  2    Energy = -2.630389042382D+02    Weight =  1.53846D-01
+Level  3    Energy = -2.628712715909D+02    Weight =  1.53846D-01
+Level  4    Energy = -2.596057581376D+02    Weight =  1.53846D-01
+Level  1    Energy = -2.630359803680D+02    Weight =  2.30769D-01
+
+Weights of major contributors to ASF:
+
+Block Level J Parity      CSF contributions
+
+  1     1   1/2 -       0.9866     0.1498    -0.0277     0.0244    -0.0181
+                             1         81         31         20         23
+  1     2   1/2 -       0.9825    -0.1496    -0.0468     0.0422     0.0385
+                            81          1         23         24         30
+  2     1   3/2 -       0.7409     0.4987    -0.4434     0.0319    -0.0263
+                             2          3          1         59         53
+  2     2   3/2 -       0.6648    -0.6078     0.4271     0.0289     0.0217
+                             2          3          1         58         62
+  2     3   3/2 -       0.7774     0.6046     0.1498     0.0573    -0.0258
+                             1          3        169          2         41
+  2     4   3/2 -       0.9823    -0.1075    -0.1058    -0.0486     0.0357
+                           169          1          3         53         56
+  3     1   5/2 -       0.9971     0.0313    -0.0228    -0.0176    -0.0165
+                             1         41         40         42         45
+
+Weighted average energy of these levels =  -2.6225528883D+02
+
+Generalised occupation numbers:
+
+   1.9998D+00  1.5371D+00  1.1513D+00  2.3026D+00  6.5004D-04  5.2503D-04
+   1.0457D-03  2.8077D-03  4.2154D-03
+
+ Iteration number   8
+ --------------------
+
+Lagrange multipliers:
+
+                1s    3s   -6.260410484D-04
+                2s    3s    3.483088082D-02
+                2p-   3p-   2.780442560D-02
+                2p    3p    5.545579413D-02
+                                         Self-            Damping
+Subshell    Energy    Method   P0    consistency  Norm-1  factor  JP MTP INV NNP
+
+  3s    3.4500820D+01  3  1.248D+02  3.78D-04 -3.91D-03 0.000   238   299  0  2
+  3p-   3.3838882D+01  3  8.942D-02  2.39D-04 -2.50D-03 0.000   238   299  0  1
+  3p    3.3868739D+01  3  2.530D+02  3.61D-04 -2.46D-03 0.000   238   300  0  1
+  3d-   1.6921848D+01  3  9.676D-02  6.54D-06 -1.46D-05 0.000   250   297  0  0
+  3d    1.6918736D+01  3  2.059D+02  7.82D-06 -1.27D-05 0.000   250   297  0  0
+
+ Average energy =  -1.9580789974D+02 Hartrees
+ Average energy =  -1.9332114398D+02 Hartrees
+ Average energy =  -2.0020488249D+02 Hartrees
+
+Optimise on the following level(s):
+
+Level  1    Energy = -2.628742755681D+02    Weight =  7.69231D-02
+Level  2    Energy = -2.595781494834D+02    Weight =  7.69231D-02
+Level  1    Energy = -2.633632527360D+02    Weight =  1.53846D-01
+Level  2    Energy = -2.630389670181D+02    Weight =  1.53846D-01
+Level  3    Energy = -2.628713183147D+02    Weight =  1.53846D-01
+Level  4    Energy = -2.596056761646D+02    Weight =  1.53846D-01
+Level  1    Energy = -2.630360435971D+02    Weight =  2.30769D-01
+
+Weights of major contributors to ASF:
+
+Block Level J Parity      CSF contributions
+
+  1     1   1/2 -       0.9866     0.1498    -0.0277     0.0244    -0.0181
+                             1         81         31         20         23
+  1     2   1/2 -       0.9825    -0.1496    -0.0468     0.0422     0.0385
+                            81          1         23         24         30
+  2     1   3/2 -       0.7409     0.4988    -0.4434     0.0319    -0.0263
+                             2          3          1         59         53
+  2     2   3/2 -       0.6649    -0.6078     0.4271     0.0289     0.0217
+                             2          3          1         58         62
+  2     3   3/2 -       0.7774     0.6047     0.1498     0.0573    -0.0258
+                             1          3        169          2         41
+  2     4   3/2 -       0.9823    -0.1075    -0.1058    -0.0486     0.0357
+                           169          1          3         53         56
+  3     1   5/2 -       0.9971     0.0313    -0.0228    -0.0176    -0.0165
+                             1         41         40         42         45
+
+Weighted average energy of these levels =  -2.6225530649D+02
+
+Generalised occupation numbers:
+
+   1.9998D+00  1.5371D+00  1.1513D+00  2.3026D+00  6.3584D-04  5.1651D-04
+   1.0288D-03  2.8075D-03  4.2151D-03
+
+ Iteration number   9
+ --------------------
+
+Lagrange multipliers:
+
+                1s    3s   -2.668027948D-04
+                2s    3s    3.481326039D-02
+                2p-   3p-   2.754310268D-02
+                2p    3p    5.493461610D-02
+                                         Self-            Damping
+Subshell    Energy    Method   P0    consistency  Norm-1  factor  JP MTP INV NNP
+
+  3s    3.5195511D+01  3  1.265D+02  2.92D-04 -3.06D-03 0.000   238   299  0  2
+  3p-   3.4257823D+01  3  9.052D-02  1.80D-04 -1.89D-03 0.000   238   299  0  1
+  3p    3.4285587D+01  3  2.558D+02  2.74D-04 -1.87D-03 0.000   238   300  0  1
+  3d-   1.6927000D+01  3  9.682D-02  4.61D-06 -8.07D-06 0.000   250   297  0  0
+  3d    1.6923804D+01  3  2.060D+02  5.58D-06 -7.14D-06 0.000   250   297  0  0
+
+ Average energy =  -1.9564046944D+02 Hartrees
+ Average energy =  -1.9315588898D+02 Hartrees
+ Average energy =  -2.0005328465D+02 Hartrees
+
+Optimise on the following level(s):
+
+Level  1    Energy = -2.628743074628D+02    Weight =  7.69231D-02
+Level  2    Energy = -2.595780860122D+02    Weight =  7.69231D-02
+Level  1    Energy = -2.633632571170D+02    Weight =  1.53846D-01
+Level  2    Energy = -2.630390118404D+02    Weight =  1.53846D-01
+Level  3    Energy = -2.628713504929D+02    Weight =  1.53846D-01
+Level  4    Energy = -2.596056117523D+02    Weight =  1.53846D-01
+Level  1    Energy = -2.630360887515D+02    Weight =  2.30769D-01
+
+Weights of major contributors to ASF:
+
+Block Level J Parity      CSF contributions
+
+  1     1   1/2 -       0.9866     0.1498    -0.0277     0.0244    -0.0181
+                             1         81         31         20         23
+  1     2   1/2 -       0.9825    -0.1496    -0.0468     0.0422     0.0385
+                            81          1         23         24         30
+  2     1   3/2 -       0.7409     0.4988    -0.4434     0.0319    -0.0263
+                             2          3          1         59         53
+  2     2   3/2 -       0.6649    -0.6078     0.4271     0.0289     0.0217
+                             2          3          1         58         62
+  2     3   3/2 -       0.7774     0.6047     0.1498     0.0572    -0.0258
+                             1          3        169          2         41
+  2     4   3/2 -       0.9823    -0.1075    -0.1058    -0.0486     0.0357
+                           169          1          3         53         56
+  3     1   5/2 -       0.9971     0.0313    -0.0228    -0.0176    -0.0165
+                             1         41         40         42         45
+
+Weighted average energy of these levels =  -2.6225531709D+02
+
+Generalised occupation numbers:
+
+   1.9998D+00  1.5371D+00  1.1513D+00  2.3026D+00  6.2492D-04  5.1006D-04
+   1.0160D-03  2.8074D-03  4.2150D-03
+
+ Iteration number  10
+ --------------------
+
+Lagrange multipliers:
+
+                1s    3s    2.222598110D-05
+                2s    3s    3.478976406D-02
+                2p-   3p-   2.734102172D-02
+                2p    3p    5.453114743D-02
+                                         Self-            Damping
+Subshell    Energy    Method   P0    consistency  Norm-1  factor  JP MTP INV NNP
+
+  3s    3.5751593D+01  3  1.278D+02  2.29D-04 -2.42D-03 0.000   237   299  0  2
+  3p-   3.4583581D+01  3  9.140D-02  1.38D-04 -1.46D-03 0.000   238   299  0  1
+  3p    3.4610448D+01  3  2.579D+02  2.11D-04 -1.44D-03 0.000   238   300  0  1
+  3d-   1.6930829D+01  3  9.686D-02  3.42D-06 -5.06D-06 0.000   250   297  0  0
+  3d    1.6927585D+01  3  2.061D+02  4.14D-06 -4.45D-06 0.000   250   297  0  0
+
+ Average energy =  -1.9550855375D+02 Hartrees
+ Average energy =  -1.9302584569D+02 Hartrees
+ Average energy =  -1.9993411651D+02 Hartrees
+
+Optimise on the following level(s):
+
+Level  1    Energy = -2.628743301697D+02    Weight =  7.69231D-02
+Level  2    Energy = -2.595780358550D+02    Weight =  7.69231D-02
+Level  1    Energy = -2.633632587981D+02    Weight =  1.53846D-01
+Level  2    Energy = -2.630390447538D+02    Weight =  1.53846D-01
+Level  3    Energy = -2.628713734054D+02    Weight =  1.53846D-01
+Level  4    Energy = -2.596055609392D+02    Weight =  1.53846D-01
+Level  1    Energy = -2.630361219155D+02    Weight =  2.30769D-01
+
+Weights of major contributors to ASF:
+
+Block Level J Parity      CSF contributions
+
+  1     1   1/2 -       0.9866     0.1498    -0.0277     0.0244    -0.0181
+                             1         81         31         20         23
+  1     2   1/2 -       0.9825    -0.1496    -0.0468     0.0422     0.0385
+                            81          1         23         24         30
+  2     1   3/2 -       0.7410     0.4988    -0.4434     0.0319    -0.0263
+                             2          3          1         59         53
+  2     2   3/2 -       0.6649    -0.6078     0.4271     0.0289     0.0217
+                             2          3          1         58         62
+  2     3   3/2 -       0.7775     0.6047     0.1498     0.0572    -0.0258
+                             1          3        169          2         41
+  2     4   3/2 -       0.9824    -0.1075    -0.1058    -0.0486     0.0357
+                           169          1          3         53         56
+  3     1   5/2 -       0.9971     0.0313    -0.0228    -0.0176    -0.0165
+                             1         41         40         42         45
+
+Weighted average energy of these levels =  -2.6225532366D+02
+
+Generalised occupation numbers:
+
+   1.9998D+00  1.5371D+00  1.1513D+00  2.3026D+00  6.1643D-04  5.0510D-04
+   1.0061D-03  2.8073D-03  4.2148D-03
+
+ Iteration number  11
+ --------------------
+
+Lagrange multipliers:
+
+                1s    3s    2.554131593D-04
+                2s    3s    3.476538633D-02
+                2p-   3p-   2.718304723D-02
+                2p    3p    5.421544729D-02
+                                         Self-            Damping
+Subshell    Energy    Method   P0    consistency  Norm-1  factor  JP MTP INV NNP
+
+  3s    3.6198837D+01  3  1.288D+02  1.81D-04 -1.93D-03 0.000   237   299  0  2
+  3p-   3.4839527D+01  3  9.211D-02  1.08D-04 -1.14D-03 0.000   238   299  0  1
+  3p    3.4866124D+01  3  2.596D+02  1.65D-04 -1.13D-03 0.000   238   300  0  1
+  3d-   1.6933748D+01  3  9.689D-02  2.60D-06 -3.39D-06 0.000   250   297  0  0
+  3d    1.6930470D+01  3  2.062D+02  3.15D-06 -2.92D-06 0.000   250   297  0  0
+
+ Average energy =  -1.9540378023D+02 Hartrees
+ Average energy =  -1.9292266151D+02 Hartrees
+ Average energy =  -1.9983964378D+02 Hartrees
+
+Optimise on the following level(s):
+
+Level  1    Energy = -2.628743467647D+02    Weight =  7.69231D-02
+Level  2    Energy = -2.595779960358D+02    Weight =  7.69231D-02
+Level  1    Energy = -2.633632590752D+02    Weight =  1.53846D-01
+Level  2    Energy = -2.630390694556D+02    Weight =  1.53846D-01
+Level  3    Energy = -2.628713901536D+02    Weight =  1.53846D-01
+Level  4    Energy = -2.596055206521D+02    Weight =  1.53846D-01
+Level  1    Energy = -2.630361468098D+02    Weight =  2.30769D-01
+
+Weights of major contributors to ASF:
+
+Block Level J Parity      CSF contributions
+
+  1     1   1/2 -       0.9866     0.1498    -0.0277     0.0244    -0.0181
+                             1         81         31         20         23
+  1     2   1/2 -       0.9825    -0.1496    -0.0468     0.0422     0.0385
+                            81          1         23         24         30
+  2     1   3/2 -       0.7410     0.4988    -0.4434     0.0319    -0.0263
+                             2          3          1         59         53
+  2     2   3/2 -       0.6649    -0.6078     0.4271     0.0289     0.0217
+                             2          3          1         58         62
+  2     3   3/2 -       0.7775     0.6047     0.1498     0.0572    -0.0258
+                             1          3        169          2         41
+  2     4   3/2 -       0.9824    -0.1075    -0.1058    -0.0486     0.0357
+                           169          1          3         53         56
+  3     1   5/2 -       0.9971     0.0313    -0.0228    -0.0176    -0.0165
+                             1         41         40         42         45
+
+Weighted average energy of these levels =  -2.6225532784D+02
+
+Generalised occupation numbers:
+
+   1.9998D+00  1.5371D+00  1.1513D+00  2.3026D+00  6.0975D-04  5.0123D-04
+   9.9838D-04  2.8072D-03  4.2147D-03
+
+ Iteration number  12
+ --------------------
+
+Lagrange multipliers:
+
+                1s    3s    4.440362756D-04
+                2s    3s    3.474241128D-02
+                2p-   3p-   2.705842744D-02
+                2p    3p    5.396622195D-02
+                                         Self-            Damping
+Subshell    Energy    Method   P0    consistency  Norm-1  factor  JP MTP INV NNP
+
+  3s    3.6559893D+01  3  1.297D+02  1.44D-04 -1.55D-03 0.000   237   298  0  2
+  3p-   3.5042300D+01  3  9.267D-02  8.47D-05 -8.94D-04 0.000   238   299  0  1
+  3p    3.5068947D+01  3  2.609D+02  1.30D-04 -8.89D-04 0.000   238   300  0  1
+  3d-   1.6936010D+01  3  9.692D-02  2.01D-06 -2.35D-06 0.000   250   297  0  0
+  3d    1.6932707D+01  3  2.063D+02  2.43D-06 -1.98D-06 0.000   250   297  0  0
+
+ Average energy =  -1.9532003636D+02 Hartrees
+ Average energy =  -1.9284025425D+02 Hartrees
+ Average energy =  -1.9976424736D+02 Hartrees
+
+Optimise on the following level(s):
+
+Level  1    Energy = -2.628743591503D+02    Weight =  7.69231D-02
+Level  2    Energy = -2.595779642736D+02    Weight =  7.69231D-02
+Level  1    Energy = -2.633632586503D+02    Weight =  1.53846D-01
+Level  2    Energy = -2.630390883158D+02    Weight =  1.53846D-01
+Level  3    Energy = -2.628714026559D+02    Weight =  1.53846D-01
+Level  4    Energy = -2.596054885487D+02    Weight =  1.53846D-01
+Level  1    Energy = -2.630361658198D+02    Weight =  2.30769D-01
+
+Weights of major contributors to ASF:
+
+Block Level J Parity      CSF contributions
+
+  1     1   1/2 -       0.9866     0.1498    -0.0277     0.0244    -0.0181
+                             1         81         31         20         23
+  1     2   1/2 -       0.9826    -0.1496    -0.0468     0.0422     0.0385
+                            81          1         23         24         30
+  2     1   3/2 -       0.7410     0.4988    -0.4434     0.0319    -0.0263
+                             2          3          1         59         53
+  2     2   3/2 -       0.6649    -0.6078     0.4271     0.0289     0.0217
+                             2          3          1         58         62
+  2     3   3/2 -       0.7775     0.6047     0.1498     0.0572    -0.0258
+                             1          3        169          2         41
+  2     4   3/2 -       0.9824    -0.1075    -0.1058    -0.0486     0.0357
+                           169          1          3         53         56
+  3     1   5/2 -       0.9971     0.0313    -0.0228    -0.0176    -0.0165
+                             1         41         40         42         45
+
+Weighted average energy of these levels =  -2.6225533056D+02
+
+Generalised occupation numbers:
+
+   1.9998D+00  1.5371D+00  1.1513D+00  2.3026D+00  6.0445D-04  4.9819D-04
+   9.9231D-04  2.8072D-03  4.2147D-03
+
+ Iteration number  13
+ --------------------
+
+Lagrange multipliers:
+
+                1s    3s    5.969605481D-04
+                2s    3s    3.472178180D-02
+                2p-   3p-   2.695938952D-02
+                2p    3p    5.376804665D-02
+                                         Self-            Damping
+Subshell    Energy    Method   P0    consistency  Norm-1  factor  JP MTP INV NNP
+
+  3s    3.6852241D+01  3  1.304D+02  1.15D-04 -1.24D-03 0.000   237   298  0  2
+  3p-   3.5204023D+01  3  9.312D-02  6.72D-05 -7.10D-04 0.000   238   299  0  1
+  3p    3.5230868D+01  3  2.620D+02  1.03D-04 -7.06D-04 0.000   238   300  0  1
+  3d-   1.6937783D+01  3  9.694D-02  1.57D-06 -1.67D-06 0.000   250   297  0  0
+  3d    1.6934460D+01  3  2.063D+02  1.90D-06 -1.37D-06 0.000   250   297  0  0
+
+ Average energy =  -1.9525276461D+02 Hartrees
+ Average energy =  -1.9277409932D+02 Hartrees
+ Average energy =  -1.9970375548D+02 Hartrees
+
+Optimise on the following level(s):
+
+Level  1    Energy = -2.628743685530D+02    Weight =  7.69231D-02
+Level  2    Energy = -2.595779388262D+02    Weight =  7.69231D-02
+Level  1    Energy = -2.633632579070D+02    Weight =  1.53846D-01
+Level  2    Energy = -2.630391029140D+02    Weight =  1.53846D-01
+Level  3    Energy = -2.628714121487D+02    Weight =  1.53846D-01
+Level  4    Energy = -2.596054628472D+02    Weight =  1.53846D-01
+Level  1    Energy = -2.630361805359D+02    Weight =  2.30769D-01
+
+Weights of major contributors to ASF:
+
+Block Level J Parity      CSF contributions
+
+  1     1   1/2 -       0.9866     0.1498    -0.0277     0.0244    -0.0181
+                             1         81         31         20         23
+  1     2   1/2 -       0.9826    -0.1496    -0.0468     0.0422     0.0385
+                            81          1         23         24         30
+  2     1   3/2 -       0.7410     0.4988    -0.4434     0.0319    -0.0263
+                             2          3          1         59         53
+  2     2   3/2 -       0.6649    -0.6078     0.4271     0.0289     0.0217
+                             2          3          1         58         62
+  2     3   3/2 -       0.7775     0.6047     0.1498     0.0572    -0.0258
+                             1          3        169          2         41
+  2     4   3/2 -       0.9824    -0.1075    -0.1058    -0.0486     0.0357
+                           169          1          3         53         56
+  3     1   5/2 -       0.9971     0.0313    -0.0228    -0.0176    -0.0165
+                             1         41         40         42         45
+
+Weighted average energy of these levels =  -2.6225533236D+02
+
+Generalised occupation numbers:
+
+   1.9998D+00  1.5371D+00  1.1513D+00  2.3027D+00  6.0023D-04  4.9577D-04
+   9.8748D-04  2.8072D-03  4.2146D-03
+
+ Iteration number  14
+ --------------------
+
+Lagrange multipliers:
+
+                1s    3s    7.211851550D-04
+                2s    3s    3.470376966D-02
+                2p-   3p-   2.688020896D-02
+                2p    3p    5.360953878D-02
+                                         Self-            Damping
+Subshell    Energy    Method   P0    consistency  Norm-1  factor  JP MTP INV NNP
+
+  3s    3.7089526D+01  3  1.309D+02  9.27D-05 -1.00D-03 0.000   237   298  0  2
+  3p-   3.5333697D+01  3  9.349D-02  5.36D-05 -5.67D-04 0.000   238   299  0  1
+  3p    3.5360799D+01  3  2.628D+02  8.23D-05 -5.65D-04 0.000   238   300  0  1
+  3d-   1.6939184D+01  3  9.696D-02  1.24D-06 -1.20D-06 0.000   250   297  0  0
+  3d    1.6935846D+01  3  2.063D+02  1.50D-06 -9.62D-07 0.000   250   297  0  0
+
+ Average energy =  -1.9519850819D+02 Hartrees
+ Average energy =  -1.9272077183D+02 Hartrees
+ Average energy =  -1.9965501579D+02 Hartrees
+
+Optimise on the following level(s):
+
+Level  1    Energy = -2.628743757910D+02    Weight =  7.69231D-02
+Level  2    Energy = -2.595779183584D+02    Weight =  7.69231D-02
+Level  1    Energy = -2.633632570540D+02    Weight =  1.53846D-01
+Level  2    Energy = -2.630391143378D+02    Weight =  1.53846D-01
+Level  3    Energy = -2.628714194573D+02    Weight =  1.53846D-01
+Level  4    Energy = -2.596054421867D+02    Weight =  1.53846D-01
+Level  1    Energy = -2.630361920532D+02    Weight =  2.30769D-01
+
+Weights of major contributors to ASF:
+
+Block Level J Parity      CSF contributions
+
+  1     1   1/2 -       0.9866     0.1498    -0.0277     0.0244    -0.0181
+                             1         81         31         20         23
+  1     2   1/2 -       0.9826    -0.1496    -0.0468     0.0422     0.0385
+                            81          1         23         24         30
+  2     1   3/2 -       0.7410     0.4988    -0.4434     0.0319    -0.0263
+                             2          3          1         59         53
+  2     2   3/2 -       0.6649    -0.6078     0.4271     0.0289     0.0217
+                             2          3          1         58         62
+  2     3   3/2 -       0.7775     0.6047     0.1498     0.0572    -0.0258
+                             1          3        169          2         41
+  2     4   3/2 -       0.9824    -0.1075    -0.1058    -0.0486     0.0357
+                           169          1          3         53         56
+  3     1   5/2 -       0.9971     0.0313    -0.0228    -0.0176    -0.0165
+                             1         41         40         42         45
+
+Weighted average energy of these levels =  -2.6225533357D+02
+
+Generalised occupation numbers:
+
+   1.9998D+00  1.5371D+00  1.1513D+00  2.3027D+00  5.9683D-04  4.9384D-04
+   9.8363D-04  2.8071D-03  4.2146D-03
+
+ Iteration number  15
+ --------------------
+
+Lagrange multipliers:
+
+                1s    3s    8.222634412D-04
+                2s    3s    3.468831698D-02
+                2p-   3p-   2.681659704D-02
+                2p    3p    5.348215604D-02
+                                         Self-            Damping
+Subshell    Energy    Method   P0    consistency  Norm-1  factor  JP MTP INV NNP
+
+  3s    3.7282492D+01  3  1.314D+02  7.49D-05 -8.14D-04 0.000   237   298  0  2
+  3p-   3.5438124D+01  3  9.378D-02  4.30D-05 -4.55D-04 0.000   238   299  0  1
+  3p    3.5465493D+01  3  2.635D+02  6.61D-05 -4.54D-04 0.000   238   300  0  1
+  3d-   1.6940300D+01  3  9.697D-02  9.82D-07 -8.84D-07 0.000   250   297  0  0
+  3d    1.6936950D+01  3  2.064D+02  1.19D-06 -6.88D-07 0.000   250   297  0  0
+
+ Average energy =  -1.9515460830D+02 Hartrees
+ Average energy =  -1.9267764200D+02 Hartrees
+ Average energy =  -1.9961561143D+02 Hartrees
+
+Optimise on the following level(s):
+
+Level  1    Energy = -2.628743814263D+02    Weight =  7.69231D-02
+Level  2    Energy = -2.595779018403D+02    Weight =  7.69231D-02
+Level  1    Energy = -2.633632562024D+02    Weight =  1.53846D-01
+Level  2    Energy = -2.630391233565D+02    Weight =  1.53846D-01
+Level  3    Energy = -2.628714251485D+02    Weight =  1.53846D-01
+Level  4    Energy = -2.596054255204D+02    Weight =  1.53846D-01
+Level  1    Energy = -2.630362011466D+02    Weight =  2.30769D-01
+
+Weights of major contributors to ASF:
+
+Block Level J Parity      CSF contributions
+
+  1     1   1/2 -       0.9866     0.1498    -0.0277     0.0244    -0.0181
+                             1         81         31         20         23
+  1     2   1/2 -       0.9826    -0.1496    -0.0468     0.0422     0.0385
+                            81          1         23         24         30
+  2     1   3/2 -       0.7410     0.4988    -0.4434     0.0319    -0.0263
+                             2          3          1         59         53
+  2     2   3/2 -       0.6649    -0.6078     0.4271     0.0289     0.0217
+                             2          3          1         58         62
+  2     3   3/2 -       0.7775     0.6047     0.1498     0.0572    -0.0258
+                             1          3        169          2         41
+  2     4   3/2 -       0.9824    -0.1075    -0.1058    -0.0486     0.0357
+                           169          1          3         53         56
+  3     1   5/2 -       0.9971     0.0313    -0.0228    -0.0176    -0.0165
+                             1         41         40         42         45
+
+Weighted average energy of these levels =  -2.6225533440D+02
+
+Generalised occupation numbers:
+
+   1.9998D+00  1.5371D+00  1.1513D+00  2.3027D+00  5.9410D-04  4.9229D-04
+   9.8053D-04  2.8071D-03  4.2145D-03
+
+ Iteration number  16
+ --------------------
+
+Lagrange multipliers:
+
+                1s    3s    9.046226596D-04
+                2s    3s    3.467521435D-02
+                2p-   3p-   2.676529225D-02
+                2p    3p    5.337939307D-02
+                                         Self-            Damping
+Subshell    Energy    Method   P0    consistency  Norm-1  factor  JP MTP INV NNP
+
+  3s    3.7439665D+01  3  1.318D+02  6.06D-05 -6.61D-04 0.000   237   298  0  2
+  3p-   3.5522512D+01  3  9.403D-02  3.47D-05 -3.67D-04 0.000   238   299  0  1
+  3p    3.5550135D+01  3  2.641D+02  5.33D-05 -3.66D-04 0.000   238   300  0  1
+  3d-   1.6941194D+01  3  9.698D-02  7.85D-07 -6.60D-07 0.000   250   297  0  0
+  3d    1.6937835D+01  3  2.064D+02  9.53D-07 -5.00D-07 0.000   250   297  0  0
+
+ Average energy =  -1.9511899616D+02 Hartrees
+ Average energy =  -1.9264266667D+02 Hartrees
+ Average energy =  -1.9958366705D+02 Hartrees
+
+Optimise on the following level(s):
+
+Level  1    Energy = -2.628743858550D+02    Weight =  7.69231D-02
+Level  2    Energy = -2.595778884717D+02    Weight =  7.69231D-02
+Level  1    Energy = -2.633632554076D+02    Weight =  1.53846D-01
+Level  2    Energy = -2.630391305273D+02    Weight =  1.53846D-01
+Level  3    Energy = -2.628714296217D+02    Weight =  1.53846D-01
+Level  4    Energy = -2.596054120364D+02    Weight =  1.53846D-01
+Level  1    Energy = -2.630362083774D+02    Weight =  2.30769D-01
+
+Weights of major contributors to ASF:
+
+Block Level J Parity      CSF contributions
+
+  1     1   1/2 -       0.9866     0.1498    -0.0277     0.0244    -0.0181
+                             1         81         31         20         23
+  1     2   1/2 -       0.9826    -0.1496    -0.0468     0.0422     0.0385
+                            81          1         23         24         30
+  2     1   3/2 -       0.7410     0.4988    -0.4434     0.0319    -0.0263
+                             2          3          1         59         53
+  2     2   3/2 -       0.6649    -0.6078     0.4271     0.0289     0.0217
+                             2          3          1         58         62
+  2     3   3/2 -       0.7775     0.6047     0.1498     0.0572    -0.0258
+                             1          3        169          2         41
+  2     4   3/2 -       0.9824    -0.1075    -0.1058    -0.0486     0.0357
+                           169          1          3         53         56
+  3     1   5/2 -       0.9971     0.0313    -0.0228    -0.0176    -0.0165
+                             1         41         40         42         45
+
+Weighted average energy of these levels =  -2.6225533497D+02
+
+Generalised occupation numbers:
+
+   1.9998D+00  1.5371D+00  1.1513D+00  2.3027D+00  5.9189D-04  4.9104D-04
+   9.7804D-04  2.8071D-03  4.2145D-03
+
+ Iteration number  17
+ --------------------
+
+Lagrange multipliers:
+
+                1s    3s    9.718075917D-04
+                2s    3s    3.466419421D-02
+                2p-   3p-   2.672378230D-02
+                2p    3p    5.329623336D-02
+                                         Self-            Damping
+Subshell    Energy    Method   P0    consistency  Norm-1  factor  JP MTP INV NNP
+
+  3s    3.7567850D+01  3  1.321D+02  4.92D-05 -5.37D-04 0.000   237   298  0  2
+  3p-   3.5590898D+01  3  9.422D-02  2.80D-05 -2.96D-04 0.000   238   299  0  1
+  3p    3.5618751D+01  3  2.645D+02  4.31D-05 -2.96D-04 0.000   238   300  0  1
+  3d-   1.6941913D+01  3  9.699D-02  6.31D-07 -4.99D-07 0.000   250   297  0  0
+  3d    1.6938546D+01  3  2.064D+02  7.65D-07 -3.69D-07 0.000   250   297  0  0
+
+ Average energy =  -1.9509004682D+02 Hartrees
+ Average energy =  -1.9261424298D+02 Hartrees
+ Average energy =  -1.9955771304D+02 Hartrees
+
+Optimise on the following level(s):
+
+Level  1    Energy = -2.628743893622D+02    Weight =  7.69231D-02
+Level  2    Energy = -2.595778776263D+02    Weight =  7.69231D-02
+Level  1    Energy = -2.633632546943D+02    Weight =  1.53846D-01
+Level  2    Energy = -2.630391362618D+02    Weight =  1.53846D-01
+Level  3    Energy = -2.628714331647D+02    Weight =  1.53846D-01
+Level  4    Energy = -2.596054011002D+02    Weight =  1.53846D-01
+Level  1    Energy = -2.630362141603D+02    Weight =  2.30769D-01
+
+Weights of major contributors to ASF:
+
+Block Level J Parity      CSF contributions
+
+  1     1   1/2 -       0.9866     0.1498    -0.0277     0.0244    -0.0181
+                             1         81         31         20         23
+  1     2   1/2 -       0.9826    -0.1496    -0.0468     0.0422     0.0385
+                            81          1         23         24         30
+  2     1   3/2 -       0.7410     0.4988    -0.4434     0.0319    -0.0263
+                             2          3          1         59         53
+  2     2   3/2 -       0.6649    -0.6078     0.4271     0.0289     0.0217
+                             2          3          1         58         62
+  2     3   3/2 -       0.7775     0.6047     0.1498     0.0572    -0.0258
+                             1          3        169          2         41
+  2     4   3/2 -       0.9824    -0.1075    -0.1058    -0.0486     0.0357
+                           169          1          3         53         56
+  3     1   5/2 -       0.9971     0.0313    -0.0228    -0.0176    -0.0165
+                             1         41         40         42         45
+
+Weighted average energy of these levels =  -2.6225533538D+02
+
+Generalised occupation numbers:
+
+   1.9998D+00  1.5371D+00  1.1513D+00  2.3027D+00  5.9010D-04  4.9003D-04
+   9.7602D-04  2.8071D-03  4.2145D-03
+
+ Iteration number  18
+ --------------------
+
+Lagrange multipliers:
+
+                1s    3s    1.026667233D-03
+                2s    3s    3.465497933D-02
+                2p-   3p-   2.669011094D-02
+                2p    3p    5.322876737D-02
+                                         Self-            Damping
+Subshell    Energy    Method   P0    consistency  Norm-1  factor  JP MTP INV NNP
+
+  3s    3.7672503D+01  3  1.323D+02  4.00D-05 -4.38D-04 0.000   237   298  0  2
+  3p-   3.5646443D+01  3  9.438D-02  2.27D-05 -2.40D-04 0.000   237   299  0  1
+  3p    3.5674498D+01  3  2.649D+02  3.50D-05 -2.40D-04 0.000   238   300  0  1
+  3d-   1.6942494D+01  3  9.700D-02  5.08D-07 -3.82D-07 0.000   250   297  0  0
+  3d    1.6939120D+01  3  2.064D+02  6.17D-07 -2.76D-07 0.000   250   297  0  0
+
+ Average energy =  -1.9506647392D+02 Hartrees
+ Average energy =  -1.9259110339D+02 Hartrees
+ Average energy =  -1.9953658829D+02 Hartrees
+
+Optimise on the following level(s):
+
+Level  1    Energy = -2.628743921572D+02    Weight =  7.69231D-02
+Level  2    Energy = -2.595778688104D+02    Weight =  7.69231D-02
+Level  1    Energy = -2.633632540695D+02    Weight =  1.53846D-01
+Level  2    Energy = -2.630391408693D+02    Weight =  1.53846D-01
+Level  3    Energy = -2.628714359884D+02    Weight =  1.53846D-01
+Level  4    Energy = -2.596053922123D+02    Weight =  1.53846D-01
+Level  1    Energy = -2.630362188069D+02    Weight =  2.30769D-01
+
+Weights of major contributors to ASF:
+
+Block Level J Parity      CSF contributions
+
+  1     1   1/2 -       0.9866     0.1498    -0.0277     0.0244    -0.0181
+                             1         81         31         20         23
+  1     2   1/2 -       0.9826    -0.1496    -0.0468     0.0422     0.0385
+                            81          1         23         24         30
+  2     1   3/2 -       0.7410     0.4988    -0.4434     0.0319    -0.0263
+                             2          3          1         59         53
+  2     2   3/2 -       0.6649    -0.6078     0.4271     0.0289     0.0217
+                             2          3          1         58         62
+  2     3   3/2 -       0.7775     0.6047     0.1498     0.0572    -0.0258
+                             1          3        169          2         41
+  2     4   3/2 -       0.9824    -0.1075    -0.1058    -0.0486     0.0357
+                           169          1          3         53         56
+  3     1   5/2 -       0.9971     0.0313    -0.0228    -0.0176    -0.0165
+                             1         41         40         42         45
+
+Weighted average energy of these levels =  -2.6225533567D+02
+
+Generalised occupation numbers:
+
+   1.9998D+00  1.5371D+00  1.1513D+00  2.3027D+00  5.8865D-04  4.8921D-04
+   9.7438D-04  2.8071D-03  4.2145D-03
+
+ Iteration number  19
+ --------------------
+
+Lagrange multipliers:
+
+                1s    3s    1.071498881D-03
+                2s    3s    3.464730680D-02
+                2p-   3p-   2.666274105D-02
+                2p    3p    5.317392115D-02
+                                         Self-            Damping
+Subshell    Energy    Method   P0    consistency  Norm-1  factor  JP MTP INV NNP
+
+  3s    3.7758017D+01  3  1.325D+02  3.26D-05 -3.57D-04 0.000   236   298  0  2
+  3p-   3.5691641D+01  3  9.451D-02  1.85D-05 -1.95D-04 0.000   237   299  0  1
+  3p    3.5719870D+01  3  2.652D+02  2.84D-05 -1.95D-04 0.000   237   300  0  1
+  3d-   1.6942964D+01  3  9.700D-02  4.11D-07 -2.96D-07 0.000   250   297  0  0
+  3d    1.6939585D+01  3  2.064D+02  5.00D-07 -2.09D-07 0.000   250   297  0  0
+
+ Average energy =  -1.9504725265D+02 Hartrees
+ Average energy =  -1.9257223892D+02 Hartrees
+ Average energy =  -1.9951936926D+02 Hartrees
+
+Optimise on the following level(s):
+
+Level  1    Energy = -2.628743943962D+02    Weight =  7.69231D-02
+Level  2    Energy = -2.595778616324D+02    Weight =  7.69231D-02
+Level  1    Energy = -2.633632535313D+02    Weight =  1.53846D-01
+Level  2    Energy = -2.630391445853D+02    Weight =  1.53846D-01
+Level  3    Energy = -2.628714382507D+02    Weight =  1.53846D-01
+Level  4    Energy = -2.596053849769D+02    Weight =  1.53846D-01
+Level  1    Energy = -2.630362225547D+02    Weight =  2.30769D-01
+
+Weights of major contributors to ASF:
+
+Block Level J Parity      CSF contributions
+
+  1     1   1/2 -       0.9866     0.1498    -0.0277     0.0244    -0.0181
+                             1         81         31         20         23
+  1     2   1/2 -       0.9826    -0.1496    -0.0468     0.0422     0.0385
+                            81          1         23         24         30
+  2     1   3/2 -       0.7410     0.4988    -0.4434     0.0319    -0.0263
+                             2          3          1         59         53
+  2     2   3/2 -       0.6649    -0.6078     0.4271     0.0289     0.0217
+                             2          3          1         58         62
+  2     3   3/2 -       0.7775     0.6047     0.1498     0.0572    -0.0258
+                             1          3        169          2         41
+  2     4   3/2 -       0.9824    -0.1075    -0.1058    -0.0486     0.0357
+                           169          1          3         53         56
+  3     1   5/2 -       0.9971     0.0313    -0.0228    -0.0176    -0.0165
+                             1         41         40         42         45
+
+Weighted average energy of these levels =  -2.6225533588D+02
+
+Generalised occupation numbers:
+
+   1.9998D+00  1.5371D+00  1.1513D+00  2.3027D+00  5.8747D-04  4.8855D-04
+   9.7305D-04  2.8070D-03  4.2144D-03
+
+ Iteration number  20
+ --------------------
+
+Lagrange multipliers:
+
+                1s    3s    1.108160169D-03
+                2s    3s    3.464093886D-02
+                2p-   3p-   2.664045569D-02
+                2p    3p    5.312925973D-02
+                                         Self-            Damping
+Subshell    Energy    Method   P0    consistency  Norm-1  factor  JP MTP INV NNP
+
+  3s    3.7827943D+01  3  1.327D+02  2.66D-05 -2.92D-04 0.000   236   298  0  2
+  3p-   3.5728475D+01  3  9.462D-02  1.50D-05 -1.59D-04 0.000   237   299  0  1
+  3p    3.5756853D+01  3  2.654D+02  2.31D-05 -1.59D-04 0.000   237   300  0  1
+  3d-   1.6943345D+01  3  9.701D-02  3.34D-07 -2.32D-07 0.000   250   297  0  0
+  3d    1.6939963D+01  3  2.065D+02  4.05D-07 -1.60D-07 0.000   250   297  0  0
+
+ Average energy =  -1.9503156221D+02 Hartrees
+ Average energy =  -1.9255684205D+02 Hartrees
+ Average energy =  -1.9950531725D+02 Hartrees
+
+Optimise on the following level(s):
+
+Level  1    Energy = -2.628743961975D+02    Weight =  7.69231D-02
+Level  2    Energy = -2.595778557802D+02    Weight =  7.69231D-02
+Level  1    Energy = -2.633632530731D+02    Weight =  1.53846D-01
+Level  2    Energy = -2.630391475918D+02    Weight =  1.53846D-01
+Level  3    Energy = -2.628714400708D+02    Weight =  1.53846D-01
+Level  4    Energy = -2.596053790785D+02    Weight =  1.53846D-01
+Level  1    Energy = -2.630362255870D+02    Weight =  2.30769D-01
+
+Weights of major contributors to ASF:
+
+Block Level J Parity      CSF contributions
+
+  1     1   1/2 -       0.9866     0.1498    -0.0277     0.0244    -0.0181
+                             1         81         31         20         23
+  1     2   1/2 -       0.9826    -0.1496    -0.0468     0.0422     0.0385
+                            81          1         23         24         30
+  2     1   3/2 -       0.7410     0.4988    -0.4434     0.0319    -0.0263
+                             2          3          1         59         53
+  2     2   3/2 -       0.6649    -0.6078     0.4271     0.0289     0.0217
+                             2          3          1         58         62
+  2     3   3/2 -       0.7775     0.6047     0.1498     0.0572    -0.0258
+                             1          3        169          2         41
+  2     4   3/2 -       0.9824    -0.1075    -0.1058    -0.0486     0.0357
+                           169          1          3         53         56
+  3     1   5/2 -       0.9971     0.0313    -0.0228    -0.0176    -0.0165
+                             1         41         40         42         45
+
+Weighted average energy of these levels =  -2.6225533603D+02
+
+Generalised occupation numbers:
+
+   1.9998D+00  1.5371D+00  1.1513D+00  2.3027D+00  5.8650D-04  4.8800D-04
+   9.7196D-04  2.8070D-03  4.2144D-03
+
+ Iteration number  21
+ --------------------
+
+Lagrange multipliers:
+
+                1s    3s    1.138156789D-03
+                2s    3s    3.463566653D-02
+                2p-   3p-   2.662228530D-02
+                2p    3p    5.309284245D-02
+                                         Self-            Damping
+Subshell    Energy    Method   P0    consistency  Norm-1  factor  JP MTP INV NNP
+
+  3s    3.7885154D+01  3  1.328D+02  2.17D-05 -2.38D-04 0.000   236   298  0  2
+  3p-   3.5758529D+01  3  9.470D-02  1.23D-05 -1.30D-04 0.000   237   299  0  1
+  3p    3.5787032D+01  3  2.656D+02  1.89D-05 -1.30D-04 0.000   237   300  0  1
+  3d-   1.6943655D+01  3  9.701D-02  2.71D-07 -1.83D-07 0.000   250   297  0  0
+  3d    1.6940270D+01  3  2.065D+02  3.29D-07 -1.24D-07 0.000   250   297  0  0
+
+ Average energy =  -1.9501874239D+02 Hartrees
+ Average energy =  -1.9254426363D+02 Hartrees
+ Average energy =  -1.9949383877D+02 Hartrees
+
+Optimise on the following level(s):
+
+Level  1    Energy = -2.628743976517D+02    Weight =  7.69231D-02
+Level  2    Energy = -2.595778510035D+02    Weight =  7.69231D-02
+Level  1    Energy = -2.633632526862D+02    Weight =  1.53846D-01
+Level  2    Energy = -2.630391500302D+02    Weight =  1.53846D-01
+Level  3    Energy = -2.628714415403D+02    Weight =  1.53846D-01
+Level  4    Energy = -2.596053742647D+02    Weight =  1.53846D-01
+Level  1    Energy = -2.630362280465D+02    Weight =  2.30769D-01
+
+Weights of major contributors to ASF:
+
+Block Level J Parity      CSF contributions
+
+  1     1   1/2 -       0.9866     0.1498    -0.0277     0.0244    -0.0181
+                             1         81         31         20         23
+  1     2   1/2 -       0.9826    -0.1496    -0.0468     0.0422     0.0385
+                            81          1         23         24         30
+  2     1   3/2 -       0.7410     0.4988    -0.4434     0.0319    -0.0263
+                             2          3          1         59         53
+  2     2   3/2 -       0.6649    -0.6078     0.4271     0.0289     0.0217
+                             2          3          1         58         62
+  2     3   3/2 -       0.7775     0.6047     0.1498     0.0572    -0.0258
+                             1          3        169          2         41
+  2     4   3/2 -       0.9824    -0.1075    -0.1058    -0.0486     0.0357
+                           169          1          3         53         56
+  3     1   5/2 -       0.9971     0.0313    -0.0228    -0.0176    -0.0165
+                             1         41         40         42         45
+
+Weighted average energy of these levels =  -2.6225533614D+02
+
+Generalised occupation numbers:
+
+   1.9998D+00  1.5371D+00  1.1513D+00  2.3027D+00  5.8572D-04  4.8756D-04
+   9.7108D-04  2.8070D-03  4.2144D-03
+
+ Iteration number  22
+ --------------------
+
+Lagrange multipliers:
+
+                1s    3s    1.162711627D-03
+                2s    3s    3.463130947D-02
+                2p-   3p-   2.660745346D-02
+                2p    3p    5.306311463D-02
+                                         Self-            Damping
+Subshell    Energy    Method   P0    consistency  Norm-1  factor  JP MTP INV NNP
+
+  3s    3.7931985D+01  3  1.329D+02  1.77D-05 -1.95D-04 0.000   236   298  0  2
+  3p-   3.5783076D+01  3  9.477D-02  1.00D-05 -1.06D-04 0.000   237   299  0  1
+  3p    3.5811684D+01  3  2.658D+02  1.54D-05 -1.06D-04 0.000   237   300  0  1
+  3d-   1.6943908D+01  3  9.701D-02  2.21D-07 -1.46D-07 0.000   250   297  0  0
+  3d    1.6940520D+01  3  2.065D+02  2.68D-07 -9.64D-08 0.000   250   297  0  0
+
+ Average energy =  -1.9500826027D+02 Hartrees
+ Average energy =  -1.9253397990D+02 Hartrees
+ Average energy =  -1.9948445515D+02 Hartrees
+
+Optimise on the following level(s):
+
+Level  1    Energy = -2.628743988290D+02    Weight =  7.69231D-02
+Level  2    Energy = -2.595778471011D+02    Weight =  7.69231D-02
+Level  1    Energy = -2.633632523616D+02    Weight =  1.53846D-01
+Level  2    Energy = -2.630391520121D+02    Weight =  1.53846D-01
+Level  3    Energy = -2.628714427301D+02    Weight =  1.53846D-01
+Level  4    Energy = -2.596053703323D+02    Weight =  1.53846D-01
+Level  1    Energy = -2.630362300456D+02    Weight =  2.30769D-01
+
+Weights of major contributors to ASF:
+
+Block Level J Parity      CSF contributions
+
+  1     1   1/2 -       0.9866     0.1498    -0.0277     0.0244    -0.0181
+                             1         81         31         20         23
+  1     2   1/2 -       0.9826    -0.1496    -0.0468     0.0422     0.0385
+                            81          1         23         24         30
+  2     1   3/2 -       0.7410     0.4988    -0.4434     0.0319    -0.0263
+                             2          3          1         59         53
+  2     2   3/2 -       0.6649    -0.6078     0.4271     0.0289     0.0217
+                             2          3          1         58         62
+  2     3   3/2 -       0.7775     0.6047     0.1498     0.0572    -0.0258
+                             1          3        169          2         41
+  2     4   3/2 -       0.9824    -0.1075    -0.1058    -0.0486     0.0357
+                           169          1          3         53         56
+  3     1   5/2 -       0.9971     0.0313    -0.0228    -0.0176    -0.0165
+                             1         41         40         42         45
+
+Weighted average energy of these levels =  -2.6225533623D+02
+
+Generalised occupation numbers:
+
+   1.9998D+00  1.5371D+00  1.1513D+00  2.3027D+00  5.8507D-04  4.8720D-04
+   9.7036D-04  2.8070D-03  4.2144D-03
+
+ Iteration number  23
+ --------------------
+
+Lagrange multipliers:
+
+                1s    3s    1.182819558D-03
+                2s    3s    3.462771407D-02
+                2p-   3p-   2.659533568D-02
+                2p    3p    5.303882559D-02
+                                         Self-            Damping
+Subshell    Energy    Method   P0    consistency  Norm-1  factor  JP MTP INV NNP
+
+  3s    3.7970335D+01  3  1.330D+02  1.45D-05 -1.59D-04 0.000   236   298  0  2
+  3p-   3.5803140D+01  3  9.483D-02  8.18D-06 -8.64D-05 0.000   237   299  0  1
+  3p    3.5831836D+01  3  2.659D+02  1.26D-05 -8.64D-05 0.000   237   300  0  1
+  3d-   1.6944114D+01  3  9.701D-02  1.80D-07 -1.17D-07 0.000   250   297  0  0
+  3d    1.6940724D+01  3  2.065D+02  2.19D-07 -7.58D-08 0.000   250   297  0  0
+
+ Average energy =  -1.9499968440D+02 Hartrees
+ Average energy =  -1.9252556702D+02 Hartrees
+ Average energy =  -1.9947677918D+02 Hartrees
+
+Optimise on the following level(s):
+
+Level  1    Energy = -2.628743997845D+02    Weight =  7.69231D-02
+Level  2    Energy = -2.595778439107D+02    Weight =  7.69231D-02
+Level  1    Energy = -2.633632520905D+02    Weight =  1.53846D-01
+Level  2    Energy = -2.630391536257D+02    Weight =  1.53846D-01
+Level  3    Energy = -2.628714436957D+02    Weight =  1.53846D-01
+Level  4    Energy = -2.596053671176D+02    Weight =  1.53846D-01
+Level  1    Energy = -2.630362316731D+02    Weight =  2.30769D-01
+
+Weights of major contributors to ASF:
+
+Block Level J Parity      CSF contributions
+
+  1     1   1/2 -       0.9866     0.1498    -0.0277     0.0244    -0.0181
+                             1         81         31         20         23
+  1     2   1/2 -       0.9826    -0.1496    -0.0468     0.0422     0.0385
+                            81          1         23         24         30
+  2     1   3/2 -       0.7410     0.4988    -0.4434     0.0319    -0.0263
+                             2          3          1         59         53
+  2     2   3/2 -       0.6649    -0.6078     0.4271     0.0289     0.0217
+                             2          3          1         58         62
+  2     3   3/2 -       0.7775     0.6047     0.1498     0.0572    -0.0258
+                             1          3        169          2         41
+  2     4   3/2 -       0.9824    -0.1075    -0.1058    -0.0486     0.0357
+                           169          1          3         53         56
+  3     1   5/2 -       0.9971     0.0313    -0.0228    -0.0176    -0.0165
+                             1         41         40         42         45
+
+Weighted average energy of these levels =  -2.6225533629D+02
+
+Generalised occupation numbers:
+
+   1.9998D+00  1.5371D+00  1.1513D+00  2.3027D+00  5.8455D-04  4.8691D-04
+   9.6977D-04  2.8070D-03  4.2144D-03
+
+ Iteration number  24
+ --------------------
+
+Lagrange multipliers:
+
+                1s    3s    1.199291114D-03
+                2s    3s    3.462475058D-02
+                2p-   3p-   2.658542795D-02
+                2p    3p    5.301896567D-02
+                                         Self-            Damping
+Subshell    Energy    Method   P0    consistency  Norm-1  factor  JP MTP INV NNP
+
+  3s    3.8001749D+01  3  1.331D+02  1.19D-05 -1.31D-04 0.000   236   298  0  2
+  3p-   3.5819552D+01  3  9.488D-02  6.68D-06 -7.07D-05 0.000   237   299  0  1
+  3p    3.5848321D+01  3  2.660D+02  1.03D-05 -7.07D-05 0.000   237   300  0  1
+  3d-   1.6944283D+01  3  9.702D-02  1.47D-07 -9.46D-08 0.000   250   297  0  0
+  3d    1.6940891D+01  3  2.065D+02  1.78D-07 -6.01D-08 0.000   250   297  0  0
+
+ Average energy =  -1.9499266465D+02 Hartrees
+ Average energy =  -1.9251868115D+02 Hartrees
+ Average energy =  -1.9947049683D+02 Hartrees
+
+Optimise on the following level(s):
+
+Level  1    Energy = -2.628744005614D+02    Weight =  7.69231D-02
+Level  2    Energy = -2.595778413006D+02    Weight =  7.69231D-02
+Level  1    Energy = -2.633632518650D+02    Weight =  1.53846D-01
+Level  2    Energy = -2.630391549411D+02    Weight =  1.53846D-01
+Level  3    Energy = -2.628714444809D+02    Weight =  1.53846D-01
+Level  4    Energy = -2.596053644877D+02    Weight =  1.53846D-01
+Level  1    Energy = -2.630362330000D+02    Weight =  2.30769D-01
+
+Weights of major contributors to ASF:
+
+Block Level J Parity      CSF contributions
+
+  1     1   1/2 -       0.9866     0.1498    -0.0277     0.0244    -0.0181
+                             1         81         31         20         23
+  1     2   1/2 -       0.9826    -0.1496    -0.0468     0.0422     0.0385
+                            81          1         23         24         30
+  2     1   3/2 -       0.7410     0.4988    -0.4434     0.0319    -0.0263
+                             2          3          1         59         53
+  2     2   3/2 -       0.6649    -0.6078     0.4271     0.0289     0.0217
+                             2          3          1         58         62
+  2     3   3/2 -       0.7775     0.6047     0.1498     0.0572    -0.0258
+                             1          3        169          2         41
+  2     4   3/2 -       0.9824    -0.1075    -0.1058    -0.0486     0.0357
+                           169          1          3         53         56
+  3     1   5/2 -       0.9971     0.0313    -0.0228    -0.0176    -0.0165
+                             1         41         40         42         45
+
+Weighted average energy of these levels =  -2.6225533634D+02
+
+Generalised occupation numbers:
+
+   1.9998D+00  1.5371D+00  1.1513D+00  2.3027D+00  5.8412D-04  4.8667D-04
+   9.6929D-04  2.8070D-03  4.2144D-03
+
+ Iteration number  25
+ --------------------
+
+Lagrange multipliers:
+
+                1s    3s    1.212787420D-03
+                2s    3s    3.462231017D-02
+                2p-   3p-   2.657732226D-02
+                2p    3p    5.300271744D-02
+                                         Self-            Damping
+Subshell    Energy    Method   P0    consistency  Norm-1  factor  JP MTP INV NNP
+
+  3s    3.8027489D+01  3  1.331D+02  9.72D-06 -1.07D-04 0.000   236   298  0  2
+  3p-   3.5832983D+01  3  9.492D-02  5.47D-06 -5.78D-05 0.000   237   299  0  1
+  3p    3.5861812D+01  3  2.661D+02  8.41D-06 -5.78D-05 0.000   237   300  0  1
+  3d-   1.6944420D+01  3  9.702D-02  1.20D-07 -7.70D-08 0.000   250   297  0  0
+  3d    1.6941027D+01  3  2.065D+02  1.46D-07 -4.79D-08 0.000   250   297  0  0
+
+ Average energy =  -1.9498691635D+02 Hartrees
+ Average energy =  -1.9251304278D+02 Hartrees
+ Average energy =  -1.9946535290D+02 Hartrees
+
+Optimise on the following level(s):
+
+Level  1    Energy = -2.628744011941D+02    Weight =  7.69231D-02
+Level  2    Energy = -2.595778391643D+02    Weight =  7.69231D-02
+Level  1    Energy = -2.633632516779D+02    Weight =  1.53846D-01
+Level  2    Energy = -2.630391560148D+02    Weight =  1.53846D-01
+Level  3    Energy = -2.628714451204D+02    Weight =  1.53846D-01
+Level  4    Energy = -2.596053623354D+02    Weight =  1.53846D-01
+Level  1    Energy = -2.630362340830D+02    Weight =  2.30769D-01
+
+Weights of major contributors to ASF:
+
+Block Level J Parity      CSF contributions
+
+  1     1   1/2 -       0.9866     0.1498    -0.0277     0.0244    -0.0181
+                             1         81         31         20         23
+  1     2   1/2 -       0.9826    -0.1496    -0.0468     0.0422     0.0385
+                            81          1         23         24         30
+  2     1   3/2 -       0.7410     0.4988    -0.4434     0.0319    -0.0263
+                             2          3          1         59         53
+  2     2   3/2 -       0.6649    -0.6078     0.4271     0.0289     0.0217
+                             2          3          1         58         62
+  2     3   3/2 -       0.7775     0.6047     0.1498     0.0572    -0.0258
+                             1          3        169          2         41
+  2     4   3/2 -       0.9824    -0.1075    -0.1058    -0.0486     0.0357
+                           169          1          3         53         56
+  3     1   5/2 -       0.9971     0.0313    -0.0228    -0.0176    -0.0165
+                             1         41         40         42         45
+
+Weighted average energy of these levels =  -2.6225533638D+02
+
+Generalised occupation numbers:
+
+   1.9998D+00  1.5371D+00  1.1513D+00  2.3027D+00  5.8377D-04  4.8647D-04
+   9.6889D-04  2.8070D-03  4.2144D-03
+
+ Iteration number  26
+ --------------------
+
+Lagrange multipliers:
+
+                1s    3s    1.223848269D-03
+                2s    3s    3.462030196D-02
+                2p-   3p-   2.657068754D-02
+                2p    3p    5.298941754D-02
+                                         Self-            Damping
+Subshell    Energy    Method   P0    consistency  Norm-1  factor  JP MTP INV NNP
+
+  3s    3.8048584D+01  3  1.332D+02  7.96D-06 -8.76D-05 0.000   236   298  0  2
+  3p-   3.5843979D+01  3  9.495D-02  4.47D-06 -4.73D-05 0.000   237   299  0  1
+  3p    3.5872859D+01  3  2.662D+02  6.88D-06 -4.73D-05 0.000   237   300  0  1
+  3d-   1.6944533D+01  3  9.702D-02  9.81D-08 -6.30D-08 0.000   250   297  0  0
+  3d    1.6941138D+01  3  2.065D+02  1.19D-07 -3.84D-08 0.000   250   297  0  0
+
+ Average energy =  -1.9498220766D+02 Hartrees
+ Average energy =  -1.9250842434D+02 Hartrees
+ Average energy =  -1.9946113962D+02 Hartrees
+
+Optimise on the following level(s):
+
+Level  1    Energy = -2.628744017101D+02    Weight =  7.69231D-02
+Level  2    Energy = -2.595778374151D+02    Weight =  7.69231D-02
+Level  1    Energy = -2.633632515230D+02    Weight =  1.53846D-01
+Level  2    Energy = -2.630391568919D+02    Weight =  1.53846D-01
+Level  3    Energy = -2.628714456420D+02    Weight =  1.53846D-01
+Level  4    Energy = -2.596053605730D+02    Weight =  1.53846D-01
+Level  1    Energy = -2.630362349678D+02    Weight =  2.30769D-01
+
+Weights of major contributors to ASF:
+
+Block Level J Parity      CSF contributions
+
+  1     1   1/2 -       0.9866     0.1498    -0.0277     0.0244    -0.0181
+                             1         81         31         20         23
+  1     2   1/2 -       0.9826    -0.1496    -0.0468     0.0422     0.0385
+                            81          1         23         24         30
+  2     1   3/2 -       0.7410     0.4988    -0.4434     0.0319    -0.0263
+                             2          3          1         59         53
+  2     2   3/2 -       0.6649    -0.6078     0.4271     0.0289     0.0217
+                             2          3          1         58         62
+  2     3   3/2 -       0.7775     0.6047     0.1498     0.0572    -0.0258
+                             1          3        169          2         41
+  2     4   3/2 -       0.9824    -0.1075    -0.1058    -0.0486     0.0357
+                           169          1          3         53         56
+  3     1   5/2 -       0.9971     0.0313    -0.0228    -0.0176    -0.0165
+                             1         41         40         42         45
+
+Weighted average energy of these levels =  -2.6225533641D+02
+
+Generalised occupation numbers:
+
+   1.9998D+00  1.5371D+00  1.1513D+00  2.3027D+00  5.8348D-04  4.8631D-04
+   9.6857D-04  2.8070D-03  4.2144D-03
+
+ Iteration number  27
+ --------------------
+
+Lagrange multipliers:
+
+                1s    3s    1.232914755D-03
+                2s    3s    3.461865038D-02
+                2p-   3p-   2.656525466D-02
+                2p    3p    5.297852661D-02
+                                         Self-            Damping
+Subshell    Energy    Method   P0    consistency  Norm-1  factor  JP MTP INV NNP
+
+  3s    3.8065875D+01  3  1.332D+02  6.52D-06 -7.17D-05 0.000   236   298  0  2
+  3p-   3.5852986D+01  3  9.498D-02  3.66D-06 -3.87D-05 0.000   237   299  0  1
+  3p    3.5881907D+01  3  2.662D+02  5.64D-06 -3.88D-05 0.000   237   300  0  1
+  3d-   1.6944625D+01  3  9.702D-02  8.02D-08 -5.18D-08 0.000   250   297  0  0
+  3d    1.6941229D+01  3  2.065D+02  9.75D-08 -3.09D-08 0.000   250   297  0  0
+
+ Average energy =  -1.9497834952D+02 Hartrees
+ Average energy =  -1.9250464029D+02 Hartrees
+ Average energy =  -1.9945768764D+02 Hartrees
+
+Optimise on the following level(s):
+
+Level  1    Energy = -2.628744021313D+02    Weight =  7.69231D-02
+Level  2    Energy = -2.595778359822D+02    Weight =  7.69231D-02
+Level  1    Energy = -2.633632513950D+02    Weight =  1.53846D-01
+Level  2    Energy = -2.630391576090D+02    Weight =  1.53846D-01
+Level  3    Energy = -2.628714460677D+02    Weight =  1.53846D-01
+Level  4    Energy = -2.596053591295D+02    Weight =  1.53846D-01
+Level  1    Energy = -2.630362356911D+02    Weight =  2.30769D-01
+
+Weights of major contributors to ASF:
+
+Block Level J Parity      CSF contributions
+
+  1     1   1/2 -       0.9866     0.1498    -0.0277     0.0244    -0.0181
+                             1         81         31         20         23
+  1     2   1/2 -       0.9826    -0.1496    -0.0468     0.0422     0.0385
+                            81          1         23         24         30
+  2     1   3/2 -       0.7410     0.4988    -0.4434     0.0319    -0.0263
+                             2          3          1         59         53
+  2     2   3/2 -       0.6649    -0.6078     0.4271     0.0289     0.0217
+                             2          3          1         58         62
+  2     3   3/2 -       0.7775     0.6047     0.1498     0.0572    -0.0258
+                             1          3        169          2         41
+  2     4   3/2 -       0.9824    -0.1075    -0.1058    -0.0486     0.0357
+                           169          1          3         53         56
+  3     1   5/2 -       0.9971     0.0313    -0.0228    -0.0176    -0.0165
+                             1         41         40         42         45
+
+Weighted average energy of these levels =  -2.6225533643D+02
+
+Generalised occupation numbers:
+
+   1.9998D+00  1.5371D+00  1.1513D+00  2.3027D+00  5.8324D-04  4.8618D-04
+   9.6831D-04  2.8070D-03  4.2144D-03
+
+ Iteration number  28
+ --------------------
+
+Lagrange multipliers:
+
+                1s    3s    1.240347564D-03
+                2s    3s    3.461729272D-02
+                2p-   3p-   2.656080442D-02
+                2p    3p    5.296960538D-02
+                                         Self-            Damping
+Subshell    Energy    Method   P0    consistency  Norm-1  factor  JP MTP INV NNP
+
+  3s    3.8080051D+01  3  1.333D+02  5.34D-06 -5.88D-05 0.000   236   298  0  2
+  3p-   3.5860365D+01  3  9.500D-02  3.00D-06 -3.17D-05 0.000   237   299  0  1
+  3p    3.5889320D+01  3  2.663D+02  4.62D-06 -3.17D-05 0.000   237   300  0  1
+  3d-   1.6944700D+01  3  9.702D-02  6.56D-08 -4.29D-08 0.000   250   297  0  0
+  3d    1.6941304D+01  3  2.065D+02  7.98D-08 -2.49D-08 0.000   250   297  0  0
+
+ Average energy =  -1.9497518760D+02 Hartrees
+ Average energy =  -1.9250153917D+02 Hartrees
+ Average energy =  -1.9945485874D+02 Hartrees
+
+Optimise on the following level(s):
+
+Level  1    Energy = -2.628744024754D+02    Weight =  7.69231D-02
+Level  2    Energy = -2.595778348083D+02    Weight =  7.69231D-02
+Level  1    Energy = -2.633632512894D+02    Weight =  1.53846D-01
+Level  2    Energy = -2.630391581956D+02    Weight =  1.53846D-01
+Level  3    Energy = -2.628714464156D+02    Weight =  1.53846D-01
+Level  4    Energy = -2.596053579468D+02    Weight =  1.53846D-01
+Level  1    Energy = -2.630362362829D+02    Weight =  2.30769D-01
+
+Weights of major contributors to ASF:
+
+Block Level J Parity      CSF contributions
+
+  1     1   1/2 -       0.9866     0.1498    -0.0277     0.0244    -0.0181
+                             1         81         31         20         23
+  1     2   1/2 -       0.9826    -0.1496    -0.0468     0.0422     0.0385
+                            81          1         23         24         30
+  2     1   3/2 -       0.7410     0.4988    -0.4434     0.0319    -0.0263
+                             2          3          1         59         53
+  2     2   3/2 -       0.6649    -0.6078     0.4271     0.0289     0.0217
+                             2          3          1         58         62
+  2     3   3/2 -       0.7775     0.6047     0.1498     0.0572    -0.0258
+                             1          3        169          2         41
+  2     4   3/2 -       0.9824    -0.1075    -0.1058    -0.0486     0.0357
+                           169          1          3         53         56
+  3     1   5/2 -       0.9971     0.0313    -0.0228    -0.0176    -0.0165
+                             1         41         40         42         45
+
+Weighted average energy of these levels =  -2.6225533645D+02
+
+Generalised occupation numbers:
+
+   1.9998D+00  1.5371D+00  1.1513D+00  2.3027D+00  5.8305D-04  4.8607D-04
+   9.6809D-04  2.8070D-03  4.2144D-03
+
+ Iteration number  29
+ --------------------
+
+Lagrange multipliers:
+
+                1s    3s    1.246441797D-03
+                2s    3s    3.461617710D-02
+                2p-   3p-   2.655715810D-02
+                2p    3p    5.296229565D-02
+                                         Self-            Damping
+Subshell    Energy    Method   P0    consistency  Norm-1  factor  JP MTP INV NNP
+
+  3s    3.8091674D+01  3  1.333D+02  4.38D-06 -4.82D-05 0.000   236   298  0  2
+  3p-   3.5866412D+01  3  9.501D-02  2.46D-06 -2.60D-05 0.000   237   299  0  1
+  3p    3.5895395D+01  3  2.663D+02  3.78D-06 -2.60D-05 0.000   237   300  0  1
+  3d-   1.6944762D+01  3  9.702D-02  5.37D-08 -3.57D-08 0.000   250   297  0  0
+  3d    1.6941365D+01  3  2.065D+02  6.54D-08 -2.02D-08 0.000   250   297  0  0
+
+ Average energy =  -1.9497259579D+02 Hartrees
+ Average energy =  -1.9249899727D+02 Hartrees
+ Average energy =  -1.9945254002D+02 Hartrees
+
+Optimise on the following level(s):
+
+Level  1    Energy = -2.628744027568D+02    Weight =  7.69231D-02
+Level  2    Energy = -2.595778338462D+02    Weight =  7.69231D-02
+Level  1    Energy = -2.633632512023D+02    Weight =  1.53846D-01
+Level  2    Energy = -2.630391586757D+02    Weight =  1.53846D-01
+Level  3    Energy = -2.628714467000D+02    Weight =  1.53846D-01
+Level  4    Energy = -2.596053569776D+02    Weight =  1.53846D-01
+Level  1    Energy = -2.630362367672D+02    Weight =  2.30769D-01
+
+Weights of major contributors to ASF:
+
+Block Level J Parity      CSF contributions
+
+  1     1   1/2 -       0.9866     0.1498    -0.0277     0.0244    -0.0181
+                             1         81         31         20         23
+  1     2   1/2 -       0.9826    -0.1496    -0.0468     0.0422     0.0385
+                            81          1         23         24         30
+  2     1   3/2 -       0.7410     0.4988    -0.4434     0.0319    -0.0263
+                             2          3          1         59         53
+  2     2   3/2 -       0.6649    -0.6078     0.4271     0.0289     0.0217
+                             2          3          1         58         62
+  2     3   3/2 -       0.7775     0.6047     0.1498     0.0572    -0.0258
+                             1          3        169          2         41
+  2     4   3/2 -       0.9824    -0.1075    -0.1058    -0.0486     0.0357
+                           169          1          3         53         56
+  3     1   5/2 -       0.9971     0.0313    -0.0228    -0.0176    -0.0165
+                             1         41         40         42         45
+
+Weighted average energy of these levels =  -2.6225533646D+02
+
+Generalised occupation numbers:
+
+   1.9998D+00  1.5371D+00  1.1513D+00  2.3027D+00  5.8289D-04  4.8598D-04
+   9.6791D-04  2.8070D-03  4.2144D-03
+
+ Iteration number  30
+ --------------------
+
+Lagrange multipliers:
+
+                1s    3s    1.251439015D-03
+                2s    3s    3.461526065D-02
+                2p-   3p-   2.655416980D-02
+                2p    3p    5.295630500D-02
+                                         Self-            Damping
+Subshell    Energy    Method   P0    consistency  Norm-1  factor  JP MTP INV NNP
+
+  3s    3.8101204D+01  3  1.333D+02  3.59D-06 -3.95D-05 0.000   236   298  0  2
+  3p-   3.5871368D+01  3  9.503D-02  2.02D-06 -2.13D-05 0.000   237   299  0  1
+  3p    3.5900374D+01  3  2.664D+02  3.10D-06 -2.13D-05 0.000   237   300  0  1
+  3d-   1.6944813D+01  3  9.702D-02  4.40D-08 -3.00D-08 0.000   250   297  0  0
+  3d    1.6941415D+01  3  2.065D+02  5.36D-08 -1.64D-08 0.000   250   297  0  0
+
+ Average energy =  -1.9497047099D+02 Hartrees
+ Average energy =  -1.9249691342D+02 Hartrees
+ Average energy =  -1.9945063916D+02 Hartrees
+
+Optimise on the following level(s):
+
+Level  1    Energy = -2.628744029871D+02    Weight =  7.69231D-02
+Level  2    Energy = -2.595778330576D+02    Weight =  7.69231D-02
+Level  1    Energy = -2.633632511306D+02    Weight =  1.53846D-01
+Level  2    Energy = -2.630391590688D+02    Weight =  1.53846D-01
+Level  3    Energy = -2.628714469328D+02    Weight =  1.53846D-01
+Level  4    Energy = -2.596053561831D+02    Weight =  1.53846D-01
+Level  1    Energy = -2.630362371638D+02    Weight =  2.30769D-01
+
+Weights of major contributors to ASF:
+
+Block Level J Parity      CSF contributions
+
+  1     1   1/2 -       0.9866     0.1498    -0.0277     0.0244    -0.0181
+                             1         81         31         20         23
+  1     2   1/2 -       0.9826    -0.1496    -0.0468     0.0422     0.0385
+                            81          1         23         24         30
+  2     1   3/2 -       0.7410     0.4988    -0.4434     0.0319    -0.0263
+                             2          3          1         59         53
+  2     2   3/2 -       0.6649    -0.6078     0.4271     0.0289     0.0217
+                             2          3          1         58         62
+  2     3   3/2 -       0.7775     0.6047     0.1498     0.0572    -0.0258
+                             1          3        169          2         41
+  2     4   3/2 -       0.9824    -0.1075    -0.1058    -0.0486     0.0357
+                           169          1          3         53         56
+  3     1   5/2 -       0.9971     0.0313    -0.0228    -0.0176    -0.0165
+                             1         41         40         42         45
+
+Weighted average energy of these levels =  -2.6225533647D+02
+
+Generalised occupation numbers:
+
+   1.9998D+00  1.5371D+00  1.1513D+00  2.3027D+00  5.8276D-04  4.8591D-04
+   9.6777D-04  2.8070D-03  4.2144D-03
+
+ Iteration number  31
+ --------------------
+
+Lagrange multipliers:
+
+                1s    3s    1.255537022D-03
+                2s    3s    3.461450799D-02
+                2p-   3p-   2.655172035D-02
+                2p    3p    5.295139451D-02
+                                         Self-            Damping
+Subshell    Energy    Method   P0    consistency  Norm-1  factor  JP MTP INV NNP
+
+  3s    3.8109020D+01  3  1.333D+02  2.94D-06 -3.24D-05 0.000   236   298  0  2
+  3p-   3.5875431D+01  3  9.504D-02  1.65D-06 -1.75D-05 0.000   237   299  0  1
+  3p    3.5904456D+01  3  2.664D+02  2.54D-06 -1.75D-05 0.000   237   300  0  1
+  3d-   1.6944854D+01  3  9.702D-02  3.60D-08 -2.53D-08 0.000   250   297  0  0
+  3d    1.6941456D+01  3  2.065D+02  4.39D-08 -1.34D-08 0.000   250   297  0  0
+
+ Average energy =  -1.9496872884D+02 Hartrees
+ Average energy =  -1.9249520487D+02 Hartrees
+ Average energy =  -1.9944908067D+02 Hartrees
+
+Optimise on the following level(s):
+
+Level  1    Energy = -2.628744031755D+02    Weight =  7.69231D-02
+Level  2    Energy = -2.595778324111D+02    Weight =  7.69231D-02
+Level  1    Energy = -2.633632510715D+02    Weight =  1.53846D-01
+Level  2    Energy = -2.630391593909D+02    Weight =  1.53846D-01
+Level  3    Energy = -2.628714471232D+02    Weight =  1.53846D-01
+Level  4    Energy = -2.596053555319D+02    Weight =  1.53846D-01
+Level  1    Energy = -2.630362374886D+02    Weight =  2.30769D-01
+
+Weights of major contributors to ASF:
+
+Block Level J Parity      CSF contributions
+
+  1     1   1/2 -       0.9866     0.1498    -0.0277     0.0244    -0.0181
+                             1         81         31         20         23
+  1     2   1/2 -       0.9826    -0.1496    -0.0468     0.0422     0.0385
+                            81          1         23         24         30
+  2     1   3/2 -       0.7410     0.4988    -0.4434     0.0319    -0.0263
+                             2          3          1         59         53
+  2     2   3/2 -       0.6649    -0.6078     0.4271     0.0289     0.0217
+                             2          3          1         58         62
+  2     3   3/2 -       0.7775     0.6047     0.1498     0.0572    -0.0258
+                             1          3        169          2         41
+  2     4   3/2 -       0.9824    -0.1075    -0.1058    -0.0486     0.0357
+                           169          1          3         53         56
+  3     1   5/2 -       0.9971     0.0313    -0.0228    -0.0176    -0.0165
+                             1         41         40         42         45
+
+Weighted average energy of these levels =  -2.6225533648D+02
+
+Generalised occupation numbers:
+
+   1.9998D+00  1.5371D+00  1.1513D+00  2.3027D+00  5.8266D-04  4.8585D-04
+   9.6765D-04  2.8070D-03  4.2144D-03
+
+ Iteration number  32
+ --------------------
+
+Lagrange multipliers:
+
+                1s    3s    1.258897852D-03
+                2s    3s    3.461388999D-02
+                2p-   3p-   2.654971226D-02
+                2p    3p    5.294736882D-02
+                                         Self-            Damping
+Subshell    Energy    Method   P0    consistency  Norm-1  factor  JP MTP INV NNP
+
+  3s    3.8115430D+01  3  1.333D+02  2.41D-06 -2.66D-05 0.000   236   298  0  2
+  3p-   3.5878762D+01  3  9.505D-02  1.35D-06 -1.43D-05 0.000   237   299  0  1
+  3p    3.5907803D+01  3  2.664D+02  2.08D-06 -1.43D-05 0.000   237   300  0  1
+  3d-   1.6944888D+01  3  9.702D-02  2.95D-08 -2.15D-08 0.000   250   297  0  0
+  3d    1.6941490D+01  3  2.065D+02  3.60D-08 -1.09D-08 0.000   250   297  0  0
+
+ Average energy =  -1.9496730028D+02 Hartrees
+ Average energy =  -1.9249380389D+02 Hartrees
+ Average energy =  -1.9944780275D+02 Hartrees
+
+Optimise on the following level(s):
+
+Level  1    Energy = -2.628744033299D+02    Weight =  7.69231D-02
+Level  2    Energy = -2.595778318811D+02    Weight =  7.69231D-02
+Level  1    Energy = -2.633632510230D+02    Weight =  1.53846D-01
+Level  2    Energy = -2.630391596547D+02    Weight =  1.53846D-01
+Level  3    Energy = -2.628714472792D+02    Weight =  1.53846D-01
+Level  4    Energy = -2.596053549979D+02    Weight =  1.53846D-01
+Level  1    Energy = -2.630362377548D+02    Weight =  2.30769D-01
+
+Weights of major contributors to ASF:
+
+Block Level J Parity      CSF contributions
+
+  1     1   1/2 -       0.9866     0.1498    -0.0277     0.0244    -0.0181
+                             1         81         31         20         23
+  1     2   1/2 -       0.9826    -0.1496    -0.0468     0.0422     0.0385
+                            81          1         23         24         30
+  2     1   3/2 -       0.7410     0.4988    -0.4434     0.0319    -0.0263
+                             2          3          1         59         53
+  2     2   3/2 -       0.6649    -0.6078     0.4271     0.0289     0.0217
+                             2          3          1         58         62
+  2     3   3/2 -       0.7775     0.6047     0.1498     0.0572    -0.0258
+                             1          3        169          2         41
+  2     4   3/2 -       0.9824    -0.1075    -0.1058    -0.0486     0.0357
+                           169          1          3         53         56
+  3     1   5/2 -       0.9971     0.0313    -0.0228    -0.0176    -0.0165
+                             1         41         40         42         45
+
+Weighted average energy of these levels =  -2.6225533649D+02
+
+Generalised occupation numbers:
+
+   1.9998D+00  1.5371D+00  1.1513D+00  2.3027D+00  5.8257D-04  4.8580D-04
+   9.6755D-04  2.8070D-03  4.2144D-03
+
+ Iteration number  33
+ --------------------
+
+Lagrange multipliers:
+
+                1s    3s    1.261654263D-03
+                2s    3s    3.461338262D-02
+                2p-   3p-   2.654806581D-02
+                2p    3p    5.294406810D-02
+                                         Self-            Damping
+Subshell    Energy    Method   P0    consistency  Norm-1  factor  JP MTP INV NNP
+
+  3s    3.8120687D+01  3  1.334D+02  1.98D-06 -2.18D-05 0.000   236   298  0  2
+  3p-   3.5881493D+01  3  9.506D-02  1.11D-06 -1.17D-05 0.000   237   299  0  1
+  3p    3.5910547D+01  3  2.664D+02  1.71D-06 -1.17D-05 0.000   237   300  0  1
+  3d-   1.6944916D+01  3  9.702D-02  2.42D-08 -1.84D-08 0.000   250   297  0  0
+  3d    1.6941517D+01  3  2.065D+02  2.95D-08 -8.94D-09 0.000   250   297  0  0
+
+ Average energy =  -1.9496612877D+02 Hartrees
+ Average energy =  -1.9249265501D+02 Hartrees
+ Average energy =  -1.9944675480D+02 Hartrees
+
+Optimise on the following level(s):
+
+Level  1    Energy = -2.628744034563D+02    Weight =  7.69231D-02
+Level  2    Energy = -2.595778314465D+02    Weight =  7.69231D-02
+Level  1    Energy = -2.633632509831D+02    Weight =  1.53846D-01
+Level  2    Energy = -2.630391598709D+02    Weight =  1.53846D-01
+Level  3    Energy = -2.628714474070D+02    Weight =  1.53846D-01
+Level  4    Energy = -2.596053545601D+02    Weight =  1.53846D-01
+Level  1    Energy = -2.630362379729D+02    Weight =  2.30769D-01
+
+Weights of major contributors to ASF:
+
+Block Level J Parity      CSF contributions
+
+  1     1   1/2 -       0.9866     0.1498    -0.0277     0.0244    -0.0181
+                             1         81         31         20         23
+  1     2   1/2 -       0.9826    -0.1496    -0.0468     0.0422     0.0385
+                            81          1         23         24         30
+  2     1   3/2 -       0.7410     0.4988    -0.4434     0.0319    -0.0263
+                             2          3          1         59         53
+  2     2   3/2 -       0.6649    -0.6078     0.4271     0.0289     0.0217
+                             2          3          1         58         62
+  2     3   3/2 -       0.7775     0.6047     0.1498     0.0572    -0.0258
+                             1          3        169          2         41
+  2     4   3/2 -       0.9824    -0.1075    -0.1058    -0.0486     0.0357
+                           169          1          3         53         56
+  3     1   5/2 -       0.9971     0.0313    -0.0228    -0.0176    -0.0165
+                             1         41         40         42         45
+
+Weighted average energy of these levels =  -2.6225533650D+02
+
+Generalised occupation numbers:
+
+   1.9998D+00  1.5371D+00  1.1513D+00  2.3027D+00  5.8250D-04  4.8576D-04
+   9.6747D-04  2.8070D-03  4.2144D-03
+
+ Iteration number  34
+ --------------------
+
+Lagrange multipliers:
+
+                1s    3s    1.263915058D-03
+                2s    3s    3.461296615D-02
+                2p-   3p-   2.654671574D-02
+                2p    3p    5.294136153D-02
+                                         Self-            Damping
+Subshell    Energy    Method   P0    consistency  Norm-1  factor  JP MTP INV NNP
+
+  3s    3.8124999D+01  3  1.334D+02  1.62D-06 -1.79D-05 0.000   236   298  0  2
+  3p-   3.5883733D+01  3  9.507D-02  9.10D-07 -9.63D-06 0.000   237   299  0  1
+  3p    3.5912798D+01  3  2.665D+02  1.40D-06 -9.63D-06 0.000   237   300  0  1
+  3d-   1.6944939D+01  3  9.702D-02  1.98D-08 -1.59D-08 0.000   250   297  0  0
+  3d    1.6941540D+01  3  2.065D+02  2.42D-08 -7.33D-09 0.000   250   297  0  0
+
+ Average energy =  -1.9496516800D+02 Hartrees
+ Average energy =  -1.9249171280D+02 Hartrees
+ Average energy =  -1.9944589537D+02 Hartrees
+
+Optimise on the following level(s):
+
+Level  1    Energy = -2.628744035598D+02    Weight =  7.69231D-02
+Level  2    Energy = -2.595778310900D+02    Weight =  7.69231D-02
+Level  1    Energy = -2.633632509503D+02    Weight =  1.53846D-01
+Level  2    Energy = -2.630391600481D+02    Weight =  1.53846D-01
+Level  3    Energy = -2.628714475117D+02    Weight =  1.53846D-01
+Level  4    Energy = -2.596053542010D+02    Weight =  1.53846D-01
+Level  1    Energy = -2.630362381517D+02    Weight =  2.30769D-01
+
+Weights of major contributors to ASF:
+
+Block Level J Parity      CSF contributions
+
+  1     1   1/2 -       0.9866     0.1498    -0.0277     0.0244    -0.0181
+                             1         81         31         20         23
+  1     2   1/2 -       0.9826    -0.1496    -0.0468     0.0422     0.0385
+                            81          1         23         24         30
+  2     1   3/2 -       0.7410     0.4988    -0.4434     0.0319    -0.0263
+                             2          3          1         59         53
+  2     2   3/2 -       0.6649    -0.6078     0.4271     0.0289     0.0217
+                             2          3          1         58         62
+  2     3   3/2 -       0.7775     0.6047     0.1498     0.0572    -0.0258
+                             1          3        169          2         41
+  2     4   3/2 -       0.9824    -0.1075    -0.1058    -0.0486     0.0357
+                           169          1          3         53         56
+  3     1   5/2 -       0.9971     0.0313    -0.0228    -0.0176    -0.0165
+                             1         41         40         42         45
+
+Weighted average energy of these levels =  -2.6225533650D+02
+
+Generalised occupation numbers:
+
+   1.9998D+00  1.5371D+00  1.1513D+00  2.3027D+00  5.8244D-04  4.8573D-04
+   9.6741D-04  2.8070D-03  4.2144D-03
+
+ Iteration number  35
+ --------------------
+
+Lagrange multipliers:
+
+                1s    3s    1.265769421D-03
+                2s    3s    3.461262432D-02
+                2p-   3p-   2.654560860D-02
+                2p    3p    5.293914198D-02
+                                         Self-            Damping
+Subshell    Energy    Method   P0    consistency  Norm-1  factor  JP MTP INV NNP
+
+  3s    3.8128535D+01  3  1.334D+02  1.33D-06 -1.47D-05 0.000   236   298  0  2
+  3p-   3.5885570D+01  3  9.507D-02  7.47D-07 -7.90D-06 0.000   237   299  0  1
+  3p    3.5914643D+01  3  2.665D+02  1.15D-06 -7.90D-06 0.000   237   300  0  1
+  3d-   1.6944957D+01  3  9.702D-02  1.62D-08 -1.39D-08 0.000   250   297  0  0
+  3d    1.6941558D+01  3  2.065D+02  1.98D-08 -6.02D-09 0.000   250   297  0  0
+
+ Average energy =  -1.9496438001D+02 Hartrees
+ Average energy =  -1.9249094004D+02 Hartrees
+ Average energy =  -1.9944519050D+02 Hartrees
+
+Optimise on the following level(s):
+
+Level  1    Energy = -2.628744036447D+02    Weight =  7.69231D-02
+Level  2    Energy = -2.595778307977D+02    Weight =  7.69231D-02
+Level  1    Energy = -2.633632509234D+02    Weight =  1.53846D-01
+Level  2    Energy = -2.630391601934D+02    Weight =  1.53846D-01
+Level  3    Energy = -2.628714475975D+02    Weight =  1.53846D-01
+Level  4    Energy = -2.596053539066D+02    Weight =  1.53846D-01
+Level  1    Energy = -2.630362382982D+02    Weight =  2.30769D-01
+
+Weights of major contributors to ASF:
+
+Block Level J Parity      CSF contributions
+
+  1     1   1/2 -       0.9866     0.1498    -0.0277     0.0244    -0.0181
+                             1         81         31         20         23
+  1     2   1/2 -       0.9826    -0.1496    -0.0468     0.0422     0.0385
+                            81          1         23         24         30
+  2     1   3/2 -       0.7410     0.4988    -0.4434     0.0319    -0.0263
+                             2          3          1         59         53
+  2     2   3/2 -       0.6649    -0.6078     0.4271     0.0289     0.0217
+                             2          3          1         58         62
+  2     3   3/2 -       0.7775     0.6047     0.1498     0.0572    -0.0258
+                             1          3        169          2         41
+  2     4   3/2 -       0.9824    -0.1075    -0.1058    -0.0486     0.0357
+                           169          1          3         53         56
+  3     1   5/2 -       0.9971     0.0313    -0.0228    -0.0176    -0.0165
+                             1         41         40         42         45
+
+Weighted average energy of these levels =  -2.6225533651D+02
+
+Generalised occupation numbers:
+
+   1.9998D+00  1.5371D+00  1.1513D+00  2.3027D+00  5.8239D-04  4.8570D-04
+   9.6735D-04  2.8070D-03  4.2144D-03
+ ====================================================
+        RSCF2: Execution Finished ...
+ ====================================================
+ Wall time:
+       10 seconds
+
+ Finish Date and Time:
+   Date (Yr/Mon/Day): 2019/01/08
+   Time (Hr/Min/Sec): 19/58/58.748
+   Zone: -0500
+
+ RSCF2: Execution complete.

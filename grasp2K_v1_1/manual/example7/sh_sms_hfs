@@ -1,0 +1,28 @@
+#!/bin/sh
+set -x
+
+#      Run sms2 and rhfs3 for 2s_3 and 2p_3 rci calculations
+$GRASP/bin/sms2 <<S1
+y
+2s_3
+y
+S1
+
+$GRASP/bin/sms2 <<S2
+y
+2p_3
+y
+S2
+
+$GRASP/bin/rhfs3 <<S3
+y
+2s_3
+y
+S3
+
+$GRASP/bin/rhfs3 <<S4
+y
+2p_3
+y
+S4
+

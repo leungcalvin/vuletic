@@ -1,0 +1,27 @@
+#!/bin/sh
+
+set -x
+
+#    Example of grasp2K run for 1s(2)2s2p 1,3P in B II
+
+# 1.   Get the nuclear data
+        ./sh_iso
+
+# 2.   Generate the 1s(2)2s2p DF expansion
+	./sh_jjgen
+
+# 3.   Angular integration
+        ./sh_mcp
+
+# 4.   Perform HF calculations (note HF needs to be availabel and on the path) 
+#      Convert HF wave functions using mchfmcdf
+        ./sh_HF
+
+# 5.   Perform scf calculation and save to 2s2p_DF
+        ./sh_scf
+
+# 6.   Transform from jj- to LSJ-coupling
+        ./sh_jj2lsj
+
+# 7.  View levels
+        ./sh_rlevels

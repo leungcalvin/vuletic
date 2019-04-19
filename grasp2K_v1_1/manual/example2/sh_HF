@@ -1,0 +1,23 @@
+#!/bin/sh
+set -x
+
+#    HF calculation on configuration average for 2s2p
+HF <<EOF
+B,AV,5.
+  1s
+2s(1)2p(1)
+all
+y
+y
+n
+n
+EOF
+
+cp wfn.out wfn.inp
+
+#   Convert HF radial orbitals to relativistic ones
+$GRASP/bin/mchfmcdf 
+
+#   Copy files
+cp rwfn.out rwfn.inp
+

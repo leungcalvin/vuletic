@@ -1,0 +1,33 @@
+#
+# Define the following global variables according to your environment and
+# source the script or add these definitions to your .cshrc file and 
+# source ~/.cshrc
+
+#
+# For Linux, gfortran gcc version 4.6.3
+# ------------------------------------------
+export    FC=gfortran                                   # Fortran compiler 
+export    FC_FLAGS="-O2 -fno-automatic -fcray-pointer"  # Serial code compiler flags
+export    FC_LD="-static-libgfortran"                   # Serical linker flags
+export    GRASP="/home/calvin/Documents/vuletic/grasp2K_v1_1"  # Location of the grasp2K_v1_1 directory SHOULD BE SET BY THE USER!!!!!!!
+export    LAPACK_LIB="-llapackd -llapacku -lblas"       # Libraries to be searched
+export    LAPACK_DIR="${GRASP}/lib"                     # Location of LAPACK library 
+export    GRASPLIBS="-l92 -lnjgraf -ldvdson"            # Libraries to be searched by v1 and v2 codes
+export    NEWGRASPLIBS="-lrang -l92 -ldvdson"           # Libraries to be searched by v3 codes
+export    FC_MALLOC="LINUX"                             # Memory allocation routine (availabel for Linux and other systems)
+export    GRASP_INCLUDES="${GRASP}/src/lib/def"         # Location of parameter definition file 
+
+export    F90=gfortran                                  # Fortran compiler
+export    F90_FLAGS="-O2 -fno-automatic -fcray-pointer" # Serial code compiler flag
+
+export CPP="g++"                                        # C++ compiler
+export CPP_FLAGS="-O3"                                  # C++ compiler flags
+export CPP_LD="-static"                                 # C++ linker
+
+#
+# For running MPI
+# ---------------------------------------
+export FC_MPI="mpif90"                                  # MPICH/mpif90 compiler
+export FC_MPIFLAGS="-O2 -fno-automatic -fcray-pointer"  # Serial code compiler flags
+export FC_MPILD="-static"                               # Serical linker flags
+export MPI_TMP="/tmp/$USER"

@@ -1,0 +1,103 @@
+#!/bin/sh
+set -x
+
+#   Generate grasp2K expansions
+#   [Xe]4f14 6s2 ; S ; 2J = 0,0 (1S term)
+#   [Xe]4f14 6s1 6p1; S; 2J = 0,4 (3P term)
+#   [Xe]4f14 6s1 6p1; S; 2J = 2,2 (1P term)
+#   [Xe]4f13 5d1 6s2; S; 2J = 4,10 (some other state with nearby energies...)
+#   [Xe]4f14 5d1 6s1; S; 2J = 2,6 (1D, 3D)
+#   See NIST website...
+#   4939 configs
+
+$GRASP/bin/jjgen << EOF
+
+
+7
+f
+ 
+
+6
+c
+5
+14
+0
+0
+2
+0
+0
+0
+0,0
+1
+y
+7
+f
+
+
+6
+14
+0
+0
+1
+1
+0
+0
+0,4
+1
+y
+7
+f
+
+
+6
+14
+0
+0
+1
+1
+0
+0
+2,2
+1
+y
+7
+f
+
+
+6
+13
+1
+0
+2
+0
+0
+0
+4,10
+1
+y
+7
+f
+
+
+6
+14
+1
+0
+1
+0
+0
+0
+2,6
+1
+
+EOF
+
+cp clist.log 6s_6p_5d_4f.log
+cp clist.out rcsl.inp
+
+$GRASP/bin/jsplit << EOF
+n
+EOF
+
+cp rcsl.out rcsl.inp
+

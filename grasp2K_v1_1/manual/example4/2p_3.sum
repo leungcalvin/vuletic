@@ -1,0 +1,71 @@
+
+ There are 3 electrons in the cloud
+  in 186 relativistic CSFs
+  based on 9 relativistic subshells.
+
+The atomic number is  70.0000000000;
+ the mass of the nucleus is  3.115978599513D+05 electron masses;
+  Fermi nucleus:
+  c = 1.179157016706D-04 Bohr radii,
+  a = 9.890591365424D-06 Bohr radii;
+  there are 83 tabulation points in the nucleus.
+
+Speed of light =  137.0359990740D+00 atomic units.
+
+Radial grid: R(I) = RNT*(exp((I-1)*H)-1), I = 1, ..., N;
+
+ RNT  =  2.000000000000D-06 Bohr radii;
+ H    =  5.000000000000D-02 Bohr radii;
+ N    =  590;
+ R(1) =  0.000000000000D+00 Bohr radii;
+ R(2) =  1.025421927520D-07 Bohr radii;
+ R(N) =  1.233111896689D+07 Bohr radii.
+
+ EOL calculation.
+ 2 levels will be optimised;
+  their indices are: 1, 1.
+ Each is assigned its statistical weight;
+
+Radial wavefunction summary:
+
+                                                                   Self
+Subshell      e             p0     gamma     P(2)       Q(2)   Consistency MTP
+
+  1s   2.5686801132D+03  2.342D+03  1.00  2.402D-04 -5.098D-08  0.000D+00  253
+  2s   6.3924413358D+02  9.133D+02  1.00  9.365D-05 -2.004D-08  0.000D+00  260
+  2p-  6.3266768684D+02  5.472D+01  1.00  5.022D-09  2.197D-05  0.000D+00  260
+  2p   5.8912407717D+02  1.241D+04  2.00  1.305D-10 -4.156D-14  0.000D+00  261
+  3s   6.0699487492D+03  3.250D+04  1.00  4.211D-04 -7.834D-08  7.876D-08  260
+  3p-  5.1391136159D+03  2.145D+02  1.00  3.821D-08  1.558D-04  7.690D-07  259
+  3p   6.3731986789D+03  1.767D+05  2.00  1.902D-09 -5.555D-12  1.656D-06  260
+  3d-  4.1247455838D+03  5.375D+03  2.00  1.483D-13  4.425D-10  2.205D-07  257
+  3d   5.1443242586D+03  5.573D+06  3.00  6.009D-15 -1.981D-18  1.087D-05  257
+
+                  -3              -1                             2              4     Generalised
+Subshell    <  r  >        <  r  >        <  r  >        <  r  >        <  r  >      occupation
+
+  1s      0.00000D+00    8.08921D+01    1.95630D-02    5.23828D-04    7.34171D-07    1.99999D+00
+  2s      0.00000D+00    2.05750D+01    7.87017D-02    7.34363D-03    9.15231D-05    2.17990D-06
+  2p-     0.00000D+00    2.04678D+01    6.47282D-02    5.15547D-03    5.27773D-05    3.33333D-01
+  2p      1.54121D+04    1.76441D+01    7.13794D-02    6.14424D-03    7.14944D-05    6.66667D-01
+  3s      0.00000D+00    9.72409D+01    3.27513D-02    2.32333D-03    3.00333D-05    3.85453D-06
+  3p-     0.00000D+00    6.51790D+01    3.12350D-02    1.97330D-03    2.13707D-05    1.65364D-06
+  3p      4.72682D+05    5.44563D+01    2.93665D-02    1.63725D-03    1.74642D-05    3.90710D-06
+  3d-     8.01059D+04    3.11756D+01    4.02387D-02    1.96292D-03    7.66594D-06    5.70429D-07
+  3d      7.15831D+04    3.30458D+01    3.69692D-02    1.65004D-03    5.58467D-06    6.64834D-07
+
+Eigenenergies:
+
+Level  J Parity       Hartrees              Kaysers                eV
+
+  1     1/2 -    -5.852367262838D+03  -1.284446147658D+09  -1.592510191016D+05
+  1     3/2 -    -5.808816846909D+03  -1.274887936176D+09  -1.580659519642D+05
+
+Weights of major contributors to ASF:
+
+Block Level J Parity      CSF contributions
+
+  1     1   1/2 -       1.0000     0.0012    -0.0012    -0.0008     0.0008
+                             1         58         56          7         30
+  2     1   3/2 -       1.0000     0.0012    -0.0012     0.0007     0.0006
+                             1         67         62         32         71

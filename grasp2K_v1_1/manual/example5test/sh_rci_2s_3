@@ -1,0 +1,17 @@
+#!/bin/sh
+set -x
+
+# Relativistic CI calculation for 2s n = 3
+$GRASP/bin/rci3 << EOF
+y
+2s_3
+y
+y
+1d-6
+y
+n
+n
+y
+3
+1
+EOF

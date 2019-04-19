@@ -1,0 +1,34 @@
+#
+# Define the following global variables according to your environment and
+# source the script or add these definitions to your .cshrc file and 
+# source ~/.cshrc
+
+# PLEASE NOTE THAT THE GFORTRAN COMPILER IS USED TO COMPILE JJGEN SINCE THIS PROGRAM DOES NOT COMPILE WITH IFORT
+#
+# For Linux, ifort version 
+# ----------------------------------------------
+export    FC=ifort                                   # Fortran compiler
+export    FC_FLAGS="-O1 -save -zero -align all -W0"  # Serial code compiler flag
+export    FC_LD="-static-intel -Bstatic"             # Serial linker flags
+export    GRASP="/home/XXXXX/grasp2K_v1_1"           # Location of the grasp2K_v1_1 directory SHOULD BE SET BY THE USER !!!!!!!!
+export    LAPACK_LIB="-llapackd -llapacku -lblas"    # Library to be searched
+export    LAPACK_DIR="${GRASP}/lib"                  # Location of LAPACK library 
+export    GRASPLIBS="-l92 -lnjgraf -ldvdson"         # Libraries to be searched by v1 and v2 code
+export    NEWGRASPLIBS="-lrang -l92 -ldvdson"        # Libraries to be searched by v3 code
+export    FC_MALLOC="LINUX"                          # Memory allocation routine (available for Linux and other systems)
+export    GRASP_INCLUDES="${GRASP}/src/lib/def"      # Location of parameter definition file
+
+export    F90=ifort                                  # Fortran compiler
+export    F90_FLAGS="-static-intel"                  # Serial code compiler flag
+
+export CPP="g++"                                     # C++ compiler
+export CPP_FLAGS="-O3"                               # C++ compiler flags
+export CPP_LD="-static"                              # C++ linker
+
+#
+# For running MPI
+# ----------------------------------------------
+export FC_MPI="mpif90"                               # MPICH/mpif90 compiler
+export FC_MPIFLAGS="-O1 -save -zero -align all -W0"  # Parallel code compiler flags
+export FC_MPILD="-O"                                 # MPI Loader
+export MPI_TMP="/tmp/$USER"

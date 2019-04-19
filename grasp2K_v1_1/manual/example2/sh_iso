@@ -1,0 +1,15 @@
+#!/bin/sh
+set -x
+
+#    Get isodata
+$GRASP/bin/iso <<EOF
+5
+11
+n
+10.81
+1.5
+2.6886489
+0.04
+EOF
+
+cat isodata

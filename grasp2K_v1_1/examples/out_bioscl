@@ -1,0 +1,174 @@
+ ====================================================
+        BIOSCL3: Execution Begins ...
+ ====================================================
+
+
+  Input from a CI calculation?
+
+  Generate debug output?
+
+  Name of the Initial state
+  Name of the Final state
+
+ MRGCSL: Execution begins ...
+ Loading Configuration Symmetry List File ...
+ There are 16 relativistic subshells;
+ There are 2190 relativistic CSFs;
+  ... load complete;
+ Loading Configuration Symmetry List File ...
+ There are 16 relativistic subshells;
+ There are 2190 relativistic CSFs;
+  ... load complete;
+           1 s 
+           2 s 
+           2 p-
+           2 p 
+           3 s 
+           3 p-
+           3 p 
+           3 d-
+           3 d 
+           4 s 
+           4 p-
+           4 p 
+           4 d-
+           4 d 
+           4 f-
+           4 f 
+           3
+         323        1163        2190
+           3
+         323        1163        2190
+ Loading Configuration Symmetry List File ...
+  there are 16 relativistic subshells;
+           1
+           1           3
+           1
+           1           1
+           1
+           1           3
+  there are 4380 relativistic CSFs;
+  ... load complete;
+ Enter the list of transition specifications
+  e.g.,  E1,M2  or  E1 M2  or  E1;M2 :
+ E2 transitions only between levels with different J?
+ M1 transitions only between levels with different J?
+ Loading Radial WaveFunction File for initial state...
+ NWII          16
+          -1           1 s 
+          -1           2 s 
+           1           2 p-
+          -2           2 p 
+          -1           3 s 
+           1           3 p-
+          -2           3 p 
+           2           3 d-
+          -3           3 d 
+          -1           4 s 
+           1           4 p-
+          -2           4 p 
+           2           4 d-
+          -3           4 d 
+           3           4 f-
+          -4           4 f 
+  ... load complete;
+ Loading Radial WaveFunction File for final state...
+  ... load complete;
+< 1s | 1s > = 0.1000000000000E+01
+< 1s | 2s > =-0.8091674393588E-18
+< 1s | 3s > = 0.1231234385446E-16
+< 1s | 4s > = 0.6296026036279E-16
+< 2s | 1s > =-0.8091674393588E-18
+< 2s | 2s > = 0.1000000000000E+01
+< 2s | 3s > = 0.5462046740915E-16
+< 2s | 4s > =-0.1076533758545E-15
+< 2p-| 2p-> = 0.1000000000000E+01
+< 2p-| 3p-> =-0.1000916902363E-15
+< 2p-| 4p-> = 0.2870054406274E-16
+< 2p | 2p > = 0.1000000000000E+01
+< 2p | 3p > = 0.1556357586012E-16
+< 2p | 4p > =-0.1460894796863E-16
+< 3s | 1s > = 0.1231234385446E-16
+< 3s | 2s > = 0.5462046740915E-16
+< 3s | 3s > = 0.1000000000000E+01
+< 3s | 4s > = 0.7335692461227E-16
+< 3p-| 2p-> =-0.1000916902363E-15
+< 3p-| 3p-> = 0.1000000000000E+01
+< 3p-| 4p-> = 0.3631370841057E-16
+< 3p | 2p > = 0.1556357586012E-16
+< 3p | 3p > = 0.1000000000000E+01
+< 3p | 4p > =-0.9721801813383E-16
+< 3d-| 3d-> = 0.1000000000000E+01
+< 3d-| 4d-> = 0.4903109738240E-16
+< 3d | 3d > = 0.1000000000000E+01
+< 3d | 4d > =-0.2132158993270E-16
+< 4s | 1s > = 0.6296026036279E-16
+< 4s | 2s > =-0.1076533758545E-15
+< 4s | 3s > = 0.7335692461227E-16
+< 4s | 4s > = 0.1000000000000E+01
+< 4p-| 2p-> = 0.2870054406274E-16
+< 4p-| 3p-> = 0.3631370841057E-16
+< 4p-| 4p-> = 0.1000000000000E+01
+< 4p | 2p > =-0.1460894796863E-16
+< 4p | 3p > =-0.9721801813383E-16
+< 4p | 4p > = 0.1000000000000E+01
+< 4d-| 3d-> = 0.4903109738240E-16
+< 4d-| 4d-> = 0.1000000000000E+01
+< 4d | 3d > =-0.2132158993270E-16
+< 4d | 4d > = 0.1000000000000E+01
+< 4f-| 4f-> = 0.1000000000000E+01
+< 4f | 4f > = 0.1000000000000E+01
+    nelec  =            4
+    ncftoti =         2190
+    nwi     =           16
+    nblocki =            3
+
+  Angular data read from file
+    nelec  =            4
+    ncftotf =         2190
+    nwf     =           16
+    nblockf =            3
+
+    nelec  =            4
+    ncftotf =         2190
+    nwf     =           16
+    nblockf =            3
+
+    nelec  =            4
+    ncftotf =         2190
+    nwf     =           16
+    nblockf =            3
+
+    nelec  =            4
+    ncftoti =         2190
+    nwi     =           16
+    nblocki =            3
+
+  Angular data read from file
+    nelec  =            4
+    ncftotf =         2190
+    nwf     =           16
+    nblockf =            3
+
+    nelec  =            4
+    ncftotf =         2190
+    nwf     =           16
+    nblockf =            3
+
+    nelec  =            4
+    ncftotf =         2190
+    nwf     =           16
+    nblockf =            3
+
+ ====================================================
+        BIOSCL3: Execution Finished ...
+ ====================================================
+ Wall time:
+        0 seconds
+
+ Finish Date and Time:
+   Date (Yr/Mon/Day): 2019/01/08
+   Time (Hr/Min/Sec): 18/59/44.079
+   Zone: -0500
+
+ BIOSCL3: Execution complete.

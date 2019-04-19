@@ -1,0 +1,30 @@
+#!/bin/sh
+
+set -x
+
+# Follows p. 66 of manual.pdf
+# COPY 2p_3.w TO mcdf.w WHICH IS THE INPUT FILE TO PLOTMCDF
+cp 2p_3.w mcdf.w
+# Save 1s orbital...by default is this J = +1?
+$GRASP/bin/plotmcdf << EOF
+1,0,1
+
+EOF
+cp mcdf.w.dat plot_1s.dat
+
+# Save 2p_3/2 orbital...pretty sure J = +1?
+$GRASP/bin/plotmcdf << EOF
+2,1,1
+
+EOF
+cp mcdf.w.dat plot_2p32.dat
+
+# Save 2p_1/2 orbital...pretty sure J = -1?
+$GRASP/bin/plotmcdf << EOF
+2,1,-1
+
+EOF
+cp mcdf.w.dat plot_2p12.dat
+
+rm mcdf.w
+rm mcdf.w.dat

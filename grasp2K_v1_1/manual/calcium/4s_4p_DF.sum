@@ -1,0 +1,25 @@
+
+ There are 19 electrons in the cloud
+  in 1 relativistic CSFs
+  based on 14 relativistic subshells.
+
+The atomic number is  20.0000000000;
+ the mass of the nucleus is  7.284734677823D+04 electron masses;
+  Fermi nucleus:
+  c = 6.888922438968D-05 Bohr radii,
+  a = 9.890591365424D-06 Bohr radii;
+  there are 73 tabulation points in the nucleus.
+
+Speed of light =  137.0359990740D+00 atomic units.
+
+Radial grid: R(I) = RNT*(exp((I-1)*H)-1), I = 1, ..., N;
+
+ RNT  =  2.000000000000D-06 Bohr radii;
+ H    =  5.000000000000D-02 Bohr radii;
+ N    =  590;
+ R(1) =  0.000000000000D+00 Bohr radii;
+ R(2) =  1.025421927520D-07 Bohr radii;
+ R(N) =  1.233111896689D+07 Bohr radii.
+
+ OL calculation.
+ Level 1 will be optimised.

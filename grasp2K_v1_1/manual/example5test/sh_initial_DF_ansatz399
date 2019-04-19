@@ -1,0 +1,17 @@
+#!/bin/sh
+set -x
+
+# Angular integration
+
+$GRASP/bin/mcp3  <<EOF
+y
+EOF
+
+#  Get initial estimates of wave functions from Joon's core file
+#  Then, use TF
+$GRASP/bin/erwf <<EOF
+y
+1
+ansatz399.w
+*
+EOF

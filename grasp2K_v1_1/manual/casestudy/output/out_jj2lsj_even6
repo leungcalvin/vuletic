@@ -1,0 +1,301 @@
+ ====================================================
+        jj2lsj: Execution Begins ...
+ ====================================================
+  
+   jj2lsj: Transformation of ASFs from a jj-coupled CSF basis
+           into an LS-coupled CSF basis  (Fortran 95 version)
+           (C) Copyright by   G. Gaigalas and Ch. F. Fischer,
+           NIST (2011).
+  
+ Loading Configuration Symmetry List File ...
+ There are 36 relativistic subshells;
+ There are 36290 relativistic CSFs;
+  ... load complete;
+    nelec  =            5
+    ncftot =        36290
+    nw     =           36
+    nblock =            3
+
+   block     ncf     nev    2j+1  parity
+       1    7585       3       2       1
+       2   13116       3       4       1
+       3   15589       2       6       1
+ Maximum % of omitted composition is    1.000
+ Below  5.0E-03 the eigenvector component is to be neglected for calculating
+ Below  1.0E-03 the eigenvector composition is to be neglected for printing
+  
+  
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ Under investigation is the block:     1                 The number of eigenvectors:  3
+ The number of CSF (in jj-coupling):      7585           The number of CSF (in LS-coupling):        15
+ Weights of major contributors to ASF in jj-coupling:
+  
+  Level  J Parity      CSF contributions
+  
+    1  1/2   +      0.91546 of      7    0.07010 of      6    0.01426 of      5    0.00003 of    243
+                    0.00003 of     72
+               Total sum over  weight (in jj) is:  0.99990249279255616     
+  
+ Definition of leading CSF:
+  
+            7) 1s ( 2)   2s ( 1)   2p-( 2)
+                            1/2           
+                               1/2         1/2
+  
+  
+ Weights of major contributors to ASF in LS-coupling:
+  
+  Level  J Parity      CSF contributions
+  
+    1  1/2   +      0.71743 of      4    0.20694 of      2    0.07544 of      3
+               Total sum over  weight (in LSJ) is:  0.99982014390387597     
+  
+ Definition of leading CSF:
+  
+         2)     1s( 2)   2s( 1)   2p( 2)
+                   1S0      2S1      1S0      2S       2S        1/2
+         3)     1s( 2)   2s( 1)   2p( 2)
+                   1S0      2S1      3P2      2S       2P        1/2
+         4)     1s( 2)   2s( 1)   2p( 2)
+                   1S0      2S1      3P2      2S       4P        1/2
+  
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ The new level is under investigation.
+ Weights of major contributors to ASF in jj-coupling:
+  
+  Level  J Parity      CSF contributions
+  
+    2  1/2   +      0.89865 of      6    0.07881 of      7    0.02209 of      5    0.00016 of    241
+                    0.00008 of    243
+               Total sum over  weight (in jj) is:  0.99986350101105503     
+  
+ Definition of leading CSF:
+  
+            6) 1s ( 2)   2s ( 1)   2p-( 1)   2p ( 1)
+                            1/2       1/2       3/2 
+                               1/2        1           1/2
+  
+  
+ Weights of major contributors to ASF in LS-coupling:
+  
+  Level  J Parity      CSF contributions
+  
+    2  1/2   +      0.73414 of      3    0.18508 of      4    0.08033 of      2
+               Total sum over  weight (in LSJ) is:  0.99954922995840412     
+  
+ Definition of leading CSF:
+  
+         2)     1s( 2)   2s( 1)   2p( 2)
+                   1S0      2S1      1S0      2S       2S        1/2
+         3)     1s( 2)   2s( 1)   2p( 2)
+                   1S0      2S1      3P2      2S       2P        1/2
+         4)     1s( 2)   2s( 1)   2p( 2)
+                   1S0      2S1      3P2      2S       4P        1/2
+  
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ The new level is under investigation.
+ Weights of major contributors to ASF in jj-coupling:
+  
+  Level  J Parity      CSF contributions
+  
+    3  1/2   +      0.96339 of      5    0.03084 of      6    0.00546 of      7    0.00006 of     70
+                    0.00004 of    241
+               Total sum over  weight (in jj) is:  0.99985823467184709     
+  
+ Definition of leading CSF:
+  
+            5) 1s ( 2)   2s ( 1)   2p ( 2)
+                            1/2           
+                               1/2         1/2
+  
+  
+ Weights of major contributors to ASF in LS-coupling:
+  
+  Level  J Parity      CSF contributions
+  
+    3  1/2   +      0.71247 of      2    0.18986 of      3    0.09737 of      4
+               Total sum over  weight (in LSJ) is:  0.99970488171149496     
+  
+ Definition of leading CSF:
+  
+         2)     1s( 2)   2s( 1)   2p( 2)
+                   1S0      2S1      1S0      2S       2S        1/2
+         3)     1s( 2)   2s( 1)   2p( 2)
+                   1S0      2S1      3P2      2S       2P        1/2
+         4)     1s( 2)   2s( 1)   2p( 2)
+                   1S0      2S1      3P2      2S       4P        1/2
+  
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ Under investigation is the block:     2                 The number of eigenvectors:  3
+ The number of CSF (in jj-coupling):     13116           The number of CSF (in LS-coupling):        19
+ Weights of major contributors to ASF in jj-coupling:
+  
+  Level  J Parity      CSF contributions
+  
+    1  3/2   +      0.67754 of      6    0.30575 of      7    0.01658 of      5    0.00002 of    100
+                    0.00001 of    391
+               Total sum over  weight (in jj) is:  0.99992831430062701     
+  
+ Definition of leading CSF:
+  
+            6) 1s ( 2)   2s ( 1)   2p-( 1)   2p ( 1)
+                            1/2       1/2       3/2 
+                               1/2        1           1/2
+  
+  
+ Weights of major contributors to ASF in LS-coupling:
+  
+  Level  J Parity      CSF contributions
+  
+    1  3/2   +      0.95197 of      3    0.03258 of      4    0.01532 of      2
+               Total sum over  weight (in LSJ) is:  0.99986893992333614     
+  
+ Definition of leading CSF:
+  
+         2)     1s( 2)   2s( 1)   2p( 2)
+                   1S0      2S1      3P2      2S       2P        3/2
+         3)     1s( 2)   2s( 1)   2p( 2)
+                   1S0      2S1      3P2      2S       4P        3/2
+         4)     1s( 2)   2s( 1)   2p( 2)
+                   1S0      2S1      1D2      2S       2D        3/2
+  
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ The new level is under investigation.
+ Weights of major contributors to ASF in jj-coupling:
+  
+  Level  J Parity      CSF contributions
+  
+    2  3/2   +      0.65113 of      7    0.32202 of      6    0.02641 of      5    0.00008 of    388
+                    0.00007 of      1
+               Total sum over  weight (in jj) is:  0.99985916868641900     
+  
+ Definition of leading CSF:
+  
+            7) 1s ( 2)   2s ( 1)   2p-( 2)
+                            1/2           
+                               1/2         1/2
+  
+  
+ Weights of major contributors to ASF in LS-coupling:
+  
+  Level  J Parity      CSF contributions
+  
+    2  3/2   +      0.74581 of      4    0.24434 of      2    0.00943 of      3
+               Total sum over  weight (in LSJ) is:  0.99963914543632559     
+  
+ Definition of leading CSF:
+  
+         2)     1s( 2)   2s( 1)   2p( 2)
+                   1S0      2S1      3P2      2S       2P        3/2
+         3)     1s( 2)   2s( 1)   2p( 2)
+                   1S0      2S1      3P2      2S       4P        3/2
+         4)     1s( 2)   2s( 1)   2p( 2)
+                   1S0      2S1      1D2      2S       2D        3/2
+  
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ The new level is under investigation.
+ Weights of major contributors to ASF in jj-coupling:
+  
+  Level  J Parity      CSF contributions
+  
+    3  3/2   +      0.95654 of      5    0.04275 of      7    0.00022 of    369    0.00020 of      6
+                    0.00007 of    391
+               Total sum over  weight (in jj) is:  0.99986789002415644     
+  
+ Definition of leading CSF:
+  
+            5) 1s ( 2)   2s ( 1)   2p ( 2)
+                            1/2           
+                               1/2         1/2
+  
+  
+ Weights of major contributors to ASF in LS-coupling:
+  
+  Level  J Parity      CSF contributions
+  
+    3  3/2   +      0.73978 of      2    0.22122 of      4    0.03849 of      3
+               Total sum over  weight (in LSJ) is:  0.99950952502636115     
+  
+ Definition of leading CSF:
+  
+         2)     1s( 2)   2s( 1)   2p( 2)
+                   1S0      2S1      3P2      2S       2P        3/2
+         3)     1s( 2)   2s( 1)   2p( 2)
+                   1S0      2S1      3P2      2S       4P        3/2
+         4)     1s( 2)   2s( 1)   2p( 2)
+                   1S0      2S1      1D2      2S       2D        3/2
+  
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ Under investigation is the block:     3                 The number of eigenvectors:  2
+ The number of CSF (in jj-coupling):     15589           The number of CSF (in LS-coupling):        11
+ Weights of major contributors to ASF in jj-coupling:
+  
+  Level  J Parity      CSF contributions
+  
+    1  5/2   +      0.94633 of      6    0.05344 of      5    0.00004 of      1    0.00003 of    441
+                    0.00002 of    421
+               Total sum over  weight (in jj) is:  0.99987545969930336     
+  
+ Definition of leading CSF:
+  
+            6) 1s ( 2)   2s ( 1)   2p-( 1)   2p ( 1)
+                            1/2       1/2       3/2 
+                               1/2        1           1/2
+  
+  
+ Weights of major contributors to ASF in LS-coupling:
+  
+  Level  J Parity      CSF contributions
+  
+    1  5/2   +      0.56309 of      2    0.43668 of      3
+               Total sum over  weight (in LSJ) is:  0.99980571518315653     
+  
+ Definition of leading CSF:
+  
+         2)     1s( 2)   2s( 1)   2p( 2)
+                   1S0      2S1      3P2      2S       4P        5/2
+         3)     1s( 2)   2s( 1)   2p( 2)
+                   1S0      2S1      1D2      2S       2D        5/2
+  
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ The new level is under investigation.
+ Weights of major contributors to ASF in jj-coupling:
+  
+  Level  J Parity      CSF contributions
+  
+    2  5/2   +      0.94635 of      5    0.05338 of      6    0.00005 of      1    0.00004 of    420
+                    0.00003 of    440
+               Total sum over  weight (in jj) is:  0.99988823306195806     
+  
+ Definition of leading CSF:
+  
+            5) 1s ( 2)   2s ( 1)   2p ( 2)
+                            1/2           
+                               1/2         1/2
+  
+  
+ Weights of major contributors to ASF in LS-coupling:
+  
+  Level  J Parity      CSF contributions
+  
+    2  5/2   +      0.56294 of      3    0.43679 of      2
+               Total sum over  weight (in LSJ) is:  0.99978080993561746     
+  
+ Definition of leading CSF:
+  
+         2)     1s( 2)   2s( 1)   2p( 2)
+                   1S0      2S1      3P2      2S       4P        5/2
+         3)     1s( 2)   2s( 1)   2p( 2)
+                   1S0      2S1      1D2      2S       2D        5/2
+ ====================================================
+        jj2lsj: Execution Finished ...
+ ====================================================
+ Wall time:
+        1 seconds
+
+ Finish Date and Time:
+   Date (Yr/Mon/Day): 2012/09/21
+   Time (Hr/Min/Sec): 05/03/44.685
+   Zone: +0200
+
+ jj2lsj: Execution complete.

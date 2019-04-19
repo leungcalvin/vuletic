@@ -1,0 +1,68 @@
+
+
+ Level  J Parity  Specific mass shift (au) 
+
+   1        0 -        -0.1523415574D+01
+   1        1 -        -0.1522044109D+01
+   2        1 -        -0.1367464327D+01
+   1        2 -        -0.1519231025D+01
+
+
+ Electron density in atomic units
+
+ Level  J Parity        DENS (a.u.)
+
+   1        0 -         0.2083379746D+03
+   1        1 -         0.2083390140D+03
+   2        1 -         0.2075610507D+03
+   1        2 -         0.2083408399D+03
+
+
+ Kinetic energy 
+
+ Level  J Parity        T (a.u.)
+
+   1        0 -         0.5092863111D+02
+   1        1 -         0.5092671241D+02
+   2        1 -         0.5071905014D+02
+   1        2 -         0.5092264852D+02
+
+
+ Radial expectationvalue
+
+ Level  J Parity        <r> (a.u.)
+
+   1        0 -         0.2587852344D+01
+   1        1 -         0.2588229297D+01
+   2        1 -         0.2611803650D+01
+   1        2 -         0.2589017398D+01
+
+
+ Radial expectationvalue
+
+ Level  J Parity        <r2> (a.u.)
+
+   1        0 -         0.2856982716D+01
+   1        1 -         0.2857895173D+01
+   2        1 -         0.2919006255D+01
+   1        2 -         0.2859801265D+01
+
+
+ Radial expectationvalue
+
+ Level  J Parity        <r-1> (a.u.)
+
+   1        0 -         0.1588346405D+02
+   1        1 -         0.1588299358D+02
+   2        1 -         0.1583980197D+02
+   1        2 -         0.1588200658D+02
+
+
+ Radial expectationvalue
+
+ Level  J Parity        <r-2> (a.u.)
+
+   1        0 -         0.1897747648D+03
+   1        1 -         0.1897735603D+03
+   2        1 -         0.1891415888D+03
+   1        2 -         0.1897708562D+03

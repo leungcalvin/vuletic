@@ -1,0 +1,7 @@
+#!/bin/sh
+set -x
+
+#    Angular integration
+$GRASP/bin/mcp3 <<EOF
+y
+EOF

@@ -1,0 +1,40 @@
+#!/bin/sh
+set -x
+
+#  5. Perform transition calculation for the n=4 results 
+#     Change to n=5 for large calculation
+
+
+n=4
+
+#  First the biorthogonal rotations
+
+#  Since initial and final states are the same, it is possible
+#  to avoid biotr2 and just
+#  cp <name>.w <name>.bw 
+#  cp <name>.cm <name>.bcm   OR
+#  cp <name>.m <name>.bm  
+# since orbitals are already biorthogonal
+
+$GRASP/bin/biotra3 > out_biotra <<EOF
+y
+y
+odd$n
+odd$n
+y
+y
+EOF
+
+# Then the transition calculations
+
+$GRASP/bin/bioscl3 > out_bioscl <<EOF
+y
+n
+odd$n
+odd$n
+E2,M1
+n
+n
+EOF
+
+

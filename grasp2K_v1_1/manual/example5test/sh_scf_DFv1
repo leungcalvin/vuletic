@@ -1,0 +1,16 @@
+#!/bin/sh
+set -x
+
+# Perform self-consistent field calculations
+# ...with extended optimal level weighting (idk what that means)
+$GRASP/bin/rscf2 > out_scf_6s_6p_DF <<EOF
+y
+y
+1
+6*
+
+1000
+EOF
+
+$GRASP/bin/rsave 6s_6p_DF
+less 6s_6p_DF.sum | grep 6[s,p]

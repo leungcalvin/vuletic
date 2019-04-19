@@ -1,0 +1,17 @@
+
+This directory contains a series of scripts.  The file, sh_grasp2K_ex, 
+outlines the steps of a calculation whereas the other scripts show 
+how the various applications can be used.  They can be run as 
+executables but also show how applications can be run. Input data
+is always read in response to prompts.  
+
+It is recommended that users first run the applications interactively, using
+the scripts as a manual showing the possible responses to prompts.
+
+Please note that the environment variable GRASP needs to be set in order for the scripts to work.
+The environment variable is set by issuing the command
+
+source ./make_environment_gfortran
+
+in the installation directory.
+

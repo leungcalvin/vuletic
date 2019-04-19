@@ -1,0 +1,10 @@
+#!/bin/sh
+set -x
+
+#  Run rlevels
+$GRASP/bin/rlevels > out_rlevels <<S1
+2s22p3_2p5_3.cm
+
+S1
+
+cat out_rlevels

@@ -1,0 +1,68 @@
+1
+
+
+         HARTREE-FOCK WAVE FUNCTIONS FOR  B     AV     Z =  5.0
+
+              Core =  1s(   2)
+     Configuration =  2s(   1)  2p(   1)                              
+
+
+         INPUT DATA
+         ----- ----
+
+             WAVE FUNCTION  PROCEDURE
+                 NL  SIGMA METH ACC OPT
+
+
+
+       1   1s  1  0    1.0   1 0.0   0
+       2   2s  2  0    2.0   1 0.0   0
+       3   2p  2  1    3.0   1 0.0   0
+
+
+
+        INITIAL ESTIMATES 
+
+          NL    SIGMA      E(NL)    AZ(NL)    FUNCTIONS
+
+
+          1s     1.00      0.000    18.000    SCREENED HYDROGENIC    
+          2s     2.00      0.000     4.899    SCREENED HYDROGENIC    
+          2p     3.00      0.000     3.536    SCREENED HYDROGENIC    
+
+      LEAST SELF-CONSISTENT FUNCTION IS  2p :WEIGHTED MAXIMUM CHANGE =  2.02D-01
+
+      LEAST SELF-CONSISTENT FUNCTION IS  2s :WEIGHTED MAXIMUM CHANGE =  2.86D-03
+
+      LEAST SELF-CONSISTENT FUNCTION IS  1s :WEIGHTED MAXIMUM CHANGE =  6.31D-04
+
+      LEAST SELF-CONSISTENT FUNCTION IS  2s :WEIGHTED MAXIMUM CHANGE =  2.98D-06
+
+      LEAST SELF-CONSISTENT FUNCTION IS  2p :WEIGHTED MAXIMUM CHANGE =  2.74D-07
+
+
+          NUMBER OF FUNCTIONS ITERATED          =     3
+          MAXIMUM WEIGHTED CHANGE IN FUNCTIONS  =  0.27D-07
+
+
+
+
+                        ATOM B        TERM AV    
+
+  nl       E(nl)        I(nl)       KE(nl)        Rel(nl)   S(nl)       Az(nl)
+  1s    16.3418222   -12.438054    10.925162    -0.003081   0.401     20.833282
+  2s     1.8579695    -2.751440     1.203982    -0.000347   1.627      4.733694
+  2p     1.4015370    -2.534455     1.012483    -0.000082   2.252      4.079951
+
+
+  nl      Delta(R)     1/R**3       1/R         R        R**2
+  1s        34.539       0.0000    4.67264   0.32614    0.14371
+  2s         1.783       0.0000    0.79108   1.77863    3.73354
+  2p         0.000       1.1211    0.70939   1.81923    4.06477
+
+
+     TOTAL ENERGY (a.u.)
+     ----- ------
+           Non-Relativistic      -24.06678870    Kinetic       24.06678852
+           Relativistic Shift     -0.00587815    Potential    -48.13357722
+           Relativistic          -24.07266685    Ratio        -2.000000008

@@ -1,0 +1,45 @@
+#!/bin/sh
+set -x
+
+#   Generate grasp2K expansions
+#   DF for 2s2p(3) and 2p(5)
+#   split into blocks
+
+$GRASP/bin/jjgen << EOF
+
+
+2
+p
+
+
+2
+
+2
+2
+3
+1,5
+0
+y
+2
+p
+
+
+2
+2
+0
+5
+1,5
+0
+
+EOF
+
+cp clist.log 2s22p3_2p5_DF.log
+cp clist.out rcsl.inp
+cp clist.out mrlist
+
+$GRASP/bin/jsplit << EOF
+n
+EOF
+
+cp rcsl.out rcsl.inp
+

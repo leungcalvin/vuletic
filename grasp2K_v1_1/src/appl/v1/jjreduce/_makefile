@@ -1,0 +1,26 @@
+#---------------------------------------------------------------------
+# makefile for jjreduce
+# Created by going through source codes
+# XHH                                     Last revision: 19 May 1997
+#
+# Note:
+#   lodres and getinf are called by setmcp which is not used in the
+#   current version of jjreduce.
+#---------------------------------------------------------------------
+BINDIR  = ${GRASPBIN}
+BINDIR = ../../../bin
+BINFILE = $(BINDIR)/jjreduce
+FC      = ${GRASPFOR}
+FFLAGS  = ${GRASPOPT}
+
+LIBS = ${GRASPBLOCKD} -L${GRASPLIB} ${GRASPLIBS}
+
+OBJECTS= jjreduce.o chkplt.o setdbg.o setcslb.o identy.o mcp.o
+
+$(BINFILE) : $(OBJECTS) 
+	$(FC) -o $(BINFILE) $(LFLAGS) $(FFLAGS) $(OBJECTS) $(LIBS)
+
+.f.o : 
+	$(FC) -c $(FFLAGS) $*.f
+
+
