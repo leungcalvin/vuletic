@@ -1,0 +1,31 @@
+#!/bin/bash
+# Executes full GRASP calculation of 6s6p (odd) levels of Yb I
+# Define odd multireference in rcsf.inp and rcsfmr.inp
+calc_directory='/home/calvin/Documents/vuletic/multireference-calcs'
+cp $calc_directory/multireferences/singlet-triplet-f72/multireference.inp rcsf.inp # let's use the NIST multireference
+cp rcsf.inp rcsf.out
+cp rcsf.inp rcsfmr.inp
+
+rnucleus < inputs/rnucleus_input70
+rangular < inputs/rangular_input
+rwfnestimate < inputs/rwfnestimate_Calvin_appendTF
+rmcdhf < multireferences/singlet-triplet-f72/rmcdhf_input3
+# Save files to mr (intermediate results)
+rsave mr
+
+# Make bigger CSF basis
+rcsfgenerate < $calc_directory/multireferences/singlet-triplet-f72/rcsfgenerate_singles
+cp rcsfgenerate.log ci.exc
+cp rcsf.out rcsf.inp
+rcsfinteract < $calc_directory/inputs/rcsfinteract_DC
+cp rcsf.out rcsf.inp #rcsf.inp is the reduced CSF list that includes states interacting with multireference
+rangular < $calc_directory/inputs/rangular_input
+rwfnestimate < $calc_directory/inputs/rwfnestimate_appendTF #previous mcdhf run writes wavefunctions to rwfn.out, now we have correlation orbitals
+rmcdhf < $calc_directory/multireferences/singlet-triplet-f72/rmcdhf_correlation
+#rmcdhf < $calc_directory/multireferences/singlet-triplet-f72/rmcdhf_all
+rsave singlet-triplet
+rci < $calc_directory/multireferences/singlet-triplet-f72/rci_input
+jj2lsj < $calc_directory/multireferences/singlet-triplet-f72/jj2lsj_input
+rsave singlet-triplet-ci
+rlevels $calc_directory/singlet-triplet-ci.cm
+

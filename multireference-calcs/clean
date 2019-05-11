@@ -1,0 +1,14 @@
+rm *.out
+rm *.inp
+rm *.sum
+rm *.w
+rm *.log
+rm *.m
+rm *.c
+rm *.3*
+rm isodata
+rm *.exc
+rm *.alog
+rm *.clog
+rm *.lbl
+rm *.csum

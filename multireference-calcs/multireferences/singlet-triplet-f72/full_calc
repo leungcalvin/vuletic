@@ -1,0 +1,33 @@
+#!/bin/bash
+# Executes full GRASP calculation of 6s6p (odd) levels of Yb I
+# Define odd multireference in rcsf.inp and rcsfmr.inp
+rcsfgenerate < rcsfgenerate_mr
+cp rcsfgenerate.log mr.exc
+cp rcsf-f72only.inp rcsf.inp # let's use the NIST multireference
+cp rcsf-f72only.inp rcsfmr.inp
+
+
+
+rangular < rangular_input
+# Estimate orbitals stably with charge decrease method
+./rwfnestimate_decrease.sh
+# Save files to mr (intermediate results)
+rsave mr
+# Make bigger CSF basis
+rcsfgenerate < rcsfgenerate_ci
+cp rcsfgenerate.log ci.exc
+cp rcsf.out rcsf.inp
+rcsfinteract rcsfinteract_DCB
+cp rcsf.out rcsf.inp #this is the reduced CSF list
+rangular < rangular_input
+rwfnestimate < rwfnestimate_appendTF
+rmcdhf < rmcdhf_correlation
+# Run MCDHF again after finally decrease the charge to 70 from 70.5...
+mv rwfn.inp rwfn.out
+rnucleus < rnucleus_input70
+rwfnestimate < rwfnestimate_previous
+rmcdhf < rmcdhf_correlation
+rci < rci_input
+rsave oddlevels
+
+
