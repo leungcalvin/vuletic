@@ -1,0 +1,45 @@
+#!/bin/bash
+
+#1. Yb core ([Xe]4f14) + 6s2 and 6s6p
+# user-defined order of orbitals in clist.ref
+
+#1. add 6s2 and 6s6p with Z=72
+rnucleus_input="rnucleus_input_Z72"
+rnucleus < $rnucleus_input
+cat $rnucleus_input
+rcsfgenerate_input="rcsfgenerate_input_6s2_6s6p"
+rcsfgenerate < $rcsfgenerate_input
+cat $rcsfgenerate_input
+cp rcsfgenerate.log 6s2.exc
+cp rcsf.out rcsf.inp
+printf 'y' | rangular
+rwfnestimate_input="rwfnestimate_input_6s2_6s6p"
+rwfnestimate < $rwfnestimate_input
+cat $rwfnestimate_input
+rmcdhf_input="rmcdhf_input_6s2_6s6p"
+rmcdhf < $rmcdhf_input
+cat $rmcdhf_input
+#rsave 6s2_6s6p
+
+#2. decrease Z=72->70
+rnucleus_input="rnucleus_input_Z70"
+rnucleus < $rnucleus_input
+cat $rnucleus_input
+rcsfgenerate_input="rcsfgenerate_input_6s2_6s6p"
+rcsfgenerate < $rcsfgenerate_input
+cat $rcsfgenerate_input
+cp rcsfgenerate.log 6s2.exc
+cp rcsf.out rcsf.inp
+printf 'y' | rangular
+rwfnestimate_input="rwfnestimate_input_6s2_6s6p_2"
+rwfnestimate < $rwfnestimate_input
+cat $rwfnestimate_input
+rmcdhf_input="rmcdhf_input_6s2_6s6p"
+rmcdhf < $rmcdhf_input
+cat $rmcdhf_input
+rsave 6s2_6s6p
+
+cp rwfn.out rwfn_6s2_6s6p.out
+
+printf '6s2_6s6p\nn\ny\ny' | jj2lsj
+rlevelseV 6s2_6s6p.m
