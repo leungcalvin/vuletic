@@ -1,0 +1,24 @@
+#!/bin/bash
+
+#1. Yb core ([Xe]4f14) + 6s2
+# user-defined order of orbitals in clist.ref
+
+rnucleus_input="rnucleus_input_Z70"
+rnucleus < $rnucleus_input
+cat $rnucleus_input
+rcsfgenerate_input="rcsfgenerate_input_6s2"
+rcsfgenerate < $rcsfgenerate_input
+cat $rcsfgenerate_input
+cp rcsfgenerate.log 6s2.exc
+cp rcsf.out rcsf.inp
+printf 'y' | rangular
+rwfnestimate_input="rwfnestimate_input_6s2"
+rwfnestimate < $rwfnestimate_input
+cat $rwfnestimate_input
+rmcdhf_input="rmcdhf_input_6s2"
+rmcdhf < $rmcdhf_input
+cat $rmcdhf_input
+#rsave 6s2
+
+# save rwfn.out
+cp rwfn.out rwfn_6s_5d.out

@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Run calculation script
+./script_6s2_6s6p |& tee script_6s2_6s6p.out
+./script_1S0 |& tee script_1S0.out
+./script_1P1 |& tee script_1P1.out
+
+# Show energy levels
+echo '---------- SCF------------'
+rlevelseV 1S0.m 1P1.m
+
+echo ''
+echo '---------- CI ------------'
+#rlevelseV 1S0.cm 1P1.cm
+

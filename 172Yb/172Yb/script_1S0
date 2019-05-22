@@ -1,0 +1,298 @@
+#!/bin/bash
+
+#1. Yb core ([Xe]4f14) + 6s6p 1S0
+# user-defined order of orbitals in clist.ref
+# separate 5d1 out from previous calculation (script_6s2_6s6p)
+rnucleus_input="rnucleus_input_Z70"
+rnucleus < $rnucleus_input
+cat $rnucleus_input
+rcsfgenerate_input="rcsfgenerate_input_1S0"
+rcsfgenerate < $rcsfgenerate_input
+cat $rcsfgenerate_input
+cp rcsfgenerate.log 1S0.exc
+cp rcsf.out rcsf.inp
+cp rcsf.out rcsfmr.inp
+printf 'y' | rangular
+rwfnestimate_input="rwfnestimate_input_1S0"
+rwfnestimate < $rwfnestimate_input
+cat $rwfnestimate_input
+rmcdhf_input="rmcdhf_input_1S0"
+rmcdhf < $rmcdhf_input
+cat $rmcdhf_input
+#rsave 1S0
+
+#2. add active orbitals: layer 1-1 (6p,5f) -- non-spectroscopic
+rcsfgenerate_input="rcsfgenerate_input_1S0_2"
+rcsfgenerate < $rcsfgenerate_input
+cat $rcsfgenerate_input
+cp rcsfgenerate.log 1S0.exc
+cp rcsf.out rcsf.inp
+printf '1' | rcsfinteract
+cp rcsf.out rcsf.inp
+printf 'y' | rangular
+rwfnestimate_input="rwfnestimate_input_1S0_2"
+rwfnestimate < $rwfnestimate_input
+cat $rwfnestimate_input
+rmcdhf_input="rmcdhf_input_1S0_2"
+rmcdhf < $rmcdhf_input
+cat $rmcdhf_input
+#rsave 1S0
+ 
+#3. fix 6p,5f to be spectroscopic
+rcsfgenerate_input="rcsfgenerate_input_1S0_3"
+rcsfgenerate < $rcsfgenerate_input
+cat $rcsfgenerate_input
+cp rcsfgenerate.log 1S0.exc
+cp rcsf.out rcsf.inp
+printf '1' | rcsfinteract
+cp rcsf.out rcsf.inp
+printf 'y' | rangular
+rwfnestimate_input="rwfnestimate_input_1S0_2"
+rwfnestimate < $rwfnestimate_input
+cat $rwfnestimate_input
+rmcdhf_input="rmcdhf_input_1S0_3"
+rmcdhf < $rmcdhf_input
+cat $rmcdhf_input
+#rsave 1S0
+
+#4. add active orbitals: layer 1-2 (5d)
+rcsfgenerate_input="rcsfgenerate_input_1S0_4"
+rcsfgenerate < $rcsfgenerate_input
+cat $rcsfgenerate_input
+cp rcsfgenerate.log 1S0.exc
+cp rcsf.out rcsf.inp
+printf '1' | rcsfinteract
+cp rcsf.out rcsf.inp
+printf 'y' | rangular
+rwfnestimate_input="rwfnestimate_input_1S0_2"
+rwfnestimate < $rwfnestimate_input
+cat $rwfnestimate_input
+rmcdhf_input="rmcdhf_input_1S0_4"
+rmcdhf < $rmcdhf_input
+cat $rmcdhf_input
+#rsave 1S0
+
+#4. add active orbitals: layer 1-3 (7s) -- non-spectroscopic
+rcsfgenerate_input="rcsfgenerate_input_1S0_5"
+rcsfgenerate < $rcsfgenerate_input
+cat $rcsfgenerate_input
+cp rcsfgenerate.log 1S0.exc
+cp rcsf.out rcsf.inp
+printf '1' | rcsfinteract
+cp rcsf.out rcsf.inp
+printf 'y' | rangular
+rwfnestimate_input="rwfnestimate_input_1S0_2"
+rwfnestimate < $rwfnestimate_input
+cat $rwfnestimate_input
+rmcdhf_input="rmcdhf_input_1S0_5"
+rmcdhf < $rmcdhf_input
+cat $rmcdhf_input
+#rsave 1S0
+
+#5. fix 7s to be spectroscopic
+rcsfgenerate_input="rcsfgenerate_input_1S0_5"
+rcsfgenerate < $rcsfgenerate_input
+cat $rcsfgenerate_input
+cp rcsfgenerate.log 1S0.exc
+cp rcsf.out rcsf.inp
+printf '1' | rcsfinteract
+cp rcsf.out rcsf.inp
+printf 'y' | rangular
+rwfnestimate_input="rwfnestimate_input_1S0_2"
+rwfnestimate < $rwfnestimate_input
+cat $rwfnestimate_input
+rmcdhf_input="rmcdhf_input_1S0_6"
+rmcdhf < $rmcdhf_input
+cat $rmcdhf_input
+#rsave 1S0
+
+#6. add active orbitals: layer 1-4 (5g)
+rcsfgenerate_input="rcsfgenerate_input_1S0_7"
+rcsfgenerate < $rcsfgenerate_input
+cat $rcsfgenerate_input
+cp rcsfgenerate.log 1S0.exc
+cp rcsf.out rcsf.inp
+printf '1' | rcsfinteract
+cp rcsf.out rcsf.inp
+printf 'y' | rangular
+rwfnestimate_input="rwfnestimate_input_1S0_2"
+rwfnestimate < $rwfnestimate_input
+cat $rwfnestimate_input
+rmcdhf_input="rmcdhf_input_1S0_7"
+rmcdhf < $rmcdhf_input
+cat $rmcdhf_input
+#rsave 1S0
+
+#7. add active orbitals: layer 2-1 (7p)
+rcsfgenerate_input="rcsfgenerate_input_1S0_8"
+rcsfgenerate < $rcsfgenerate_input
+cat $rcsfgenerate_input
+cp rcsfgenerate.log 1S0.exc
+cp rcsf.out rcsf.inp
+printf '1' | rcsfinteract
+cp rcsf.out rcsf.inp
+printf 'y' | rangular
+rwfnestimate_input="rwfnestimate_input_1S0_2"
+rwfnestimate < $rwfnestimate_input
+cat $rwfnestimate_input
+rmcdhf_input="rmcdhf_input_1S0_8"
+rmcdhf < $rmcdhf_input
+cat $rmcdhf_input
+#rsave 1S0
+
+cp rwfn.out rwfn_1S0_7p.out
+
+#8. add active orbitals: layer 2-2 (6d) -- non-spectroscopic
+rcsfgenerate_input="rcsfgenerate_input_1S0_9"
+rcsfgenerate < $rcsfgenerate_input
+cat $rcsfgenerate_input
+cp rcsfgenerate.log 1S0.exc
+cp rcsf.out rcsf.inp
+printf '1' | rcsfinteract
+cp rcsf.out rcsf.inp
+printf 'y' | rangular
+rwfnestimate_input="rwfnestimate_input_1S0_2"
+rwfnestimate < $rwfnestimate_input
+cat $rwfnestimate_input
+rmcdhf_input="rmcdhf_input_1S0_9"
+rmcdhf < $rmcdhf_input
+cat $rmcdhf_input
+#rsave 1S0
+
+#9. add active orbitals: layer 2-3 (8s); 6d to be spectroscopic as well
+rcsfgenerate_input="rcsfgenerate_input_1S0_10"
+rcsfgenerate < $rcsfgenerate_input
+cat $rcsfgenerate_input
+cp rcsfgenerate.log 1S0.exc
+cp rcsf.out rcsf.inp
+printf '1' | rcsfinteract
+cp rcsf.out rcsf.inp
+printf 'y' | rangular
+rwfnestimate_input="rwfnestimate_input_1S0_2"
+rwfnestimate < $rwfnestimate_input
+cat $rwfnestimate_input
+rmcdhf_input="rmcdhf_input_1S0_10"
+rmcdhf < $rmcdhf_input
+cat $rmcdhf_input
+#rsave 1S0
+
+#10. add active orbitals: layer 3-1 (9s,8p)
+rcsfgenerate_input="rcsfgenerate_input_1S0_11"
+rcsfgenerate < $rcsfgenerate_input
+cat $rcsfgenerate_input
+cp rcsfgenerate.log 1S0.exc
+cp rcsf.out rcsf.inp
+printf '1' | rcsfinteract
+cp rcsf.out rcsf.inp
+printf 'y' | rangular
+rwfnestimate_input="rwfnestimate_input_1S0_2"
+rwfnestimate < $rwfnestimate_input
+cat $rwfnestimate_input
+rmcdhf_input="rmcdhf_input_1S0_11"
+rmcdhf < $rmcdhf_input
+cat $rmcdhf_input
+#rsave 1S0
+
+#11. add active orbitals: layer 3-2 (7d) -- non-spectroscopic
+rcsfgenerate_input="rcsfgenerate_input_1S0_12"
+rcsfgenerate < $rcsfgenerate_input
+cat $rcsfgenerate_input
+cp rcsfgenerate.log 1S0.exc
+cp rcsf.out rcsf.inp
+printf '1' | rcsfinteract
+cp rcsf.out rcsf.inp
+printf 'y' | rangular
+rwfnestimate_input="rwfnestimate_input_1S0_2"
+rwfnestimate < $rwfnestimate_input
+cat $rwfnestimate_input
+rmcdhf_input="rmcdhf_input_1S0_12"
+rmcdhf < $rmcdhf_input
+cat $rmcdhf_input
+#rsave 1S0
+
+#12. add active orbitals: layer 3-2 (6f) -- non-spectroscopic
+rcsfgenerate_input="rcsfgenerate_input_1S0_13"
+rcsfgenerate < $rcsfgenerate_input
+cat $rcsfgenerate_input
+cp rcsfgenerate.log 1S0.exc
+cp rcsf.out rcsf.inp
+printf '1' | rcsfinteract
+cp rcsf.out rcsf.inp
+printf 'y' | rangular
+rwfnestimate_input="rwfnestimate_input_1S0_2"
+rwfnestimate < $rwfnestimate_input
+cat $rwfnestimate_input
+rmcdhf_input="rmcdhf_input_1S0_13"
+rmcdhf < $rmcdhf_input
+cat $rmcdhf_input
+#rsave 1S0
+
+#13.  fix 6f to be spectroscopic
+rcsfgenerate_input="rcsfgenerate_input_1S0_13"
+rcsfgenerate < $rcsfgenerate_input
+cat $rcsfgenerate_input
+cp rcsfgenerate.log 1S0.exc
+cp rcsf.out rcsf.inp
+printf '1' | rcsfinteract
+cp rcsf.out rcsf.inp
+printf 'y' | rangular
+rwfnestimate_input="rwfnestimate_input_1S0_2"
+rwfnestimate < $rwfnestimate_input
+cat $rwfnestimate_input
+rmcdhf_input="rmcdhf_input_1S0_14"
+rmcdhf < $rmcdhf_input
+cat $rmcdhf_input
+#rsave 1S0
+
+#14.  fix 7d to be spectroscopic
+rcsfgenerate_input="rcsfgenerate_input_1S0_13"
+rcsfgenerate < $rcsfgenerate_input
+cat $rcsfgenerate_input
+cp rcsfgenerate.log 1S0.exc
+cp rcsf.out rcsf.inp
+printf '1' | rcsfinteract
+cp rcsf.out rcsf.inp
+printf 'y' | rangular
+rwfnestimate_input="rwfnestimate_input_1S0_2"
+rwfnestimate < $rwfnestimate_input
+cat $rwfnestimate_input
+rmcdhf_input="rmcdhf_input_1S0_15"
+rmcdhf < $rmcdhf_input
+cat $rmcdhf_input
+#rsave 1S0
+
+#14.  fix 7d to be spectroscopic
+rcsfgenerate_input="rcsfgenerate_input_1S0_13"
+rcsfgenerate < $rcsfgenerate_input
+cat $rcsfgenerate_input
+cp rcsfgenerate.log 1S0.exc
+cp rcsf.out rcsf.inp
+printf '1' | rcsfinteract
+cp rcsf.out rcsf.inp
+printf 'y' | rangular
+rwfnestimate_input="rwfnestimate_input_1S0_2"
+rwfnestimate < $rwfnestimate_input
+cat $rwfnestimate_input
+rmcdhf_input="rmcdhf_input_1S0_16"
+rmcdhf < $rmcdhf_input
+cat $rmcdhf_input
+
+stateID="1S0"
+rsave $stateID
+printf "1\n$stateID.w\n$stateID.w.readrwf" | readrwf
+printf "$stateID\nn\n0\ny" | rmixextract |& tee $stateID.rmix # DHF
+
+
+# CI
+#rci_input="rci_input_1S0"
+#mpirun -np 4 rci_mpi < $rci_input
+#cat $rci_input
+#printf "$stateID\ny\n0\ny" | rmixextract |& tee $stateID.crmix # CI
+
+# jj2lsj
+jj2lsj_input="jj2lsj_input_1S0"
+jj2lsj < $jj2lsj_input
+cat $jj2lsj_input
+
+
+
