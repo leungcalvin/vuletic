@@ -7,7 +7,7 @@
 
 # Show energy levels
 echo '---------- SCF------------'
-rlevelseV 1S0.m 1P1.m
+rlevelseV 1S0.cm 1P1.cm
 
 echo ''
 echo '---------- CI ------------'
