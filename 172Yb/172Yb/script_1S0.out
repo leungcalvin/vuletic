@@ -399,7 +399,7 @@ n
  Number of electrons in 6f? (0..14)
  Inactive, active or double excited? (i/*/d)
  Resulting 2*J-number? lower, higher (J=1 -> 2*J=2 etc.)
- Number of excitations = ? (0..0)
+ Number of excitations = ? (0..2)
  One configuration state has been generated.
  One configuration state in the final list.
  Generate another list? (y/*)
@@ -412,10 +412,10 @@ n
            1    0+              1
 u
 5
-4f(14,c)6s(2,i)
+4f(14,c)6s(2,*)
 
 6s,5p,4d,4f
-0,0
+0,10
 0
 n
 
@@ -450,7 +450,7 @@ n
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 20/58/03.031
+   Time (Hr/Min/Sec): 21/28/12.391
    Zone: -0400
 
  RANGULAR: Execution complete.
@@ -704,7 +704,7 @@ Generalised occupation numbers:
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 20/58/03.090
+   Time (Hr/Min/Sec): 21/28/12.471
    Zone: -0400
 
  RMCDHF: Execution complete.
@@ -803,22 +803,27 @@ y
  Inactive, active or double excited? (i/*/d)
  Resulting 2*J-number? lower, higher (J=1 -> 2*J=2 etc.)
  Number of excitations = ? (0..2)
- 5 configuration states have been generated.
- 5 configuration states in the final list.
+ 29 configuration states have been generated.
+ 29 configuration states in the final list.
  Generate another list? (y/*)
 
  Group CSFs into symmetry blocks
 
- 1 blocks were created
+ 6 blocks were created
 
        block  J/P            NCSF
            1    0+              5
+           2    1+              3
+           3    2+              8
+           4    3+              5
+           5    4+              6
+           6    5+              2
 u
 5
 4f(14,c)6s(2,*)
 
 6s,6p,4d,5f
-0,0
+0,10
 2
 n
  
@@ -841,7 +846,7 @@ n
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 20/58/03.099
+   Time (Hr/Min/Sec): 21/28/12.482
    Zone: -0400
 
  RCSFinteract: Execution complete.
@@ -877,7 +882,7 @@ n
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 20/58/03.104
+   Time (Hr/Min/Sec): 21/28/12.487
    Zone: -0400
 
  RANGULAR: Execution complete.
@@ -1864,7 +1869,7 @@ Generalised occupation numbers:
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 20/58/03.391
+   Time (Hr/Min/Sec): 21/28/12.843
    Zone: -0400
 
  RMCDHF: Execution complete.
@@ -2000,7 +2005,7 @@ n
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 20/58/03.400
+   Time (Hr/Min/Sec): 21/28/12.855
    Zone: -0400
 
  RCSFinteract: Execution complete.
@@ -2036,7 +2041,7 @@ n
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 20/58/03.404
+   Time (Hr/Min/Sec): 21/28/12.859
    Zone: -0400
 
  RANGULAR: Execution complete.
@@ -2223,7 +2228,7 @@ Generalised occupation numbers:
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 20/58/03.442
+   Time (Hr/Min/Sec): 21/28/12.907
    Zone: -0400
 
  RMCDHF: Execution complete.
@@ -2359,7 +2364,7 @@ n
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 20/58/03.453
+   Time (Hr/Min/Sec): 21/28/12.918
    Zone: -0400
 
  RCSFinteract: Execution complete.
@@ -2395,7 +2400,7 @@ n
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 20/58/03.458
+   Time (Hr/Min/Sec): 21/28/12.923
    Zone: -0400
 
  RANGULAR: Execution complete.
@@ -2683,7 +2688,7 @@ Generalised occupation numbers:
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 20/58/03.532
+   Time (Hr/Min/Sec): 21/28/13.020
    Zone: -0400
 
  RMCDHF: Execution complete.
@@ -2823,7 +2828,7 @@ n
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 20/58/03.540
+   Time (Hr/Min/Sec): 21/28/13.034
    Zone: -0400
 
  RCSFinteract: Execution complete.
@@ -2859,7 +2864,7 @@ n
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 20/58/03.546
+   Time (Hr/Min/Sec): 21/28/13.040
    Zone: -0400
 
  RANGULAR: Execution complete.
@@ -3098,7 +3103,7 @@ Generalised occupation numbers:
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 20/58/03.605
+   Time (Hr/Min/Sec): 21/28/13.116
    Zone: -0400
 
  RMCDHF: Execution complete.
@@ -3238,7 +3243,7 @@ n
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 20/58/03.618
+   Time (Hr/Min/Sec): 21/28/13.129
    Zone: -0400
 
  RCSFinteract: Execution complete.
@@ -3274,7 +3279,7 @@ n
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 20/58/03.622
+   Time (Hr/Min/Sec): 21/28/13.136
    Zone: -0400
 
  RANGULAR: Execution complete.
@@ -3468,7 +3473,7 @@ Generalised occupation numbers:
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 20/58/03.665
+   Time (Hr/Min/Sec): 21/28/13.199
    Zone: -0400
 
  RMCDHF: Execution complete.
@@ -3613,7 +3618,7 @@ n
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 20/58/03.682
+   Time (Hr/Min/Sec): 21/28/13.211
    Zone: -0400
 
  RCSFinteract: Execution complete.
@@ -3651,7 +3656,7 @@ n
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 20/58/03.686
+   Time (Hr/Min/Sec): 21/28/13.218
    Zone: -0400
 
  RANGULAR: Execution complete.
@@ -3914,7 +3919,7 @@ Generalised occupation numbers:
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 20/58/03.776
+   Time (Hr/Min/Sec): 21/28/13.326
    Zone: -0400
 
  RMCDHF: Execution complete.
@@ -4059,7 +4064,7 @@ n
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 20/58/03.786
+   Time (Hr/Min/Sec): 21/28/13.336
    Zone: -0400
 
  RCSFinteract: Execution complete.
@@ -4097,7 +4102,7 @@ n
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 20/58/03.791
+   Time (Hr/Min/Sec): 21/28/13.344
    Zone: -0400
 
  RANGULAR: Execution complete.
@@ -4377,7 +4382,7 @@ Generalised occupation numbers:
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 20/58/03.907
+   Time (Hr/Min/Sec): 21/28/13.477
    Zone: -0400
 
  RMCDHF: Execution complete.
@@ -4522,7 +4527,7 @@ n
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 20/58/03.918
+   Time (Hr/Min/Sec): 21/28/13.490
    Zone: -0400
 
  RCSFinteract: Execution complete.
@@ -4560,7 +4565,7 @@ n
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 20/58/03.928
+   Time (Hr/Min/Sec): 21/28/13.501
    Zone: -0400
 
  RANGULAR: Execution complete.
@@ -4832,7 +4837,7 @@ Generalised occupation numbers:
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 20/58/04.055
+   Time (Hr/Min/Sec): 21/28/13.665
    Zone: -0400
 
  RMCDHF: Execution complete.
@@ -4982,7 +4987,7 @@ n
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 20/58/04.066
+   Time (Hr/Min/Sec): 21/28/13.677
    Zone: -0400
 
  RCSFinteract: Execution complete.
@@ -5020,7 +5025,7 @@ n
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 20/58/04.072
+   Time (Hr/Min/Sec): 21/28/13.686
    Zone: -0400
 
  RANGULAR: Execution complete.
@@ -5246,7 +5251,7 @@ Generalised occupation numbers:
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 20/58/04.200
+   Time (Hr/Min/Sec): 21/28/13.856
    Zone: -0400
 
  RMCDHF: Execution complete.
@@ -5401,7 +5406,7 @@ n
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 20/58/04.221
+   Time (Hr/Min/Sec): 21/28/13.870
    Zone: -0400
 
  RCSFinteract: Execution complete.
@@ -5439,7 +5444,7 @@ n
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 20/58/04.230
+   Time (Hr/Min/Sec): 21/28/13.886
    Zone: -0400
 
  RANGULAR: Execution complete.
@@ -5683,7 +5688,7 @@ Generalised occupation numbers:
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 20/58/04.465
+   Time (Hr/Min/Sec): 21/28/14.164
    Zone: -0400
 
  RMCDHF: Execution complete.
@@ -5838,7 +5843,7 @@ n
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 20/58/04.479
+   Time (Hr/Min/Sec): 21/28/14.177
    Zone: -0400
 
  RCSFinteract: Execution complete.
@@ -5876,7 +5881,7 @@ n
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 20/58/04.495
+   Time (Hr/Min/Sec): 21/28/14.197
    Zone: -0400
 
  RANGULAR: Execution complete.
@@ -6238,7 +6243,7 @@ Generalised occupation numbers:
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 20/58/04.852
+   Time (Hr/Min/Sec): 21/28/14.616
    Zone: -0400
 
  RMCDHF: Execution complete.
@@ -6393,7 +6398,7 @@ n
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 20/58/04.869
+   Time (Hr/Min/Sec): 21/28/14.632
    Zone: -0400
 
  RCSFinteract: Execution complete.
@@ -6431,7 +6436,7 @@ n
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 20/58/04.882
+   Time (Hr/Min/Sec): 21/28/14.651
    Zone: -0400
 
  RANGULAR: Execution complete.
@@ -6886,7 +6891,7 @@ Generalised occupation numbers:
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 20/58/05.407
+   Time (Hr/Min/Sec): 21/28/15.241
    Zone: -0400
 
  RMCDHF: Execution complete.
@@ -7041,7 +7046,7 @@ n
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 20/58/05.424
+   Time (Hr/Min/Sec): 21/28/15.260
    Zone: -0400
 
  RCSFinteract: Execution complete.
@@ -7079,7 +7084,7 @@ n
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 20/58/05.437
+   Time (Hr/Min/Sec): 21/28/15.283
    Zone: -0400
 
  RANGULAR: Execution complete.
@@ -7281,7 +7286,7 @@ Generalised occupation numbers:
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 20/58/05.599
+   Time (Hr/Min/Sec): 21/28/15.475
    Zone: -0400
 
  RMCDHF: Execution complete.
@@ -7436,7 +7441,7 @@ n
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 20/58/05.612
+   Time (Hr/Min/Sec): 21/28/15.491
    Zone: -0400
 
  RCSFinteract: Execution complete.
@@ -7474,7 +7479,7 @@ n
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 20/58/05.627
+   Time (Hr/Min/Sec): 21/28/15.510
    Zone: -0400
 
  RANGULAR: Execution complete.
@@ -7682,7 +7687,7 @@ Generalised occupation numbers:
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 20/58/05.811
+   Time (Hr/Min/Sec): 21/28/15.731
    Zone: -0400
 
  RMCDHF: Execution complete.
@@ -7837,7 +7842,7 @@ n
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 20/58/05.828
+   Time (Hr/Min/Sec): 21/28/15.748
    Zone: -0400
 
  RCSFinteract: Execution complete.
@@ -7875,7 +7880,7 @@ n
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 20/58/05.842
+   Time (Hr/Min/Sec): 21/28/15.763
    Zone: -0400
 
  RANGULAR: Execution complete.
@@ -8083,7 +8088,7 @@ Generalised occupation numbers:
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 20/58/06.028
+   Time (Hr/Min/Sec): 21/28/15.974
    Zone: -0400
 
  RMCDHF: Execution complete.
@@ -8147,11 +8152,11 @@ Name of state:
 
 
  Wall time:
-      114 seconds
+      115 seconds
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 21/00/00.475
+   Time (Hr/Min/Sec): 21/30/11.584
    Zone: -0400
 
  RCI: Execution complete.
@@ -8242,7 +8247,7 @@ y
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 21/00/00.482
+   Time (Hr/Min/Sec): 21/30/11.592
    Zone: -0400
 
  jj2lsj: Execution complete.
