@@ -1,3 +1,302 @@
+#!/bin/bash
+
+echo "1. Yb core ([Xe]4f14) + 6s6p 1S0"
+# user-defined order of orbitals in clist.ref
+# separate 5d1 out from previous calculation (script_6s2_6s6p)
+rnucleus_input="rnucleus_input_Z70"
+rnucleus < $rnucleus_input
+cat $rnucleus_input
+rcsfgenerate_input="rcsfgenerate_input_1S0"
+rcsfgenerate < $rcsfgenerate_input
+cat $rcsfgenerate_input
+cp rcsfgenerate.log 1S0.exc
+cp rcsf.out rcsf.inp
+cp rcsf.out rcsfmr.inp
+printf 'y' | rangular
+rwfnestimate_input="rwfnestimate_input_1S0"
+rwfnestimate < $rwfnestimate_input
+cat $rwfnestimate_input
+rmcdhf_input="rmcdhf_input_1S0"
+rmcdhf < $rmcdhf_input
+cat $rmcdhf_input
+#rsave 1S0
+
+echo "2. add active orbitals: layer 1-1 (6p,5f) -- non-spectroscopic"
+rcsfgenerate_input="rcsfgenerate_input_1S0_2"
+rcsfgenerate < $rcsfgenerate_input
+cat $rcsfgenerate_input
+cp rcsfgenerate.log 1S0.exc
+cp rcsf.out rcsf.inp
+printf '1' | rcsfinteract
+cp rcsf.out rcsf.inp
+printf 'y' | rangular
+rwfnestimate_input="rwfnestimate_input_1S0_2"
+rwfnestimate < $rwfnestimate_input
+cat $rwfnestimate_input
+rmcdhf_input="rmcdhf_input_1S0_2"
+rmcdhf < $rmcdhf_input
+cat $rmcdhf_input
+#rsave 1S0
+ 
+#3. fix 6p,5f to be spectroscopic
+rcsfgenerate_input="rcsfgenerate_input_1S0_3"
+rcsfgenerate < $rcsfgenerate_input
+cat $rcsfgenerate_input
+cp rcsfgenerate.log 1S0.exc
+cp rcsf.out rcsf.inp
+printf '1' | rcsfinteract
+cp rcsf.out rcsf.inp
+printf 'y' | rangular
+rwfnestimate_input="rwfnestimate_input_1S0_2"
+rwfnestimate < $rwfnestimate_input
+cat $rwfnestimate_input
+rmcdhf_input="rmcdhf_input_1S0_3"
+rmcdhf < $rmcdhf_input
+cat $rmcdhf_input
+#rsave 1S0
+
+#4. add active orbitals: layer 1-2 (5d)
+rcsfgenerate_input="rcsfgenerate_input_1S0_4"
+rcsfgenerate < $rcsfgenerate_input
+cat $rcsfgenerate_input
+cp rcsfgenerate.log 1S0.exc
+cp rcsf.out rcsf.inp
+printf '1' | rcsfinteract
+cp rcsf.out rcsf.inp
+printf 'y' | rangular
+rwfnestimate_input="rwfnestimate_input_1S0_2"
+rwfnestimate < $rwfnestimate_input
+cat $rwfnestimate_input
+rmcdhf_input="rmcdhf_input_1S0_4"
+rmcdhf < $rmcdhf_input
+cat $rmcdhf_input
+#rsave 1S0
+
+#4. add active orbitals: layer 1-3 (7s) -- non-spectroscopic
+rcsfgenerate_input="rcsfgenerate_input_1S0_5"
+rcsfgenerate < $rcsfgenerate_input
+cat $rcsfgenerate_input
+cp rcsfgenerate.log 1S0.exc
+cp rcsf.out rcsf.inp
+printf '1' | rcsfinteract
+cp rcsf.out rcsf.inp
+printf 'y' | rangular
+rwfnestimate_input="rwfnestimate_input_1S0_2"
+rwfnestimate < $rwfnestimate_input
+cat $rwfnestimate_input
+rmcdhf_input="rmcdhf_input_1S0_5"
+rmcdhf < $rmcdhf_input
+cat $rmcdhf_input
+#rsave 1S0
+
+#5. fix 7s to be spectroscopic
+rcsfgenerate_input="rcsfgenerate_input_1S0_5"
+rcsfgenerate < $rcsfgenerate_input
+cat $rcsfgenerate_input
+cp rcsfgenerate.log 1S0.exc
+cp rcsf.out rcsf.inp
+printf '1' | rcsfinteract
+cp rcsf.out rcsf.inp
+printf 'y' | rangular
+rwfnestimate_input="rwfnestimate_input_1S0_2"
+rwfnestimate < $rwfnestimate_input
+cat $rwfnestimate_input
+rmcdhf_input="rmcdhf_input_1S0_6"
+rmcdhf < $rmcdhf_input
+cat $rmcdhf_input
+#rsave 1S0
+
+#6. add active orbitals: layer 1-4 (5g)
+rcsfgenerate_input="rcsfgenerate_input_1S0_7"
+rcsfgenerate < $rcsfgenerate_input
+cat $rcsfgenerate_input
+cp rcsfgenerate.log 1S0.exc
+cp rcsf.out rcsf.inp
+printf '1' | rcsfinteract
+cp rcsf.out rcsf.inp
+printf 'y' | rangular
+rwfnestimate_input="rwfnestimate_input_1S0_2"
+rwfnestimate < $rwfnestimate_input
+cat $rwfnestimate_input
+rmcdhf_input="rmcdhf_input_1S0_7"
+rmcdhf < $rmcdhf_input
+cat $rmcdhf_input
+#rsave 1S0
+
+#7. add active orbitals: layer 2-1 (7p)
+rcsfgenerate_input="rcsfgenerate_input_1S0_8"
+rcsfgenerate < $rcsfgenerate_input
+cat $rcsfgenerate_input
+cp rcsfgenerate.log 1S0.exc
+cp rcsf.out rcsf.inp
+printf '1' | rcsfinteract
+cp rcsf.out rcsf.inp
+printf 'y' | rangular
+rwfnestimate_input="rwfnestimate_input_1S0_2"
+rwfnestimate < $rwfnestimate_input
+cat $rwfnestimate_input
+rmcdhf_input="rmcdhf_input_1S0_8"
+rmcdhf < $rmcdhf_input
+cat $rmcdhf_input
+#rsave 1S0
+
+cp rwfn.out rwfn_1S0_7p.out
+
+#8. add active orbitals: layer 2-2 (6d) -- non-spectroscopic
+rcsfgenerate_input="rcsfgenerate_input_1S0_9"
+rcsfgenerate < $rcsfgenerate_input
+cat $rcsfgenerate_input
+cp rcsfgenerate.log 1S0.exc
+cp rcsf.out rcsf.inp
+printf '1' | rcsfinteract
+cp rcsf.out rcsf.inp
+printf 'y' | rangular
+rwfnestimate_input="rwfnestimate_input_1S0_2"
+rwfnestimate < $rwfnestimate_input
+cat $rwfnestimate_input
+rmcdhf_input="rmcdhf_input_1S0_9"
+rmcdhf < $rmcdhf_input
+cat $rmcdhf_input
+#rsave 1S0
+
+#9. add active orbitals: layer 2-3 (8s); 6d to be spectroscopic as well
+rcsfgenerate_input="rcsfgenerate_input_1S0_10"
+rcsfgenerate < $rcsfgenerate_input
+cat $rcsfgenerate_input
+cp rcsfgenerate.log 1S0.exc
+cp rcsf.out rcsf.inp
+printf '1' | rcsfinteract
+cp rcsf.out rcsf.inp
+printf 'y' | rangular
+rwfnestimate_input="rwfnestimate_input_1S0_2"
+rwfnestimate < $rwfnestimate_input
+cat $rwfnestimate_input
+rmcdhf_input="rmcdhf_input_1S0_10"
+rmcdhf < $rmcdhf_input
+cat $rmcdhf_input
+#rsave 1S0
+
+#10. add active orbitals: layer 3-1 (9s,8p)
+rcsfgenerate_input="rcsfgenerate_input_1S0_11"
+rcsfgenerate < $rcsfgenerate_input
+cat $rcsfgenerate_input
+cp rcsfgenerate.log 1S0.exc
+cp rcsf.out rcsf.inp
+printf '1' | rcsfinteract
+cp rcsf.out rcsf.inp
+printf 'y' | rangular
+rwfnestimate_input="rwfnestimate_input_1S0_2"
+rwfnestimate < $rwfnestimate_input
+cat $rwfnestimate_input
+rmcdhf_input="rmcdhf_input_1S0_11"
+rmcdhf < $rmcdhf_input
+cat $rmcdhf_input
+#rsave 1S0
+
+#11. add active orbitals: layer 3-2 (7d) -- non-spectroscopic
+rcsfgenerate_input="rcsfgenerate_input_1S0_12"
+rcsfgenerate < $rcsfgenerate_input
+cat $rcsfgenerate_input
+cp rcsfgenerate.log 1S0.exc
+cp rcsf.out rcsf.inp
+printf '1' | rcsfinteract
+cp rcsf.out rcsf.inp
+printf 'y' | rangular
+rwfnestimate_input="rwfnestimate_input_1S0_2"
+rwfnestimate < $rwfnestimate_input
+cat $rwfnestimate_input
+rmcdhf_input="rmcdhf_input_1S0_12"
+rmcdhf < $rmcdhf_input
+cat $rmcdhf_input
+#rsave 1S0
+
+#12. add active orbitals: layer 3-2 (6f) -- non-spectroscopic
+rcsfgenerate_input="rcsfgenerate_input_1S0_13"
+rcsfgenerate < $rcsfgenerate_input
+cat $rcsfgenerate_input
+cp rcsfgenerate.log 1S0.exc
+cp rcsf.out rcsf.inp
+printf '1' | rcsfinteract
+cp rcsf.out rcsf.inp
+printf 'y' | rangular
+rwfnestimate_input="rwfnestimate_input_1S0_2"
+rwfnestimate < $rwfnestimate_input
+cat $rwfnestimate_input
+rmcdhf_input="rmcdhf_input_1S0_13"
+rmcdhf < $rmcdhf_input
+cat $rmcdhf_input
+#rsave 1S0
+
+#13.  fix 6f to be spectroscopic
+rcsfgenerate_input="rcsfgenerate_input_1S0_13"
+rcsfgenerate < $rcsfgenerate_input
+cat $rcsfgenerate_input
+cp rcsfgenerate.log 1S0.exc
+cp rcsf.out rcsf.inp
+printf '1' | rcsfinteract
+cp rcsf.out rcsf.inp
+printf 'y' | rangular
+rwfnestimate_input="rwfnestimate_input_1S0_2"
+rwfnestimate < $rwfnestimate_input
+cat $rwfnestimate_input
+rmcdhf_input="rmcdhf_input_1S0_14"
+rmcdhf < $rmcdhf_input
+cat $rmcdhf_input
+#rsave 1S0
+
+#14.  fix 7d to be spectroscopic
+rcsfgenerate_input="rcsfgenerate_input_1S0_13"
+rcsfgenerate < $rcsfgenerate_input
+cat $rcsfgenerate_input
+cp rcsfgenerate.log 1S0.exc
+cp rcsf.out rcsf.inp
+printf '1' | rcsfinteract
+cp rcsf.out rcsf.inp
+printf 'y' | rangular
+rwfnestimate_input="rwfnestimate_input_1S0_2"
+rwfnestimate < $rwfnestimate_input
+cat $rwfnestimate_input
+rmcdhf_input="rmcdhf_input_1S0_15"
+rmcdhf < $rmcdhf_input
+cat $rmcdhf_input
+#rsave 1S0
+
+#14.  fix 7d to be spectroscopic
+rcsfgenerate_input="rcsfgenerate_input_1S0_13"
+rcsfgenerate < $rcsfgenerate_input
+cat $rcsfgenerate_input
+cp rcsfgenerate.log 1S0.exc
+cp rcsf.out rcsf.inp
+printf '1' | rcsfinteract
+cp rcsf.out rcsf.inp
+printf 'y' | rangular
+rwfnestimate_input="rwfnestimate_input_1S0_2"
+rwfnestimate < $rwfnestimate_input
+cat $rwfnestimate_input
+rmcdhf_input="rmcdhf_input_1S0_16"
+rmcdhf < $rmcdhf_input
+cat $rmcdhf_input
+
+stateID="1S0"
+rsave $stateID
+#printf "1\n$stateID.w\n$stateID.w.readrwf" | readrwf
+#printf "$stateID\nn\n0\ny" | rmixextract |& tee $stateID.rmix # DHF
+
+
+# CI
+rci_input="rci_input_1S0"
+rci < $rci_input
+cat $rci_input
+#printf "$stateID\ny\n0\ny" | rmixextract |& tee $stateID.crmix # CI
+
+# jj2lsj
+jj2lsj_input="jj2lsj_input_1S0"
+jj2lsj < $jj2lsj_input
+cat $jj2lsj_input
+
+rsave $stateID
+
+1. Yb core ([Xe]4f14) + 6s6p 1S0
  Enter the atomic number:
  Enter the mass number (0 if the nucleus is to be modelled as a point source:
  The default root mean squared radius is    5.2192449328117521       fm;
@@ -150,8 +449,8 @@ n
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/05/21
-   Time (Hr/Min/Sec): 15/31/09.473
+   Date (Yr/Mon/Day): 2019/05/27
+   Time (Hr/Min/Sec): 20/37/16.955
    Zone: -0400
 
  RANGULAR: Execution complete.
@@ -404,8 +703,8 @@ Generalised occupation numbers:
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/05/21
-   Time (Hr/Min/Sec): 15/31/09.540
+   Date (Yr/Mon/Day): 2019/05/27
+   Time (Hr/Min/Sec): 20/37/17.023
    Zone: -0400
 
  RMCDHF: Execution complete.
@@ -416,6 +715,7 @@ y
 *
 100
 
+2. add active orbitals: layer 1-1 (6p,5f) -- non-spectroscopic
 
  RCSFGENERATE
  This program generates a list of CSFs
@@ -540,8 +840,8 @@ n
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/05/21
-   Time (Hr/Min/Sec): 15/31/09.553
+   Date (Yr/Mon/Day): 2019/05/27
+   Time (Hr/Min/Sec): 20/37/17.033
    Zone: -0400
 
  RCSFinteract: Execution complete.
@@ -576,8 +876,8 @@ n
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/05/21
-   Time (Hr/Min/Sec): 15/31/09.558
+   Date (Yr/Mon/Day): 2019/05/27
+   Time (Hr/Min/Sec): 20/37/17.037
    Zone: -0400
 
  RANGULAR: Execution complete.
@@ -1563,8 +1863,8 @@ Generalised occupation numbers:
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/05/21
-   Time (Hr/Min/Sec): 15/31/09.838
+   Date (Yr/Mon/Day): 2019/05/27
+   Time (Hr/Min/Sec): 20/37/17.341
    Zone: -0400
 
  RMCDHF: Execution complete.
@@ -1699,8 +1999,8 @@ n
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/05/21
-   Time (Hr/Min/Sec): 15/31/09.846
+   Date (Yr/Mon/Day): 2019/05/27
+   Time (Hr/Min/Sec): 20/37/17.350
    Zone: -0400
 
  RCSFinteract: Execution complete.
@@ -1735,8 +2035,8 @@ n
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/05/21
-   Time (Hr/Min/Sec): 15/31/09.850
+   Date (Yr/Mon/Day): 2019/05/27
+   Time (Hr/Min/Sec): 20/37/17.354
    Zone: -0400
 
  RANGULAR: Execution complete.
@@ -1922,8 +2222,8 @@ Generalised occupation numbers:
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/05/21
-   Time (Hr/Min/Sec): 15/31/09.884
+   Date (Yr/Mon/Day): 2019/05/27
+   Time (Hr/Min/Sec): 20/37/17.396
    Zone: -0400
 
  RMCDHF: Execution complete.
@@ -2058,8 +2358,8 @@ n
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/05/21
-   Time (Hr/Min/Sec): 15/31/09.896
+   Date (Yr/Mon/Day): 2019/05/27
+   Time (Hr/Min/Sec): 20/37/17.407
    Zone: -0400
 
  RCSFinteract: Execution complete.
@@ -2094,8 +2394,8 @@ n
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/05/21
-   Time (Hr/Min/Sec): 15/31/09.900
+   Date (Yr/Mon/Day): 2019/05/27
+   Time (Hr/Min/Sec): 20/37/17.411
    Zone: -0400
 
  RANGULAR: Execution complete.
@@ -2382,8 +2682,8 @@ Generalised occupation numbers:
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/05/21
-   Time (Hr/Min/Sec): 15/31/09.965
+   Date (Yr/Mon/Day): 2019/05/27
+   Time (Hr/Min/Sec): 20/37/17.483
    Zone: -0400
 
  RMCDHF: Execution complete.
@@ -2522,8 +2822,8 @@ n
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/05/21
-   Time (Hr/Min/Sec): 15/31/09.973
+   Date (Yr/Mon/Day): 2019/05/27
+   Time (Hr/Min/Sec): 20/37/17.498
    Zone: -0400
 
  RCSFinteract: Execution complete.
@@ -2558,8 +2858,8 @@ n
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/05/21
-   Time (Hr/Min/Sec): 15/31/09.977
+   Date (Yr/Mon/Day): 2019/05/27
+   Time (Hr/Min/Sec): 20/37/17.503
    Zone: -0400
 
  RANGULAR: Execution complete.
@@ -2797,8 +3097,8 @@ Generalised occupation numbers:
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/05/21
-   Time (Hr/Min/Sec): 15/31/10.035
+   Date (Yr/Mon/Day): 2019/05/27
+   Time (Hr/Min/Sec): 20/37/17.570
    Zone: -0400
 
  RMCDHF: Execution complete.
@@ -2937,8 +3237,8 @@ n
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/05/21
-   Time (Hr/Min/Sec): 15/31/10.046
+   Date (Yr/Mon/Day): 2019/05/27
+   Time (Hr/Min/Sec): 20/37/17.579
    Zone: -0400
 
  RCSFinteract: Execution complete.
@@ -2973,8 +3273,8 @@ n
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/05/21
-   Time (Hr/Min/Sec): 15/31/10.051
+   Date (Yr/Mon/Day): 2019/05/27
+   Time (Hr/Min/Sec): 20/37/17.587
    Zone: -0400
 
  RANGULAR: Execution complete.
@@ -3167,8 +3467,8 @@ Generalised occupation numbers:
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/05/21
-   Time (Hr/Min/Sec): 15/31/10.092
+   Date (Yr/Mon/Day): 2019/05/27
+   Time (Hr/Min/Sec): 20/37/17.636
    Zone: -0400
 
  RMCDHF: Execution complete.
@@ -3312,8 +3612,8 @@ n
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/05/21
-   Time (Hr/Min/Sec): 15/31/10.101
+   Date (Yr/Mon/Day): 2019/05/27
+   Time (Hr/Min/Sec): 20/37/17.647
    Zone: -0400
 
  RCSFinteract: Execution complete.
@@ -3350,8 +3650,8 @@ n
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/05/21
-   Time (Hr/Min/Sec): 15/31/10.109
+   Date (Yr/Mon/Day): 2019/05/27
+   Time (Hr/Min/Sec): 20/37/17.654
    Zone: -0400
 
  RANGULAR: Execution complete.
@@ -3613,8 +3913,8 @@ Generalised occupation numbers:
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/05/21
-   Time (Hr/Min/Sec): 15/31/10.192
+   Date (Yr/Mon/Day): 2019/05/27
+   Time (Hr/Min/Sec): 20/37/17.747
    Zone: -0400
 
  RMCDHF: Execution complete.
@@ -3758,8 +4058,8 @@ n
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/05/21
-   Time (Hr/Min/Sec): 15/31/10.203
+   Date (Yr/Mon/Day): 2019/05/27
+   Time (Hr/Min/Sec): 20/37/17.758
    Zone: -0400
 
  RCSFinteract: Execution complete.
@@ -3796,8 +4096,8 @@ n
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/05/21
-   Time (Hr/Min/Sec): 15/31/10.209
+   Date (Yr/Mon/Day): 2019/05/27
+   Time (Hr/Min/Sec): 20/37/17.763
    Zone: -0400
 
  RANGULAR: Execution complete.
@@ -4076,8 +4376,8 @@ Generalised occupation numbers:
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/05/21
-   Time (Hr/Min/Sec): 15/31/10.305
+   Date (Yr/Mon/Day): 2019/05/27
+   Time (Hr/Min/Sec): 20/37/17.874
    Zone: -0400
 
  RMCDHF: Execution complete.
@@ -4221,8 +4521,8 @@ n
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/05/21
-   Time (Hr/Min/Sec): 15/31/10.316
+   Date (Yr/Mon/Day): 2019/05/27
+   Time (Hr/Min/Sec): 20/37/17.887
    Zone: -0400
 
  RCSFinteract: Execution complete.
@@ -4259,8 +4559,8 @@ n
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/05/21
-   Time (Hr/Min/Sec): 15/31/10.321
+   Date (Yr/Mon/Day): 2019/05/27
+   Time (Hr/Min/Sec): 20/37/17.893
    Zone: -0400
 
  RANGULAR: Execution complete.
@@ -4531,8 +4831,8 @@ Generalised occupation numbers:
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/05/21
-   Time (Hr/Min/Sec): 15/31/10.435
+   Date (Yr/Mon/Day): 2019/05/27
+   Time (Hr/Min/Sec): 20/37/18.029
    Zone: -0400
 
  RMCDHF: Execution complete.
@@ -4681,8 +4981,8 @@ n
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/05/21
-   Time (Hr/Min/Sec): 15/31/10.445
+   Date (Yr/Mon/Day): 2019/05/27
+   Time (Hr/Min/Sec): 20/37/18.041
    Zone: -0400
 
  RCSFinteract: Execution complete.
@@ -4719,8 +5019,8 @@ n
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/05/21
-   Time (Hr/Min/Sec): 15/31/10.455
+   Date (Yr/Mon/Day): 2019/05/27
+   Time (Hr/Min/Sec): 20/37/18.047
    Zone: -0400
 
  RANGULAR: Execution complete.
@@ -4945,8 +5245,8 @@ Generalised occupation numbers:
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/05/21
-   Time (Hr/Min/Sec): 15/31/10.572
+   Date (Yr/Mon/Day): 2019/05/27
+   Time (Hr/Min/Sec): 20/37/18.188
    Zone: -0400
 
  RMCDHF: Execution complete.
@@ -5100,8 +5400,8 @@ n
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/05/21
-   Time (Hr/Min/Sec): 15/31/10.585
+   Date (Yr/Mon/Day): 2019/05/27
+   Time (Hr/Min/Sec): 20/37/18.200
    Zone: -0400
 
  RCSFinteract: Execution complete.
@@ -5138,8 +5438,8 @@ n
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/05/21
-   Time (Hr/Min/Sec): 15/31/10.593
+   Date (Yr/Mon/Day): 2019/05/27
+   Time (Hr/Min/Sec): 20/37/18.211
    Zone: -0400
 
  RANGULAR: Execution complete.
@@ -5382,8 +5682,8 @@ Generalised occupation numbers:
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/05/21
-   Time (Hr/Min/Sec): 15/31/10.795
+   Date (Yr/Mon/Day): 2019/05/27
+   Time (Hr/Min/Sec): 20/37/18.449
    Zone: -0400
 
  RMCDHF: Execution complete.
@@ -5537,8 +5837,8 @@ n
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/05/21
-   Time (Hr/Min/Sec): 15/31/10.807
+   Date (Yr/Mon/Day): 2019/05/27
+   Time (Hr/Min/Sec): 20/37/18.465
    Zone: -0400
 
  RCSFinteract: Execution complete.
@@ -5575,8 +5875,8 @@ n
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/05/21
-   Time (Hr/Min/Sec): 15/31/10.818
+   Date (Yr/Mon/Day): 2019/05/27
+   Time (Hr/Min/Sec): 20/37/18.479
    Zone: -0400
 
  RANGULAR: Execution complete.
@@ -5937,8 +6237,8 @@ Generalised occupation numbers:
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/05/21
-   Time (Hr/Min/Sec): 15/31/11.141
+   Date (Yr/Mon/Day): 2019/05/27
+   Time (Hr/Min/Sec): 20/37/18.850
    Zone: -0400
 
  RMCDHF: Execution complete.
@@ -6092,8 +6392,8 @@ n
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/05/21
-   Time (Hr/Min/Sec): 15/31/11.154
+   Date (Yr/Mon/Day): 2019/05/27
+   Time (Hr/Min/Sec): 20/37/18.867
    Zone: -0400
 
  RCSFinteract: Execution complete.
@@ -6130,8 +6430,8 @@ n
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/05/21
-   Time (Hr/Min/Sec): 15/31/11.169
+   Date (Yr/Mon/Day): 2019/05/27
+   Time (Hr/Min/Sec): 20/37/18.882
    Zone: -0400
 
  RANGULAR: Execution complete.
@@ -6585,8 +6885,8 @@ Generalised occupation numbers:
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/05/21
-   Time (Hr/Min/Sec): 15/31/11.620
+   Date (Yr/Mon/Day): 2019/05/27
+   Time (Hr/Min/Sec): 20/37/19.402
    Zone: -0400
 
  RMCDHF: Execution complete.
@@ -6740,8 +7040,8 @@ n
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/05/21
-   Time (Hr/Min/Sec): 15/31/11.635
+   Date (Yr/Mon/Day): 2019/05/27
+   Time (Hr/Min/Sec): 20/37/19.417
    Zone: -0400
 
  RCSFinteract: Execution complete.
@@ -6778,8 +7078,8 @@ n
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/05/21
-   Time (Hr/Min/Sec): 15/31/11.648
+   Date (Yr/Mon/Day): 2019/05/27
+   Time (Hr/Min/Sec): 20/37/19.433
    Zone: -0400
 
  RANGULAR: Execution complete.
@@ -6980,8 +7280,8 @@ Generalised occupation numbers:
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/05/21
-   Time (Hr/Min/Sec): 15/31/11.799
+   Date (Yr/Mon/Day): 2019/05/27
+   Time (Hr/Min/Sec): 20/37/19.592
    Zone: -0400
 
  RMCDHF: Execution complete.
@@ -7135,8 +7435,8 @@ n
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/05/21
-   Time (Hr/Min/Sec): 15/31/11.811
+   Date (Yr/Mon/Day): 2019/05/27
+   Time (Hr/Min/Sec): 20/37/19.609
    Zone: -0400
 
  RCSFinteract: Execution complete.
@@ -7173,8 +7473,8 @@ n
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/05/21
-   Time (Hr/Min/Sec): 15/31/11.827
+   Date (Yr/Mon/Day): 2019/05/27
+   Time (Hr/Min/Sec): 20/37/19.624
    Zone: -0400
 
  RANGULAR: Execution complete.
@@ -7381,8 +7681,8 @@ Generalised occupation numbers:
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/05/21
-   Time (Hr/Min/Sec): 15/31/11.986
+   Date (Yr/Mon/Day): 2019/05/27
+   Time (Hr/Min/Sec): 20/37/19.804
    Zone: -0400
 
  RMCDHF: Execution complete.
@@ -7536,8 +7836,8 @@ n
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/05/21
-   Time (Hr/Min/Sec): 15/31/11.999
+   Date (Yr/Mon/Day): 2019/05/27
+   Time (Hr/Min/Sec): 20/37/19.817
    Zone: -0400
 
  RCSFinteract: Execution complete.
@@ -7574,8 +7874,8 @@ n
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/05/21
-   Time (Hr/Min/Sec): 15/31/12.015
+   Date (Yr/Mon/Day): 2019/05/27
+   Time (Hr/Min/Sec): 20/37/19.835
    Zone: -0400
 
  RANGULAR: Execution complete.
@@ -7782,8 +8082,8 @@ Generalised occupation numbers:
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/05/21
-   Time (Hr/Min/Sec): 15/31/12.170
+   Date (Yr/Mon/Day): 2019/05/27
+   Time (Hr/Min/Sec): 20/37/20.014
    Zone: -0400
 
  RMCDHF: Execution complete.
@@ -7795,198 +8095,79 @@ y
 100
 
 Created 1S0.w, 1S0.c, 1S0.m, 1S0.sum 1S0.alog and 1S0.log
-./script_1S0: line 282: readrwf: command not found
- RMIXEXTRACT
- Extract and prints mixing coefficient above a 
- cut-off. Corresponding CSFs written to screen and 
- to rcsf.out
- Input files: name.c, name.(c)m
- Output file: rcsf.out
 
- Name of state
- Mixing coefficients from CI calc. ?
- Enter the cut-off value for the coefficients [0--1]
- Sort extracted CSFs according to mixingcoeffcients? (y/n)
+ RCI
+ This is the configuration interaction program 
+ Input file:  isodata, name.c, name.w
+ Outputfiles: name.cm, name.csum, name.clog 
+              rci.res (can be used for restart)
 
-  nblock =    1    ncftot =         42    nw =   41    nelec =   70
+Default settings? 
+Name of state: 
+ Block            1 ,  ncf =           42
+ Loading CSF file ... Header only
+ There are/is           41  relativistic subshells;
+ Include contribution of H (Transverse)?
+ Modify all transverse photon frequencies?
+ Enter the scale factor:
+ Include H (Vacuum Polarisation)?
+ Include H (Normal Mass Shift)?
+ Include H (Specific Mass Shift)?
+ Estimate self-energy?
+ Largest n quantum number for including self-energy for orbital
+ n should be less or equal 8
+ Loading Radial WaveFunction File ...
+ There are            1  blocks  (block   J/Parity   NCF):
+  1    0+      42
 
- ===========================================================================
-  nb =    1  ncfblk =         42  nevblk =    1  2J+1 =    1  parity =    1
-  nb =    1  ncfblk =         42  nevblk =    1  2J+1 =    1  parity =    1
- ===========================================================================
- Average Energy =   -14067.062220564070          ncf_reduced =           42
+ Enter ASF serial numbers for each block
+ Block            1    ncf =           42  id =    0+
+ Calling STRSUM...
+ Calling FACTT...
+ Calling GENINTRK...
+ Allocating space for       231987  Rk integrals
+ Calling GENINTBREIT1...
+ Computing     2283877  Breit integrals of type 1
+ Calling GENINTBREIT2...
+ Computing     1157925  Breit integrals of type 2
+ Calling MATRIX...
+ Loading CSF File for block            1
+ There are           42  relativistic CSFs... load complete;
+ Entering QED ...
+           0  (total           42 ) rows read from .res
+ Calling setham ...
+ Row            1 :            1  nonzero elements;  block =            1
+ Row           41 :           41  nonzero elements;  block =            1
+ Row           42 :           42  nonzero elements;  block =            1
+ LAPACK routine DSPEVX selected for eigenvalue problem.
+ RCI92 MIXing coefficients File generated.
 
- Energy =   -14067.698684285961          Coefficients and CSF :
 
-           1   0.972880
-   6s ( 2)
- 
-          0+
-           2   0.195105
-   6p ( 2)
-         0
-          0+
-           3   0.086182
-   6p-( 2)
- 
-          0+
-           4  -0.057777
-   5d ( 2)
-         0
-          0+
-           5  -0.041672
-   7s ( 2)
- 
-          0+
-           6  -0.033453
-   6p-( 1)  7p-( 1)
-       1/2      1/2
-                   0+
-           7  -0.020945
-   6d-( 2)
-         0
-          0+
-           8  -0.017247
-   6p-( 1)  8p-( 1)
-       1/2      1/2
-                   0+
-           9   0.016640
-   5d-( 1)  6d-( 1)
-       3/2      3/2
-                   0+
-          10  -0.012983
-   6d-( 1)  7d-( 1)
-       3/2      3/2
-                   0+
-          11   0.011580
-   7p-( 2)
- 
-          0+
-          12  -0.011017
-   6s ( 1)  7s ( 1)
-       1/2      1/2
-                   0+
-          13   0.009076
-   7p ( 2)
-         0
-          0+
-          14   0.008897
-   5f ( 2)
-         0
-          0+
-          15   0.007984
-   7p-( 1)  8p-( 1)
-       1/2      1/2
-                   0+
-          16   0.007377
-   5d-( 1)  7d-( 1)
-       3/2      3/2
-                   0+
-          17  -0.006017
-   5d-( 2)
-         0
-          0+
-          18  -0.004252
-   5g ( 2)
-         0
-          0+
-          19  -0.003886
-   7d-( 2)
-         0
-          0+
-          20  -0.003511
-   7d ( 2)
-         0
-          0+
-          21   0.002727
-   8p-( 2)
- 
-          0+
-          22   0.002226
-   6f ( 2)
-         0
-          0+
-          23   0.001851
-   6p ( 1)  7p ( 1)
-       3/2      3/2
-                   0+
-          24  -0.001449
-   6s ( 1)  8s ( 1)
-       1/2      1/2
-                   0+
-          25   0.000713
-   6d ( 1)  7d ( 1)
-       5/2      5/2
-                   0+
-          26  -0.000709
-   5f ( 1)  6f ( 1)
-       7/2      7/2
-                   0+
-          27  -0.000262
-   5d ( 1)  6d ( 1)
-       5/2      5/2
-                   0+
-          28   0.000143
-   5f-( 1)  6f-( 1)
-       5/2      5/2
-                   0+
-          29  -0.000118
-   6p ( 1)  8p ( 1)
-       3/2      3/2
-                   0+
-          30  -0.000105
-   5d ( 1)  7d ( 1)
-       5/2      5/2
-                   0+
-          31  -0.000099
-   6s ( 1)  9s ( 1)
-       1/2      1/2
-                   0+
-          32   0.000099
-   5f-( 2)
-         0
-          0+
-          33  -0.000095
-   8s ( 1)  7s ( 1)
-       1/2      1/2
-                   0+
-          34   0.000094
-   6f-( 2)
-         0
-          0+
-          35  -0.000072
-   6d ( 2)
-         0
-          0+
-          36  -0.000044
-   7s ( 1)  9s ( 1)
-       1/2      1/2
-                   0+
-          37   0.000033
-   5g-( 2)
-         0
-          0+
-          38  -0.000019
-   8s ( 2)
- 
-          0+
-          39   0.000017
-   7p ( 1)  8p ( 1)
-       3/2      3/2
-                   0+
-          40  -0.000005
-   8s ( 1)  9s ( 1)
-       1/2      1/2
-                   0+
-          41   0.000001
-   9s ( 2)
- 
-          0+
-          42   0.000001
-   8p ( 2)
-         0
-          0+
- RMIXEXTRACT: Execution complete.
+ Finish time, Statistics
+
+
+ Wall time:
+      115 seconds
+
+ Finish Date and Time:
+   Date (Yr/Mon/Day): 2019/05/27
+   Time (Hr/Min/Sec): 20/39/15.604
+   Zone: -0400
+
+ RCI: Execution complete.
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+y
+1S0
+y
+y
+1.d-6
+y
+n
+n
+y
+8
+1
+
   
  jj2lsj: Transformation of ASFs from a jj-coupled CSF basis
          into an LS-coupled CSF basis  (Fortran 95 version)
@@ -8028,7 +8209,7 @@ Created 1S0.w, 1S0.c, 1S0.m, 1S0.sum 1S0.alog and 1S0.log
   
     1    0   +      0.94644 of      1    0.03829 of     17    0.00730 of     18    0.00334 of      2
                     0.00173 of     29
-               Total sum over  weight (in jj) is:  0.99993678003905495     
+               Total sum over  weight (in jj) is:  0.99993678007538089     
   
  Definition of leading CSF:
   
@@ -8043,7 +8224,7 @@ Created 1S0.w, 1S0.c, 1S0.m, 1S0.sum 1S0.alog and 1S0.log
   
     1    0   +      0.94644 of      1    0.04372 of     11    0.00236 of      2    0.00102 of      3
 
-               Total sum over  weight (in LSJ) is:  0.99400664247199888     
+               Total sum over  weight (in LSJ) is:  0.99400664248495252     
   
  Definition of leading CSF:
   
@@ -8060,8 +8241,8 @@ Created 1S0.w, 1S0.c, 1S0.m, 1S0.sum 1S0.alog and 1S0.log
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/05/21
-   Time (Hr/Min/Sec): 15/31/12.190
+   Date (Yr/Mon/Day): 2019/05/27
+   Time (Hr/Min/Sec): 20/39/15.611
    Zone: -0400
 
  jj2lsj: Execution complete.
@@ -8070,3 +8251,24 @@ Note: The following floating-point exceptions are signalling: IEEE_DIVIDE_BY_ZER
 y
 y
 y
+mv: cannot stat 'rmix.out': No such file or directory
+mv: cannot stat 'rmcdhf.sum': No such file or directory
+mv: cannot stat 'rmcdhf.log': No such file or directory
+mv: cannot stat 'rangular.log': No such file or directory
+Created 1S0.w, 1S0.c, 1S0.m, 1S0.sum 1S0.alog and 1S0.log
+ nblock =            1   ncftot =           42   nw =           41   nelec =           70
+ nblock =            6   ncftot =          731   nw =           25   nelec =           70
+
+ Energy levels for ...
+ Rydberg constant is   109737.31569
+ Splitting is the energy difference with the lower neighbor
+------------------------------------------------------------------------------------------
+ No Pos  J Parity Energy Total    Levels     Splitting     Configuration
+                      (a.u.)      (cm^-1)     (cm^-1)
+------------------------------------------------------------------------------------------
+  1  1   0  +  -14044.1936875        0.00        0.00  6s(2)_1S0
+  2  1   0  -  -14044.1262601    14798.60    14798.60  4f(14)1S1.6s_2S.6p_3P
+  3  1   1  -  -14044.1236388    15373.91      575.31  4f(14)1S1.6s_2S.6p_3P
+  4  1   2  -  -14044.1193018    16325.79      951.88  4f(14)1S1.6s_2S.6p_3P
+  5  2   1  -  -14044.0773848    25525.51     9199.72  4f(14)1S1.6s_2S.6p_1P
+------------------------------------------------------------------------------------------
