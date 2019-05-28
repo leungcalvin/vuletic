@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#1. Yb core ([Xe]4f14) + 6s6p 1S0
+echo "1. Yb core ([Xe]4f14) + 6s6p 1S0"
 # user-defined order of orbitals in clist.ref
 # separate 5d1 out from previous calculation (script_6s2_6s6p)
 rnucleus_input="rnucleus_input_Z70"
@@ -21,7 +21,7 @@ rmcdhf < $rmcdhf_input
 cat $rmcdhf_input
 #rsave 1S0
 
-#2. add active orbitals: layer 1-1 (6p,5f) -- non-spectroscopic
+echo "2. add active orbitals: layer 1-1 (6p,5f) -- non-spectroscopic"
 rcsfgenerate_input="rcsfgenerate_input_1S0_2"
 rcsfgenerate < $rcsfgenerate_input
 cat $rcsfgenerate_input
@@ -279,14 +279,14 @@ cat $rmcdhf_input
 
 stateID="1S0"
 rsave $stateID
-printf "1\n$stateID.w\n$stateID.w.readrwf" | readrwf
-printf "$stateID\nn\n0\ny" | rmixextract |& tee $stateID.rmix # DHF
+#printf "1\n$stateID.w\n$stateID.w.readrwf" | readrwf
+#printf "$stateID\nn\n0\ny" | rmixextract |& tee $stateID.rmix # DHF
 
 
 # CI
-#rci_input="rci_input_1S0"
-#mpirun -np 4 rci_mpi < $rci_input
-#cat $rci_input
+rci_input="rci_input_1S0"
+rci < $rci_input
+cat $rci_input
 #printf "$stateID\ny\n0\ny" | rmixextract |& tee $stateID.crmix # CI
 
 # jj2lsj
@@ -294,5 +294,5 @@ jj2lsj_input="jj2lsj_input_1S0"
 jj2lsj < $jj2lsj_input
 cat $jj2lsj_input
 
-
+rsave $stateID
 
