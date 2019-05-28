@@ -59,9 +59,10 @@ cat $rwfnestimate_input
 rmcdhf_input="rmcdhf_input_1P1_12"
 rmcdhf < $rmcdhf_input
 cat $rmcdhf_input
-rsave 1P1
+#rsave 1P1
 
-#3. add active orbitals: layer 1-2 (7p,5f)
+#3. add active orbitals: layer 1-2 (7p)
+# convergence problsm at mcdhf, try 7p first then 5f
 # rnucleus_input="rnucleus_input_Z70"
 # rnucleus < $rnucleus_input
 # cat $rnucleus_input
@@ -79,7 +80,29 @@ rsave 1P1
 # rmcdhf_input="rmcdhf_input_1P1_3"
 # rmcdhf < $rmcdhf_input
 # cat $rmcdhf_input
+# rmcdhf_input="rmcdhf_input_1P1_13"
+# rmcdhf < $rmcdhf_input
+# cat $rmcdhf_input
 #rsave 1P1
+
+#3. add active orbitals: layer 1-2 (5f)
+# rnucleus_input="rnucleus_input_Z70"
+# rnucleus < $rnucleus_input
+# cat $rnucleus_input
+# rcsfgenerate_input="rcsfgenerate_input_1P1_3"
+# rcsfgenerate < $rcsfgenerate_input
+# cat $rcsfgenerate_input
+# cp rcsfgenerate.log 1P1.exc
+# cp rcsf.out rcsf.inp
+# printf '1' | rcsfinteract
+# cp rcsf.out rcsf.inp
+# printf 'y' | rangular
+# rwfnestimate_input="rwfnestimate_input_1P1_2"
+# rwfnestimate < $rwfnestimate_input
+# cat $rwfnestimate_input
+# rmcdhf_input="rmcdhf_input_1P1_13"
+# rmcdhf < $rmcdhf_input
+# cat $rmcdhf_input
 
 #3. add active orbitals: layer 1-3 (5g)
 # rnucleus_input="rnucleus_input_Z70"
@@ -240,10 +263,31 @@ rsave 1P1
 # cat $rmcdhf_input
 # rsave 1P1
 
+# Final Step. vary all orbitals:
+
+rnucleus_input="rnucleus_input_Z70"
+rnucleus < $rnucleus_input
+cat $rnucleus_input
+rcsfgenerate_input="rcsfgenerate_input_1P1_2"
+rcsfgenerate < $rcsfgenerate_input
+cat $rcsfgenerate_input
+cp rcsfgenerate.log 1P1.exc
+cp rcsf.out rcsf.inp
+printf '1' | rcsfinteract
+cp rcsf.out rcsf.inp
+printf 'y' | rangular
+rwfnestimate_input="rwfnestimate_input_1P1_2"
+rwfnestimate < $rwfnestimate_input
+cat $rwfnestimate_input
+rmcdhf_input="rmcdhf_input_1P1_all"
+rmcdhf < $rmcdhf_input
+cat $rmcdhf_input
+rsave 1P1
+
 stateID="1P1"
 rsave $stateID
 # printf "1\n$stateID.w\n$stateID.w.readrwf" | readrwf
-printf "$stateID\nn\n0\ny" | rmixextract |& tee $stateID.rmix # DHF
+#printf "$stateID\nn\n0\ny" | rmixextract |& tee $stateID.rmix # DHF
 
 # CI
 rci_input="rci_input_1P1"
@@ -544,7 +588,7 @@ n
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 20/39/15.643
+   Time (Hr/Min/Sec): 21/00/00.517
    Zone: -0400
 
  RANGULAR: Execution complete.
@@ -1145,7 +1189,7 @@ Generalised occupation numbers:
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 20/39/15.933
+   Time (Hr/Min/Sec): 21/00/00.815
    Zone: -0400
 
  RMCDHF: Execution complete.
@@ -1358,7 +1402,7 @@ n
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 20/39/15.990
+   Time (Hr/Min/Sec): 21/00/00.873
    Zone: -0400
 
  RCSFinteract: Execution complete.
@@ -1479,7 +1523,7 @@ n
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 20/39/16.311
+   Time (Hr/Min/Sec): 21/00/01.215
    Zone: -0400
 
  RANGULAR: Execution complete.
@@ -1897,7 +1941,7 @@ Generalised occupation numbers:
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 20/39/16.903
+   Time (Hr/Min/Sec): 21/00/01.819
    Zone: -0400
 
  RMCDHF: Execution complete.
@@ -2110,7 +2154,7 @@ n
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 20/39/16.962
+   Time (Hr/Min/Sec): 21/00/01.881
    Zone: -0400
 
  RCSFinteract: Execution complete.
@@ -2231,7 +2275,7 @@ n
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 20/39/17.292
+   Time (Hr/Min/Sec): 21/00/02.212
    Zone: -0400
 
  RANGULAR: Execution complete.
@@ -2469,7 +2513,7 @@ Generalised occupation numbers:
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 20/39/17.585
+   Time (Hr/Min/Sec): 21/00/02.507
    Zone: -0400
 
  RMCDHF: Execution complete.
@@ -2486,1661 +2530,1179 @@ y
 *
 100
 
+ Enter the atomic number:
+ Enter the mass number (0 if the nucleus is to be modelled as a point source:
+ The default root mean squared radius is    5.2192449328117521       fm;
+  the default nuclear skin thickness is    2.2999999999999998       fm;
+ Revise these values?
+ Enter the mass of the neutral atom (in amu) (0 if the nucleus is to be static):
+ Enter the nuclear spin quantum number (I) (in units of h / 2 pi):
+ Enter the nuclear dipole moment (in nuclear magnetons):
+ Enter the nuclear quadrupole moment (in barns):
+70
+172
+n
+171.936378
+0
+0
+0
+
+ RCSFGENERATE
+ This program generates a list of CSFs
+
+ Configurations should be entered in spectroscopic notation
+ with occupation numbers and indications if orbitals are
+ closed (c), inactive (i), active (*) or has a minimal
+ occupation e.g. 1s(2,1)2s(2,*)
+ Outputfiles: rcsf.out, rcsfgenerate.log
+
+ Default, reverse, symmetry or user specified ordering? (*/r/s/u)
+
+ Select core 
+        0: No core
+        1: He (       1s(2)                  =  2 electrons)
+        2: Ne ([He] + 2s(2)2p(6)             = 10 electrons)
+        3: Ar ([Ne] + 3s(2)3p(6)             = 18 electrons)
+        4: Kr ([Ar] + 3d(10)4s(2)4p(6)       = 36 electrons)
+        5: Xe ([Kr] + 4d(10)5s(2)5p(6)       = 54 electrons)
+        6: Rn ([Xe] + 4f(14)5d(10)6s(2)6p(6) = 86 electrons)
+
+ Enter list of (maximum 100) configurations. End list with a blank line or an asterisk (*)
+
+ Give configuration           1
+ Give configuration           2
+ Give configuration           3
+ Give set of active orbitals, as defined by the highest principal quantum number
+ per l-symmetry, in a comma delimited list in s,p,d etc order, e.g. 5s,4p,3d
+ Resulting 2*J-number? lower, higher (J=1 -> 2*J=2 etc.)
+ Number of excitations (if negative number e.g. -2, correlation 
+ orbitals will always be doubly occupied)                        
+ Generate more lists ? (y/n)
+  Excitationdata file opened
+
+ THE LINES BELOW ARE DEBUG OUTPUT FROM THE
+ CSF GENERATOR:   PLEASE IGNORE !!!       
+
+     *  : new list
+     e  : expand existing list
+     q  : quit
+ Default, reverse, symmetry or user specified ordering? (*/r/s/u)
+ Reference file present!
+ The couplings will be made in the following customized order:
+  1s, 2s, 2p, 3s, 3p, 3d, 4s, 4p, 4d, 5s, 5p, 4f, 5d, 6s, 6p, 5f, 6d, 7p, 8s
+ 
+ Highest principal quantum number, n? (1..15)
+ Highest orbital angular momentum, l? (s..i)
+ Are all these nl-subshells active? (n/*)
+ Limitations on population of n-subshells? (y/*)
+ Highest n-number in reference configuration? (1..7)
+ Predefine open, closed or no core? (o/c/*)
+ Select core,
+      1: He (       1s(2)                  =  2 electrons)
+      2: Ne ([He] + 2s(2)2p(6)             = 10 electrons)
+      3: Ar ([Ne] + 3s(2)3p(6)             = 18 electrons)
+      4: Kr ([Ar] + 3d(10)4s(2)4p(6)       = 36 electrons)
+      5: Xe ([Kr] + 4d(10)5s(2)5p(6)       = 54 electrons)
+      6: Rn ([Xe] + 4f(16)5d(10)6s(2)6p(6) = 86 electrons)
+ 1s is part of the predefined core.
+ 2s is part of the predefined core.
+ 2p is part of the predefined core.
+ 3s is part of the predefined core.
+ 3p is part of the predefined core.
+ 3d is part of the predefined core.
+ 4s is part of the predefined core.
+ 4p is part of the predefined core.
+ Number of electrons in 4d? (0..10)
+ Closed, inactive, active or minimum? (c/i/*/0..9)
+ Number of electrons in 4f? (0..14)
+ Closed, inactive, active or minimum? (c/i/*/0..13)
+ Number of electrons in 5s? (0..2)
+ Closed, inactive, active or minimum? (c/i/*/0..1)
+ Number of electrons in 5p? (0..6)
+ Closed, inactive, active or minimum? (c/i/*/0..5)
+ Number of electrons in 5d? (0..10)
+ Inactive, active or double excited? (i/*/d)
+ Number of electrons in 5f? (0..14)
+ Inactive, active or double excited? (i/*/d)
+ Number of electrons in 6s? (0..2)
+ Inactive or active? (i/*)
+ Number of electrons in 6p? (0..6)
+ Inactive or active? (i/*)
+ Number of electrons in 6d? (0..10)
+ Inactive, active or double excited? (i/*/d)
+ Number of electrons in 6f? (0..14)
+ Inactive, active or double excited? (i/*/d)
+ 7s inactive, active or doubled excited? (i/*/d)
+ 7p inactive, active or doubled excited? (i/*/d)
+ 7d inactive, active or doubled excited? (i/*/d)
+ 7f inactive, active or doubled excited? (i/*/d)
+ Resulting 2*J-number? lower, higher (J=1 -> 2*J=2 etc.)
+ Number of excitations = ? (0..2)
+ 20 configuration states have been generated.
+ 20 configuration states in the final list.
+ Generate another list? (y/*)
+ Highest n-number? (1..15)
+ Highest l-number? (s..i)
+ Are all these nl-subshells active? (n/*)
+ Limitations on population of n-subshells? (y/*)
+ Highest n-number in reference configuration? (1..7)
+ 1s is a closed shell.
+ 2s is a closed shell.
+ 2p is a closed shell.
+ 3s is a closed shell.
+ 3p is a closed shell.
+ 3d is a closed shell.
+ 4s is a closed shell.
+ 4p is a closed shell.
+ 4d is a closed shell.
+ Number of electrons in 4f? (0..14)
+ Inactive, active or minimum? (i/*/0..12)
+ 5s is a closed shell.
+ 5p is a closed shell.
+ Number of electrons in 5d? (0..10)
+ Inactive or active? (i/*)
+ Number of electrons in 5f? (0..14)
+ Inactive, active or doubled  excited? (i/*/d)
+ Number of electrons in 6s? (0..2)
+ Inactive, active or minimum? (i/*/0..1)
+ Number of electrons in 6p? (0..6)
+ Inactive, active or doubled  excited? (i/*/d)
+ Number of electrons in 6d? (0..10)
+ Inactive, active or doubled  excited? (i/*/d)
+ Number of electrons in 6f? (0..14)
+ Inactive, active or doubled  excited? (i/*/d)
+ 7s inactive, active or doubled excited? (i/*/d)
+ 7p inactive, active or doubled excited? (i/*/d)
+ 7d inactive, active or doubled excited? (i/*/d)
+ 7f inactive, active or doubled excited? (i/*/d)
+ Resulting 2*J-number? lower, higher (J=1 -> 2*J=2 etc.)
+ Number of excitations = ? (0..4)
+ 717 configuration states have been generated.
+ 737 configuration states in the final list.
+ Generate another list? (y/*)
+
+ Group CSFs into symmetry blocks
+
+ 6 blocks were created
+
+       block  J/P            NCSF
+           1    0-             38
+           2    1-            106
+           3    2-            150
+           4    3-            165
+           5    4-            154
+           6    5-            124
+u
+5
+4f(14,i)6s(1,*)6p(1,*)
+4f(13,12)5d(1,*)6s(2,*)
+
+7s,6p,5d,4f
+0,10
+1
+n
+ 
+ RCSFinteract: Determines all the CSFs (rcsf.inp) that interact
+               with the CSFs in the multireference (rcsfmr.inp)
+               (C)  Copyright by G. Gaigalas and Ch. F. Fischer
+               (Fortran 95 version)               NIST  (2017).
+               Input files: rcsfmr.inp, rcsf.inp
+               Output file: rcsf.out
+ 
+ Reduction based on Dirac-Coulomb (1) or
+ Dirac-Coulomb-Breit (2) Hamiltonian?
+ Loading Configuration Symmetry List File ...
+ There are 25 relativistic subshells;
+  Block    MR NCSF   Before NCSF   After NCSF
+    1            2           38           36
+    2            5          106          106
+    3            5          150          150
+    4            4          165          162
+    5            4          154          153
+    6            3          124          124
+
+ Wall time:
+        0 seconds
+
+ Finish Date and Time:
+   Date (Yr/Mon/Day): 2019/05/27
+   Time (Hr/Min/Sec): 21/00/02.567
+   Zone: -0400
+
+ RCSFinteract: Execution complete.
+
+ RANGULAR
+ This program performs angular integration 
+ Input file:  rcsf.inp
+ Outputfiles: mcp.30, mcp.31, ....
+ rangular.log                     
+
+ Full interaction?  (y/n) 
+ Block            1 ,  ncf =           36
+ Block            2 ,  ncf =          106
+ Block            3 ,  ncf =          150
+ Block            4 ,  ncf =          162
+ Block            5 ,  ncf =          153
+ Block            6 ,  ncf =          124
+ Loading CSF file ... Header only
+ There are/is           25  relativistic subshells;
+
+ Block            1 ,  ncf =           36
+ Loading CSF File for block            1
+ There are           36  relativistic CSFs... load complete;
+ Analysing sparse matrix array definition file ...          30
+  ... complete; density of non-zero elements of H(DC):         381 /         666
+ Sorting 2 T coefficients ...          31
+ Sorting 55 V(k=0) coefficients ...          32
+ Sorting 154 V(k=1) coefficients ...          33
+ Sorting 702 V(k=2) coefficients ...          34
+ Sorting 370 V(k=3) coefficients ...          35
+ Sorting 348 V(k=4) coefficients ...          36
+ Sorting 51 V(k=5) coefficients ...          37
+ Sorting 38 V(k=6) coefficients ...          38
+ Sorting 0 V(k=7) coefficients ...          39
+
+ Block            2 ,  ncf =          106
+ Loading CSF File for block            2
+ There are          106  relativistic CSFs... load complete;
+ Row          100 ; nnonz =         2319 ;  block =            2
+ Analysing sparse matrix array definition file ...          30
+  ... complete; density of non-zero elements of H(DC):        2525 /        5671
+ Sorting 8 T coefficients ...          31
+ Sorting 220 V(k=0) coefficients ...          32
+ Sorting 737 V(k=1) coefficients ...          33
+ Sorting 3991 V(k=2) coefficients ...          34
+ Sorting 1947 V(k=3) coefficients ...          35
+ Sorting 1708 V(k=4) coefficients ...          36
+ Sorting 274 V(k=5) coefficients ...          37
+ Sorting 124 V(k=6) coefficients ...          38
+ Sorting 0 V(k=7) coefficients ...          39
+
+ Block            3 ,  ncf =          150
+ Loading CSF File for block            3
+ There are          150  relativistic CSFs... load complete;
+ Row          100 ; nnonz =         2479 ;  block =            3
+ Analysing sparse matrix array definition file ...          30
+  ... complete; density of non-zero elements of H(DC):        4829 /       11325
+ Sorting 9 T coefficients ...          31
+ Sorting 252 V(k=0) coefficients ...          32
+ Sorting 1329 V(k=1) coefficients ...          33
+ Sorting 7572 V(k=2) coefficients ...          34
+ Sorting 3512 V(k=3) coefficients ...          35
+ Sorting 3126 V(k=4) coefficients ...          36
+ Sorting 571 V(k=5) coefficients ...          37
+ Sorting 184 V(k=6) coefficients ...          38
+ Sorting 0 V(k=7) coefficients ...          39
+
+ Block            4 ,  ncf =          162
+ Loading CSF File for block            4
+ There are          162  relativistic CSFs... load complete;
+ Row          100 ; nnonz =         2607 ;  block =            4
+ Analysing sparse matrix array definition file ...          30
+  ... complete; density of non-zero elements of H(DC):        5820 /       13203
+ Sorting 8 T coefficients ...          31
+ Sorting 228 V(k=0) coefficients ...          32
+ Sorting 1539 V(k=1) coefficients ...          33
+ Sorting 9346 V(k=2) coefficients ...          34
+ Sorting 4132 V(k=3) coefficients ...          35
+ Sorting 3880 V(k=4) coefficients ...          36
+ Sorting 847 V(k=5) coefficients ...          37
+ Sorting 215 V(k=6) coefficients ...          38
+ Sorting 0 V(k=7) coefficients ...          39
+
+ Block            5 ,  ncf =          153
+ Loading CSF File for block            5
+ There are          153  relativistic CSFs... load complete;
+ Row          100 ; nnonz =         2645 ;  block =            5
+ Analysing sparse matrix array definition file ...          30
+  ... complete; density of non-zero elements of H(DC):        5306 /       11781
+ Sorting 8 T coefficients ...          31
+ Sorting 227 V(k=0) coefficients ...          32
+ Sorting 1319 V(k=1) coefficients ...          33
+ Sorting 8753 V(k=2) coefficients ...          34
+ Sorting 3819 V(k=3) coefficients ...          35
+ Sorting 3780 V(k=4) coefficients ...          36
+ Sorting 886 V(k=5) coefficients ...          37
+ Sorting 213 V(k=6) coefficients ...          38
+ Sorting 0 V(k=7) coefficients ...          39
+
+ Block            6 ,  ncf =          124
+ Loading CSF File for block            6
+ There are          124  relativistic CSFs... load complete;
+ Row          100 ; nnonz =         2673 ;  block =            6
+ Analysing sparse matrix array definition file ...          30
+  ... complete; density of non-zero elements of H(DC):        3721 /        7750
+ Sorting 6 T coefficients ...          31
+ Sorting 170 V(k=0) coefficients ...          32
+ Sorting 827 V(k=1) coefficients ...          33
+ Sorting 6498 V(k=2) coefficients ...          34
+ Sorting 2676 V(k=3) coefficients ...          35
+ Sorting 2940 V(k=4) coefficients ...          36
+ Sorting 681 V(k=5) coefficients ...          37
+ Sorting 183 V(k=6) coefficients ...          38
+ Sorting 0 V(k=7) coefficients ...          39
+
+ Wall time:
+        0 seconds
+
+ Finish Date and Time:
+   Date (Yr/Mon/Day): 2019/05/27
+   Time (Hr/Min/Sec): 21/00/02.902
+   Zone: -0400
+
+ RANGULAR: Execution complete.
+ RWFNESTIMATE
+ This program estimates radial wave functions
+ for orbitals
+ Input files: isodata, rcsf.inp, optional rwfn file
+ Output file: rwfn.inp
+ Default settings ?
+ Loading CSF file ... Header only
+ There are/is           25  relativistic subshells;
+ The following subshell radial wavefunctions remain to be estimated:
+ 1s 2s 2p- 2p 3s 3p- 3p 3d- 3d 4s 4p- 4p 4d- 4d 5s 5p- 5p 4f- 4f 5d- 5d 6s 6p-
+ 6p 7s
+
+ Read subshell radial wavefunctions. Choose one below
+     1 -- GRASP92 File
+     2 -- Thomas-Fermi
+     3 -- Screened Hydrogenic
+ Enter the file name (Null then "rwfn.out")
+ Enter the list of relativistic subshells:
+ All required subshell radial wavefunctions  have been estimated:
+Shell      e           p0        gamma        P(2)       Q(2)      MTP  SRC
+
+  1s   0.2268D+04  0.2334D+04  0.1000D+01  0.3419D-05 -0.1549D-10  392  rwf
+  2s   0.3889D+03  0.8677D+03  0.1000D+01  0.1271D-05 -0.5771D-11  402  rwf
+  2p-  0.3701D+03  0.5091D+02  0.1000D+01  0.1384D-11  0.2920D-06  403  rwf
+  2p   0.3315D+03  0.1138D+05  0.2000D+01  0.2443D-13 -0.1109D-18  404  rwf
+  3s   0.8976D+02  0.4084D+03  0.1000D+01  0.5983D-06 -0.2718D-11  408  rwf
+  3p-  0.8148D+02  0.2530D+02  0.1000D+01  0.6882D-12  0.1451D-06  410  rwf
+  3p   0.7315D+02  0.5787D+04  0.2000D+01  0.1242D-13 -0.5641D-19  412  rwf
+  3d-  0.5925D+02  0.5559D+02  0.2000D+01  0.4430D-20  0.9341D-15  403  rwf
+  3d   0.5745D+02  0.2005D+05  0.3000D+01  0.6302D-22 -0.2863D-27  400  rwf
+  4s   0.1873D+02  0.1982D+03  0.1000D+01  0.2903D-06 -0.1319D-11  413  rwf
+  4p-  0.1533D+02  0.1211D+02  0.1000D+01  0.3294D-12  0.6945D-07  417  rwf
+  4p   0.1343D+02  0.2769D+04  0.2000D+01  0.5943D-14 -0.2700D-19  418  rwf
+  4d-  0.7834D+01  0.2690D+02  0.2000D+01  0.2144D-20  0.4521D-15  413  rwf
+  4d   0.7477D+01  0.9673D+04  0.3000D+01  0.3041D-22 -0.1381D-27  413  rwf
+  5s   0.2493D+01  0.7560D+02  0.1000D+01  0.1107D-06 -0.5031D-12  418  rwf
+  5p-  0.1473D+01  0.4175D+01  0.1000D+01  0.1136D-12  0.2395D-07  420  rwf
+  5p   0.1237D+01  0.9215D+03  0.2000D+01  0.1977D-14 -0.8983D-20  421  rwf
+  4f-  0.5945D+00  0.1605D+02  0.3000D+01  0.2810D-29  0.5925D-24  415  rwf
+  4f   0.5352D+00  0.6633D+04  0.4000D+01  0.3054D-31 -0.1387D-36  416  rwf
+  5d-  0.3892D+00  0.6188D+01  0.2000D+01  0.4932D-21  0.1040D-15  418  rwf
+  5d   0.2542D+00  0.8546D+03  0.3000D+01  0.2687D-23 -0.1220D-28  427  rwf
+  6s   0.2523D+00  0.1953D+02  0.1000D+01  0.2861D-07 -0.1300D-12  425  rwf
+  6p-  0.1294D+00  0.7561D+00  0.1000D+01  0.2057D-13  0.4337D-08  429  rwf
+  6p   0.1213D+00  0.1731D+03  0.2000D+01  0.3715D-15 -0.1688D-20  429  rwf
+  7s   0.2648D+00  0.2460D+03  0.1000D+01  0.3832D-07 -0.4624D-11  428  rwf
+ RWFNESTIMATE: Execution complete.
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+y
+1
+
+*
+2
+*
+
+ RMCDHF
+ This program determines the radial orbitals   
+ and the expansion coefficients of the CSFs         
+ in a self-onsistent field proceedure               
+ Input file:  isodata, rcsf.inp, rwfn.inp, mcp.30, ...
+ Outputfiles: rwfn.out, rmix.out, rmcdhf.sum, rmcdhf.log
+
+Default settings?  (y/n)  Loading CSF file ... Header only
+ There are/is           25  relativistic subshells;
+ Loading CSF File for ALL blocks 
+ There are          731  relativistic CSFs... load complete;
+ Loading Radial WaveFunction File ...
+ There are            6  blocks  (block   J/Parity   NCF):
+  1    0-      36       2    1-     106       3    2-     150       4    3-     162
+  5    4-     153       6    5-     124
+
+ Enter ASF serial numbers for each block
+ Block            1    ncf =           36  id =    0-
+ Block            2    ncf =          106  id =    1-
+ Block            3    ncf =          150  id =    2-
+ Block            4    ncf =          162  id =    3-
+ Block            5    ncf =          153  id =    4-
+ Block            6    ncf =          124  id =    5-
+ level weights (1 equal;  5 standard;  9 user)
+ Radial functions
+ 1s 2s 2p- 2p 3s 3p- 3p 3d- 3d 4s 4p- 4p 4d- 4d 5s 5p- 5p 4f- 4f 5d- 5d 6s 6p-
+ 6p 7s
+ Enter orbitals to be varied (Updating order)
+ Which of these are spectroscopic orbitals?
+ Enter the maximum number of SCF cycles:
+
+ Average energy =  -1.4066685401D+04 Hartrees
+ Average energy =  -1.4066657955D+04 Hartrees
+ Average energy =  -1.4066641138D+04 Hartrees
+
+Optimise on the following level(s):
+
+Level  1    Energy = -1.406763114255D+04    Weight =  8.33333D-02
+Level  1    Energy = -1.406762848826D+04    Weight =  2.50000D-01
+Level  2    Energy = -1.406758208561D+04    Weight =  2.50000D-01
+Level  1    Energy = -1.406762408222D+04    Weight =  4.16667D-01
+
+Weights of major contributors to ASF:
+
+Block Level J Parity      CSF contributions
+
+  1     1     0 -       0.9981    -0.0440    -0.0255     0.0250     0.0166
+                             1          3          4         13          8
+  2     1     1 -       0.8169    -0.5700     0.0597     0.0326    -0.0270
+                             2          1          6          7          8
+  2     2     1 -       0.7506     0.5417    -0.3307    -0.1157    -0.1072
+                             1          2          6          4          8
+  3     1     2 -       0.9889    -0.1047     0.0900     0.0395     0.0267
+                             1          7          6         16         10
+
+Weighted average energy of these levels =  -1.4067615273D+04
+
+Generalised occupation numbers:
+
+   2.0000D+00  2.0000D+00  2.0000D+00  4.0000D+00  2.0000D+00  2.0000D+00
+   4.0000D+00  4.0000D+00  6.0000D+00  2.0000D+00  2.0000D+00  4.0000D+00
+   4.0000D+00  6.0000D+00  2.0000D+00  2.0000D+00  4.0000D+00  5.9955D+00
+   7.9984D+00  9.0021D-03  3.8900D-02  9.6333D-01  3.3122D-01  6.6269D-01
+   9.5445D-04
+
+ Iteration number   1
+ --------------------
+
+Include Lagrange multipliers between:
+
+                1s    6s 
+                1s    7s 
+                2s    6s 
+                2s    7s 
+                2p-   6p-
+                2p    6p 
+                3s    6s 
+                3s    7s 
+                3p-   6p-
+                3p    6p 
+                3d-   5d-
+                3d    5d 
+                4s    6s 
+                4s    7s 
+                4p-   6p-
+                4p    6p 
+                4d-   5d-
+                4d    5d 
+                5s    6s 
+                5s    7s 
+                5p-   6p-
+                5p    6p 
+                6s    7s 
+
+Lagrange multipliers:
+
+                1s    6s    5.216409060D-06
+                1s    7s    9.218864393D-08
+                2s    6s    2.458775766D-05
+                2s    7s    8.605874518D-07
+                2p-   6p-   1.179448259D-05
+                2p    6p    2.564653281D-05
+                3s    6s    6.859000606D-05
+                3s    7s    6.190645816D-06
+                3p-   6p-   2.158609500D-05
+                3p    6p    6.383895242D-05
+                3d-   5d-   3.069884009D-04
+                3d    5d    1.506833775D-04
+                4s    6s    3.453957039D-04
+                4s    7s    1.406940617D-06
+                4p-   6p-  -5.268046370D-05
+                4p    6p    7.262420289D-06
+                4d-   5d-  -3.426756312D-04
+                4d    5d   -2.453145953D-05
+                5s    6s    4.364092086D-03
+                5s    7s    2.762535320D-05
+                5p-   6p-  -2.544347464D-03
+                5p    6p   -5.923279836D-03
+                6s    7s   -3.170424723D-03
+                                         Self-            Damping
+Subshell    Energy    Method   P0    consistency  Norm-1  factor  JP MTP INV NNP
+
+  1s    2.2677042D+03  1  2.334D+03  5.32D-07  4.23D-08 0.000   276   390  0  0
+  2s    3.8894460D+02  1  8.677D+02  3.35D-07 -4.40D-08 0.000   305   401  0  1
+  2p-   3.7010742D+02  1  5.091D+01  7.01D-07 -6.32D-08 0.000   305   405  0  0
+  2p    3.3153962D+02  1  1.138D+04  9.71D-07 -9.84D-09 0.000   307   407  0  0
+  3s    8.9761737D+01  1  4.084D+02  7.54D-06  4.77D-07 0.000   323   406  0  2
+  3p-   8.1474732D+01  1  2.530D+01  3.63D-06  2.39D-08 0.000   324   410  0  1
+  3p    7.3146573D+01  1  5.787D+03  1.42D-05  6.40D-07 0.000   325   412  0  1
+  3d-   5.9244410D+01  1  5.559D+01  2.50D-06 -1.22D-07 0.000   328   403  0  0
+  3d    5.7443147D+01  1  2.005D+04  2.55D-05  6.75D-07 0.000   328   409  0  0
+  4s    1.8725438D+01  1  1.982D+02  8.23D-05  9.56D-06 0.000   338   412  0  3
+  4p-   1.5328752D+01  1  1.211D+01  8.05D-05  9.67D-06 0.000   340   415  0  2
+  4p    1.3427445D+01  1  2.769D+03  1.36D-04  1.37D-05 0.000   341   412  0  2
+  4d-   7.8317197D+00  1  2.690D+01  1.82D-04  2.08D-05 0.000   346   413  0  1
+  4d    7.4761806D+00  1  9.673D+03  2.37D-04  2.25D-05 0.000   346   414  0  1
+  5s    2.4928305D+00  1  7.559D+01  3.69D-04  1.06D-04 0.000   355   418  0  4
+  5p-   1.4742018D+00  1  4.174D+00  7.39D-04  6.84D-05 0.000   360   423  0  3
+  5p    1.2374054D+00  1  9.216D+02  1.44D-03 -1.74D-05 0.000   362   424  0  3
+  4f-   5.9343603D-01  1  1.604D+01  1.57D-03  2.90D-04 0.000   370   416  0  0
+  4f    5.3730689D-01  1  6.634D+03  6.35D-04 -1.23D-04 0.000   371   417  0  0
+  5d-   3.4136527D-01  1  4.460D+00  2.72D-02  3.06D-01 0.000   375   425  0  2
+  5d    2.5325600D-01  1  8.500D+02  5.32D-04 -1.87D-03 0.000   379   427  0  2
+  6s    2.6022113D-01  1  1.993D+01  3.27D-04  1.41D-05 0.000   379   425  0  5
+  6p-   1.3964734D-01  1  7.781D-01  1.07D-02 -2.24D-02 0.000   388   428  0  4
+  6p    1.3662013D-01  1  1.784D+02  2.24D-02 -3.72D-02 0.000   389   429  0  4
+  7s    2.6809329D-01  1  2.158D+02  2.06D-03 -5.32D-02 0.000   379   427  0  6
+  5d-   3.9910867D-01  1  4.206D+00  2.04D-03  1.41D-02 0.100   373   425  0  2
+  6p    1.3696748D-01  1  1.813D+02  3.78D-03 -9.14D-03 0.000   389   428  0  4
+  6p-   1.4002283D-01  1  7.869D-01  1.48D-03  5.33D-04 0.000   388   428  0  4
+  6p    1.3698183D-01  1  1.824D+02  9.65D-04 -2.26D-03 0.000   389   428  0  4
+  7s    2.6058624D-01  1  2.118D+02  2.97D-03 -2.58D-02 0.100   379   427  0  6
+  7s    2.6099006D-01  1  2.117D+02  2.90D-03 -2.78D-02 0.050   379   427  0  6
+
+ Average energy =  -1.4066642094D+04 Hartrees
+ Average energy =  -1.4066607089D+04 Hartrees
+ Average energy =  -1.4066591122D+04 Hartrees
+
+Optimise on the following level(s):
+
+Level  1    Energy = -1.406763414147D+04    Weight =  8.33333D-02
+Level  1    Energy = -1.406763123398D+04    Weight =  2.50000D-01
+Level  2    Energy = -1.406758579651D+04    Weight =  2.50000D-01
+Level  1    Energy = -1.406762514014D+04    Weight =  4.16667D-01
+
+Weights of major contributors to ASF:
+
+Block Level J Parity      CSF contributions
+
+  1     1     0 -       0.9908    -0.1242     0.0307    -0.0304     0.0219
+                             1          3         13          4         14
+  2     1     1 -       0.8388    -0.5249     0.0967    -0.0734     0.0576
+                             2          1          7          8          6
+  2     2     1 -       0.7751     0.4741    -0.3126    -0.2354     0.0924
+                             1          2          6          8          7
+  3     1     2 -       0.9872    -0.1119     0.0943     0.0337     0.0301
+                             1          7          6          8         10
+
+Weighted average energy of these levels =  -1.4067617578D+04
+
+Generalised occupation numbers:
+
+   2.0000D+00  2.0000D+00  2.0000D+00  4.0000D+00  2.0000D+00  2.0000D+00
+   4.0000D+00  4.0000D+00  6.0000D+00  2.0000D+00  2.0000D+00  4.0000D+00
+   4.0000D+00  6.0000D+00  2.0000D+00  2.0000D+00  4.0000D+00  5.9976D+00
+   7.9980D+00  2.4556D-02  3.6995D-02  9.4632D-01  3.3477D-01  6.6084D-01
+   9.1444D-04
+
+ Iteration number   2
+ --------------------
+
+Lagrange multipliers:
+
+                1s    6s    4.391993675D-06
+                1s    7s    4.836594096D-08
+                2s    6s    2.022323696D-05
+                2s    7s    5.565945598D-07
+                2p-   6p-   1.765902305D-05
+                2p    6p    2.884256289D-05
+                3s    6s    6.110957108D-05
+                3s    7s    5.048347817D-06
+                3p-   6p-   3.496144839D-05
+                3p    6p    7.259672323D-05
+                3d-   5d-   1.933114446D-04
+                3d    5d    1.806628300D-04
+                4s    6s    2.711498297D-04
+                4s    7s    2.962908926D-06
+                4p-   6p-  -1.914526704D-05
+                4p    6p    3.869879615D-05
+                4d-   5d-  -3.062185346D-04
+                4d    5d   -2.588155340D-04
+                5s    6s    4.118487994D-03
+                5s    7s   -2.242845971D-06
+                5p-   6p-  -3.752170150D-03
+                5p    6p   -6.265938077D-03
+                6s    7s   -4.681547980D-03
+                                         Self-            Damping
+Subshell    Energy    Method   P0    consistency  Norm-1  factor  JP MTP INV NNP
+
+  1s    2.2676998D+03  1  2.334D+03  5.36D-07  4.26D-08 0.000   276   390  0  0
+  2s    3.8893998D+02  1  8.677D+02  1.34D-06 -8.88D-08 0.000   305   401  0  1
+  2p-   3.7010286D+02  1  5.091D+01  1.53D-06 -7.64D-08 0.000   305   406  0  0
+  2p    3.3153504D+02  1  1.138D+04  2.39D-06 -1.61D-08 0.000   307   406  0  0
+  3s    8.9756685D+01  1  4.084D+02  6.63D-06 -7.52D-07 0.000   323   406  0  2
+  3p-   8.1469680D+01  1  2.530D+01  9.83D-06 -1.04D-06 0.000   324   410  0  1
+  3p    7.3141550D+01  1  5.787D+03  1.25D-05 -8.72D-07 0.000   325   411  0  1
+  3d-   5.9239352D+01  1  5.559D+01  1.91D-05 -1.00D-06 0.000   328   408  0  0
+  3d    5.7438190D+01  1  2.005D+04  1.14D-05 -4.58D-07 0.000   328   410  0  0
+  4s    1.8719630D+01  1  1.982D+02  1.64D-05 -2.31D-06 0.000   338   412  0  3
+  4p-   1.5322876D+01  1  1.211D+01  2.39D-05 -3.44D-06 0.000   340   412  0  2
+  4p    1.3421579D+01  1  2.769D+03  4.43D-05 -4.69D-06 0.000   341   413  0  2
+  4d-   7.8256193D+00  1  2.690D+01  2.55D-05 -2.62D-06 0.000   346   413  0  1
+  4d    7.4700484D+00  1  9.673D+03  4.30D-05 -3.95D-06 0.000   346   414  0  1
+  5s    2.4864216D+00  1  7.558D+01  1.69D-04  4.75D-05 0.000   355   418  0  4
+  5p-   1.4680759D+00  1  4.174D+00  2.66D-04  1.41D-05 0.000   360   422  0  3
+  5p    1.2311953D+00  1  9.215D+02  1.20D-04  3.53D-05 0.000   362   423  0  3
+  4f-   5.8681882D-01  1  1.604D+01  4.14D-04  6.80D-05 0.000   370   416  0  0
+  4f    5.2920968D-01  1  6.632D+03  1.15D-03  2.06D-04 0.000   371   417  0  0
+  5d-   2.6277669D-01  1  3.553D+00  1.41D-02  1.08D-01 0.190   378   425  0  2
+  5d    2.5546196D-01  1  8.602D+02  1.02D-03 -2.77D-03 0.000   379   426  0  2
+  6s    2.5945638D-01  1  1.987D+01  3.19D-04 -2.97D-05 0.000   379   424  0  5
+  6p-   1.4685882D-01  1  8.015D-01  5.92D-03 -1.11D-02 0.000   387   427  0  4
+  6p    1.3849365D-01  1  1.838D+02  3.11D-03 -5.66D-03 0.000   388   428  0  4
+  7s    2.8355946D-01  1  3.001D+02  7.93D-04 -3.27D-02 0.025   378   426  0  6
+  5d-   2.6828682D-01  1  3.255D+00  5.05D-03  3.64D-02 0.271   378   425  0  2
+  6p-   1.4719913D-01  1  8.069D-01  1.66D-03  4.09D-03 0.000   387   427  0  4
+  5d-   2.6823583D-01  1  3.045D+00  2.49D-03  1.77D-02 0.136   378   425  0  2
+  6p    1.3858229D-01  1  1.845D+02  5.43D-04  7.29D-05 0.000   388   428  0  4
+  5d-   2.6768068D-01  1  2.926D+00  1.13D-03  7.85D-03 0.068   378   425  0  2
+  6p-   1.4749525D-01  1  8.093D-01  2.48D-03  8.28D-03 0.000   387   427  0  4
+
+ Average energy =  -1.4066606471D+04 Hartrees
+ Average energy =  -1.4066567057D+04 Hartrees
+ Average energy =  -1.4066551001D+04 Hartrees
+
+Optimise on the following level(s):
+
+Level  1    Energy = -1.406763525455D+04    Weight =  8.33333D-02
+Level  1    Energy = -1.406763213773D+04    Weight =  2.50000D-01
+Level  2    Energy = -1.406758634313D+04    Weight =  2.50000D-01
+Level  1    Energy = -1.406762522889D+04    Weight =  4.16667D-01
+
+Weights of major contributors to ASF:
+
+Block Level J Parity      CSF contributions
+
+  1     1     0 -       0.9880    -0.1454    -0.0316     0.0292     0.0216
+                             1          3          4         13         14
+  2     1     1 -       0.8435    -0.5122     0.1136    -0.0862     0.0569
+                             2          1          7          8          6
+  2     2     1 -       0.7835     0.4570    -0.3086    -0.2512     0.0966
+                             1          2          6          8          7
+  3     1     2 -       0.9868    -0.1145     0.0943     0.0409     0.0299
+                             1          7          6          8         10
+
+Weighted average energy of these levels =  -1.4067618070D+04
+
+Generalised occupation numbers:
+
+   2.0000D+00  2.0000D+00  2.0000D+00  4.0000D+00  2.0000D+00  2.0000D+00
+   4.0000D+00  4.0000D+00  6.0000D+00  2.0000D+00  2.0000D+00  4.0000D+00
+   4.0000D+00  6.0000D+00  2.0000D+00  2.0000D+00  4.0000D+00  5.9988D+00
+   7.9979D+00  2.7576D-02  3.6505D-02  9.4172D-01  3.3509D-01  6.6158D-01
+   8.6574D-04
+
+ Iteration number   3
+ --------------------
+
+Lagrange multipliers:
+
+                1s    6s    4.031338578D-06
+                1s    7s    4.304740944D-08
+                2s    6s    1.663725345D-05
+                2s    7s    4.285423625D-07
+                2p-   6p-   1.443928825D-05
+                2p    6p    2.885571229D-05
+                3s    6s    5.030473670D-05
+                3s    7s    3.711635229D-06
+                3p-   6p-   3.008223125D-05
+                3p    6p    7.406139483D-05
+                3d-   5d-   1.267356584D-04
+                3d    5d    2.000502082D-04
+                4s    6s    2.239196183D-04
+                4s    7s    2.014351896D-06
+                4p-   6p-  -1.677600301D-05
+                4p    6p    4.361372827D-05
+                4d-   5d-  -2.312891192D-04
+                4d    5d   -3.960309590D-04
+                5s    6s    3.796957046D-03
+                5s    7s   -2.750526133D-05
+                5p-   6p-  -3.178189617D-03
+                5p    6p   -6.128830847D-03
+                6s    7s   -5.069138635D-03
+                                         Self-            Damping
+Subshell    Energy    Method   P0    consistency  Norm-1  factor  JP MTP INV NNP
+
+  1s    2.2677041D+03  1  2.334D+03  3.66D-07  3.71D-08 0.000   276   390  0  0
+  2s    3.8894437D+02  1  8.677D+02  2.52D-07 -1.72D-08 0.000   305   401  0  1
+  2p-   3.7010725D+02  1  5.091D+01  3.10D-07 -4.81D-08 0.000   305   405  0  0
+  2p    3.3153943D+02  1  1.138D+04  3.04D-07  1.06D-08 0.000   307   406  0  0
+  3s    8.9760884D+01  1  4.084D+02  1.01D-05 -9.11D-07 0.000   323   406  0  2
+  3p-   8.1473931D+01  1  2.530D+01  1.04D-05 -9.18D-07 0.000   324   410  0  1
+  3p    7.3145711D+01  1  5.787D+03  2.00D-05 -1.10D-06 0.000   325   411  0  1
+  3d-   5.9243628D+01  1  5.559D+01  1.67D-05 -7.10D-07 0.000   328   408  0  0
+  3d    5.7442379D+01  1  2.005D+04  2.98D-05 -8.96D-07 0.000   328   409  0  0
+  4s    1.8722534D+01  1  1.982D+02  7.75D-05 -9.60D-06 0.000   338   411  0  3
+  4p-   1.5325780D+01  1  1.211D+01  9.09D-05 -1.18D-05 0.000   340   412  0  2
+  4p    1.3424230D+01  1  2.769D+03  1.46D-04 -1.51D-05 0.000   341   413  0  2
+  4d-   7.8282104D+00  1  2.690D+01  1.90D-04 -2.25D-05 0.000   346   413  0  1
+  4d    7.4722692D+00  1  9.673D+03  2.25D-04 -2.20D-05 0.000   346   414  0  1
+  5s    2.4868800D+00  1  7.558D+01  2.55D-04 -8.26D-05 0.000   355   417  0  4
+  5p-   1.4681942D+00  1  4.175D+00  3.51D-04 -1.51D-04 0.000   360   422  0  3
+  5p    1.2312081D+00  1  9.217D+02  5.46D-04 -1.99D-04 0.000   362   423  0  3
+  4f-   5.8759616D-01  1  1.604D+01  7.55D-04 -1.52D-04 0.000   370   416  0  0
+  4f    5.2776787D-01  1  6.631D+03  5.59D-04  1.04D-04 0.000   371   417  0  0
+  5d-   2.5227887D-01  1  2.777D+00  2.52D-03  1.46D-02 0.034   379   425  0  2
+  5d    2.5548475D-01  1  8.711D+02  4.16D-04 -1.81D-03 0.000   378   425  0  2
+  6s    2.5912410D-01  1  1.987D+01  3.65D-04 -2.74D-04 0.000   379   424  0  5
+  6p-   1.4874781D-01  1  8.073D-01  9.79D-04  2.08D-03 0.000   387   427  0  4
+  6p    1.3872152D-01  1  1.843D+02  1.73D-04 -2.05D-04 0.000   388   428  0  4
+  7s    2.8679672D-01  1  2.840D+02  2.87D-04 -1.00D-02 0.013   378   426  0  6
+  5d-   2.5176112D-01  1  2.693D+00  8.92D-04  5.84D-03 0.017   379   425  0  2
+  6p-   1.4883029D-01  1  8.066D-01  6.66D-04  2.24D-03 0.000   387   427  0  4
+  5d-   2.5136240D-01  1  2.651D+00  4.05D-04  2.59D-03 0.008   379   425  0  2
+  4f-   5.8799646D-01  1  1.604D+01  1.76D-04 -3.65D-05 0.000   370   416  0  0
+  6p-   1.4886396D-01  1  8.063D-01  6.25D-04  2.18D-03 0.000   387   427  0  4
+  6p-   1.4886419D-01  1  8.062D-01  5.89D-04  2.07D-03 0.000   387   427  0  4
+
+ Average energy =  -1.4066601783D+04 Hartrees
+ Average energy =  -1.4066561627D+04 Hartrees
+ Average energy =  -1.4066545665D+04 Hartrees
+
+Optimise on the following level(s):
+
+Level  1    Energy = -1.406763537722D+04    Weight =  8.33333D-02
+Level  1    Energy = -1.406763223235D+04    Weight =  2.50000D-01
+Level  2    Energy = -1.406758631380D+04    Weight =  2.50000D-01
+Level  1    Energy = -1.406762522298D+04    Weight =  4.16667D-01
+
+Weights of major contributors to ASF:
+
+Block Level J Parity      CSF contributions
+
+  1     1     0 -       0.9878    -0.1471    -0.0316     0.0289     0.0216
+                             1          3          4         13         14
+  2     1     1 -       0.8441    -0.5108     0.1149    -0.0869     0.0568
+                             2          1          7          8          6
+  2     2     1 -       0.7846     0.4560    -0.3092    -0.2497     0.0957
+                             1          2          6          8          7
+  3     1     2 -       0.9868    -0.1147     0.0943     0.0417     0.0299
+                             1          7          6          8         10
+
+Weighted average energy of these levels =  -1.4067618094D+04
+
+Generalised occupation numbers:
+
+   2.0000D+00  2.0000D+00  2.0000D+00  4.0000D+00  2.0000D+00  2.0000D+00
+   4.0000D+00  4.0000D+00  6.0000D+00  2.0000D+00  2.0000D+00  4.0000D+00
+   4.0000D+00  6.0000D+00  2.0000D+00  2.0000D+00  4.0000D+00  5.9990D+00
+   7.9978D+00  2.7333D-02  3.6679D-02  9.4162D-01  3.3495D-01  6.6180D-01
+   8.5578D-04
+
+ Iteration number   4
+ --------------------
+
+Lagrange multipliers:
+
+                1s    6s    4.003186262D-06
+                1s    7s    5.261494538D-08
+                2s    6s    1.626154237D-05
+                2s    7s    5.013260683D-07
+                2p-   6p-   1.333428091D-05
+                2p    6p    2.891030592D-05
+                3s    6s    5.069334383D-05
+                3s    7s    4.206027899D-06
+                3p-   6p-   2.798291017D-05
+                3p    6p    7.459141890D-05
+                3d-   5d-   1.149657157D-04
+                3d    5d    2.079853408D-04
+                4s    6s    2.301061637D-04
+                4s    7s    6.037768362D-06
+                4p-   6p-  -1.753384008D-05
+                4p    6p    4.181310772D-05
+                4d-   5d-  -2.106348987D-04
+                4d    5d   -4.276787130D-04
+                5s    6s    3.762247746D-03
+                5s    7s   -2.058149573D-05
+                5p-   6p-  -2.985905432D-03
+                5p    6p   -6.116360531D-03
+                6s    7s   -5.122322151D-03
+                                         Self-            Damping
+Subshell    Energy    Method   P0    consistency  Norm-1  factor  JP MTP INV NNP
+
+  1s    2.2677003D+03  1  2.334D+03  2.77D-07  3.14D-08 0.000   276   389  0  0
+  2s    3.8894085D+02  1  8.677D+02  2.11D-06  7.68D-08 0.000   305   401  0  1
+  2p-   3.7010367D+02  1  5.091D+01  1.92D-06 -1.37D-08 0.000   305   404  0  0
+  2p    3.3153589D+02  1  1.138D+04  3.18D-06  3.20D-08 0.000   307   406  0  0
+  3s    8.9757981D+01  1  4.084D+02  1.07D-05  9.35D-07 0.000   323   406  0  2
+  3p-   8.1471043D+01  1  2.530D+01  1.28D-05  1.01D-06 0.000   324   409  0  1
+  3p    7.3142809D+01  1  5.787D+03  1.71D-05  1.12D-06 0.000   325   411  0  1
+  3d-   5.9240750D+01  1  5.559D+01  2.49D-05  1.16D-06 0.000   328   408  0  0
+  3d    5.7439396D+01  1  2.005D+04  1.82D-05  7.32D-07 0.000   328   409  0  0
+  4s    1.8720742D+01  1  1.982D+02  3.73D-05  4.58D-06 0.000   338   411  0  3
+  4p-   1.5324131D+01  1  1.211D+01  4.05D-05  5.19D-06 0.000   340   412  0  2
+  4p    1.3422585D+01  1  2.769D+03  6.76D-05  7.09D-06 0.000   341   413  0  2
+  4d-   7.8269112D+00  1  2.690D+01  7.64D-05  9.08D-06 0.000   346   413  0  1
+  4d    7.4709795D+00  1  9.673D+03  9.80D-05  9.17D-06 0.000   346   414  0  1
+  5s    2.4866341D+00  1  7.559D+01  4.75D-05  1.37D-05 0.000   355   417  0  4
+  5p-   1.4680024D+00  1  4.175D+00  7.93D-05  3.29D-05 0.000   360   422  0  3
+  5p    1.2312544D+00  1  9.217D+02  6.73D-05  2.17D-05 0.000   362   423  0  3
+  4f-   5.8803985D-01  1  1.604D+01  5.02D-05 -9.27D-06 0.000   370   416  0  0
+  4f    5.2895028D-01  1  6.631D+03  4.23D-04 -7.88D-05 0.000   371   416  0  0
+  5d-   2.5123825D-01  1  2.615D+00  4.98D-04  2.84D-03 0.004   379   425  0  2
+  5d    2.5530231D-01  1  8.798D+02  3.05D-04 -1.28D-03 0.000   378   425  0  2
+  6s    2.5907724D-01  1  1.947D+01  3.79D-04 -4.82D-04 0.000   379   423  0  5
+  6p-   1.4889800D-01  1  8.054D-01  2.98D-04  9.64D-04 0.000   387   427  0  4
+  6p    1.3872751D-01  1  1.843D+02  1.17D-04 -2.58D-04 0.000   388   428  0  4
+  7s    2.8784646D-01  1  3.115D+02  1.68D-04 -6.42D-03 0.006   378   426  0  6
+  5d-   2.5100757D-01  1  2.594D+00  2.14D-04  1.32D-03 0.002   379   425  0  2
+  4f    5.2827620D-01  1  6.631D+03  3.50D-04  6.50D-05 0.000   371   416  0  0
+  6s    2.5910767D-01  1  1.966D+01  2.92D-04 -4.08D-04 0.000   379   423  0  5
+  4f    5.2884833D-01  1  6.631D+03  2.83D-04 -5.26D-05 0.000   371   416  0  0
+  5d    2.5544274D-01  1  8.848D+02  1.38D-04 -6.45D-04 0.000   378   425  0  2
+  6p-   1.4891605D-01  1  8.050D-01  1.38D-04  4.64D-04 0.000   387   427  0  4
+
+ Average energy =  -1.4066601855D+04 Hartrees
+ Average energy =  -1.4066561541D+04 Hartrees
+ Average energy =  -1.4066545648D+04 Hartrees
+
+Optimise on the following level(s):
+
+Level  1    Energy = -1.406763539827D+04    Weight =  8.33333D-02
+Level  1    Energy = -1.406763224764D+04    Weight =  2.50000D-01
+Level  2    Energy = -1.406758632045D+04    Weight =  2.50000D-01
+Level  1    Energy = -1.406762521259D+04    Weight =  4.16667D-01
+
+Weights of major contributors to ASF:
+
+Block Level J Parity      CSF contributions
+
+  1     1     0 -       0.9878    -0.1472    -0.0318     0.0290     0.0217
+                             1          3          4         13         14
+  2     1     1 -       0.8444    -0.5104     0.1150    -0.0870     0.0567
+                             2          1          7          8          6
+  2     2     1 -       0.7848     0.4556    -0.3097    -0.2491     0.0954
+                             1          2          6          8          7
+  3     1     2 -       0.9868    -0.1147     0.0942     0.0418     0.0301
+                             1          7          6          8         10
+
+Weighted average energy of these levels =  -1.4067618097D+04
+
+Generalised occupation numbers:
+
+   2.0000D+00  2.0000D+00  2.0000D+00  4.0000D+00  2.0000D+00  2.0000D+00
+   4.0000D+00  4.0000D+00  6.0000D+00  2.0000D+00  2.0000D+00  4.0000D+00
+   4.0000D+00  6.0000D+00  2.0000D+00  2.0000D+00  4.0000D+00  5.9990D+00
+   7.9977D+00  2.7222D-02  3.6787D-02  9.4166D-01  3.3489D-01  6.6184D-01
+   8.6281D-04
+
+ Iteration number   5
+ --------------------
+
+Lagrange multipliers:
+
+                1s    6s    3.945991210D-06
+                1s    7s    2.739239049D-08
+                2s    6s    1.586457188D-05
+                2s    7s    3.497669142D-07
+                2p-   6p-   1.309186584D-05
+                2p    6p    2.917472997D-05
+                3s    6s    4.998995933D-05
+                3s    7s    3.844269240D-06
+                3p-   6p-   2.747454478D-05
+                3p    6p    7.531411497D-05
+                3d-   5d-   1.125166748D-04
+                3d    5d    2.119077083D-04
+                4s    6s    2.310423431D-04
+                4s    7s    5.766269648D-06
+                4p-   6p-  -1.800360665D-05
+                4p    6p    4.131137301D-05
+                4d-   5d-  -2.046719237D-04
+                4d    5d   -4.367544020D-04
+                5s    6s    3.767840673D-03
+                5s    7s   -1.994207984D-05
+                5p-   6p-  -2.946400289D-03
+                5p    6p   -6.149694113D-03
+                6s    7s   -5.190959673D-03
+                                         Self-            Damping
+Subshell    Energy    Method   P0    consistency  Norm-1  factor  JP MTP INV NNP
+
+  1s    2.2676999D+03  1  2.334D+03  5.51D-07  4.29D-08 0.000   276   390  0  0
+  2s    3.8894029D+02  1  8.677D+02  1.04D-06 -7.98D-08 0.000   305   401  0  1
+  2p-   3.7010314D+02  1  5.091D+01  1.02D-06 -6.84D-08 0.000   305   404  0  0
+  2p    3.3153534D+02  1  1.138D+04  1.43D-06 -9.09D-09 0.000   307   406  0  0
+  3s    8.9757235D+01  1  4.084D+02  1.29D-06 -1.95D-07 0.000   323   406  0  2
+  3p-   8.1470295D+01  1  2.530D+01  1.49D-06 -2.35D-07 0.000   324   409  0  1
+  3p    7.3142065D+01  1  5.787D+03  1.87D-06 -5.88D-08 0.000   325   411  0  1
+  3d-   5.9239994D+01  1  5.559D+01  1.77D-06 -1.04D-07 0.000   328   408  0  0
+  3d    5.7438647D+01  1  2.005D+04  4.24D-06  4.90D-08 0.000   328   409  0  0
+  4s    1.8720127D+01  1  1.982D+02  1.98D-05  2.11D-06 0.000   338   411  0  3
+  4p-   1.5323509D+01  1  1.211D+01  2.33D-05  2.64D-06 0.000   340   412  0  2
+  4p    1.3422010D+01  1  2.769D+03  3.69D-05  3.69D-06 0.000   341   413  0  2
+  4d-   7.8263285D+00  1  2.690D+01  5.36D-05  6.20D-06 0.000   346   413  0  1
+  4d    7.4704298D+00  1  9.673D+03  6.49D-05  6.40D-06 0.000   346   414  0  1
+  5s    2.4864781D+00  1  7.558D+01  6.66D-05  2.29D-05 0.000   355   417  0  4
+  5p-   1.4678912D+00  1  4.175D+00  8.96D-05  4.23D-05 0.000   360   422  0  3
+  5p    1.2311793D+00  1  9.217D+02  1.25D-04  4.79D-05 0.000   362   423  0  3
+  4f-   5.8763570D-01  1  1.604D+01  2.10D-04  4.35D-05 0.000   370   416  0  0
+  4f    5.2906654D-01  1  6.632D+03  1.10D-04 -2.06D-05 0.000   371   416  0  0
+  5d-   2.5117870D-01  1  2.581D+00  1.55D-04  9.07D-04 0.001   379   425  0  2
+  5d    2.5539509D-01  1  8.884D+02  1.31D-04 -5.49D-04 0.000   378   425  0  2
+  6s    2.5910177D-01  1  1.967D+01  2.14D-04 -2.95D-04 0.000   379   423  0  5
+  6p-   1.4891675D-01  1  8.050D-01  7.56D-05  2.65D-04 0.000   387   427  0  4
+  6p    1.3872376D-01  1  1.843D+02  9.33D-05 -2.29D-04 0.000   388   428  0  4
+  7s    2.8834741D-01  1  2.885D+02  1.86D-04 -4.61D-03 0.003   378   426  0  6
+  6s    2.5909986D-01  1  1.946D+01  1.39D-04 -1.78D-04 0.000   379   423  0  5
+  4f-   5.8762760D-01  1  1.604D+01  3.62D-06 -3.77D-07 0.000   370   416  0  0
+  7s    2.8800269D-01  1  3.107D+02  1.06D-04 -2.36D-03 0.002   378   426  0  6
+  5d-   2.5108474D-01  1  2.574D+00  7.10D-05  4.36D-04 0.001   379   425  0  2
+  6s    2.5910120D-01  1  1.965D+01  6.58D-05 -8.46D-05 0.000   379   423  0  5
+  5d    2.5543855D-01  1  8.905D+02  5.85D-05 -2.70D-04 0.000   378   425  0  2
+
+ Average energy =  -1.4066601220D+04 Hartrees
+ Average energy =  -1.4066560852D+04 Hartrees
+ Average energy =  -1.4066544988D+04 Hartrees
+
+Optimise on the following level(s):
+
+Level  1    Energy = -1.406763540720D+04    Weight =  8.33333D-02
+Level  1    Energy = -1.406763225415D+04    Weight =  2.50000D-01
+Level  2    Energy = -1.406758632109D+04    Weight =  2.50000D-01
+Level  1    Energy = -1.406762520926D+04    Weight =  4.16667D-01
+
+Weights of major contributors to ASF:
+
+Block Level J Parity      CSF contributions
+
+  1     1     0 -       0.9878    -0.1473    -0.0320     0.0290     0.0218
+                             1          3          4         13         14
+  2     1     1 -       0.8445    -0.5102     0.1150    -0.0870     0.0567
+                             2          1          7          8          6
+  2     2     1 -       0.7849     0.4555    -0.3099    -0.2489     0.0953
+                             1          2          6          8          7
+  3     1     2 -       0.9868    -0.1146     0.0942     0.0418     0.0303
+                             1          7          6          8         10
+
+Weighted average energy of these levels =  -1.4067618098D+04
+
+Generalised occupation numbers:
+
+   2.0000D+00  2.0000D+00  2.0000D+00  4.0000D+00  2.0000D+00  2.0000D+00
+   4.0000D+00  4.0000D+00  6.0000D+00  2.0000D+00  2.0000D+00  4.0000D+00
+   4.0000D+00  6.0000D+00  2.0000D+00  2.0000D+00  4.0000D+00  5.9990D+00
+   7.9977D+00  2.7183D-02  3.6825D-02  9.4166D-01  3.3487D-01  6.6186D-01
+   8.6949D-04
+
+ Iteration number   6
+ --------------------
+
+Lagrange multipliers:
+
+                1s    6s    3.963804203D-06
+                1s    7s    3.012055702D-08
+                2s    6s    1.594146008D-05
+                2s    7s    3.662774888D-07
+                2p-   6p-   1.302043322D-05
+                2p    6p    2.931252507D-05
+                3s    6s    4.987765072D-05
+                3s    7s    3.751650526D-06
+                3p-   6p-   2.734559903D-05
+                3p    6p    7.571300316D-05
+                3d-   5d-   1.116323968D-04
+                3d    5d    2.131324264D-04
+                4s    6s    2.295949721D-04
+                4s    7s    4.971880339D-06
+                4p-   6p-  -1.815170066D-05
+                4p    6p    4.146944089D-05
+                4d-   5d-  -2.023621506D-04
+                4d    5d   -4.392138787D-04
+                5s    6s    3.766874444D-03
+                5s    7s   -2.215344226D-05
+                5p-   6p-  -2.933982951D-03
+                5p    6p   -6.165136878D-03
+                6s    7s   -5.260346862D-03
+                                         Self-            Damping
+Subshell    Energy    Method   P0    consistency  Norm-1  factor  JP MTP INV NNP
+
+  1s    2.2677010D+03  1  2.334D+03  4.76D-07  4.05D-08 0.000   276   390  0  0
+  2s    3.8894131D+02  1  8.677D+02  5.73D-07 -5.47D-08 0.000   305   401  0  1
+  2p-   3.7010417D+02  1  5.091D+01  5.61D-07 -5.86D-08 0.000   305   404  0  0
+  2p    3.3153636D+02  1  1.138D+04  7.54D-07 -9.69D-10 0.000   307   406  0  0
+  3s    8.9758098D+01  1  4.084D+02  3.27D-06 -4.26D-07 0.000   323   406  0  2
+  3p-   8.1471157D+01  1  2.530D+01  3.80D-06 -4.79D-07 0.000   324   409  0  1
+  3p    7.3142929D+01  1  5.787D+03  5.14D-06 -3.58D-07 0.000   325   411  0  1
+  3d-   5.9240860D+01  1  5.559D+01  6.85D-06 -3.88D-07 0.000   328   408  0  0
+  3d    5.7439538D+01  1  2.005D+04  5.78D-06 -2.13D-07 0.000   328   409  0  0
+  4s    1.8720675D+01  1  1.982D+02  1.16D-05 -1.70D-06 0.000   338   411  0  3
+  4p-   1.5324023D+01  1  1.211D+01  1.25D-05 -1.92D-06 0.000   340   412  0  2
+  4p    1.3422514D+01  1  2.769D+03  2.06D-05 -2.26D-06 0.000   341   413  0  2
+  4d-   7.8267506D+00  1  2.690D+01  2.29D-05 -2.87D-06 0.000   346   413  0  1
+  4d    7.4708271D+00  1  9.673D+03  2.83D-05 -2.69D-06 0.000   346   414  0  1
+  5s    2.4865875D+00  1  7.558D+01  1.47D-05 -4.70D-06 0.000   355   417  0  4
+  5p-   1.4679717D+00  1  4.175D+00  2.08D-05 -8.65D-06 0.000   360   422  0  3
+  5p    1.2312144D+00  1  9.216D+02  2.71D-05 -9.71D-06 0.000   362   423  0  3
+  4f-   5.8759656D-01  1  1.604D+01  3.17D-05  6.70D-06 0.000   370   416  0  0
+  4f    5.2882220D-01  1  6.631D+03  1.14D-04  2.13D-05 0.000   371   416  0  0
+  5d-   2.5114793D-01  1  2.569D+00  5.55D-05  3.24D-04 0.000   379   425  0  2
+  5d    2.5543403D-01  1  8.918D+02  4.49D-05 -1.92D-04 0.000   378   425  0  2
+  6s    2.5910367D-01  1  1.966D+01  1.88D-04 -2.45D-04 0.000   379   423  0  5
+  6p-   1.4892206D-01  1  8.048D-01  4.56D-05  1.54D-04 0.000   387   427  0  4
+  6p    1.3872278D-01  1  1.844D+02  4.50D-05 -1.01D-04 0.000   388   428  0  4
+  7s    2.8847179D-01  1  2.889D+02  4.43D-05 -1.96D-03 0.001   378   426  0  6
+  6s    2.5910142D-01  1  1.946D+01  5.79D-05 -7.48D-05 0.000   379   423  0  5
+  4f    5.2895181D-01  1  6.632D+03  8.73D-05 -1.62D-05 0.000   371   416  0  0
+  4f    5.2880002D-01  1  6.631D+03  7.28D-05  1.35D-05 0.000   371   416  0  0
+  4f    5.2892751D-01  1  6.632D+03  6.09D-05 -1.13D-05 0.000   371   416  0  0
+  4f    5.2882096D-01  1  6.631D+03  5.09D-05  9.45D-06 0.000   371   416  0  0
+  6s    2.5910004D-01  1  1.945D+01  1.53D-05  1.33D-05 0.000   379   423  0  5
+
+ Average energy =  -1.4066601096D+04 Hartrees
+ Average energy =  -1.4066560726D+04 Hartrees
+ Average energy =  -1.4066544873D+04 Hartrees
+
+Optimise on the following level(s):
+
+Level  1    Energy = -1.406763540934D+04    Weight =  8.33333D-02
+Level  1    Energy = -1.406763225592D+04    Weight =  2.50000D-01
+Level  2    Energy = -1.406758632031D+04    Weight =  2.50000D-01
+Level  1    Energy = -1.406762520886D+04    Weight =  4.16667D-01
+
+Weights of major contributors to ASF:
+
+Block Level J Parity      CSF contributions
+
+  1     1     0 -       0.9878    -0.1473    -0.0323     0.0291     0.0218
+                             1          3          4         13         14
+  2     1     1 -       0.8445    -0.5101     0.1150    -0.0870     0.0566
+                             2          1          7          8          6
+  2     2     1 -       0.7849     0.4554    -0.3099    -0.2488     0.0953
+                             1          2          6          8          7
+  3     1     2 -       0.9868    -0.1146     0.0942     0.0418     0.0306
+                             1          7          6          8         10
+
+Weighted average energy of these levels =  -1.4067618099D+04
+
+Generalised occupation numbers:
+
+   2.0000D+00  2.0000D+00  2.0000D+00  4.0000D+00  2.0000D+00  2.0000D+00
+   4.0000D+00  4.0000D+00  6.0000D+00  2.0000D+00  2.0000D+00  4.0000D+00
+   4.0000D+00  6.0000D+00  2.0000D+00  2.0000D+00  4.0000D+00  5.9990D+00
+   7.9977D+00  2.7173D-02  3.6838D-02  9.4165D-01  3.3487D-01  6.6187D-01
+   8.8026D-04
+
+ Iteration number   7
+ --------------------
+
+Lagrange multipliers:
+
+                1s    6s    3.980475212D-06
+                1s    7s    3.408943792D-08
+                2s    6s    1.605276384D-05
+                2s    7s    3.973206631D-07
+                2p-   6p-   1.300388310D-05
+                2p    6p    2.934960196D-05
+                3s    6s    5.019604112D-05
+                3s    7s    3.837613840D-06
+                3p-   6p-   2.731570348D-05
+                3p    6p    7.582104644D-05
+                3d-   5d-   1.113849957D-04
+                3d    5d    2.134433165D-04
+                4s    6s    2.302336812D-04
+                4s    7s    5.097116588D-06
+                4p-   6p-  -1.816732213D-05
+                4p    6p    4.154309283D-05
+                4d-   5d-  -2.017061341D-04
+                4d    5d   -4.398390118D-04
+                5s    6s    3.766892364D-03
+                5s    7s   -2.328896946D-05
+                5p-   6p-  -2.930756797D-03
+                5p    6p   -6.168466351D-03
+                6s    7s   -5.335214236D-03
+                                         Self-            Damping
+Subshell    Energy    Method   P0    consistency  Norm-1  factor  JP MTP INV NNP
+
+  1s    2.2677011D+03  1  2.334D+03  3.94D-07  3.79D-08 0.000   276   390  0  0
+  2s    3.8894149D+02  1  8.677D+02  3.10D-07 -1.52D-08 0.000   305   401  0  1
+  2p-   3.7010434D+02  1  5.091D+01  4.81D-07 -4.47D-08 0.000   305   404  0  0
+  2p    3.3153654D+02  1  1.138D+04  4.42D-07  9.38D-09 0.000   307   406  0  0
+  3s    8.9758338D+01  1  4.084D+02  4.45D-07 -1.11D-07 0.000   323   406  0  2
+  3p-   8.1471396D+01  1  2.530D+01  5.89D-07 -1.39D-07 0.000   324   409  0  1
+  3p    7.3143168D+01  1  5.787D+03  5.85D-07 -1.53D-08 0.000   325   411  0  1
+  3d-   5.9241100D+01  1  5.559D+01  6.55D-07 -5.00D-08 0.000   328   408  0  0
+  3d    5.7439779D+01  1  2.005D+04  1.20D-06  2.76D-09 0.000   328   409  0  0
+  4s    1.8720874D+01  1  1.982D+02  6.38D-06 -9.63D-07 0.000   338   411  0  3
+  4p-   1.5324222D+01  1  1.211D+01  7.26D-06 -1.15D-06 0.000   340   412  0  2
+  4p    1.3422702D+01  1  2.769D+03  1.14D-05 -1.23D-06 0.000   341   413  0  2
+  4d-   7.8269370D+00  1  2.690D+01  1.58D-05 -1.96D-06 0.000   346   413  0  1
+  4d    7.4710078D+00  1  9.673D+03  2.00D-05 -1.96D-06 0.000   346   414  0  1
+  5s    2.4866492D+00  1  7.558D+01  2.05D-05 -7.40D-06 0.000   355   417  0  4
+  5p-   1.4680166D+00  1  4.175D+00  2.56D-05 -1.26D-05 0.000   360   422  0  3
+  5p    1.2312526D+00  1  9.217D+02  3.89D-05 -1.57D-05 0.000   362   423  0  3
+  4f-   5.8773059D-01  1  1.604D+01  6.12D-05 -1.28D-05 0.000   370   416  0  0
+  4f    5.2878041D-01  1  6.631D+03  5.19D-05  9.73D-06 0.000   371   416  0  0
+  5d-   2.5113294D-01  1  2.566D+00  3.35D-05  1.98D-04 0.000   379   425  0  2
+  5d    2.5543310D-01  1  8.925D+02  2.33D-05 -1.06D-04 0.000   378   425  0  2
+  6s    2.5909791D-01  1  1.946D+01  1.77D-04 -2.36D-04 0.000   379   423  0  5
+  6p-   1.4892277D-01  1  8.047D-01  2.82D-05  8.84D-05 0.000   387   427  0  4
+  6p    1.3872261D-01  1  1.843D+02  1.52D-05 -2.97D-05 0.000   388   428  0  4
+  7s    2.8831635D-01  1  3.144D+02  3.11D-05 -1.24D-03 0.000   378   426  0  6
+  6s    2.5909860D-01  1  1.967D+01  5.45D-05 -8.31D-05 0.000   379   423  0  5
+  4f-   5.8769502D-01  1  1.604D+01  1.14D-05 -2.31D-06 0.000   370   416  0  0
+  6s    2.5909806D-01  1  1.967D+01  1.08D-05 -1.89D-05 0.000   379   423  0  5
+  4f    5.2879571D-01  1  6.631D+03  2.69D-05 -4.96D-06 0.000   371   416  0  0
+  5p    1.2311766D+00  1  9.216D+02  2.53D-05  6.21D-06 0.000   362   423  0  3
+  5d-   2.5109784D-01  1  2.564D+00  1.50D-05  9.02D-05 0.000   379   425  0  2
+
+ Average energy =  -1.4066601298D+04 Hartrees
+ Average energy =  -1.4066560935D+04 Hartrees
+ Average energy =  -1.4066545098D+04 Hartrees
+
+Optimise on the following level(s):
+
+Level  1    Energy = -1.406763541043D+04    Weight =  8.33333D-02
+Level  1    Energy = -1.406763225661D+04    Weight =  2.50000D-01
+Level  2    Energy = -1.406758632111D+04    Weight =  2.50000D-01
+Level  1    Energy = -1.406762520786D+04    Weight =  4.16667D-01
+
+Weights of major contributors to ASF:
+
+Block Level J Parity      CSF contributions
+
+  1     1     0 -       0.9878    -0.1473    -0.0326     0.0291     0.0218
+                             1          3          4         13         14
+  2     1     1 -       0.8445    -0.5101     0.1150    -0.0870     0.0566
+                             2          1          7          8          6
+  2     2     1 -       0.7850     0.4554    -0.3100    -0.2487     0.0952
+                             1          2          6          8          7
+  3     1     2 -       0.9867    -0.1146     0.0942     0.0418     0.0309
+                             1          7          6          8         10
+
+Weighted average energy of these levels =  -1.4067618099D+04
+
+Generalised occupation numbers:
+
+   2.0000D+00  2.0000D+00  2.0000D+00  4.0000D+00  2.0000D+00  2.0000D+00
+   4.0000D+00  4.0000D+00  6.0000D+00  2.0000D+00  2.0000D+00  4.0000D+00
+   4.0000D+00  6.0000D+00  2.0000D+00  2.0000D+00  4.0000D+00  5.9990D+00
+   7.9977D+00  2.7164D-02  3.6847D-02  9.4164D-01  3.3486D-01  6.6187D-01
+   8.9173D-04
+
+ Wall time:
+        5 seconds
+
+ Finish Date and Time:
+   Date (Yr/Mon/Day): 2019/05/27
+   Time (Hr/Min/Sec): 21/00/08.464
+   Zone: -0400
+
+ RMCDHF: Execution complete.
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+y
+1
+1-2
+1
+
+
+
+5
+*
+*
+100
 Created 1P1.w, 1P1.c, 1P1.m, 1P1.sum 1P1.alog and 1P1.log
 mv: cannot stat 'rmix.out': No such file or directory
 mv: cannot stat 'rmcdhf.sum': No such file or directory
 mv: cannot stat 'rmcdhf.log': No such file or directory
 mv: cannot stat 'rangular.log': No such file or directory
 Created 1P1.w, 1P1.c, 1P1.m, 1P1.sum 1P1.alog and 1P1.log
- RMIXEXTRACT
- Extract and prints mixing coefficient above a 
- cut-off. Corresponding CSFs written to screen and 
- to rcsf.out
- Input files: name.c, name.(c)m
- Output file: rcsf.out
-
- Name of state
- Mixing coefficients from CI calc. ?
- Enter the cut-off value for the coefficients [0--1]
- Sort extracted CSFs according to mixingcoeffcients? (y/n)
-
-  nblock =    6    ncftot =        731    nw =   25    nelec =   70
-
- ===========================================================================
-  nb =    1  ncfblk =         36  nevblk =    1  2J+1 =    1  parity =   -1
-  nb =    1  ncfblk =         36  nevblk =    1  2J+1 =    1  parity =   -1
- ===========================================================================
- Average Energy =   -14066.685400654758          ncf_reduced =           36
-
- Energy =   -14067.631142550399          Coefficients and CSF :
-
-           1   0.998069
-   4f-( 6)  4f ( 8)  6s ( 1)  6p-( 1)
-                         1/2      1/2
-                                     0-
-           2  -0.043973
-   4f-( 6)  4f ( 8)  5d-( 1)  6p ( 1)
-                         3/2      3/2
-                                     0-
-           3  -0.025506
-   4f-( 6)  4f ( 8)  6p-( 1)  7s ( 1)
-                         1/2      1/2
-                                     0-
-           4   0.024959
-   4f-( 6)  4f ( 7)  5d-( 1)  5d ( 1)  6s ( 1)
-                7/2      3/2      5/2      1/2
-                              2      1/2      0-
-           5   0.016641
-   4f-( 5)  4f ( 8)  5d-( 2)  6s ( 1)
-       5/2                 2      1/2
-                            1/2      0-
-           6   0.014875
-   4f-( 6)  4f ( 7)  5d-( 1)  5d ( 1)  6s ( 1)
-                7/2      3/2      5/2      1/2
-                              3      1/2      0-
-           7   0.009319
-   4f-( 5)  4f ( 8)  5d-( 1)  6s ( 1)  7s ( 1)
-       5/2               3/2      1/2      1/2
-                              1      1/2      0-
-           8  -0.004797
-   4f-( 5)  4f ( 8)  5d ( 1)  6s ( 2)
-       5/2               5/2
-                              0      0-
-           9   0.004084
-   4f-( 5)  4f ( 8)  5d-( 1)  5d ( 1)  6s ( 1)
-       5/2               3/2      5/2      1/2
-                              2      1/2      0-
-          10  -0.002880
-   4f-( 6)  4f ( 7)  5d ( 2)  6s ( 1)
-                7/2        4      1/2
-                            1/2      0-
-          11   0.002520
-   4f-( 5)  4f ( 8)  5d ( 2)  6s ( 1)
-       5/2                 2      1/2
-                            1/2      0-
-          12  -0.002042
-   4f-( 5)  4f ( 8)  5d ( 1)  6s ( 1)  7s ( 1)
-       5/2               5/2      1/2      1/2
-                              0      1/2      0-
-          13  -0.001783
-   4f-( 5)  4f ( 8)  5d ( 1)  6s ( 1)  7s ( 1)
-       5/2               5/2      1/2      1/2
-                              1      1/2      0-
-          14   0.001262
-   4f-( 6)  4f ( 6)  5d-( 1)  6s ( 2)  6p-( 1)
-                  2      3/2               1/2
-                            1/2               0-
-          15   0.001122
-   4f-( 6)  4f ( 7)  5d ( 1)  6s ( 1)  7s ( 1)
-                7/2      5/2      1/2      1/2
-                              1      1/2      0-
-          16   0.001001
-   4f-( 4)  4f ( 8)  5d-( 1)  6s ( 2)  6p-( 1)
-         2               3/2               1/2
-                            1/2               0-
-          17  -0.000571
-   4f-( 5)  4f ( 7)  5d-( 1)  6s ( 2)  6p-( 1)
-       5/2      7/2      3/2               1/2
-                     2      1/2               0-
-          18   0.000323
-   4f-( 5)  4f ( 8)  5d-( 1)  5d ( 1)  6s ( 1)
-       5/2               3/2      5/2      1/2
-                              3      1/2      0-
-          19  -0.000294
-   4f-( 6)  4f ( 6)  5d ( 1)  6s ( 2)  6p-( 1)
-                  2      5/2               1/2
-                            1/2               0-
-          20  -0.000258
-   4f-( 4)  4f ( 8)  5d ( 1)  6s ( 2)  6p-( 1)
-         2               5/2               1/2
-                            1/2               0-
-          21   0.000158
-   4f-( 5)  4f ( 7)  5d ( 1)  6s ( 2)  6p-( 1)
-       5/2      7/2      5/2               1/2
-                     2      1/2               0-
-          22  -0.000076
-   4f-( 4)  4f ( 8)  5d-( 1)  6s ( 2)  6p ( 1)
-         0               3/2               3/2
-                            3/2               0-
-          23   0.000044
-   4f-( 4)  4f ( 8)  5d-( 1)  6s ( 2)  6p ( 1)
-         2               3/2               3/2
-                            3/2               0-
-          24   0.000029
-   4f-( 5)  4f ( 7)  5d ( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      5/2               3/2
-                     3      3/2               0-
-          25   0.000025
-   4f-( 5)  4f ( 7)  5d ( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      5/2               3/2
-                     1      3/2               0-
-          26  -0.000024
-   4f-( 5)  4f ( 7)  5d ( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      5/2               3/2
-                     2      3/2               0-
-          27   0.000015
-   4f-( 5)  4f ( 7)  5d-( 1)  6s ( 2)  6p-( 1)
-       5/2      7/2      3/2               1/2
-                     1      1/2               0-
-          28  -0.000012
-   4f-( 5)  4f ( 7)  5d ( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      5/2               3/2
-                     4      3/2               0-
-          29   0.000011
-   4f-( 5)  4f ( 7)  5d ( 1)  6s ( 2)  6p-( 1)
-       5/2      7/2      5/2               1/2
-                     3      1/2               0-
-          30   0.000010
-   4f-( 5)  4f ( 7)  5d-( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      3/2               3/2
-                     2      3/2               0-
-          31   0.000007
-   4f-( 4)  4f ( 8)  5d ( 1)  6s ( 2)  6p ( 1)
-         2               5/2               3/2
-                            3/2               0-
-          32  -0.000005
-   4f-( 6)  4f ( 6)  5d ( 1)  6s ( 2)  6p ( 1)
-                  4      5/2               3/2
-                            3/2               0-
-          33  -0.000004
-   4f-( 6)  4f ( 6)  5d ( 1)  6s ( 2)  6p ( 1)
-                  2      5/2               3/2
-                            3/2               0-
-          34   0.000004
-   4f-( 4)  4f ( 8)  5d ( 1)  6s ( 2)  6p ( 1)
-         4               5/2               3/2
-                            3/2               0-
-          35   0.000001
-   4f-( 5)  4f ( 7)  5d-( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      3/2               3/2
-                     3      3/2               0-
-          36   0.000000
-   4f-( 5)  4f ( 7)  5d-( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      3/2               3/2
-                     1      3/2               0-
- ===========================================================================
-  nb =    2  ncfblk =        106  nevblk =    2  2J+1 =    3  parity =   -1
-  nb =    2  ncfblk =        106  nevblk =    2  2J+1 =    3  parity =   -1
- ===========================================================================
- Average Energy =   -14066.657954595392          ncf_reduced =          106
-
- Energy =   -14067.628488258135          Coefficients and CSF :
-
-           1   0.816944
-   4f-( 6)  4f ( 8)  6s ( 1)  6p-( 1)
-                         1/2      1/2
-                                     1-
-           2  -0.570012
-   4f-( 6)  4f ( 8)  6s ( 1)  6p ( 1)
-                         1/2      3/2
-                                     1-
-           3   0.059661
-   4f-( 6)  4f ( 8)  5d ( 1)  6p ( 1)
-                         5/2      3/2
-                                     1-
-           4   0.032592
-   4f-( 6)  4f ( 8)  5d-( 1)  6p ( 1)
-                         3/2      3/2
-                                     1-
-           5  -0.027034
-   4f-( 6)  4f ( 8)  5d-( 1)  6p-( 1)
-                         3/2      1/2
-                                     1-
-           6   0.023927
-   4f-( 6)  4f ( 8)  6p-( 1)  7s ( 1)
-                         1/2      1/2
-                                     1-
-           7   0.022516
-   4f-( 5)  4f ( 8)  5d-( 1)  5d ( 1)  6s ( 1)
-       5/2               3/2      5/2      1/2
-                              1      3/2      1-
-           8  -0.021284
-   4f-( 6)  4f ( 7)  5d-( 1)  5d ( 1)  6s ( 1)
-                7/2      3/2      5/2      1/2
-                              2      1/2      1-
-           9  -0.014070
-   4f-( 5)  4f ( 8)  5d-( 2)  6s ( 1)
-       5/2                 2      1/2
-                            1/2      1-
-          10   0.011467
-   4f-( 6)  4f ( 8)  6p ( 1)  7s ( 1)
-                         3/2      1/2
-                                     1-
-          11  -0.011354
-   4f-( 6)  4f ( 7)  5d-( 1)  5d ( 1)  6s ( 1)
-                7/2      3/2      5/2      1/2
-                              3      1/2      1-
-          12  -0.010164
-   4f-( 6)  4f ( 7)  5d ( 2)  6s ( 1)
-                7/2        4      1/2
-                            3/2      1-
-          13  -0.008958
-   4f-( 5)  4f ( 8)  5d-( 1)  6s ( 2)
-       5/2               3/2
-                              1      1-
-          14  -0.006644
-   4f-( 5)  4f ( 8)  5d-( 1)  6s ( 1)  7s ( 1)
-       5/2               3/2      1/2      1/2
-                              1      3/2      1-
-          15  -0.004268
-   4f-( 5)  4f ( 8)  5d-( 1)  6s ( 1)  7s ( 1)
-       5/2               3/2      1/2      1/2
-                              1      1/2      1-
-          16   0.004004
-   4f-( 5)  4f ( 8)  5d ( 1)  6s ( 2)
-       5/2               5/2
-                              1      1-
-          17  -0.003465
-   4f-( 5)  4f ( 8)  5d ( 2)  6s ( 1)
-       5/2                 4      1/2
-                            3/2      1-
-          18  -0.003413
-   4f-( 6)  4f ( 7)  5d ( 2)  6s ( 1)
-                7/2        2      1/2
-                            3/2      1-
-          19   0.003074
-   4f-( 5)  4f ( 8)  5d-( 2)  6s ( 1)
-       5/2                 2      1/2
-                            3/2      1-
-          20   0.003063
-   4f-( 6)  4f ( 7)  5d-( 1)  5d ( 1)  6s ( 1)
-                7/2      3/2      5/2      1/2
-                              4      3/2      1-
-          21   0.002409
-   4f-( 6)  4f ( 7)  5d-( 1)  5d ( 1)  6s ( 1)
-                7/2      3/2      5/2      1/2
-                              3      3/2      1-
-          22  -0.002138
-   4f-( 5)  4f ( 8)  5d-( 1)  5d ( 1)  6s ( 1)
-       5/2               3/2      5/2      1/2
-                              2      1/2      1-
-          23   0.002087
-   4f-( 6)  4f ( 7)  5d-( 1)  5d ( 1)  6s ( 1)
-                7/2      3/2      5/2      1/2
-                              2      3/2      1-
-          24  -0.002038
-   4f-( 5)  4f ( 8)  5d ( 2)  6s ( 1)
-       5/2                 2      1/2
-                            3/2      1-
-          25   0.001958
-   4f-( 5)  4f ( 8)  5d ( 1)  6s ( 1)  7s ( 1)
-       5/2               5/2      1/2      1/2
-                              1      3/2      1-
-          26  -0.001832
-   4f-( 6)  4f ( 7)  5d-( 1)  6s ( 1)  7s ( 1)
-                7/2      3/2      1/2      1/2
-                              2      3/2      1-
-          27  -0.001717
-   4f-( 5)  4f ( 8)  5d ( 2)  6s ( 1)
-       5/2                 2      1/2
-                            1/2      1-
-          28   0.001704
-   4f-( 6)  4f ( 7)  5d ( 2)  6s ( 1)
-                7/2        4      1/2
-                            1/2      1-
-          29   0.001032
-   4f-( 6)  4f ( 6)  5d-( 1)  6s ( 2)  6p-( 1)
-                  2      3/2               1/2
-                            1/2               1-
-          30  -0.000975
-   4f-( 5)  4f ( 8)  5d ( 1)  6s ( 1)  7s ( 1)
-       5/2               5/2      1/2      1/2
-                              0      1/2      1-
-          31   0.000898
-   4f-( 5)  4f ( 8)  5d-( 1)  5d ( 1)  6s ( 1)
-       5/2               3/2      5/2      1/2
-                              3      3/2      1-
-          32  -0.000866
-   4f-( 6)  4f ( 7)  5d ( 1)  6s ( 1)  7s ( 1)
-                7/2      5/2      1/2      1/2
-                              1      1/2      1-
-          33   0.000819
-   4f-( 4)  4f ( 8)  5d-( 1)  6s ( 2)  6p-( 1)
-         2               3/2               1/2
-                            1/2               1-
-          34   0.000783
-   4f-( 6)  4f ( 7)  5d ( 1)  6s ( 1)  7s ( 1)
-                7/2      5/2      1/2      1/2
-                              2      3/2      1-
-          35  -0.000714
-   4f-( 6)  4f ( 6)  5d-( 1)  6s ( 2)  6p ( 1)
-                  2      3/2               3/2
-                            1/2               1-
-          36  -0.000562
-   4f-( 4)  4f ( 8)  5d-( 1)  6s ( 2)  6p ( 1)
-         2               3/2               3/2
-                            1/2               1-
-          37   0.000548
-   4f-( 6)  4f ( 7)  5d ( 1)  6s ( 2)
-                7/2      5/2
-                              1      1-
-          38   0.000540
-   4f-( 5)  4f ( 8)  5d-( 1)  5d ( 1)  6s ( 1)
-       5/2               3/2      5/2      1/2
-                              4      3/2      1-
-          39  -0.000524
-   4f-( 5)  4f ( 8)  5d-( 1)  5d ( 1)  6s ( 1)
-       5/2               3/2      5/2      1/2
-                              2      3/2      1-
-          40  -0.000479
-   4f-( 5)  4f ( 8)  5d-( 1)  6s ( 1)  7s ( 1)
-       5/2               3/2      1/2      1/2
-                              2      3/2      1-
-          41  -0.000477
-   4f-( 6)  4f ( 7)  5d ( 1)  6s ( 1)  7s ( 1)
-                7/2      5/2      1/2      1/2
-                              1      3/2      1-
-          42  -0.000471
-   4f-( 5)  4f ( 7)  5d-( 1)  6s ( 2)  6p-( 1)
-       5/2      7/2      3/2               1/2
-                     2      1/2               1-
-          43  -0.000451
-   4f-( 5)  4f ( 8)  5d-( 1)  5d ( 1)  6s ( 1)
-       5/2               3/2      5/2      1/2
-                              3      1/2      1-
-          44   0.000387
-   4f-( 5)  4f ( 8)  5d ( 1)  6s ( 1)  7s ( 1)
-       5/2               5/2      1/2      1/2
-                              2      3/2      1-
-          45   0.000331
-   4f-( 6)  4f ( 7)  5d-( 2)  6s ( 1)
-                7/2        2      1/2
-                            3/2      1-
-          46   0.000318
-   4f-( 5)  4f ( 7)  5d-( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      3/2               3/2
-                     2      1/2               1-
-          47  -0.000241
-   4f-( 6)  4f ( 6)  5d ( 1)  6s ( 2)  6p-( 1)
-                  2      5/2               1/2
-                            1/2               1-
-          48  -0.000210
-   4f-( 4)  4f ( 8)  5d ( 1)  6s ( 2)  6p-( 1)
-         2               5/2               1/2
-                            1/2               1-
-          49   0.000167
-   4f-( 6)  4f ( 6)  5d ( 1)  6s ( 2)  6p ( 1)
-                  2      5/2               3/2
-                            1/2               1-
-          50   0.000152
-   4f-( 4)  4f ( 8)  5d ( 1)  6s ( 2)  6p ( 1)
-         2               5/2               3/2
-                            1/2               1-
-          51  -0.000148
-   4f-( 5)  4f ( 8)  5d ( 1)  6s ( 1)  7s ( 1)
-       5/2               5/2      1/2      1/2
-                              1      1/2      1-
-          52   0.000130
-   4f-( 5)  4f ( 7)  5d ( 1)  6s ( 2)  6p-( 1)
-       5/2      7/2      5/2               1/2
-                     2      1/2               1-
-          53  -0.000089
-   4f-( 5)  4f ( 7)  5d ( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      5/2               3/2
-                     2      1/2               1-
-          54   0.000075
-   4f-( 6)  4f ( 6)  5d ( 1)  6s ( 2)  6p ( 1)
-                  0      5/2               3/2
-                            5/2               1-
-          55   0.000058
-   4f-( 4)  4f ( 8)  5d-( 1)  6s ( 2)  6p ( 1)
-         0               3/2               3/2
-                            3/2               1-
-          56   0.000054
-   4f-( 4)  4f ( 8)  5d-( 1)  6s ( 2)  6p-( 1)
-         2               3/2               1/2
-                            3/2               1-
-          57  -0.000053
-   4f-( 4)  4f ( 8)  5d-( 1)  6s ( 2)  6p-( 1)
-         0               3/2               1/2
-                            3/2               1-
-          58   0.000049
-   4f-( 4)  4f ( 8)  5d ( 1)  6s ( 2)  6p ( 1)
-         0               5/2               3/2
-                            5/2               1-
-          59   0.000040
-   4f-( 6)  4f ( 6)  5d-( 1)  6s ( 2)  6p ( 1)
-                  0      3/2               3/2
-                            3/2               1-
-          60  -0.000039
-   4f-( 4)  4f ( 8)  5d-( 1)  6s ( 2)  6p ( 1)
-         2               3/2               3/2
-                            3/2               1-
-          61  -0.000034
-   4f-( 6)  4f ( 6)  5d-( 1)  6s ( 2)  6p-( 1)
-                  0      3/2               1/2
-                            3/2               1-
-          62  -0.000025
-   4f-( 5)  4f ( 7)  5d ( 1)  6s ( 2)  6p-( 1)
-       5/2      7/2      5/2               1/2
-                     2      3/2               1-
-          63   0.000024
-   4f-( 5)  4f ( 7)  5d ( 1)  6s ( 2)  6p-( 1)
-       5/2      7/2      5/2               1/2
-                     3      3/2               1-
-          64   0.000023
-   4f-( 5)  4f ( 7)  5d ( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      5/2               3/2
-                     2      3/2               1-
-          65   0.000022
-   4f-( 5)  4f ( 7)  5d ( 1)  6s ( 2)  6p-( 1)
-       5/2      7/2      5/2               1/2
-                     1      3/2               1-
-          66  -0.000021
-   4f-( 5)  4f ( 7)  5d ( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      5/2               3/2
-                     1      3/2               1-
-          67  -0.000020
-   4f-( 5)  4f ( 7)  5d ( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      5/2               3/2
-                     3      3/2               1-
-          68   0.000018
-   4f-( 6)  4f ( 6)  5d-( 1)  6s ( 2)  6p ( 1)
-                  2      3/2               3/2
-                            3/2               1-
-          69  -0.000016
-   4f-( 5)  4f ( 7)  5d ( 1)  6s ( 2)  6p-( 1)
-       5/2      7/2      5/2               1/2
-                     4      3/2               1-
-          70   0.000014
-   4f-( 5)  4f ( 7)  5d-( 1)  6s ( 2)  6p-( 1)
-       5/2      7/2      3/2               1/2
-                     1      1/2               1-
-          71   0.000013
-   4f-( 5)  4f ( 7)  5d ( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      5/2               3/2
-                     4      3/2               1-
-          72  -0.000012
-   4f-( 5)  4f ( 7)  5d-( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      3/2               3/2
-                     1      5/2               1-
-          73   0.000012
-   4f-( 5)  4f ( 7)  5d ( 1)  6s ( 2)  6p-( 1)
-       5/2      7/2      5/2               1/2
-                     3      1/2               1-
-          74  -0.000011
-   4f-( 5)  4f ( 7)  5d-( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      3/2               3/2
-                     1      1/2               1-
-          75  -0.000009
-   4f-( 5)  4f ( 7)  5d-( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      3/2               3/2
-                     2      3/2               1-
-          76  -0.000008
-   4f-( 5)  4f ( 7)  5d-( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      3/2               3/2
-                     4      5/2               1-
-          77  -0.000007
-   4f-( 6)  4f ( 6)  5d ( 1)  6s ( 2)  6p ( 1)
-                  4      5/2               3/2
-                            5/2               1-
-          78  -0.000007
-   4f-( 5)  4f ( 7)  5d-( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      3/2               3/2
-                     2      5/2               1-
-          79  -0.000007
-   4f-( 5)  4f ( 7)  5d-( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      3/2               3/2
-                     3      5/2               1-
-          80  -0.000007
-   4f-( 6)  4f ( 6)  5d-( 1)  6s ( 2)  6p ( 1)
-                  4      3/2               3/2
-                            5/2               1-
-          81  -0.000007
-   4f-( 5)  4f ( 7)  5d ( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      5/2               3/2
-                     3      1/2               1-
-          82  -0.000007
-   4f-( 5)  4f ( 7)  5d ( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      5/2               3/2
-                     4      5/2               1-
-          83  -0.000006
-   4f-( 6)  4f ( 6)  5d-( 1)  6s ( 2)  6p ( 1)
-                  2      3/2               3/2
-                            5/2               1-
-          84  -0.000006
-   4f-( 5)  4f ( 7)  5d ( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      5/2               3/2
-                     2      5/2               1-
-          85  -0.000006
-   4f-( 6)  4f ( 6)  5d-( 1)  6s ( 2)  6p-( 1)
-                  2      3/2               1/2
-                            3/2               1-
-          86   0.000006
-   4f-( 4)  4f ( 8)  5d ( 1)  6s ( 2)  6p-( 1)
-         4               5/2               1/2
-                            3/2               1-
-          87  -0.000006
-   4f-( 5)  4f ( 7)  5d-( 1)  6s ( 2)  6p-( 1)
-       5/2      7/2      3/2               1/2
-                     3      3/2               1-
-          88  -0.000005
-   4f-( 6)  4f ( 6)  5d ( 1)  6s ( 2)  6p ( 1)
-                  2      5/2               3/2
-                            5/2               1-
-          89   0.000005
-   4f-( 4)  4f ( 8)  5d ( 1)  6s ( 2)  6p ( 1)
-         2               5/2               3/2
-                            5/2               1-
-          90  -0.000004
-   4f-( 4)  4f ( 8)  5d ( 1)  6s ( 2)  6p ( 1)
-         4               5/2               3/2
-                            3/2               1-
-          91   0.000004
-   4f-( 4)  4f ( 8)  5d ( 1)  6s ( 2)  6p-( 1)
-         2               5/2               1/2
-                            3/2               1-
-          92   0.000004
-   4f-( 5)  4f ( 7)  5d-( 1)  6s ( 2)  6p-( 1)
-       5/2      7/2      3/2               1/2
-                     2      3/2               1-
-          93  -0.000004
-   4f-( 5)  4f ( 7)  5d ( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      5/2               3/2
-                     3      5/2               1-
-          94   0.000003
-   4f-( 6)  4f ( 6)  5d ( 1)  6s ( 2)  6p ( 1)
-                  4      5/2               3/2
-                            3/2               1-
-          95   0.000003
-   4f-( 4)  4f ( 8)  5d-( 1)  6s ( 2)  6p ( 1)
-         4               3/2               3/2
-                            5/2               1-
-          96  -0.000003
-   4f-( 5)  4f ( 7)  5d ( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      5/2               3/2
-                     5      5/2               1-
-          97   0.000002
-   4f-( 5)  4f ( 7)  5d-( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      3/2               3/2
-                     3      3/2               1-
-          98  -0.000002
-   4f-( 5)  4f ( 7)  5d-( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      3/2               3/2
-                     1      3/2               1-
-          99  -0.000002
-   4f-( 6)  4f ( 6)  5d ( 1)  6s ( 2)  6p ( 1)
-                  2      5/2               3/2
-                            3/2               1-
-         100  -0.000002
-   4f-( 6)  4f ( 6)  5d ( 1)  6s ( 2)  6p-( 1)
-                  2      5/2               1/2
-                            3/2               1-
-         101   0.000001
-   4f-( 4)  4f ( 8)  5d ( 1)  6s ( 2)  6p ( 1)
-         4               5/2               3/2
-                            5/2               1-
-         102  -0.000001
-   4f-( 4)  4f ( 8)  5d-( 1)  6s ( 2)  6p ( 1)
-         2               3/2               3/2
-                            5/2               1-
-         103  -0.000001
-   4f-( 4)  4f ( 8)  5d ( 1)  6s ( 2)  6p ( 1)
-         2               5/2               3/2
-                            3/2               1-
-         104  -0.000000
-   4f-( 5)  4f ( 7)  5d-( 1)  6s ( 2)  6p-( 1)
-       5/2      7/2      3/2               1/2
-                     1      3/2               1-
-         105  -0.000000
-   4f-( 5)  4f ( 7)  5d ( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      5/2               3/2
-                     1      5/2               1-
-         106   0.000000
-   4f-( 6)  4f ( 6)  5d ( 1)  6s ( 2)  6p-( 1)
-                  4      5/2               1/2
-                            3/2               1-
-
- Energy =   -14067.582085614456          Coefficients and CSF :
-
-           1   0.750599
-   4f-( 6)  4f ( 8)  6s ( 1)  6p ( 1)
-                         1/2      3/2
-                                     1-
-           2   0.541729
-   4f-( 6)  4f ( 8)  6s ( 1)  6p-( 1)
-                         1/2      1/2
-                                     1-
-           3  -0.330717
-   4f-( 6)  4f ( 8)  5d ( 1)  6p ( 1)
-                         5/2      3/2
-                                     1-
-           4  -0.115733
-   4f-( 5)  4f ( 8)  5d-( 1)  6s ( 2)
-       5/2               3/2
-                              1      1-
-           5  -0.107186
-   4f-( 6)  4f ( 8)  5d-( 1)  6p-( 1)
-                         3/2      1/2
-                                     1-
-           6  -0.062563
-   4f-( 6)  4f ( 7)  5d ( 1)  6s ( 2)
-                7/2      5/2
-                              1      1-
-           7   0.047550
-   4f-( 6)  4f ( 8)  5d-( 1)  6p ( 1)
-                         3/2      3/2
-                                     1-
-           8  -0.025649
-   4f-( 6)  4f ( 8)  6p-( 1)  7s ( 1)
-                         1/2      1/2
-                                     1-
-           9   0.024729
-   4f-( 6)  4f ( 8)  6p ( 1)  7s ( 1)
-                         3/2      1/2
-                                     1-
-          10  -0.022132
-   4f-( 5)  4f ( 8)  5d-( 1)  5d ( 1)  6s ( 1)
-       5/2               3/2      5/2      1/2
-                              1      3/2      1-
-          11  -0.016012
-   4f-( 6)  4f ( 7)  5d-( 1)  5d ( 1)  6s ( 1)
-                7/2      3/2      5/2      1/2
-                              2      1/2      1-
-          12   0.011852
-   4f-( 5)  4f ( 8)  5d ( 1)  6s ( 2)
-       5/2               5/2
-                              1      1-
-          13  -0.010790
-   4f-( 5)  4f ( 8)  5d-( 1)  6s ( 1)  7s ( 1)
-       5/2               3/2      1/2      1/2
-                              1      3/2      1-
-          14   0.009635
-   4f-( 6)  4f ( 7)  5d ( 2)  6s ( 1)
-                7/2        4      1/2
-                            3/2      1-
-          15  -0.009347
-   4f-( 6)  4f ( 7)  5d ( 1)  6s ( 1)  7s ( 1)
-                7/2      5/2      1/2      1/2
-                              1      3/2      1-
-          16   0.006704
-   4f-( 6)  4f ( 7)  5d ( 1)  6s ( 1)  7s ( 1)
-                7/2      5/2      1/2      1/2
-                              1      1/2      1-
-          17  -0.005834
-   4f-( 6)  4f ( 7)  5d-( 1)  5d ( 1)  6s ( 1)
-                7/2      3/2      5/2      1/2
-                              3      1/2      1-
-          18   0.005048
-   4f-( 5)  4f ( 8)  5d-( 1)  6s ( 1)  7s ( 1)
-       5/2               3/2      1/2      1/2
-                              1      1/2      1-
-          19  -0.004699
-   4f-( 5)  4f ( 8)  5d-( 2)  6s ( 1)
-       5/2                 2      1/2
-                            3/2      1-
-          20  -0.004600
-   4f-( 6)  4f ( 7)  5d-( 1)  5d ( 1)  6s ( 1)
-                7/2      3/2      5/2      1/2
-                              3      3/2      1-
-          21  -0.004138
-   4f-( 6)  4f ( 7)  5d-( 1)  5d ( 1)  6s ( 1)
-                7/2      3/2      5/2      1/2
-                              2      3/2      1-
-          22   0.003964
-   4f-( 5)  4f ( 8)  5d ( 2)  6s ( 1)
-       5/2                 4      1/2
-                            3/2      1-
-          23  -0.003512
-   4f-( 6)  4f ( 7)  5d-( 2)  6s ( 1)
-                7/2        2      1/2
-                            3/2      1-
-          24   0.002913
-   4f-( 6)  4f ( 7)  5d ( 2)  6s ( 1)
-                7/2        4      1/2
-                            1/2      1-
-          25  -0.002839
-   4f-( 5)  4f ( 8)  5d-( 2)  6s ( 1)
-       5/2                 2      1/2
-                            1/2      1-
-          26   0.002797
-   4f-( 6)  4f ( 7)  5d-( 1)  6s ( 1)  7s ( 1)
-                7/2      3/2      1/2      1/2
-                              2      3/2      1-
-          27  -0.002596
-   4f-( 5)  4f ( 8)  5d-( 1)  5d ( 1)  6s ( 1)
-       5/2               3/2      5/2      1/2
-                              3      1/2      1-
-          28  -0.002521
-   4f-( 5)  4f ( 8)  5d-( 1)  5d ( 1)  6s ( 1)
-       5/2               3/2      5/2      1/2
-                              2      3/2      1-
-          29   0.001659
-   4f-( 5)  4f ( 8)  5d ( 1)  6s ( 1)  7s ( 1)
-       5/2               5/2      1/2      1/2
-                              1      3/2      1-
-          30  -0.001378
-   4f-( 5)  4f ( 8)  5d ( 1)  6s ( 1)  7s ( 1)
-       5/2               5/2      1/2      1/2
-                              1      1/2      1-
-          31  -0.001340
-   4f-( 6)  4f ( 7)  5d ( 1)  6s ( 1)  7s ( 1)
-                7/2      5/2      1/2      1/2
-                              2      3/2      1-
-          32   0.001234
-   4f-( 6)  4f ( 7)  5d ( 2)  6s ( 1)
-                7/2        2      1/2
-                            3/2      1-
-          33   0.001059
-   4f-( 5)  4f ( 8)  5d ( 2)  6s ( 1)
-       5/2                 2      1/2
-                            1/2      1-
-          34  -0.000959
-   4f-( 5)  4f ( 8)  5d-( 1)  5d ( 1)  6s ( 1)
-       5/2               3/2      5/2      1/2
-                              2      1/2      1-
-          35   0.000932
-   4f-( 6)  4f ( 6)  5d-( 1)  6s ( 2)  6p ( 1)
-                  2      3/2               3/2
-                            1/2               1-
-          36   0.000786
-   4f-( 4)  4f ( 8)  5d-( 1)  6s ( 2)  6p ( 1)
-         2               3/2               3/2
-                            1/2               1-
-          37   0.000725
-   4f-( 4)  4f ( 8)  5d-( 1)  6s ( 2)  6p-( 1)
-         2               3/2               1/2
-                            3/2               1-
-          38   0.000640
-   4f-( 5)  4f ( 8)  5d-( 1)  5d ( 1)  6s ( 1)
-       5/2               3/2      5/2      1/2
-                              4      3/2      1-
-          39   0.000629
-   4f-( 5)  4f ( 8)  5d-( 1)  5d ( 1)  6s ( 1)
-       5/2               3/2      5/2      1/2
-                              3      3/2      1-
-          40   0.000607
-   4f-( 6)  4f ( 6)  5d-( 1)  6s ( 2)  6p-( 1)
-                  2      3/2               1/2
-                            1/2               1-
-          41  -0.000568
-   4f-( 6)  4f ( 6)  5d ( 1)  6s ( 2)  6p ( 1)
-                  0      5/2               3/2
-                            5/2               1-
-          42   0.000534
-   4f-( 5)  4f ( 8)  5d ( 1)  6s ( 1)  7s ( 1)
-       5/2               5/2      1/2      1/2
-                              2      3/2      1-
-          43   0.000490
-   4f-( 4)  4f ( 8)  5d-( 1)  6s ( 2)  6p-( 1)
-         2               3/2               1/2
-                            1/2               1-
-          44  -0.000489
-   4f-( 5)  4f ( 7)  5d-( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      3/2               3/2
-                     2      1/2               1-
-          45   0.000455
-   4f-( 5)  4f ( 7)  5d-( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      3/2               3/2
-                     3      5/2               1-
-          46  -0.000429
-   4f-( 5)  4f ( 8)  5d-( 1)  6s ( 1)  7s ( 1)
-       5/2               3/2      1/2      1/2
-                              2      3/2      1-
-          47   0.000424
-   4f-( 5)  4f ( 7)  5d-( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      3/2               3/2
-                     2      5/2               1-
-          48  -0.000423
-   4f-( 4)  4f ( 8)  5d-( 1)  6s ( 2)  6p-( 1)
-         0               3/2               1/2
-                            3/2               1-
-          49   0.000335
-   4f-( 6)  4f ( 6)  5d ( 1)  6s ( 2)  6p ( 1)
-                  4      5/2               3/2
-                            5/2               1-
-          50   0.000334
-   4f-( 5)  4f ( 7)  5d-( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      3/2               3/2
-                     4      5/2               1-
-          51   0.000324
-   4f-( 5)  4f ( 7)  5d-( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      3/2               3/2
-                     1      5/2               1-
-          52  -0.000309
-   4f-( 4)  4f ( 8)  5d ( 1)  6s ( 2)  6p ( 1)
-         0               5/2               3/2
-                            5/2               1-
-          53   0.000301
-   4f-( 6)  4f ( 6)  5d ( 1)  6s ( 2)  6p ( 1)
-                  2      5/2               3/2
-                            5/2               1-
-          54  -0.000300
-   4f-( 5)  4f ( 7)  5d-( 1)  6s ( 2)  6p-( 1)
-       5/2      7/2      3/2               1/2
-                     2      1/2               1-
-          55  -0.000295
-   4f-( 5)  4f ( 7)  5d ( 1)  6s ( 2)  6p-( 1)
-       5/2      7/2      5/2               1/2
-                     4      3/2               1-
-          56  -0.000294
-   4f-( 6)  4f ( 7)  5d-( 1)  5d ( 1)  6s ( 1)
-                7/2      3/2      5/2      1/2
-                              4      3/2      1-
-          57   0.000274
-   4f-( 5)  4f ( 7)  5d ( 1)  6s ( 2)  6p-( 1)
-       5/2      7/2      5/2               1/2
-                     3      3/2               1-
-          58  -0.000262
-   4f-( 5)  4f ( 7)  5d ( 1)  6s ( 2)  6p-( 1)
-       5/2      7/2      5/2               1/2
-                     2      3/2               1-
-          59   0.000221
-   4f-( 5)  4f ( 7)  5d ( 1)  6s ( 2)  6p-( 1)
-       5/2      7/2      5/2               1/2
-                     1      3/2               1-
-          60  -0.000208
-   4f-( 5)  4f ( 8)  5d ( 2)  6s ( 1)
-       5/2                 2      1/2
-                            3/2      1-
-          61  -0.000177
-   4f-( 4)  4f ( 8)  5d ( 1)  6s ( 2)  6p ( 1)
-         2               5/2               3/2
-                            1/2               1-
-          62  -0.000171
-   4f-( 6)  4f ( 6)  5d ( 1)  6s ( 2)  6p ( 1)
-                  2      5/2               3/2
-                            1/2               1-
-          63   0.000165
-   4f-( 4)  4f ( 8)  5d-( 1)  6s ( 2)  6p ( 1)
-         0               3/2               3/2
-                            3/2               1-
-          64  -0.000159
-   4f-( 6)  4f ( 6)  5d-( 1)  6s ( 2)  6p-( 1)
-                  0      3/2               1/2
-                            3/2               1-
-          65  -0.000143
-   4f-( 4)  4f ( 8)  5d-( 1)  6s ( 2)  6p ( 1)
-         4               3/2               3/2
-                            5/2               1-
-          66   0.000138
-   4f-( 4)  4f ( 8)  5d ( 1)  6s ( 2)  6p-( 1)
-         4               5/2               1/2
-                            3/2               1-
-          67  -0.000138
-   4f-( 4)  4f ( 8)  5d ( 1)  6s ( 2)  6p-( 1)
-         2               5/2               1/2
-                            1/2               1-
-          68  -0.000135
-   4f-( 6)  4f ( 6)  5d ( 1)  6s ( 2)  6p-( 1)
-                  2      5/2               1/2
-                            1/2               1-
-          69  -0.000129
-   4f-( 4)  4f ( 8)  5d-( 1)  6s ( 2)  6p ( 1)
-         2               3/2               3/2
-                            3/2               1-
-          70  -0.000125
-   4f-( 6)  4f ( 6)  5d-( 1)  6s ( 2)  6p ( 1)
-                  4      3/2               3/2
-                            5/2               1-
-          71   0.000116
-   4f-( 5)  4f ( 8)  5d ( 1)  6s ( 1)  7s ( 1)
-       5/2               5/2      1/2      1/2
-                              0      1/2      1-
-          72   0.000086
-   4f-( 5)  4f ( 7)  5d ( 1)  6s ( 2)  6p-( 1)
-       5/2      7/2      5/2               1/2
-                     2      1/2               1-
-          73   0.000083
-   4f-( 5)  4f ( 7)  5d ( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      5/2               3/2
-                     4      5/2               1-
-          74   0.000080
-   4f-( 5)  4f ( 7)  5d ( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      5/2               3/2
-                     2      1/2               1-
-          75   0.000080
-   4f-( 5)  4f ( 7)  5d ( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      5/2               3/2
-                     2      3/2               1-
-          76  -0.000077
-   4f-( 5)  4f ( 7)  5d ( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      5/2               3/2
-                     1      3/2               1-
-          77  -0.000077
-   4f-( 5)  4f ( 7)  5d ( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      5/2               3/2
-                     3      3/2               1-
-          78   0.000076
-   4f-( 5)  4f ( 7)  5d ( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      5/2               3/2
-                     4      3/2               1-
-          79  -0.000070
-   4f-( 5)  4f ( 7)  5d-( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      3/2               3/2
-                     2      3/2               1-
-          80   0.000063
-   4f-( 6)  4f ( 6)  5d-( 1)  6s ( 2)  6p ( 1)
-                  2      3/2               3/2
-                            3/2               1-
-          81  -0.000059
-   4f-( 5)  4f ( 7)  5d-( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      3/2               3/2
-                     1      3/2               1-
-          82  -0.000059
-   4f-( 6)  4f ( 6)  5d ( 1)  6s ( 2)  6p ( 1)
-                  4      5/2               3/2
-                            3/2               1-
-          83   0.000058
-   4f-( 6)  4f ( 6)  5d ( 1)  6s ( 2)  6p-( 1)
-                  4      5/2               1/2
-                            3/2               1-
-          84   0.000050
-   4f-( 5)  4f ( 7)  5d-( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      3/2               3/2
-                     3      3/2               1-
-          85  -0.000050
-   4f-( 4)  4f ( 8)  5d-( 1)  6s ( 2)  6p ( 1)
-         2               3/2               3/2
-                            5/2               1-
-          86   0.000047
-   4f-( 6)  4f ( 6)  5d-( 1)  6s ( 2)  6p ( 1)
-                  0      3/2               3/2
-                            3/2               1-
-          87   0.000047
-   4f-( 5)  4f ( 7)  5d ( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      5/2               3/2
-                     2      5/2               1-
-          88  -0.000044
-   4f-( 6)  4f ( 6)  5d ( 1)  6s ( 2)  6p ( 1)
-                  2      5/2               3/2
-                            3/2               1-
-          89  -0.000043
-   4f-( 5)  4f ( 7)  5d-( 1)  6s ( 2)  6p-( 1)
-       5/2      7/2      3/2               1/2
-                     3      3/2               1-
-          90   0.000039
-   4f-( 4)  4f ( 8)  5d ( 1)  6s ( 2)  6p-( 1)
-         2               5/2               1/2
-                            3/2               1-
-          91  -0.000034
-   4f-( 4)  4f ( 8)  5d ( 1)  6s ( 2)  6p ( 1)
-         4               5/2               3/2
-                            3/2               1-
-          92  -0.000031
-   4f-( 6)  4f ( 6)  5d-( 1)  6s ( 2)  6p ( 1)
-                  2      3/2               3/2
-                            5/2               1-
-          93  -0.000030
-   4f-( 5)  4f ( 7)  5d ( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      5/2               3/2
-                     5      5/2               1-
-          94   0.000026
-   4f-( 6)  4f ( 6)  5d-( 1)  6s ( 2)  6p-( 1)
-                  2      3/2               1/2
-                            3/2               1-
-          95  -0.000025
-   4f-( 5)  4f ( 7)  5d ( 1)  6s ( 2)  6p-( 1)
-       5/2      7/2      5/2               1/2
-                     3      1/2               1-
-          96  -0.000025
-   4f-( 5)  4f ( 7)  5d-( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      3/2               3/2
-                     1      1/2               1-
-          97   0.000024
-   4f-( 5)  4f ( 7)  5d-( 1)  6s ( 2)  6p-( 1)
-       5/2      7/2      3/2               1/2
-                     1      1/2               1-
-          98  -0.000024
-   4f-( 4)  4f ( 8)  5d ( 1)  6s ( 2)  6p ( 1)
-         2               5/2               3/2
-                            3/2               1-
-          99   0.000018
-   4f-( 5)  4f ( 7)  5d-( 1)  6s ( 2)  6p-( 1)
-       5/2      7/2      3/2               1/2
-                     2      3/2               1-
-         100  -0.000016
-   4f-( 5)  4f ( 7)  5d-( 1)  6s ( 2)  6p-( 1)
-       5/2      7/2      3/2               1/2
-                     1      3/2               1-
-         101   0.000008
-   4f-( 5)  4f ( 7)  5d ( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      5/2               3/2
-                     3      1/2               1-
-         102   0.000007
-   4f-( 4)  4f ( 8)  5d ( 1)  6s ( 2)  6p ( 1)
-         4               5/2               3/2
-                            5/2               1-
-         103  -0.000007
-   4f-( 6)  4f ( 6)  5d ( 1)  6s ( 2)  6p-( 1)
-                  2      5/2               1/2
-                            3/2               1-
-         104  -0.000006
-   4f-( 5)  4f ( 7)  5d ( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      5/2               3/2
-                     1      5/2               1-
-         105   0.000004
-   4f-( 4)  4f ( 8)  5d ( 1)  6s ( 2)  6p ( 1)
-         2               5/2               3/2
-                            5/2               1-
-         106  -0.000004
-   4f-( 5)  4f ( 7)  5d ( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      5/2               3/2
-                     3      5/2               1-
- ===========================================================================
-  nb =    3  ncfblk =        150  nevblk =    1  2J+1 =    5  parity =   -1
-  nb =    3  ncfblk =        150  nevblk =    1  2J+1 =    5  parity =   -1
- ===========================================================================
- Average Energy =   -14066.641138063784          ncf_reduced =          150
-
- Energy =   -14067.624082217681          Coefficients and CSF :
-
-           1   0.988926
-   4f-( 6)  4f ( 8)  6s ( 1)  6p ( 1)
-                         1/2      3/2
-                                     2-
-           2  -0.104707
-   4f-( 6)  4f ( 8)  5d ( 1)  6p-( 1)
-                         5/2      1/2
-                                     2-
-           3   0.090038
-   4f-( 6)  4f ( 8)  5d ( 1)  6p ( 1)
-                         5/2      3/2
-                                     2-
-           4   0.039474
-   4f-( 5)  4f ( 8)  5d-( 1)  5d ( 1)  6s ( 1)
-       5/2               3/2      5/2      1/2
-                              1      3/2      2-
-           5   0.026697
-   4f-( 6)  4f ( 8)  6p ( 1)  7s ( 1)
-                         3/2      1/2
-                                     2-
-           6  -0.017067
-   4f-( 6)  4f ( 7)  5d ( 2)  6s ( 1)
-                7/2        4      1/2
-                            3/2      2-
-           7  -0.009811
-   4f-( 6)  4f ( 7)  5d-( 1)  6s ( 2)
-                7/2      3/2
-                              2      2-
-           8   0.008637
-   4f-( 6)  4f ( 8)  5d-( 1)  6p ( 1)
-                         3/2      3/2
-                                     2-
-           9   0.005642
-   4f-( 5)  4f ( 8)  5d-( 2)  6s ( 1)
-       5/2                 2      1/2
-                            3/2      2-
-          10   0.005176
-   4f-( 6)  4f ( 7)  5d-( 1)  5d ( 1)  6s ( 1)
-                7/2      3/2      5/2      1/2
-                              3      3/2      2-
-          11  -0.005091
-   4f-( 6)  4f ( 7)  5d ( 2)  6s ( 1)
-                7/2        2      1/2
-                            3/2      2-
-          12   0.004662
-   4f-( 6)  4f ( 7)  5d-( 1)  5d ( 1)  6s ( 1)
-                7/2      3/2      5/2      1/2
-                              4      3/2      2-
-          13  -0.004291
-   4f-( 6)  4f ( 8)  5d-( 1)  6p-( 1)
-                         3/2      1/2
-                                     2-
-          14  -0.004195
-   4f-( 5)  4f ( 8)  5d ( 2)  6s ( 1)
-       5/2                 4      1/2
-                            3/2      2-
-          15   0.004013
-   4f-( 6)  4f ( 7)  5d ( 1)  6s ( 2)
-                7/2      5/2
-                              2      2-
-          16  -0.003503
-   4f-( 6)  4f ( 7)  5d-( 1)  6s ( 1)  7s ( 1)
-                7/2      3/2      1/2      1/2
-                              2      5/2      2-
-          17   0.003333
-   4f-( 6)  4f ( 7)  5d-( 1)  5d ( 1)  6s ( 1)
-                7/2      3/2      5/2      1/2
-                              2      3/2      2-
-          18  -0.003316
-   4f-( 5)  4f ( 8)  5d ( 2)  6s ( 1)
-       5/2                 2      1/2
-                            3/2      2-
-          19  -0.003192
-   4f-( 5)  4f ( 8)  5d-( 1)  6s ( 1)  7s ( 1)
-       5/2               3/2      1/2      1/2
-                              1      3/2      2-
-          20   0.001792
-   4f-( 6)  4f ( 7)  5d ( 1)  6s ( 1)  7s ( 1)
-                7/2      5/2      1/2      1/2
-                              2      5/2      2-
-          21  -0.001749
-   4f-( 5)  4f ( 8)  5d-( 1)  6s ( 2)
-       5/2               3/2
-                              2      2-
-          22   0.001415
-   4f-( 5)  4f ( 8)  5d ( 1)  6s ( 2)
-       5/2               5/2
-                              2      2-
-          23   0.001246
-   4f-( 6)  4f ( 6)  5d-( 1)  6s ( 2)  6p ( 1)
-                  2      3/2               3/2
-                            1/2               2-
-          24   0.001190
-   4f-( 5)  4f ( 8)  5d-( 1)  5d ( 1)  6s ( 1)
-       5/2               3/2      5/2      1/2
-                              3      3/2      2-
-          25   0.000990
-   4f-( 4)  4f ( 8)  5d-( 1)  6s ( 2)  6p ( 1)
-         2               3/2               3/2
-                            1/2               2-
-          26  -0.000857
-   4f-( 6)  4f ( 7)  5d-( 1)  5d ( 1)  6s ( 1)
-                7/2      3/2      5/2      1/2
-                              2      5/2      2-
-          27  -0.000844
-   4f-( 5)  4f ( 8)  5d-( 1)  6s ( 1)  7s ( 1)
-       5/2               3/2      1/2      1/2
-                              2      5/2      2-
-          28   0.000809
-   4f-( 5)  4f ( 8)  5d-( 1)  5d ( 1)  6s ( 1)
-       5/2               3/2      5/2      1/2
-                              4      3/2      2-
-          29  -0.000786
-   4f-( 5)  4f ( 8)  5d-( 1)  5d ( 1)  6s ( 1)
-       5/2               3/2      5/2      1/2
-                              1      5/2      2-
-          30   0.000773
-   4f-( 5)  4f ( 8)  5d ( 1)  6s ( 1)  7s ( 1)
-       5/2               5/2      1/2      1/2
-                              2      5/2      2-
-          31  -0.000735
-   4f-( 5)  4f ( 8)  5d-( 1)  5d ( 1)  6s ( 1)
-       5/2               3/2      5/2      1/2
-                              2      3/2      2-
-          32  -0.000662
-   4f-( 6)  4f ( 7)  5d ( 1)  6s ( 1)  7s ( 1)
-                7/2      5/2      1/2      1/2
-                              1      3/2      2-
-          33  -0.000563
-   4f-( 5)  4f ( 7)  5d-( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      3/2               3/2
-                     2      1/2               2-
-          34  -0.000545
-   4f-( 5)  4f ( 8)  5d ( 2)  6s ( 1)
-       5/2                 4      1/2
-                            5/2      2-
-          35  -0.000477
-   4f-( 6)  4f ( 7)  5d-( 2)  6s ( 1)
-                7/2        2      1/2
-                            5/2      2-
-          36  -0.000462
-   4f-( 5)  4f ( 8)  5d ( 1)  6s ( 1)  7s ( 1)
-       5/2               5/2      1/2      1/2
-                              1      3/2      2-
-          37  -0.000417
-   4f-( 6)  4f ( 7)  5d ( 2)  6s ( 1)
-                7/2        4      1/2
-                            5/2      2-
-          38  -0.000354
-   4f-( 6)  4f ( 7)  5d-( 1)  6s ( 1)  7s ( 1)
-                7/2      3/2      1/2      1/2
-                              2      3/2      2-
-          39  -0.000286
-   4f-( 6)  4f ( 6)  5d ( 1)  6s ( 2)  6p ( 1)
-                  2      5/2               3/2
-                            1/2               2-
-          40   0.000271
-   4f-( 6)  4f ( 7)  5d-( 1)  5d ( 1)  6s ( 1)
-                7/2      3/2      5/2      1/2
-                              4      5/2      2-
-          41   0.000255
-   4f-( 6)  4f ( 7)  5d-( 1)  5d ( 1)  6s ( 1)
-                7/2      3/2      5/2      1/2
-                              3      5/2      2-
-          42  -0.000253
-   4f-( 4)  4f ( 8)  5d ( 1)  6s ( 2)  6p ( 1)
-         2               5/2               3/2
-                            1/2               2-
-          43  -0.000244
-   4f-( 5)  4f ( 8)  5d-( 1)  5d ( 1)  6s ( 1)
-       5/2               3/2      5/2      1/2
-                              2      5/2      2-
-          44   0.000184
-   4f-( 5)  4f ( 8)  5d-( 1)  5d ( 1)  6s ( 1)
-       5/2               3/2      5/2      1/2
-                              3      5/2      2-
-          45   0.000152
-   4f-( 5)  4f ( 7)  5d ( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      5/2               3/2
-                     2      1/2               2-
-          46  -0.000144
-   4f-( 6)  4f ( 6)  5d ( 1)  6s ( 2)  6p-( 1)
-                  0      5/2               1/2
-                            5/2               2-
-          47  -0.000140
-   4f-( 6)  4f ( 7)  5d ( 1)  6s ( 1)  7s ( 1)
-                7/2      5/2      1/2      1/2
-                              2      3/2      2-
-          48   0.000123
-   4f-( 6)  4f ( 6)  5d ( 1)  6s ( 2)  6p ( 1)
-                  0      5/2               3/2
-                            5/2               2-
-          49   0.000095
-   4f-( 6)  4f ( 7)  5d ( 2)  6s ( 1)
-                7/2        2      1/2
-                            5/2      2-
-          50  -0.000092
-   4f-( 5)  4f ( 8)  5d-( 1)  6s ( 1)  7s ( 1)
-       5/2               3/2      1/2      1/2
-                              2      3/2      2-
-          51  -0.000088
-   4f-( 4)  4f ( 8)  5d ( 1)  6s ( 2)  6p-( 1)
-         0               5/2               1/2
-                            5/2               2-
-          52   0.000082
-   4f-( 5)  4f ( 8)  5d ( 2)  6s ( 1)
-       5/2                 2      1/2
-                            5/2      2-
-          53  -0.000081
-   4f-( 5)  4f ( 8)  5d-( 2)  6s ( 1)
-       5/2                 2      1/2
-                            5/2      2-
-          54   0.000077
-   4f-( 4)  4f ( 8)  5d ( 1)  6s ( 2)  6p ( 1)
-         0               5/2               3/2
-                            5/2               2-
-          55  -0.000073
-   4f-( 6)  4f ( 7)  5d-( 1)  6s ( 1)  7s ( 1)
-                7/2      3/2      1/2      1/2
-                              3      5/2      2-
-          56   0.000073
-   4f-( 6)  4f ( 7)  5d ( 1)  6s ( 1)  7s ( 1)
-                7/2      5/2      1/2      1/2
-                              3      5/2      2-
-          57   0.000066
-   4f-( 6)  4f ( 7)  5d-( 1)  5d ( 1)  6s ( 1)
-                7/2      3/2      5/2      1/2
-                              5      5/2      2-
-          58   0.000063
-   4f-( 5)  4f ( 8)  5d-( 2)  6s ( 1)
-       5/2                 0      1/2
-                                     2-
-          59   0.000058
-   4f-( 6)  4f ( 7)  5d-( 2)  6s ( 1)
-                7/2        2      1/2
-                            3/2      2-
-          60   0.000054
-   4f-( 5)  4f ( 7)  5d-( 1)  6s ( 2)  6p-( 1)
-       5/2      7/2      3/2               1/2
-                     3      5/2               2-
-          61   0.000047
-   4f-( 5)  4f ( 7)  5d-( 1)  6s ( 2)  6p-( 1)
-       5/2      7/2      3/2               1/2
-                     2      5/2               2-
-          62   0.000043
-   4f-( 5)  4f ( 7)  5d-( 1)  6s ( 2)  6p-( 1)
-       5/2      7/2      3/2               1/2
-                     1      5/2               2-
-          63  -0.000038
-   4f-( 5)  4f ( 7)  5d-( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      3/2               3/2
-                     3      5/2               2-
-          64  -0.000037
-   4f-( 5)  4f ( 8)  5d ( 1)  6s ( 1)  7s ( 1)
-       5/2               5/2      1/2      1/2
-                              2      3/2      2-
-          65  -0.000035
-   4f-( 5)  4f ( 7)  5d-( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      3/2               3/2
-                     2      5/2               2-
-          66   0.000034
-   4f-( 6)  4f ( 6)  5d ( 1)  6s ( 2)  6p-( 1)
-                  2      5/2               1/2
-                            5/2               2-
-          67  -0.000034
-   4f-( 5)  4f ( 7)  5d-( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      3/2               3/2
-                     1      5/2               2-
-          68   0.000033
-   4f-( 6)  4f ( 6)  5d ( 1)  6s ( 2)  6p-( 1)
-                  4      5/2               1/2
-                            5/2               2-
-          69   0.000030
-   4f-( 5)  4f ( 8)  5d-( 1)  5d ( 1)  6s ( 1)
-       5/2               3/2      5/2      1/2
-                              4      5/2      2-
-          70  -0.000026
-   4f-( 5)  4f ( 7)  5d-( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      3/2               3/2
-                     4      5/2               2-
-          71   0.000025
-   4f-( 5)  4f ( 7)  5d-( 1)  6s ( 2)  6p-( 1)
-       5/2      7/2      3/2               1/2
-                     4      5/2               2-
-          72  -0.000023
-   4f-( 5)  4f ( 8)  6s ( 2)  7s ( 1)
-       5/2                        1/2
-                                     2-
-          73  -0.000022
-   4f-( 6)  4f ( 6)  5d ( 1)  6s ( 2)  6p ( 1)
-                  4      5/2               3/2
-                            5/2               2-
-          74  -0.000021
-   4f-( 6)  4f ( 6)  5d ( 1)  6s ( 2)  6p ( 1)
-                  2      5/2               3/2
-                            5/2               2-
-          75   0.000018
-   4f-( 5)  4f ( 8)  5d ( 1)  6s ( 1)  7s ( 1)
-       5/2               5/2      1/2      1/2
-                              3      5/2      2-
-          76   0.000016
-   4f-( 5)  4f ( 7)  5d ( 1)  6s ( 2)  6p-( 1)
-       5/2      7/2      5/2               1/2
-                     4      5/2               2-
-          77   0.000016
-   4f-( 4)  4f ( 8)  5d-( 1)  6s ( 2)  6p ( 1)
-         0               3/2               3/2
-                            3/2               2-
-          78   0.000016
-   4f-( 5)  4f ( 7)  5d-( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      3/2               3/2
-                     1      1/2               2-
-          79  -0.000015
-   4f-( 5)  4f ( 8)  5d ( 2)  6s ( 1)
-       5/2                 0      1/2
-                                     2-
-          80  -0.000015
-   4f-( 4)  4f ( 8)  5d-( 1)  6s ( 2)  6p ( 1)
-         2               3/2               3/2
-                            3/2               2-
-          81   0.000014
-   4f-( 6)  4f ( 6)  5d-( 1)  6s ( 2)  6p ( 1)
-                  0      3/2               3/2
-                            3/2               2-
-          82  -0.000011
-   4f-( 5)  4f ( 8)  5d-( 1)  6s ( 1)  7s ( 1)
-       5/2               3/2      1/2      1/2
-                              3      5/2      2-
-          83   0.000011
-   4f-( 6)  4f ( 6)  5d-( 1)  6s ( 2)  6p ( 1)
-                  4      3/2               3/2
-                            7/2               2-
-          84   0.000011
-   4f-( 5)  4f ( 7)  5d ( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      5/2               3/2
-                     3      1/2               2-
-          85   0.000010
-   4f-( 6)  4f ( 6)  5d-( 1)  6s ( 2)  6p ( 1)
-                  2      3/2               3/2
-                            3/2               2-
-          86  -0.000009
-   4f-( 5)  4f ( 7)  5d ( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      5/2               3/2
-                     4      5/2               2-
-          87  -0.000009
-   4f-( 4)  4f ( 8)  5d-( 1)  6s ( 2)  6p-( 1)
-         0               3/2               1/2
-                            3/2               2-
-          88  -0.000009
-   4f-( 6)  4f ( 6)  5d-( 1)  6s ( 2)  6p ( 1)
-                  2      3/2               3/2
-                            5/2               2-
-          89   0.000008
-   4f-( 5)  4f ( 7)  5d-( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      3/2               3/2
-                     4      7/2               2-
-          90   0.000008
-   4f-( 6)  4f ( 6)  5d-( 1)  6s ( 2)  6p-( 1)
-                  2      3/2               1/2
-                            5/2               2-
-          91   0.000007
-   4f-( 4)  4f ( 8)  5d-( 1)  6s ( 2)  6p-( 1)
-         2               3/2               1/2
-                            3/2               2-
-          92   0.000007
-   4f-( 5)  4f ( 7)  5d ( 1)  6s ( 2)  6p-( 1)
-       5/2      7/2      5/2               1/2
-                     3      3/2               2-
-          93  -0.000007
-   4f-( 4)  4f ( 8)  5d ( 1)  6s ( 2)  6p-( 1)
-         2               5/2               1/2
-                            5/2               2-
-          94   0.000007
-   4f-( 5)  4f ( 7)  5d ( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      5/2               3/2
-                     2      3/2               2-
-          95  -0.000007
-   4f-( 5)  4f ( 7)  5d ( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      5/2               3/2
-                     3      3/2               2-
-          96   0.000007
-   4f-( 4)  4f ( 8)  5d-( 1)  6s ( 2)  6p ( 1)
-         4               3/2               3/2
-                            5/2               2-
-          97   0.000006
-   4f-( 4)  4f ( 8)  5d ( 1)  6s ( 2)  6p ( 1)
-         2               5/2               3/2
-                            5/2               2-
-          98   0.000006
-   4f-( 5)  4f ( 7)  5d ( 1)  6s ( 2)  6p-( 1)
-       5/2      7/2      5/2               1/2
-                     2      5/2               2-
-          99   0.000006
-   4f-( 5)  4f ( 7)  5d-( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      3/2               3/2
-                     5      7/2               2-
-         100   0.000006
-   4f-( 4)  4f ( 8)  5d ( 1)  6s ( 2)  6p ( 1)
-         2               5/2               3/2
-                            3/2               2-
-         101   0.000006
-   4f-( 5)  4f ( 7)  5d-( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      3/2               3/2
-                     3      7/2               2-
-         102  -0.000005
-   4f-( 5)  4f ( 7)  5d ( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      5/2               3/2
-                     1      3/2               2-
-         103  -0.000005
-   4f-( 6)  4f ( 6)  5d-( 1)  6s ( 2)  6p-( 1)
-                  0      3/2               1/2
-                            3/2               2-
-         104  -0.000005
-   4f-( 5)  4f ( 7)  5d ( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      5/2               3/2
-                     2      5/2               2-
-         105   0.000005
-   4f-( 5)  4f ( 7)  5d-( 1)  6s ( 2)  6p-( 1)
-       5/2      7/2      3/2               1/2
-                     2      3/2               2-
-         106  -0.000004
-   4f-( 5)  4f ( 7)  5d ( 1)  6s ( 2)  6p-( 1)
-       5/2      7/2      5/2               1/2
-                     2      3/2               2-
-         107  -0.000004
-   4f-( 4)  4f ( 8)  5d ( 1)  6s ( 2)  6p-( 1)
-         4               5/2               1/2
-                            5/2               2-
-         108   0.000004
-   4f-( 6)  4f ( 6)  5d ( 1)  6s ( 2)  6p ( 1)
-                  2      5/2               3/2
-                            3/2               2-
-         109   0.000004
-   4f-( 5)  4f ( 7)  5d ( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      5/2               3/2
-                     4      3/2               2-
-         110   0.000004
-   4f-( 6)  4f ( 6)  5d ( 1)  6s ( 2)  6p ( 1)
-                  2      5/2               3/2
-                            7/2               2-
-         111   0.000004
-   4f-( 5)  4f ( 7)  5d ( 1)  6s ( 2)  6p-( 1)
-       5/2      7/2      5/2               1/2
-                     1      3/2               2-
-         112  -0.000004
-   4f-( 5)  4f ( 7)  5d-( 1)  6s ( 2)  6p-( 1)
-       5/2      7/2      3/2               1/2
-                     3      3/2               2-
-         113   0.000003
-   4f-( 4)  4f ( 8)  5d-( 1)  6s ( 2)  6p-( 1)
-         2               3/2               1/2
-                            5/2               2-
-         114   0.000003
-   4f-( 5)  4f ( 7)  5d-( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      3/2               3/2
-                     1      3/2               2-
-         115  -0.000002
-   4f-( 6)  4f ( 6)  5d-( 1)  6s ( 2)  6p-( 1)
-                  2      3/2               1/2
-                            3/2               2-
-         116  -0.000002
-   4f-( 6)  4f ( 6)  5d-( 1)  6s ( 2)  6p ( 1)
-                  4      3/2               3/2
-                            5/2               2-
-         117  -0.000002
-   4f-( 6)  4f ( 6)  5d ( 1)  6s ( 2)  6p ( 1)
-                  4      5/2               3/2
-                            7/2               2-
-         118  -0.000002
-   4f-( 5)  4f ( 7)  5d ( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      5/2               3/2
-                     3      7/2               2-
-         119  -0.000002
-   4f-( 5)  4f ( 7)  5d ( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      5/2               3/2
-                     4      7/2               2-
-         120  -0.000002
-   4f-( 6)  4f ( 6)  5d-( 1)  6s ( 2)  6p ( 1)
-                  2      3/2               3/2
-                            7/2               2-
-         121   0.000002
-   4f-( 5)  4f ( 7)  5d ( 1)  6s ( 2)  6p-( 1)
-       5/2      7/2      5/2               1/2
-                     5      5/2               2-
-         122   0.000002
-   4f-( 5)  4f ( 7)  5d-( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      3/2               3/2
-                     3      3/2               2-
-         123  -0.000002
-   4f-( 5)  4f ( 7)  5d-( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      3/2               3/2
-                     2      3/2               2-
-         124   0.000002
-   4f-( 4)  4f ( 8)  5d ( 1)  6s ( 2)  6p ( 1)
-         4               5/2               3/2
-                            5/2               2-
-         125   0.000002
-   4f-( 5)  4f ( 7)  5d ( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      5/2               3/2
-                     1      5/2               2-
-         126   0.000001
-   4f-( 5)  4f ( 7)  5d-( 1)  6s ( 2)  6p-( 1)
-       5/2      7/2      3/2               1/2
-                     1      3/2               2-
-         127   0.000001
-   4f-( 6)  4f ( 6)  5d ( 1)  6s ( 2)  6p ( 1)
-                  4      5/2               3/2
-                            3/2               2-
-         128   0.000001
-   4f-( 5)  4f ( 7)  5d ( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      5/2               3/2
-                     1      7/2               2-
-         129   0.000001
-   4f-( 5)  4f ( 7)  5d ( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      5/2               3/2
-                     3      5/2               2-
-         130  -0.000001
-   4f-( 4)  4f ( 8)  5d-( 1)  6s ( 2)  6p ( 1)
-         2               3/2               3/2
-                            5/2               2-
-         131   0.000001
-   4f-( 5)  4f ( 7)  5d-( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      3/2               3/2
-                     2      7/2               2-
-         132  -0.000001
-   4f-( 5)  4f ( 7)  5d ( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      5/2               3/2
-                     5      5/2               2-
-         133   0.000001
-   4f-( 6)  4f ( 6)  5d-( 1)  6s ( 2)  6p-( 1)
-                  4      3/2               1/2
-                            5/2               2-
-         134  -0.000001
-   4f-( 6)  4f ( 6)  5d ( 1)  6s ( 2)  6p ( 1)
-                  6      5/2               3/2
-                            7/2               2-
-         135  -0.000001
-   4f-( 5)  4f ( 7)  5d ( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      5/2               3/2
-                     5      7/2               2-
-         136  -0.000001
-   4f-( 4)  4f ( 8)  5d ( 1)  6s ( 2)  6p ( 1)
-         4               5/2               3/2
-                            3/2               2-
-         137  -0.000001
-   4f-( 4)  4f ( 8)  5d ( 1)  6s ( 2)  6p-( 1)
-         2               5/2               1/2
-                            3/2               2-
-         138  -0.000001
-   4f-( 4)  4f ( 8)  5d-( 1)  6s ( 2)  6p-( 1)
-         4               3/2               1/2
-                            5/2               2-
-         139   0.000001
-   4f-( 5)  4f ( 7)  5d ( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      5/2               3/2
-                     2      7/2               2-
-         140  -0.000000
-   4f-( 5)  4f ( 7)  5d ( 1)  6s ( 2)  6p-( 1)
-       5/2      7/2      5/2               1/2
-                     4      3/2               2-
-         141   0.000000
-   4f-( 5)  4f ( 7)  5d ( 1)  6s ( 2)  6p-( 1)
-       5/2      7/2      5/2               1/2
-                     3      5/2               2-
-         142  -0.000000
-   4f-( 4)  4f ( 8)  5d-( 1)  6s ( 2)  6p ( 1)
-         4               3/2               3/2
-                            7/2               2-
-         143   0.000000
-   4f-( 6)  4f ( 6)  5d ( 1)  6s ( 2)  6p-( 1)
-                  2      5/2               1/2
-                            3/2               2-
-         144   0.000000
-   4f-( 5)  4f ( 7)  5d ( 1)  6s ( 2)  6p-( 1)
-       5/2      7/2      5/2               1/2
-                     1      5/2               2-
-         145  -0.000000
-   4f-( 5)  4f ( 7)  5d ( 1)  6s ( 2)  6p ( 1)
-       5/2      7/2      5/2               3/2
-                     6      7/2               2-
-         146   0.000000
-   4f-( 6)  4f ( 6)  5d ( 1)  6s ( 2)  6p-( 1)
-                  4      5/2               1/2
-                            3/2               2-
-         147  -0.000000
-   4f-( 4)  4f ( 8)  5d ( 1)  6s ( 2)  6p-( 1)
-         4               5/2               1/2
-                            3/2               2-
-         148   0.000000
-   4f-( 4)  4f ( 8)  5d-( 1)  6s ( 2)  6p ( 1)
-         2               3/2               3/2
-                            7/2               2-
-         149   0.000000
-   4f-( 4)  4f ( 8)  5d ( 1)  6s ( 2)  6p ( 1)
-         2               5/2               3/2
-                            7/2               2-
-         150  -0.000000
-   4f-( 4)  4f ( 8)  5d ( 1)  6s ( 2)  6p ( 1)
-         4               5/2               3/2
-                            7/2               2-
-At line 134 of file rmixextract.f90 (unit = 20, file = '1P1.m')
-Fortran runtime error: End of file
-
-Error termination. Backtrace:
-#0  0x7f5549ee431a
-#1  0x7f5549ee4ec5
-#2  0x7f5549ee568d
-#3  0x7f554a05ba33
-#4  0x7f554a05c36f
-#5  0x7f554a05c435
-#6  0x7f554a05ecec
-#7  0x55ab9a81dcef
-#8  0x55ab9a81cdee
-#9  0x7f5549af9b96
-#10  0x55ab9a81ce29
-#11  0xffffffffffffffff
 
  RCI
  This is the configuration interaction program 
@@ -4257,7 +3819,7 @@ Name of state:
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 20/39/33.514
+   Time (Hr/Min/Sec): 21/00/24.476
    Zone: -0400
 
  RCI: Execution complete.
@@ -4319,14 +3881,14 @@ y
   
  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
  Under investigation is the block:     1                 The number of eigenvectors:  1
- The number of CSF (in jj-coupling):        36           The number of CSF (in LS-coupling):        14
+ The number of CSF (in jj-coupling):        36           The number of CSF (in LS-coupling):        11
  Weights of major contributors to ASF in jj-coupling:
   
   Level  J Parity      CSF contributions
   
-    1    0   -      0.99597 of      1    0.00192 of      3    0.00077 of      4    0.00065 of     13
-                    0.00029 of      8
-               Total sum over  weight (in jj) is:  0.99993001470215082     
+    1    0   -      0.97527 of      1    0.02185 of      3    0.00121 of      4    0.00088 of     13
+                    0.00050 of     14
+               Total sum over  weight (in jj) is:  0.99991618383808745     
   
  Definition of leading CSF:
   
@@ -4339,13 +3901,15 @@ y
   
   Level  J Parity      CSF contributions
   
-    1    0   -      0.99597 of      1
-               Total sum over  weight (in LSJ) is:  0.99596825298978897     
+    1    0   -      0.97527 of      1    0.02185 of      3
+               Total sum over  weight (in LSJ) is:  0.99715256411128661     
   
  Definition of leading CSF:
   
          1)     4f(14)   6s( 1)   6p( 1)
                    1S1      2S1      2P1      2S       3P          0
+         3)     4f(14)   5d( 1)   6p( 1)
+                   1S1      2D1      2P1      2D       3P          0
   
  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
  Under investigation is the block:     2                 The number of eigenvectors:  2
@@ -4354,9 +3918,9 @@ y
   
   Level  J Parity      CSF contributions
   
-    1    1   -      0.66641 of      2    0.32566 of      1    0.00361 of      6    0.00105 of      7
-                    0.00072 of      8
-               Total sum over  weight (in jj) is:  0.99994832388140376     
+    1    1   -      0.71248 of      2    0.26053 of      1    0.01332 of      7    0.00759 of      8
+                    0.00325 of      6
+               Total sum over  weight (in jj) is:  0.99994410666740441     
   
  Definition of leading CSF:
   
@@ -4369,13 +3933,18 @@ y
   
   Level  J Parity      CSF contributions
   
-    1    1   -      0.99204 of      2    0.00457 of      7
-               Total sum over  weight (in LSJ) is:  0.99725646784938038     
+    1    1   -      0.96803 of      2    0.02283 of      7    0.00498 of      1    0.00129 of      6
+
+               Total sum over  weight (in LSJ) is:  0.99725090588914655     
   
  Definition of leading CSF:
   
+         1)     4f(14)   6s( 1)   6p( 1)
+                   1S1      2S1      2P1      2S       1P          1
          2)     4f(14)   6s( 1)   6p( 1)
                    1S1      2S1      2P1      2S       3P          1
+         6)     4f(14)   5d( 1)   6p( 1)
+                   1S1      2D1      2P1      2D       1P          1
          7)     4f(14)   5d( 1)   6p( 1)
                    1S1      2D1      2P1      2D       3P          1
   
@@ -4385,9 +3954,9 @@ y
   
   Level  J Parity      CSF contributions
   
-    2    1   -      0.56127 of      1    0.29376 of      2    0.11005 of      6    0.01467 of      4
-                    0.01129 of      8
-               Total sum over  weight (in jj) is:  0.99993600947798866     
+    2    1   -      0.61478 of      1    0.20736 of      2    0.09664 of      6    0.06207 of      8
+                    0.00912 of      7
+               Total sum over  weight (in jj) is:  0.99995411041508475     
   
  Definition of leading CSF:
   
@@ -4400,22 +3969,20 @@ y
   
   Level  J Parity      CSF contributions
   
-    2    1   -      0.85493 of      1    0.10924 of      6    0.01618 of      3    0.01078 of      7
-                    0.00194 of      5
-               Total sum over  weight (in LSJ) is:  0.99398555942747446     
+    2    1   -      0.81560 of      1    0.16752 of      6    0.00876 of      3    0.00654 of      2
+
+               Total sum over  weight (in LSJ) is:  0.99862359214124519     
   
  Definition of leading CSF:
   
          1)     4f(14)   6s( 1)   6p( 1)
                    1S1      2S1      2P1      2S       1P          1
+         2)     4f(14)   6s( 1)   6p( 1)
+                   1S1      2S1      2P1      2S       3P          1
          3)     4f(13)   5d( 1)   6s( 2)
                    2F1      2D1      1S0      1P       1P          1
-         5)     4f(13)   5d( 1)   6s( 2)
-                   2F1      2D1      1S0      3D       3D          1
          6)     4f(14)   5d( 1)   6p( 1)
                    1S1      2D1      2P1      2D       1P          1
-         7)     4f(14)   5d( 1)   6p( 1)
-                   1S1      2D1      2P1      2D       3P          1
   
  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
  Under investigation is the block:     3                 The number of eigenvectors:  1
@@ -4424,9 +3991,9 @@ y
   
   Level  J Parity      CSF contributions
   
-    1    2   -      0.97760 of      1    0.01103 of      7    0.00817 of      6    0.00164 of     16
-                    0.00084 of     10
-               Total sum over  weight (in jj) is:  0.99985722902126173     
+    1    2   -      0.97330 of      1    0.01323 of      7    0.00894 of      6    0.00176 of      8
+                    0.00109 of     10
+               Total sum over  weight (in jj) is:  0.99991630395947606     
   
  Definition of leading CSF:
   
@@ -4439,8 +4006,8 @@ y
   
   Level  J Parity      CSF contributions
   
-    1    2   -      0.97760 of      1    0.01790 of      6
-               Total sum over  weight (in LSJ) is:  0.99560989230157670     
+    1    2   -      0.97330 of      1    0.02440 of      6
+               Total sum over  weight (in LSJ) is:  0.99773144527499269     
   
  Definition of leading CSF:
   
@@ -4454,7 +4021,7 @@ y
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 20/39/33.551
+   Time (Hr/Min/Sec): 21/00/24.513
    Zone: -0400
 
  jj2lsj: Execution complete.
@@ -4474,8 +4041,8 @@ y
                       (a.u.)      (cm^-1)     (cm^-1)
 ------------------------------------------------------------------------------------------
   1  1   0  +  -14044.1936875        0.00        0.00  6s(2)_1S0
-  2  1   0  -  -14044.1262601    14798.60    14798.60  4f(14)1S1.6s_2S.6p_3P
-  3  1   1  -  -14044.1236388    15373.91      575.31  4f(14)1S1.6s_2S.6p_3P
-  4  1   2  -  -14044.1193018    16325.79      951.88  4f(14)1S1.6s_2S.6p_3P
-  5  2   1  -  -14044.0773848    25525.51     9199.72  4f(14)1S1.6s_2S.6p_1P
+  2  1   0  -  -14044.1305822    13850.01    13850.01  4f(14)1S1.6s_2S.6p_3P
+  3  1   1  -  -14044.1274525    14536.91      686.90  4f(14)1S1.6s_2S.6p_3P
+  4  1   2  -  -14044.1204626    16071.02     1534.11  4f(14)1S1.6s_2S.6p_3P
+  5  2   1  -  -14044.0816384    24591.95     8520.92  4f(14)1S1.6s_2S.6p_1P
 ------------------------------------------------------------------------------------------
