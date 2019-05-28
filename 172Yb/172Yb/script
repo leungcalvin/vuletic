@@ -13,5 +13,3 @@ less script_1P1 > script_1P1.out
 ./script_1P1 |& tee -a script_1P1.out
 rlevels 1S0.cm 1P1.cm |& tee -a script_1S0.out
 rlevels 1S0.cm 1P1.cm |& tee -a script_1P1.out
-
-
