@@ -587,8 +587,8 @@ n
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 22/25/20.185
+   Date (Yr/Mon/Day): 2019/06/16
+   Time (Hr/Min/Sec): 14/26/20.756
    Zone: -0400
 
  RANGULAR: Execution complete.
@@ -1188,8 +1188,8 @@ Generalised occupation numbers:
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 22/25/20.547
+   Date (Yr/Mon/Day): 2019/06/16
+   Time (Hr/Min/Sec): 14/26/21.113
    Zone: -0400
 
  RMCDHF: Execution complete.
@@ -1401,8 +1401,8 @@ n
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 22/25/20.610
+   Date (Yr/Mon/Day): 2019/06/16
+   Time (Hr/Min/Sec): 14/26/21.179
    Zone: -0400
 
  RCSFinteract: Execution complete.
@@ -1522,8 +1522,8 @@ n
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 22/25/20.946
+   Date (Yr/Mon/Day): 2019/06/16
+   Time (Hr/Min/Sec): 14/26/21.553
    Zone: -0400
 
  RANGULAR: Execution complete.
@@ -1940,8 +1940,8 @@ Generalised occupation numbers:
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 22/25/21.535
+   Date (Yr/Mon/Day): 2019/06/16
+   Time (Hr/Min/Sec): 14/26/22.301
    Zone: -0400
 
  RMCDHF: Execution complete.
@@ -2153,8 +2153,8 @@ n
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 22/25/21.592
+   Date (Yr/Mon/Day): 2019/06/16
+   Time (Hr/Min/Sec): 14/26/22.375
    Zone: -0400
 
  RCSFinteract: Execution complete.
@@ -2274,8 +2274,8 @@ n
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 22/25/21.923
+   Date (Yr/Mon/Day): 2019/06/16
+   Time (Hr/Min/Sec): 14/26/22.787
    Zone: -0400
 
  RANGULAR: Execution complete.
@@ -2512,8 +2512,8 @@ Generalised occupation numbers:
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 22/25/22.206
+   Date (Yr/Mon/Day): 2019/06/16
+   Time (Hr/Min/Sec): 14/26/23.181
    Zone: -0400
 
  RMCDHF: Execution complete.
@@ -2725,8 +2725,8 @@ n
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 22/25/22.263
+   Date (Yr/Mon/Day): 2019/06/16
+   Time (Hr/Min/Sec): 14/26/23.272
    Zone: -0400
 
  RCSFinteract: Execution complete.
@@ -2846,8 +2846,8 @@ n
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 22/25/22.613
+   Date (Yr/Mon/Day): 2019/06/16
+   Time (Hr/Min/Sec): 14/26/23.683
    Zone: -0400
 
  RANGULAR: Execution complete.
@@ -3677,11 +3677,11 @@ Generalised occupation numbers:
    8.9173D-04
 
  Wall time:
-        5 seconds
+        7 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 22/25/27.816
+   Date (Yr/Mon/Day): 2019/06/16
+   Time (Hr/Min/Sec): 14/26/31.212
    Zone: -0400
 
  RMCDHF: Execution complete.
@@ -3815,11 +3815,11 @@ Name of state:
 
 
  Wall time:
-       12 seconds
+       16 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 22/25/40.107
+   Date (Yr/Mon/Day): 2019/06/16
+   Time (Hr/Min/Sec): 14/26/47.260
    Zone: -0400
 
  RCI: Execution complete.
@@ -4020,8 +4020,8 @@ y
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/05/27
-   Time (Hr/Min/Sec): 22/25/40.137
+   Date (Yr/Mon/Day): 2019/06/16
+   Time (Hr/Min/Sec): 14/26/47.309
    Zone: -0400
 
  jj2lsj: Execution complete.
@@ -4040,9 +4040,9 @@ y
  No Pos  J Parity Energy Total    Levels     Splitting     Configuration
                       (a.u.)      (cm^-1)     (cm^-1)
 ------------------------------------------------------------------------------------------
-  1  1   0  +  -14044.1936875        0.00        0.00  6s(2)_1S0
-  2  1   0  -  -14044.1305822    13850.01    13850.01  4f(14)1S1.6s_2S.6p_3P
-  3  1   1  -  -14044.1274525    14536.91      686.90  4f(14)1S1.6s_2S.6p_3P
-  4  1   2  -  -14044.1204626    16071.02     1534.11  4f(14)1S1.6s_2S.6p_3P
-  5  2   1  -  -14044.0816384    24591.95     8520.92  4f(14)1S1.6s_2S.6p_1P
+  1  1   0  +  -14044.1937760        0.00        0.00  6s(2)_1S0
+  2  1   0  -  -14044.1305822    13869.42    13869.42  4f(14)1S1.6s_2S.6p_3P
+  3  1   1  -  -14044.1274525    14556.32      686.90  4f(14)1S1.6s_2S.6p_3P
+  4  1   2  -  -14044.1204626    16090.43     1534.11  4f(14)1S1.6s_2S.6p_3P
+  5  2   1  -  -14044.0816384    24611.35     8520.92  4f(14)1S1.6s_2S.6p_1P
 ------------------------------------------------------------------------------------------

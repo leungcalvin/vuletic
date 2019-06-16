@@ -245,37 +245,37 @@ cat $rmcdhf_input
 #rsave 1S0
 
 #14.  fix 7d to be spectroscopic
-rcsfgenerate_input="rcsfgenerate_input_1S0_13"
-rcsfgenerate < $rcsfgenerate_input
-cat $rcsfgenerate_input
-cp rcsfgenerate.log 1S0.exc
-cp rcsf.out rcsf.inp
-printf '1' | rcsfinteract
-cp rcsf.out rcsf.inp
-printf 'y' | rangular
-rwfnestimate_input="rwfnestimate_input_1S0_2"
-rwfnestimate < $rwfnestimate_input
-cat $rwfnestimate_input
-rmcdhf_input="rmcdhf_input_1S0_15"
-rmcdhf < $rmcdhf_input
-cat $rmcdhf_input
-#rsave 1S0
-
-#14.  fix 7d to be spectroscopic
-rcsfgenerate_input="rcsfgenerate_input_1S0_13"
-rcsfgenerate < $rcsfgenerate_input
-cat $rcsfgenerate_input
-cp rcsfgenerate.log 1S0.exc
-cp rcsf.out rcsf.inp
-printf '1' | rcsfinteract
-cp rcsf.out rcsf.inp
-printf 'y' | rangular
-rwfnestimate_input="rwfnestimate_input_1S0_2"
-rwfnestimate < $rwfnestimate_input
-cat $rwfnestimate_input
-rmcdhf_input="rmcdhf_input_1S0_16"
-rmcdhf < $rmcdhf_input
-cat $rmcdhf_input
+# rcsfgenerate_input="rcsfgenerate_input_1S0_13"
+# rcsfgenerate < $rcsfgenerate_input
+# cat $rcsfgenerate_input
+# cp rcsfgenerate.log 1S0.exc
+# cp rcsf.out rcsf.inp
+# printf '1' | rcsfinteract
+# cp rcsf.out rcsf.inp
+# printf 'y' | rangular
+# rwfnestimate_input="rwfnestimate_input_1S0_2"
+# rwfnestimate < $rwfnestimate_input
+# cat $rwfnestimate_input
+# rmcdhf_input="rmcdhf_input_1S0_15"
+# rmcdhf < $rmcdhf_input
+# cat $rmcdhf_input
+# #rsave 1S0
+# 
+# #14.  fix 7d to be spectroscopic
+# rcsfgenerate_input="rcsfgenerate_input_1S0_13"
+# rcsfgenerate < $rcsfgenerate_input
+# cat $rcsfgenerate_input
+# cp rcsfgenerate.log 1S0.exc
+# cp rcsf.out rcsf.inp
+# printf '1' | rcsfinteract
+# cp rcsf.out rcsf.inp
+# printf 'y' | rangular
+# rwfnestimate_input="rwfnestimate_input_1S0_2"
+# rwfnestimate < $rwfnestimate_input
+# cat $rwfnestimate_input
+# rmcdhf_input="rmcdhf_input_1S0_16"
+# rmcdhf < $rmcdhf_input
+# cat $rmcdhf_input
 
 stateID="1S0"
 rsave $stateID
