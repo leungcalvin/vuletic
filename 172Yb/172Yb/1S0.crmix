@@ -1,0 +1,59 @@
+ RMIXEXTRACT
+ Extract and prints mixing coefficient above a 
+ cut-off. Corresponding CSFs written to screen and 
+ to rcsf.out
+ Input files: name.c, name.(c)m
+ Output file: rcsf.out
+
+ Name of state
+ Mixing coefficients from CI calc. ?
+ Enter the cut-off value for the coefficients [0--1]
+ Sort extracted CSFs according to mixingcoeffcients? (y/n)
+
+  nblock =    1    ncftot =          9    nw =   27    nelec =   70
+
+ ===========================================================================
+  nb =    1  ncfblk =          9  nevblk =    1  2J+1 =    1  parity =    1
+  nb =    1  ncfblk =          9  nevblk =    1  2J+1 =    1  parity =    1
+ ===========================================================================
+ Average Energy =   -14043.728556231697          ncf_reduced =            9
+
+ Energy =   -14044.196794407562          Coefficients and CSF :
+
+           1   0.967247
+   6s ( 2)
+ 
+          0+
+           2   0.184683
+   6p ( 2)
+         0
+          0+
+           3   0.154923
+   6p-( 2)
+ 
+          0+
+           4  -0.054663
+   5d ( 2)
+         0
+          0+
+           5  -0.039719
+   7s ( 2)
+ 
+          0+
+           6  -0.039494
+   5d-( 2)
+         0
+          0+
+           7  -0.009290
+   6s ( 1)  7s ( 1)
+       1/2      1/2
+                   0+
+           8   0.008173
+   5f ( 2)
+         0
+          0+
+           9   0.006689
+   5f-( 2)
+         0
+          0+
+ RMIXEXTRACT: Execution complete.
