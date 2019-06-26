@@ -6,6 +6,6 @@ y            ! Default settings
 
 
            5 ! level weights
-*
+7p*
 *
          100 ! Number of SCF cycles

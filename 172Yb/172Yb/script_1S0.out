@@ -103,8 +103,15 @@ cat $rwfnestimate_input
 rmcdhf_input="rmcdhf_input_1S0_6"
 rmcdhf < $rmcdhf_input
 cat $rmcdhf_input
-# #rsave 1S0
-# 
+
+# Final Step: vary all orbitals
+rcsfgenerate < $rcsfgenerate_input
+cat $rcsfgenerate_input
+rwfnestimate < rwfnestimate_input_append_rwfnout
+cat rwfnestimate_input_append_rwfnout
+rmcdhf < rmcdhf_input_1S0_all
+cat rmcdhf_input_1S0_all
+
 # #6. add active orbitals: layer 1-4 (5g)
 # rcsfgenerate_input="rcsfgenerate_input_1S0_7"
 # rcsfgenerate < $rcsfgenerate_input
@@ -276,12 +283,6 @@ cat $rmcdhf_input
 # rmcdhf < $rmcdhf_input
 # cat $rmcdhf_input
 
-rcsfgenerate < $rcsfgenerate_input
-cat $rcsfgenerate_input
-rwfnestimate < rwfnestimate_input_append_rwfnout
-cat rwfnestimate_input_append_rwfnout
-rmcdhf < rmcdhf_input_1S0_all
-cat rmcdhf_input_1S0_all
 
 stateID="1S0"
 rsave $stateID
@@ -293,7 +294,7 @@ rsave $stateID
 rci_input="rci_input_1S0"
 rci < $rci_input
 cat $rci_input
-#printf "$stateID\ny\n0\ny" | rmixextract |& tee $stateID.crmix # CI
+printf "$stateID\ny\n0\ny" | rmixextract |& tee $stateID.crmix # CI
 
 # jj2lsj
 jj2lsj_input="jj2lsj_input_1S0"
@@ -455,8 +456,8 @@ n
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/06/16
-   Time (Hr/Min/Sec): 21/54/49.008
+   Date (Yr/Mon/Day): 2019/06/26
+   Time (Hr/Min/Sec): 14/17/49.207
    Zone: -0400
 
  RANGULAR: Execution complete.
@@ -715,8 +716,8 @@ Generalised occupation numbers:
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/06/16
-   Time (Hr/Min/Sec): 21/54/49.100
+   Date (Yr/Mon/Day): 2019/06/26
+   Time (Hr/Min/Sec): 14/17/49.291
    Zone: -0400
 
  RMCDHF: Execution complete.
@@ -846,8 +847,8 @@ n
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/06/16
-   Time (Hr/Min/Sec): 21/54/49.111
+   Date (Yr/Mon/Day): 2019/06/26
+   Time (Hr/Min/Sec): 14/17/49.304
    Zone: -0400
 
  RCSFinteract: Execution complete.
@@ -882,8 +883,8 @@ n
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/06/16
-   Time (Hr/Min/Sec): 21/54/49.117
+   Date (Yr/Mon/Day): 2019/06/26
+   Time (Hr/Min/Sec): 14/17/49.311
    Zone: -0400
 
  RANGULAR: Execution complete.
@@ -1876,8 +1877,8 @@ Generalised occupation numbers:
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/06/16
-   Time (Hr/Min/Sec): 21/54/49.538
+   Date (Yr/Mon/Day): 2019/06/26
+   Time (Hr/Min/Sec): 14/17/49.630
    Zone: -0400
 
  RMCDHF: Execution complete.
@@ -2071,8 +2072,8 @@ Generalised occupation numbers:
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/06/16
-   Time (Hr/Min/Sec): 21/54/49.597
+   Date (Yr/Mon/Day): 2019/06/26
+   Time (Hr/Min/Sec): 14/17/49.671
    Zone: -0400
 
  RMCDHF: Execution complete.
@@ -2206,8 +2207,8 @@ n
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/06/16
-   Time (Hr/Min/Sec): 21/54/49.625
+   Date (Yr/Mon/Day): 2019/06/26
+   Time (Hr/Min/Sec): 14/17/49.691
    Zone: -0400
 
  RCSFinteract: Execution complete.
@@ -2242,8 +2243,8 @@ n
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/06/16
-   Time (Hr/Min/Sec): 21/54/49.632
+   Date (Yr/Mon/Day): 2019/06/26
+   Time (Hr/Min/Sec): 14/17/49.698
    Zone: -0400
 
  RANGULAR: Execution complete.
@@ -2632,8 +2633,8 @@ Generalised occupation numbers:
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/06/16
-   Time (Hr/Min/Sec): 21/54/49.839
+   Date (Yr/Mon/Day): 2019/06/26
+   Time (Hr/Min/Sec): 14/17/49.844
    Zone: -0400
 
  RMCDHF: Execution complete.
@@ -2772,8 +2773,8 @@ n
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/06/16
-   Time (Hr/Min/Sec): 21/54/49.851
+   Date (Yr/Mon/Day): 2019/06/26
+   Time (Hr/Min/Sec): 14/17/49.855
    Zone: -0400
 
  RCSFinteract: Execution complete.
@@ -2808,8 +2809,8 @@ n
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/06/16
-   Time (Hr/Min/Sec): 21/54/49.858
+   Date (Yr/Mon/Day): 2019/06/26
+   Time (Hr/Min/Sec): 14/17/49.860
    Zone: -0400
 
  RANGULAR: Execution complete.
@@ -3018,8 +3019,8 @@ Generalised occupation numbers:
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/06/16
-   Time (Hr/Min/Sec): 21/54/49.949
+   Date (Yr/Mon/Day): 2019/06/26
+   Time (Hr/Min/Sec): 14/17/49.917
    Zone: -0400
 
  RMCDHF: Execution complete.
@@ -6305,11 +6306,11 @@ Generalised occupation numbers:
    8.9996D-05  1.3444D-04  3.3125D-03
 
  Wall time:
-        2 seconds
+        1 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/06/16
-   Time (Hr/Min/Sec): 21/54/52.723
+   Date (Yr/Mon/Day): 2019/06/26
+   Time (Hr/Min/Sec): 14/17/51.744
    Zone: -0400
 
  RMCDHF: Execution complete.
@@ -6376,8 +6377,8 @@ Name of state:
        21 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/06/16
-   Time (Hr/Min/Sec): 21/55/14.327
+   Date (Yr/Mon/Day): 2019/06/26
+   Time (Hr/Min/Sec): 14/18/13.593
    Zone: -0400
 
  RCI: Execution complete.
@@ -6394,6 +6395,65 @@ y
 8
 1
 
+ RMIXEXTRACT
+ Extract and prints mixing coefficient above a 
+ cut-off. Corresponding CSFs written to screen and 
+ to rcsf.out
+ Input files: name.c, name.(c)m
+ Output file: rcsf.out
+
+ Name of state
+ Mixing coefficients from CI calc. ?
+ Enter the cut-off value for the coefficients [0--1]
+ Sort extracted CSFs according to mixingcoeffcients? (y/n)
+
+  nblock =    1    ncftot =          9    nw =   27    nelec =   70
+
+ ===========================================================================
+  nb =    1  ncfblk =          9  nevblk =    1  2J+1 =    1  parity =    1
+  nb =    1  ncfblk =          9  nevblk =    1  2J+1 =    1  parity =    1
+ ===========================================================================
+ Average Energy =   -14043.728556231697          ncf_reduced =            9
+
+ Energy =   -14044.196794407562          Coefficients and CSF :
+
+           1   0.967247
+   6s ( 2)
+ 
+          0+
+           2   0.184683
+   6p ( 2)
+         0
+          0+
+           3   0.154923
+   6p-( 2)
+ 
+          0+
+           4  -0.054663
+   5d ( 2)
+         0
+          0+
+           5  -0.039719
+   7s ( 2)
+ 
+          0+
+           6  -0.039494
+   5d-( 2)
+         0
+          0+
+           7  -0.009290
+   6s ( 1)  7s ( 1)
+       1/2      1/2
+                   0+
+           8   0.008173
+   5f ( 2)
+         0
+          0+
+           9   0.006689
+   5f-( 2)
+         0
+          0+
+ RMIXEXTRACT: Execution complete.
   
  jj2lsj: Transformation of ASFs from a jj-coupled CSF basis
          into an LS-coupled CSF basis  (Fortran 95 version)
@@ -6464,8 +6524,8 @@ y
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/06/16
-   Time (Hr/Min/Sec): 21/55/14.335
+   Date (Yr/Mon/Day): 2019/06/26
+   Time (Hr/Min/Sec): 14/18/13.600
    Zone: -0400
 
  jj2lsj: Execution complete.
@@ -6480,7 +6540,7 @@ mv: cannot stat 'rmcdhf.log': No such file or directory
 mv: cannot stat 'rangular.log': No such file or directory
 Created 1S0.w, 1S0.c, 1S0.m, 1S0.sum 1S0.alog and 1S0.log
  nblock =            1   ncftot =            9   nw =           27   nelec =           70
- nblock =            6   ncftot =          731   nw =           25   nelec =           70
+ nblock =            6   ncftot =         1400   nw =           27   nelec =           70
 
  Energy levels for ...
  Rydberg constant is   109737.31569
@@ -6490,8 +6550,8 @@ Created 1S0.w, 1S0.c, 1S0.m, 1S0.sum 1S0.alog and 1S0.log
                       (a.u.)      (cm^-1)     (cm^-1)
 ------------------------------------------------------------------------------------------
   1  1   0  +  -14044.1967944        0.00        0.00  6s(2)_1S0
-  2  1   0  -  -14044.1305822    14531.89    14531.89  4f(14)1S1.6s_2S.6p_3P
-  3  1   1  -  -14044.1274525    15218.79      686.90  4f(14)1S1.6s_2S.6p_3P
-  4  1   2  -  -14044.1204626    16752.90     1534.11  4f(14)1S1.6s_2S.6p_3P
-  5  2   1  -  -14044.0816384    25273.82     8520.92  4f(14)1S1.6s_2S.6p_1P
+  2  1   0  -  -14044.1306210    14523.38    14523.38  4f(14)1S1.6s_2S.6p_3P
+  3  1   1  -  -14044.1275589    15195.44      672.07  4f(14)1S1.6s_2S.6p_3P
+  4  1   2  -  -14044.1205226    16739.74     1544.29  4f(14)1S1.6s_2S.6p_3P
+  5  2   1  -  -14044.0861326    24287.46     7547.72  4f(14)1S1.6s_2S.6p_1P
 ------------------------------------------------------------------------------------------

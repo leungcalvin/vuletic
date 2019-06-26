@@ -103,8 +103,15 @@ cat $rwfnestimate_input
 rmcdhf_input="rmcdhf_input_1S0_6"
 rmcdhf < $rmcdhf_input
 cat $rmcdhf_input
-# #rsave 1S0
-# 
+
+# Final Step: vary all orbitals
+rcsfgenerate < $rcsfgenerate_input
+cat $rcsfgenerate_input
+rwfnestimate < rwfnestimate_input_append_rwfnout
+cat rwfnestimate_input_append_rwfnout
+rmcdhf < rmcdhf_input_1S0_all
+cat rmcdhf_input_1S0_all
+
 # #6. add active orbitals: layer 1-4 (5g)
 # rcsfgenerate_input="rcsfgenerate_input_1S0_7"
 # rcsfgenerate < $rcsfgenerate_input
@@ -276,12 +283,6 @@ cat $rmcdhf_input
 # rmcdhf < $rmcdhf_input
 # cat $rmcdhf_input
 
-rcsfgenerate < $rcsfgenerate_input
-cat $rcsfgenerate_input
-rwfnestimate < rwfnestimate_input_append_rwfnout
-cat rwfnestimate_input_append_rwfnout
-rmcdhf < rmcdhf_input_1S0_all
-cat rmcdhf_input_1S0_all
 
 stateID="1S0"
 rsave $stateID
@@ -293,7 +294,7 @@ rsave $stateID
 rci_input="rci_input_1S0"
 rci < $rci_input
 cat $rci_input
-#printf "$stateID\ny\n0\ny" | rmixextract |& tee $stateID.crmix # CI
+printf "$stateID\ny\n0\ny" | rmixextract |& tee $stateID.crmix # CI
 
 # jj2lsj
 jj2lsj_input="jj2lsj_input_1S0"
