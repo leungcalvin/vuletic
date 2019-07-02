@@ -3,7 +3,7 @@
 #1. Yb core ([Xe]4f14) + 6s6p 1P1 + 6s6p 3P1 + 4f13 5d 6s2
 # user-defined order of orbitals in clist.ref
 # ask for 4f13(2F 7/2) levels with J=2,5,3,4 in all mcdhf runs
-# optimize only 5d*
+# optimize only 5d*,6s,6p*; 4f* is not very stable
 rnucleus_input="rnucleus_input_Z70"
 rnucleus < $rnucleus_input
 cat $rnucleus_input
@@ -20,9 +20,8 @@ cat $rwfnestimate_input
 rmcdhf_input="rmcdhf_input_1P1"
 rmcdhf < $rmcdhf_input
 cat $rmcdhf_input
-rsave 1P1
 
-#2. add active orbitals: layer 1-1 (5d)
+#2. add active orbitals: layer 1-1 (7s,7p*,6d*)
 # rnucleus_input="rnucleus_input_Z70"
 # rnucleus < $rnucleus_input
 # cat $rnucleus_input
@@ -44,23 +43,23 @@ rsave 1P1
 
 # Final Step. vary all orbitals:
 
-# rnucleus_input="rnucleus_input_Z70"
-# rnucleus < $rnucleus_input
-# cat $rnucleus_input
-# rcsfgenerate_input="rcsfgenerate_input_1P1_2"
-# rcsfgenerate < $rcsfgenerate_input
-# cat $rcsfgenerate_input
-# cp rcsfgenerate.log 1P1.exc
-# cp rcsf.out rcsf.inp
-# printf '1' | rcsfinteract
-# cp rcsf.out rcsf.inp
-# printf 'y' | rangular
-# rwfnestimate_input="rwfnestimate_input_1P1_2"
-# rwfnestimate < $rwfnestimate_input
-# cat $rwfnestimate_input
-# rmcdhf_input="rmcdhf_input_1P1_all"
-# rmcdhf < $rmcdhf_input
-# cat $rmcdhf_input
+#rnucleus_input="rnucleus_input_Z70"
+#rnucleus < $rnucleus_input
+#cat $rnucleus_input
+#rcsfgenerate_input="rcsfgenerate_input_1P1"
+#rcsfgenerate < $rcsfgenerate_input
+#cat $rcsfgenerate_input
+#cp rcsfgenerate.log 1P1.exc
+#cp rcsf.out rcsf.inp
+#printf '1' | rcsfinteract
+#cp rcsf.out rcsf.inp
+#printf 'y' | rangular
+#rwfnestimate_input="rwfnestimate_input_1P1_2"
+#rwfnestimate < $rwfnestimate_input
+#cat $rwfnestimate_input
+#rmcdhf_input="rmcdhf_input_1P1_all"
+#rmcdhf < $rmcdhf_input
+#cat $rmcdhf_input
 
 #2. add active orbitals: layer 1-1 (7s)
 # rnucleus_input="rnucleus_input_Z70"
@@ -304,10 +303,6 @@ cat $jj2lsj_input
 
 rlevels 1P1.m
 rlevels 1P1.cm
-
-
-
-
  Enter the atomic number:
  Enter the mass number (0 if the nucleus is to be modelled as a point source:
  The default root mean squared radius is    5.2192449328117521       fm;
@@ -592,7 +587,7 @@ n
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/07/02
-   Time (Hr/Min/Sec): 13/48/21.078
+   Time (Hr/Min/Sec): 14/57/44.311
    Zone: -0400
 
  RANGULAR: Execution complete.
@@ -1433,7 +1428,7 @@ Generalised occupation numbers:
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/07/02
-   Time (Hr/Min/Sec): 13/48/21.270
+   Time (Hr/Min/Sec): 14/57/44.504
    Zone: -0400
 
  RMCDHF: Execution complete.
@@ -1450,11 +1445,6 @@ y
 *
 100
 
-Created 1P1.w, 1P1.c, 1P1.m, 1P1.sum 1P1.alog and 1P1.log
-mv: cannot stat 'rmix.out': No such file or directory
-mv: cannot stat 'rmcdhf.sum': No such file or directory
-mv: cannot stat 'rmcdhf.log': No such file or directory
-mv: cannot stat 'rangular.log': No such file or directory
 Created 1P1.w, 1P1.c, 1P1.m, 1P1.sum 1P1.alog and 1P1.log
 
  RCI
@@ -1577,11 +1567,11 @@ Name of state:
 
 
  Wall time:
-        9 seconds
+        8 seconds
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/07/02
-   Time (Hr/Min/Sec): 13/48/30.742
+   Time (Hr/Min/Sec): 14/57/53.098
    Zone: -0400
 
  RCI: Execution complete.
@@ -2110,7 +2100,7 @@ y
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/07/02
-   Time (Hr/Min/Sec): 13/48/30.749
+   Time (Hr/Min/Sec): 14/57/53.105
    Zone: -0400
 
  jj2lsj: Execution complete.
