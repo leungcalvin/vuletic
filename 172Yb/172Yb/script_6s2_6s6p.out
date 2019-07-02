@@ -66,7 +66,7 @@ n
  Default, reverse, symmetry or user specified ordering? (*/r/s/u)
  Reference file present!
  The couplings will be made in the following customized order:
-  1s, 2s, 2p, 3s, 3p, 3d, 4s, 4p, 4d, 5s, 5p, 4f, 5d, 6s, 6p, 5f, 6d, 7p, 8s
+  1s, 2s, 2p, 3s, 3p, 3d, 4s, 4p, 4d, 5s, 5p, 4f, 5d, 6s, 6p, 5f, 6d, 7p, 8s, 9s
  
  Highest principal quantum number, n? (1..15)
  Highest orbital angular momentum, l? (s..h)
@@ -255,8 +255,8 @@ n
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/06/26
-   Time (Hr/Min/Sec): 14/17/48.473
+   Date (Yr/Mon/Day): 2019/07/02
+   Time (Hr/Min/Sec): 13/31/17.521
    Zone: -0400
 
  RANGULAR: Execution complete.
@@ -1006,8 +1006,8 @@ Generalised occupation numbers:
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/06/26
-   Time (Hr/Min/Sec): 14/17/48.845
+   Date (Yr/Mon/Day): 2019/07/02
+   Time (Hr/Min/Sec): 13/31/17.757
    Zone: -0400
 
  RMCDHF: Execution complete.
@@ -1090,7 +1090,7 @@ n
  Default, reverse, symmetry or user specified ordering? (*/r/s/u)
  Reference file present!
  The couplings will be made in the following customized order:
-  1s, 2s, 2p, 3s, 3p, 3d, 4s, 4p, 4d, 5s, 5p, 4f, 5d, 6s, 6p, 5f, 6d, 7p, 8s
+  1s, 2s, 2p, 3s, 3p, 3d, 4s, 4p, 4d, 5s, 5p, 4f, 5d, 6s, 6p, 5f, 6d, 7p, 8s, 9s
  
  Highest principal quantum number, n? (1..15)
  Highest orbital angular momentum, l? (s..h)
@@ -1279,8 +1279,8 @@ n
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/06/26
-   Time (Hr/Min/Sec): 14/17/48.863
+   Date (Yr/Mon/Day): 2019/07/02
+   Time (Hr/Min/Sec): 13/31/17.768
    Zone: -0400
 
  RANGULAR: Execution complete.
@@ -2019,8 +2019,8 @@ Generalised occupation numbers:
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/06/26
-   Time (Hr/Min/Sec): 14/17/49.161
+   Date (Yr/Mon/Day): 2019/07/02
+   Time (Hr/Min/Sec): 13/31/17.983
    Zone: -0400
 
  RMCDHF: Execution complete.
