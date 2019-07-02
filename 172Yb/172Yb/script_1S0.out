@@ -457,7 +457,7 @@ n
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/07/02
-   Time (Hr/Min/Sec): 12/35/22.650
+   Time (Hr/Min/Sec): 13/48/04.573
    Zone: -0400
 
  RANGULAR: Execution complete.
@@ -717,7 +717,7 @@ Generalised occupation numbers:
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/07/02
-   Time (Hr/Min/Sec): 12/35/22.687
+   Time (Hr/Min/Sec): 13/48/04.623
    Zone: -0400
 
  RMCDHF: Execution complete.
@@ -848,7 +848,7 @@ n
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/07/02
-   Time (Hr/Min/Sec): 12/35/22.693
+   Time (Hr/Min/Sec): 13/48/04.635
    Zone: -0400
 
  RCSFinteract: Execution complete.
@@ -884,7 +884,7 @@ n
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/07/02
-   Time (Hr/Min/Sec): 12/35/22.695
+   Time (Hr/Min/Sec): 13/48/04.639
    Zone: -0400
 
  RANGULAR: Execution complete.
@@ -1878,7 +1878,7 @@ Generalised occupation numbers:
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/07/02
-   Time (Hr/Min/Sec): 12/35/22.846
+   Time (Hr/Min/Sec): 13/48/04.868
    Zone: -0400
 
  RMCDHF: Execution complete.
@@ -2073,7 +2073,7 @@ Generalised occupation numbers:
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/07/02
-   Time (Hr/Min/Sec): 12/35/22.868
+   Time (Hr/Min/Sec): 13/48/04.896
    Zone: -0400
 
  RMCDHF: Execution complete.
@@ -2208,7 +2208,7 @@ n
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/07/02
-   Time (Hr/Min/Sec): 12/35/22.882
+   Time (Hr/Min/Sec): 13/48/04.911
    Zone: -0400
 
  RCSFinteract: Execution complete.
@@ -2244,7 +2244,7 @@ n
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/07/02
-   Time (Hr/Min/Sec): 12/35/22.885
+   Time (Hr/Min/Sec): 13/48/04.916
    Zone: -0400
 
  RANGULAR: Execution complete.
@@ -2634,7 +2634,7 @@ Generalised occupation numbers:
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/07/02
-   Time (Hr/Min/Sec): 12/35/22.970
+   Time (Hr/Min/Sec): 13/48/05.012
    Zone: -0400
 
  RMCDHF: Execution complete.
@@ -2774,7 +2774,7 @@ n
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/07/02
-   Time (Hr/Min/Sec): 12/35/22.977
+   Time (Hr/Min/Sec): 13/48/05.019
    Zone: -0400
 
  RCSFinteract: Execution complete.
@@ -2810,7 +2810,7 @@ n
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/07/02
-   Time (Hr/Min/Sec): 12/35/22.980
+   Time (Hr/Min/Sec): 13/48/05.023
    Zone: -0400
 
  RANGULAR: Execution complete.
@@ -3020,7 +3020,7 @@ Generalised occupation numbers:
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/07/02
-   Time (Hr/Min/Sec): 12/35/23.016
+   Time (Hr/Min/Sec): 13/48/05.065
    Zone: -0400
 
  RMCDHF: Execution complete.
@@ -6310,7 +6310,7 @@ Generalised occupation numbers:
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/07/02
-   Time (Hr/Min/Sec): 12/35/24.074
+   Time (Hr/Min/Sec): 13/48/06.313
    Zone: -0400
 
  RMCDHF: Execution complete.
@@ -6374,11 +6374,11 @@ Name of state:
 
 
  Wall time:
-       12 seconds
+       14 seconds
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/07/02
-   Time (Hr/Min/Sec): 12/35/36.988
+   Time (Hr/Min/Sec): 13/48/21.048
    Zone: -0400
 
  RCI: Execution complete.
@@ -6525,7 +6525,7 @@ y
 
  Finish Date and Time:
    Date (Yr/Mon/Day): 2019/07/02
-   Time (Hr/Min/Sec): 12/35/36.993
+   Time (Hr/Min/Sec): 13/48/21.053
    Zone: -0400
 
  jj2lsj: Execution complete.
@@ -6540,7 +6540,7 @@ mv: cannot stat 'rmcdhf.log': No such file or directory
 mv: cannot stat 'rangular.log': No such file or directory
 Created 1S0.w, 1S0.c, 1S0.m, 1S0.sum 1S0.alog and 1S0.log
  nblock =            1   ncftot =            9   nw =           27   nelec =           70
- nblock =            6   ncftot =          781   nw =           25   nelec =           70
+ nblock =            6   ncftot =           23   nw =           24   nelec =           70
 
  Energy levels for ...
  Rydberg constant is   109737.31569
@@ -6550,8 +6550,12 @@ Created 1S0.w, 1S0.c, 1S0.m, 1S0.sum 1S0.alog and 1S0.log
                       (a.u.)      (cm^-1)     (cm^-1)
 ------------------------------------------------------------------------------------------
   1  1   0  +  -14044.1967944        0.00        0.00  6s(2)_1S0
-  2  1   0  -  -14044.1305912    14529.92    14529.92  4f(14)1S1.6s_2S.6p_3P
-  3  1   1  -  -14044.1274616    15216.80      686.88  4f(14)1S1.6s_2S.6p_3P
-  4  1   2  -  -14044.1204702    16751.23     1534.44  4f(14)1S1.6s_2S.6p_3P
-  5  2   1  -  -14044.0816533    25270.56     8519.32  4f(14)1S1.6s_2S.6p_1P
+  2  1   0  -  -14044.1200813    16836.57    16836.57  4f(14)1S1.6s_2S.6p_3P
+  3  1   1  -  -14044.1168071    17555.19      718.61  4f(14)1S1.6s_2S.6p_3P
+  4  1   2  -  -14044.1101757    19010.61     1455.42  4f(14)1S1.6s_2S.6p_3P
+  5  2   1  -  -14044.0585469    30341.83    11331.22  4f(14)1S1.6s_2S.6p_1P
+  6  3   5  -  -14043.9437624    55534.11    25192.28  4f(13)2F1.5d_1H.6s(2)_1H
+  7  5   2  -  -14043.9369812    57022.40     1488.29  4f(13)2F1.5d_3F.6s(2)_3F
+  8  4   3  -  -14043.9277693    59044.18     2021.78  4f(13)2F1.5d_3G.6s(2)_3G
+  9  4   4  -  -14043.9241552    59837.40      793.21  4f(13)2F1.5d_3G.6s(2)_3G
 ------------------------------------------------------------------------------------------
