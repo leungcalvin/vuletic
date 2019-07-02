@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#1. Yb core ([Xe]4f14) + 6s6p 1P1
+#1. Yb core ([Xe]4f14) + 6s6p 1P1 + 6s6p 3P1 + 4f13 5d 6s2
 # user-defined order of orbitals in clist.ref
 # separate 5d1 out from previous calculation (script_6s2_6s6p)
 rnucleus_input="rnucleus_input_Z70"
@@ -41,26 +41,6 @@ rmcdhf < $rmcdhf_input
 cat $rmcdhf_input
 #rsave 1P1
 
-#2. add active orbitals: layer 1-1 (7s)
-rnucleus_input="rnucleus_input_Z70"
-rnucleus < $rnucleus_input
-cat $rnucleus_input
-rcsfgenerate_input="rcsfgenerate_input_1P1_2"
-rcsfgenerate < $rcsfgenerate_input
-cat $rcsfgenerate_input
-cp rcsfgenerate.log 1P1.exc
-cp rcsf.out rcsf.inp
-printf '1' | rcsfinteract
-cp rcsf.out rcsf.inp
-printf 'y' | rangular
-rwfnestimate_input="rwfnestimate_input_1P1_2"
-rwfnestimate < $rwfnestimate_input
-cat $rwfnestimate_input
-rmcdhf_input="rmcdhf_input_1P1_12"
-rmcdhf < $rmcdhf_input
-cat $rmcdhf_input
-#rsave 1P1
-
 # Final Step. vary all orbitals:
 
 rnucleus_input="rnucleus_input_Z70"
@@ -81,9 +61,11 @@ rmcdhf_input="rmcdhf_input_1P1_all"
 rmcdhf < $rmcdhf_input
 cat $rmcdhf_input
 
-#3. add active orbitals: layer 1-2 (7p)
-# convergence problsm at mcdhf, try 7p first then 5f
-rcsfgenerate_input="rcsfgenerate_input_1P1_3"
+#2. add active orbitals: layer 1-1 (7s)
+rnucleus_input="rnucleus_input_Z70"
+rnucleus < $rnucleus_input
+cat $rnucleus_input
+rcsfgenerate_input="rcsfgenerate_input_1P1_2"
 rcsfgenerate < $rcsfgenerate_input
 cat $rcsfgenerate_input
 cp rcsfgenerate.log 1P1.exc
@@ -94,14 +76,14 @@ printf 'y' | rangular
 rwfnestimate_input="rwfnestimate_input_1P1_2"
 rwfnestimate < $rwfnestimate_input
 cat $rwfnestimate_input
-rmcdhf_input="rmcdhf_input_1P1_3"
+rmcdhf_input="rmcdhf_input_1P1_12"
 rmcdhf < $rmcdhf_input
 cat $rmcdhf_input
+#rsave 1P1
 
-#3. add active orbitals: layer 1-2 (5f)
-# rnucleus_input="rnucleus_input_Z70"
-# rnucleus < $rnucleus_input
-# cat $rnucleus_input
+
+#3. add active orbitals: layer 1-2 (7p)
+# convergence problsm at mcdhf, try 7p first then 5f
 # rcsfgenerate_input="rcsfgenerate_input_1P1_3"
 # rcsfgenerate < $rcsfgenerate_input
 # cat $rcsfgenerate_input
@@ -113,9 +95,34 @@ cat $rmcdhf_input
 # rwfnestimate_input="rwfnestimate_input_1P1_2"
 # rwfnestimate < $rwfnestimate_input
 # cat $rwfnestimate_input
-# rmcdhf_input="rmcdhf_input_1P1_13"
+# rmcdhf_input="rmcdhf_input_1P1_3"
 # rmcdhf < $rmcdhf_input
 # cat $rmcdhf_input
+
+#3. add active orbitals: layer 1-2 (5f)
+#rnucleus_input="rnucleus_input_Z70"
+#rnucleus < $rnucleus_input
+#cat $rnucleus_input
+#rcsfgenerate_input="rcsfgenerate_input_1P1_12"
+#rcsfgenerate < $rcsfgenerate_input
+#cat $rcsfgenerate_input
+#cp rcsfgenerate.log 1P1.exc
+#cp rcsf.out rcsf.inp
+#printf '1' | rcsfinteract
+#cp rcsf.out rcsf.inp
+#printf 'y' | rangular
+#rwfnestimate_input="rwfnestimate_input_1P1_2"
+#rwfnestimate < $rwfnestimate_input
+#cat $rwfnestimate_input
+#rmcdhf_input="rmcdhf_input_1P1_13"
+#rmcdhf < $rmcdhf_input
+#cat $rmcdhf_input
+#rwfnestimate_input="rwfnestimate_input_1P1_2"
+#rwfnestimate < $rwfnestimate_input
+#cat $rwfnestimate_input
+#rmcdhf_input="rmcdhf_input_1P1_14"
+#rmcdhf < $rmcdhf_input
+#cat $rmcdhf_input
 rsave 1P1
 
 #3. add active orbitals: layer 1-3 (5g)
