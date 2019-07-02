@@ -9,8 +9,8 @@ n            ! Specific mass shift?
 y            ! Self energy?
            8 ! Max n for including self energy
 1
-1-2
-1
-
-
-
+1,2
+1,5
+4
+4
+3

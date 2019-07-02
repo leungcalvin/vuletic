@@ -370,7 +370,7 @@ n
  Default, reverse, symmetry or user specified ordering? (*/r/s/u)
  Reference file present!
  The couplings will be made in the following customized order:
-  1s, 2s, 2p, 3s, 3p, 3d, 4s, 4p, 4d, 5s, 5p, 4f, 5d, 6s, 6p, 5f, 6d, 7p, 8s
+  1s, 2s, 2p, 3s, 3p, 3d, 4s, 4p, 4d, 5s, 5p, 4f, 5d, 6s, 6p, 5f, 6d, 7p, 8s, 9s
  
  Highest principal quantum number, n? (1..15)
  Highest orbital angular momentum, l? (s..h)
@@ -456,8 +456,8 @@ n
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/06/26
-   Time (Hr/Min/Sec): 14/17/49.207
+   Date (Yr/Mon/Day): 2019/07/02
+   Time (Hr/Min/Sec): 12/35/22.650
    Zone: -0400
 
  RANGULAR: Execution complete.
@@ -716,8 +716,8 @@ Generalised occupation numbers:
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/06/26
-   Time (Hr/Min/Sec): 14/17/49.291
+   Date (Yr/Mon/Day): 2019/07/02
+   Time (Hr/Min/Sec): 12/35/22.687
    Zone: -0400
 
  RMCDHF: Execution complete.
@@ -773,7 +773,7 @@ n
  Default, reverse, symmetry or user specified ordering? (*/r/s/u)
  Reference file present!
  The couplings will be made in the following customized order:
-  1s, 2s, 2p, 3s, 3p, 3d, 4s, 4p, 4d, 5s, 5p, 4f, 5d, 6s, 6p, 5f, 6d, 7p, 8s
+  1s, 2s, 2p, 3s, 3p, 3d, 4s, 4p, 4d, 5s, 5p, 4f, 5d, 6s, 6p, 5f, 6d, 7p, 8s, 9s
  
  Highest principal quantum number, n? (1..15)
  Highest orbital angular momentum, l? (s..h)
@@ -847,8 +847,8 @@ n
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/06/26
-   Time (Hr/Min/Sec): 14/17/49.304
+   Date (Yr/Mon/Day): 2019/07/02
+   Time (Hr/Min/Sec): 12/35/22.693
    Zone: -0400
 
  RCSFinteract: Execution complete.
@@ -883,8 +883,8 @@ n
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/06/26
-   Time (Hr/Min/Sec): 14/17/49.311
+   Date (Yr/Mon/Day): 2019/07/02
+   Time (Hr/Min/Sec): 12/35/22.695
    Zone: -0400
 
  RANGULAR: Execution complete.
@@ -1877,8 +1877,8 @@ Generalised occupation numbers:
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/06/26
-   Time (Hr/Min/Sec): 14/17/49.630
+   Date (Yr/Mon/Day): 2019/07/02
+   Time (Hr/Min/Sec): 12/35/22.846
    Zone: -0400
 
  RMCDHF: Execution complete.
@@ -2072,8 +2072,8 @@ Generalised occupation numbers:
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/06/26
-   Time (Hr/Min/Sec): 14/17/49.671
+   Date (Yr/Mon/Day): 2019/07/02
+   Time (Hr/Min/Sec): 12/35/22.868
    Zone: -0400
 
  RMCDHF: Execution complete.
@@ -2121,7 +2121,7 @@ Created 1S0.w, 1S0.c, 1S0.m, 1S0.sum 1S0.alog and 1S0.log
  Default, reverse, symmetry or user specified ordering? (*/r/s/u)
  Reference file present!
  The couplings will be made in the following customized order:
-  1s, 2s, 2p, 3s, 3p, 3d, 4s, 4p, 4d, 5s, 5p, 4f, 5d, 6s, 6p, 5f, 6d, 7p, 8s
+  1s, 2s, 2p, 3s, 3p, 3d, 4s, 4p, 4d, 5s, 5p, 4f, 5d, 6s, 6p, 5f, 6d, 7p, 8s, 9s
  
  Highest principal quantum number, n? (1..15)
  Highest orbital angular momentum, l? (s..i)
@@ -2207,8 +2207,8 @@ n
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/06/26
-   Time (Hr/Min/Sec): 14/17/49.691
+   Date (Yr/Mon/Day): 2019/07/02
+   Time (Hr/Min/Sec): 12/35/22.882
    Zone: -0400
 
  RCSFinteract: Execution complete.
@@ -2243,8 +2243,8 @@ n
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/06/26
-   Time (Hr/Min/Sec): 14/17/49.698
+   Date (Yr/Mon/Day): 2019/07/02
+   Time (Hr/Min/Sec): 12/35/22.885
    Zone: -0400
 
  RANGULAR: Execution complete.
@@ -2633,8 +2633,8 @@ Generalised occupation numbers:
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/06/26
-   Time (Hr/Min/Sec): 14/17/49.844
+   Date (Yr/Mon/Day): 2019/07/02
+   Time (Hr/Min/Sec): 12/35/22.970
    Zone: -0400
 
  RMCDHF: Execution complete.
@@ -2687,7 +2687,7 @@ y
  Default, reverse, symmetry or user specified ordering? (*/r/s/u)
  Reference file present!
  The couplings will be made in the following customized order:
-  1s, 2s, 2p, 3s, 3p, 3d, 4s, 4p, 4d, 5s, 5p, 4f, 5d, 6s, 6p, 5f, 6d, 7p, 8s
+  1s, 2s, 2p, 3s, 3p, 3d, 4s, 4p, 4d, 5s, 5p, 4f, 5d, 6s, 6p, 5f, 6d, 7p, 8s, 9s
  
  Highest principal quantum number, n? (1..15)
  Highest orbital angular momentum, l? (s..i)
@@ -2773,8 +2773,8 @@ n
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/06/26
-   Time (Hr/Min/Sec): 14/17/49.855
+   Date (Yr/Mon/Day): 2019/07/02
+   Time (Hr/Min/Sec): 12/35/22.977
    Zone: -0400
 
  RCSFinteract: Execution complete.
@@ -2809,8 +2809,8 @@ n
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/06/26
-   Time (Hr/Min/Sec): 14/17/49.860
+   Date (Yr/Mon/Day): 2019/07/02
+   Time (Hr/Min/Sec): 12/35/22.980
    Zone: -0400
 
  RANGULAR: Execution complete.
@@ -3019,8 +3019,8 @@ Generalised occupation numbers:
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/06/26
-   Time (Hr/Min/Sec): 14/17/49.917
+   Date (Yr/Mon/Day): 2019/07/02
+   Time (Hr/Min/Sec): 12/35/23.016
    Zone: -0400
 
  RMCDHF: Execution complete.
@@ -3073,7 +3073,7 @@ y
  Default, reverse, symmetry or user specified ordering? (*/r/s/u)
  Reference file present!
  The couplings will be made in the following customized order:
-  1s, 2s, 2p, 3s, 3p, 3d, 4s, 4p, 4d, 5s, 5p, 4f, 5d, 6s, 6p, 5f, 6d, 7p, 8s
+  1s, 2s, 2p, 3s, 3p, 3d, 4s, 4p, 4d, 5s, 5p, 4f, 5d, 6s, 6p, 5f, 6d, 7p, 8s, 9s
  
  Highest principal quantum number, n? (1..15)
  Highest orbital angular momentum, l? (s..i)
@@ -6309,8 +6309,8 @@ Generalised occupation numbers:
         1 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/06/26
-   Time (Hr/Min/Sec): 14/17/51.744
+   Date (Yr/Mon/Day): 2019/07/02
+   Time (Hr/Min/Sec): 12/35/24.074
    Zone: -0400
 
  RMCDHF: Execution complete.
@@ -6374,11 +6374,11 @@ Name of state:
 
 
  Wall time:
-       21 seconds
+       12 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/06/26
-   Time (Hr/Min/Sec): 14/18/13.593
+   Date (Yr/Mon/Day): 2019/07/02
+   Time (Hr/Min/Sec): 12/35/36.988
    Zone: -0400
 
  RCI: Execution complete.
@@ -6524,8 +6524,8 @@ y
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/06/26
-   Time (Hr/Min/Sec): 14/18/13.600
+   Date (Yr/Mon/Day): 2019/07/02
+   Time (Hr/Min/Sec): 12/35/36.993
    Zone: -0400
 
  jj2lsj: Execution complete.
@@ -6540,7 +6540,7 @@ mv: cannot stat 'rmcdhf.log': No such file or directory
 mv: cannot stat 'rangular.log': No such file or directory
 Created 1S0.w, 1S0.c, 1S0.m, 1S0.sum 1S0.alog and 1S0.log
  nblock =            1   ncftot =            9   nw =           27   nelec =           70
- nblock =            6   ncftot =         1400   nw =           27   nelec =           70
+ nblock =            6   ncftot =          781   nw =           25   nelec =           70
 
  Energy levels for ...
  Rydberg constant is   109737.31569
@@ -6550,8 +6550,8 @@ Created 1S0.w, 1S0.c, 1S0.m, 1S0.sum 1S0.alog and 1S0.log
                       (a.u.)      (cm^-1)     (cm^-1)
 ------------------------------------------------------------------------------------------
   1  1   0  +  -14044.1967944        0.00        0.00  6s(2)_1S0
-  2  1   0  -  -14044.1306210    14523.38    14523.38  4f(14)1S1.6s_2S.6p_3P
-  3  1   1  -  -14044.1275589    15195.44      672.07  4f(14)1S1.6s_2S.6p_3P
-  4  1   2  -  -14044.1205226    16739.74     1544.29  4f(14)1S1.6s_2S.6p_3P
-  5  2   1  -  -14044.0861326    24287.46     7547.72  4f(14)1S1.6s_2S.6p_1P
+  2  1   0  -  -14044.1305912    14529.92    14529.92  4f(14)1S1.6s_2S.6p_3P
+  3  1   1  -  -14044.1274616    15216.80      686.88  4f(14)1S1.6s_2S.6p_3P
+  4  1   2  -  -14044.1204702    16751.23     1534.44  4f(14)1S1.6s_2S.6p_3P
+  5  2   1  -  -14044.0816533    25270.56     8519.32  4f(14)1S1.6s_2S.6p_1P
 ------------------------------------------------------------------------------------------

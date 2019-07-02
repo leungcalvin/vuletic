@@ -66,7 +66,7 @@ n
  Default, reverse, symmetry or user specified ordering? (*/r/s/u)
  Reference file present!
  The couplings will be made in the following customized order:
-  1s, 2s, 2p, 3s, 3p, 3d, 4s, 4p, 4d, 5s, 5p, 4f, 5d, 6s, 6p, 5f, 6d, 7p, 8s
+  1s, 2s, 2p, 3s, 3p, 3d, 4s, 4p, 4d, 5s, 5p, 4f, 5d, 6s, 6p, 5f, 6d, 7p, 8s, 9s
  
  Highest principal quantum number, n? (1..15)
  Highest orbital angular momentum, l? (s..h)
@@ -255,8 +255,8 @@ n
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/06/26
-   Time (Hr/Min/Sec): 14/17/48.473
+   Date (Yr/Mon/Day): 2019/07/02
+   Time (Hr/Min/Sec): 12/35/22.282
    Zone: -0400
 
  RANGULAR: Execution complete.
@@ -1006,8 +1006,8 @@ Generalised occupation numbers:
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/06/26
-   Time (Hr/Min/Sec): 14/17/48.845
+   Date (Yr/Mon/Day): 2019/07/02
+   Time (Hr/Min/Sec): 12/35/22.464
    Zone: -0400
 
  RMCDHF: Execution complete.
@@ -1090,7 +1090,7 @@ n
  Default, reverse, symmetry or user specified ordering? (*/r/s/u)
  Reference file present!
  The couplings will be made in the following customized order:
-  1s, 2s, 2p, 3s, 3p, 3d, 4s, 4p, 4d, 5s, 5p, 4f, 5d, 6s, 6p, 5f, 6d, 7p, 8s
+  1s, 2s, 2p, 3s, 3p, 3d, 4s, 4p, 4d, 5s, 5p, 4f, 5d, 6s, 6p, 5f, 6d, 7p, 8s, 9s
  
  Highest principal quantum number, n? (1..15)
  Highest orbital angular momentum, l? (s..h)
@@ -1279,8 +1279,8 @@ n
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/06/26
-   Time (Hr/Min/Sec): 14/17/48.863
+   Date (Yr/Mon/Day): 2019/07/02
+   Time (Hr/Min/Sec): 12/35/22.472
    Zone: -0400
 
  RANGULAR: Execution complete.
@@ -2019,8 +2019,8 @@ Generalised occupation numbers:
         0 seconds
 
  Finish Date and Time:
-   Date (Yr/Mon/Day): 2019/06/26
-   Time (Hr/Min/Sec): 14/17/49.161
+   Date (Yr/Mon/Day): 2019/07/02
+   Time (Hr/Min/Sec): 12/35/22.630
    Zone: -0400
 
  RMCDHF: Execution complete.
@@ -2133,11 +2133,11 @@ STOP JJ2LSJ(): program stop C.
  Splitting is the energy difference with the lower neighbor
 ------------------------------------------------------------------------------------------
  No Pos  J Parity Energy Total    Levels     Splitting     Configuration
-                      (a.u.)         (eV)         (eV)
+                      (a.u.)      (cm^-1)     (cm^-1)
 ------------------------------------------------------------------------------------------
-  1  1   0  +  -14067.6743813        0.00000        0.00000  6s(2)_1S0
-  2  1   0  -  -14067.6300274        1.20693        1.20693  
-  3  1   1  -  -14067.6266491        1.29886        0.09193  
-  4  1   2  -  -14067.6198693        1.48335        0.18449  
-  5  2   1  -  -14067.5557909        3.22701        1.74366  
+  1  1   0  +  -14067.6743813        0.00        0.00  6s(2)_1S0
+  2  1   0  -  -14067.6300274     9734.57     9734.57  
+  3  1   1  -  -14067.6266491    10476.00      741.44  
+  4  1   2  -  -14067.6198693    11964.00     1487.99  
+  5  2   1  -  -14067.5557909    26027.58    14063.58  
 ------------------------------------------------------------------------------------------

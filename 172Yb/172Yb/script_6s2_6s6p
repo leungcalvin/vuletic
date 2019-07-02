@@ -42,4 +42,4 @@ rsave 6s2_6s6p
 cp rwfn.out rwfn_6s2_6s6p.out
 
 printf '6s2_6s6p\nn\ny\ny' | jj2lsj
-rlevelseV 6s2_6s6p.m
+rlevels 6s2_6s6p.m
