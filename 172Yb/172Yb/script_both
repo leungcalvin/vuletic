@@ -1,8 +1,12 @@
 #!/bin/bash
-
-# Calculate 1S0 and 3P1 levels simultaneously
-# Orbitals: 6s, 6p, 5d, 4f
 # user-defined order of orbitals in clist.ref
+
+# Calculate Safronova's level
+# DHF for [1s2...4f14, 6s2] to solve for those orbitals
+# Calculate 6p* from 4f13 6s2 6p configurations, no exc.
+# Calculate 5d* from 4f13 6s2 5d configuration
+# Generate even multireference from 4f14 6s2,4f13 6s 5d, 4f13 6s2 6p
+# Generate odd multireference from 4f14 6s 6p, 4f13 6s2 5d
 rnucleus_input="rnucleus_input_Z70"
 rnucleus < $rnucleus_input
 cat $rnucleus_input
