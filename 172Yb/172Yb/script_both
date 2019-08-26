@@ -33,12 +33,12 @@ printf '1' | rcsfinteract
 cp rcsf.out rcsf.inp
 printf 'y' | rangular
 rwfnestimate_input="rwfnestimate_input_append_rwfnout"
-#rwfnestimate < $rwfnestimate_input
-#cat $rwfnestimate_input
-#rmcdhf_input="rmcdhf_input_both_4"
-#rmcdhf < $rmcdhf_input
-#cat $rmcdhf_input
-#rsave both
+rwfnestimate < $rwfnestimate_input
+cat $rwfnestimate_input
+rmcdhf_input="rmcdhf_input_both_4"
+rmcdhf < $rmcdhf_input
+cat $rmcdhf_input
+rsave both
 # 
 # #2. add active orbitals: layer 1-1 (7s)
 # rnucleus_input="rnucleus_input_Z70"
